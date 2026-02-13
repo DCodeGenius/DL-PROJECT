@@ -1,0 +1,30 @@
+# Google Cloud Setup Commands
+# Use these if you prefer command line, or follow the console instructions
+
+# 1. Set your project
+gcloud config set project fever-finetuning
+
+# 2. Create VM with GPU (L4 spot instance)
+gcloud compute instances create fever-gpu-vm \
+    --zone=us-central1-a \
+    --machine-type=n1-standard-4 \
+    --accelerator=type=nvidia-l4,count=1 \
+    --image-family=ubuntu-2204-lts \
+    --image-project=ubuntu-os-cloud \
+    --maintenance-policy=TERMINATE \
+    --provisioning-model=SPOT \
+    --boot-disk-size=50GB \
+    --boot-disk-type=pd-standard \
+    --metadata=install-nvidia-driver=True
+
+# 3. SSH into VM
+gcloud compute ssh fever-gpu-vm --zone=us-central1-a
+
+# 4. Stop VM (when not using, saves money)
+gcloud compute instances stop fever-gpu-vm --zone=us-central1-a
+
+# 5. Start VM (when ready to use)
+gcloud compute instances start fever-gpu-vm --zone=us-central1-a
+
+# 6. Delete VM (when project is done, to avoid charges)
+gcloud compute instances delete fever-gpu-vm --zone=us-central1-a
