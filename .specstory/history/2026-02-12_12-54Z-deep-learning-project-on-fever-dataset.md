@@ -14674,7 +14674,1619 @@ Lines added: undefined, lines removed: 1
 
 ---
 
+Now update `analyze.py` with ECE and binary-only logic:
 
+---
+
+<tool-use data-tool-type="write" data-tool-name="write">
+
+<details><summary>Tool use: **write** • Edit file: C:\Users\dhalperin\OneDrive - NVIDIA Corporation\Documents\DL\DL-PROJECT\analyze.py</summary>
+
+**Chunk 1**
+Lines added: 2, lines removed: 1
+
+```diff
+@@ -1,6 +1,7 @@
+  """
+  Analysis script for FEVER hallucination and confidence calibration study.
++ Binary classification (SUPPORTS vs REFUTES).
+  Compares baseline vs fine-tuned model across frequency buckets.
+- Produces charts and summary statistics.
++ Produces charts and summary statistics including ECE.
+  
+  Usage:
+```
+
+**Chunk 2**
+Lines added: 1, lines removed: 2
+
+```diff
+@@ -43,8 +44,7 @@
+          results = json.load(f)
+  
+-     # Merge wiki page data from eval_metadata (in case results have stale data)
++     # Merge wiki page data from eval_metadata
+      metadata = load_eval_metadata()
+      if metadata and len(metadata) == len(results):
+-         # Match by claim text
+          meta_by_claim = {m["claim"]: m for m in metadata}
+          updated = 0
+```
+
+**Chunk 3**
+Lines added: 4, lines removed: 5
+
+```diff
+@@ -60,11 +60,10 @@
+  
+  
+- def assign_frequency_buckets(results, method="quartile"):
++ def assign_frequency_buckets(results):
+      """
+-     Assign frequency buckets to each result.
+-     method: 'quartile' (data-driven) or 'fixed' (predefined thresholds)
++     Assign frequency buckets based on page_frequency.
++     Uses percentile-based bucketing on known pages.
+      """
+-     # Get all frequencies (excluding UNKNOWN pages)
+-     known_results = [r for r in results if r["wiki_page"] != "UNKNOWN"]
++     known_results = [r for r in results if r.get("wiki_page", "UNKNOWN") != "UNKNOWN"]
+      freqs = [r["page_frequency"] for r in known_results]
+  
+```
+
+**Chunk 4**
+Lines added: 51, lines removed: 12
+
+```diff
+@@ -74,30 +73,69 @@
+  
+      freqs_arr = np.array(freqs)
+-     q25 = np.percentile(freqs_arr, 25)
+-     q50 = np.percentile(freqs_arr, 50)
+-     q75 = np.percentile(freqs_arr, 75)
++     q33 = np.percentile(freqs_arr, 33)
++     q66 = np.percentile(freqs_arr, 66)
++ 
++     # If percentiles collapse (very skewed), use fixed thresholds
++     if q33 == q66:
++         unique_freqs = sorted(set(freqs))
++         if len(unique_freqs) &gt;= 3:
++             q33 = unique_freqs[len(unique_freqs) // 3]
++             q66 = unique_freqs[2 * len(unique_freqs) // 3]
++         elif len(unique_freqs) == 2:
++             q33 = unique_freqs[0]
++             q66 = unique_freqs[1]
+  
+-     print(f"\nFrequency distribution:")
++     print(f"\nFrequency distribution ({len(known_results)} examples with known pages):")
+      print(f"  Min: {freqs_arr.min()}, Max: {freqs_arr.max()}, Mean: {freqs_arr.mean():.1f}")
+-     print(f"  25th percentile: {q25:.0f}")
+-     print(f"  50th percentile (median): {q50:.0f}")
+-     print(f"  75th percentile: {q75:.0f}")
++     print(f"  Low/Medium boundary: {q33:.0f}")
++     print(f"  Medium/High boundary: {q66:.0f}")
+  
+      for r in results:
+-         freq = r["page_frequency"]
+-         if r["wiki_page"] == "UNKNOWN":
++         if r.get("wiki_page", "UNKNOWN") == "UNKNOWN":
+              r["freq_bucket"] = "UNKNOWN"
+-         elif freq &lt;= q25:
++         elif r["page_frequency"] &lt;= q33:
+              r["freq_bucket"] = "low"
+-         elif freq &lt;= q75:
++         elif r["page_frequency"] &lt;= q66:
+              r["freq_bucket"] = "medium"
+          else:
+              r["freq_bucket"] = "high"
+  
++     # Print bucket sizes
++     for bucket in ["low", "medium", "high", "UNKNOWN"]:
++         count = sum(1 for r in results if r.get("freq_bucket") == bucket)
++         if count &gt; 0:
++             print(f"  {bucket}: {count} examples")
++ 
+      return results
+  
++ 
++ def compute_ece(results, n_bins=10):
++     """
++     Compute Expected Calibration Error (ECE).
++     ECE = sum over bins of (bin_size/total) * |accuracy(bin) - confidence(bin)|
++     """
++     if not results:
++         return 0.0
++ 
++     confidences = np.array([r["confidence"] for r in results])
++     correct = np.array([1 if r["predicted_idx"] == r["true_label"] else 0 for r in results])
++     total = len(results)
++ 
++     bin_edges = np.linspace(0, 1, n_bins + 1)
++     ece = 0.0
++ 
++     for i in range(n_bins):
++         mask = (confidences &gt;= bin_edges[i]) &amp; (confidences &lt; bin_edges[i + 1])
++         bin_size = mask.sum()
++         if bin_size &gt; 0:
++             bin_acc = correct[mask].mean()
++             bin_conf = confidences[mask].mean()
++             ece += (bin_size / total) * abs(bin_acc - bin_conf)
++ 
++     return ece
++ 
+  
+  def compute_metrics(results, label=""):
+-     """Compute accuracy, confidence, and hallucination metrics."""
++     """Compute accuracy, confidence, hallucination, and ECE metrics."""
+      if not results:
+          return {}
+```
+
+**Chunk 5**
+Lines added: 7, lines removed: 4
+
+```diff
+@@ -116,9 +154,12 @@
+      avg_conf_wrong = np.mean(wrong_confs) if wrong_confs else 0
+  
+-     # Hallucination: wrong prediction with high confidence (&gt;0.7)
+-     hallucinations = [r for r in results if r["predicted_idx"] != r["true_label"] and r["confidence"] &gt; 0.7]
+-     hallucination_rate = len(hallucinations) / total if total &gt; 0 else 0
++     # High-confidence error rate (our "hallucination" metric)
++     high_conf_errors = [r for r in results if r["predicted_idx"] != r["true_label"] and r["confidence"] &gt; 0.7]
++     high_conf_error_rate = len(high_conf_errors) / total if total &gt; 0 else 0
+  
+-     # Overconfidence gap: avg confidence minus accuracy
++     # ECE
++     ece = compute_ece(results)
++ 
++     # Overconfidence gap
+      overconfidence_gap = avg_confidence - accuracy
+  
+```
+
+**Chunk 6**
+Lines added: 3, lines removed: 2
+
+```diff
+@@ -131,6 +172,7 @@
+          "avg_conf_correct": avg_conf_correct,
+          "avg_conf_wrong": avg_conf_wrong,
+-         "hallucination_count": len(hallucinations),
+-         "hallucination_rate": hallucination_rate,
++         "high_conf_error_count": len(high_conf_errors),
++         "high_conf_error_rate": high_conf_error_rate,
++         "ece": ece,
+          "overconfidence_gap": overconfidence_gap,
+      }
+```
+
+**Chunk 7**
+Lines added: 3, lines removed: 2
+
+```diff
+@@ -149,6 +191,7 @@
+      print(f"  {'Avg confidence (correct)':&lt;30} {metrics['avg_conf_correct']:&gt;10.4f}")
+      print(f"  {'Avg confidence (wrong)':&lt;30} {metrics['avg_conf_wrong']:&gt;10.4f}")
+-     print(f"  {'Hallucination count':&lt;30} {metrics['hallucination_count']:&gt;10}")
+-     print(f"  {'Hallucination rate':&lt;30} {metrics['hallucination_rate']:&gt;10.4f}")
++     print(f"  {'High-conf error count':&lt;30} {metrics['high_conf_error_count']:&gt;10}")
++     print(f"  {'High-conf error rate':&lt;30} {metrics['high_conf_error_rate']:&gt;10.4f}")
++     print(f"  {'ECE':&lt;30} {metrics['ece']:&gt;10.4f}")
+      print(f"  {'Overconfidence gap':&lt;30} {metrics['overconfidence_gap']:&gt;10.4f}")
+  
+```
+
+**Chunk 8**
+Lines added: 1, lines removed: 1
+
+```diff
+@@ -163,5 +206,5 @@
+  
+      all_metrics = {}
+-     for bucket in ["low", "medium", "high", "UNKNOWN"]:
++     for bucket in ["low", "medium", "high"]:
+          bucket_results = [r for r in results if r.get("freq_bucket") == bucket]
+          if bucket_results:
+```
+
+**Chunk 9**
+Lines added: 1, lines removed: 1
+
+```diff
+@@ -180,5 +223,5 @@
+      print(f"{'='*60}")
+  
+-     label_names = {0: "SUPPORTS", 1: "REFUTES", 2: "NOT ENOUGH INFO"}
++     label_names = {0: "SUPPORTS", 1: "REFUTES"}
+      all_metrics = {}
+  
+```
+
+**Chunk 10**
+Lines added: 7, lines removed: 7
+
+```diff
+@@ -203,12 +246,12 @@
+      width = 0.35
+  
+-     fig, axes = plt.subplots(1, 3, figsize=(18, 5))
++     fig, axes = plt.subplots(2, 2, figsize=(14, 10))
+  
+-     # Chart 1: Accuracy by frequency
+-     ax = axes[0]
+-     baseline_acc = [baseline_freq_metrics.get(b, {}).get("accuracy", 0) for b in buckets]
+-     finetuned_acc = [finetuned_freq_metrics.get(b, {}).get("accuracy", 0) for b in buckets]
+-     bars1 = ax.bar(x - width/2, baseline_acc, width, label="Baseline (zero-shot)", color="#4ECDC4")
+-     bars2 = ax.bar(x + width/2, finetuned_acc, width, label="Fine-tuned", color="#FF6B6B")
++     # Chart 1: Accuracy
++     ax = axes[0, 0]
++     b_vals = [baseline_freq_metrics.get(b, {}).get("accuracy", 0) for b in buckets]
++     f_vals = [finetuned_freq_metrics.get(b, {}).get("accuracy", 0) for b in buckets]
++     ax.bar(x - width/2, b_vals, width, label="Baseline (zero-shot)", color="#4ECDC4")
++     ax.bar(x + width/2, f_vals, width, label="Fine-tuned", color="#FF6B6B")
+      ax.set_ylabel("Accuracy")
+      ax.set_title("Accuracy by Entity Frequency")
+```
+
+**Chunk 11**
+Lines added: 36, lines removed: 18
+
+```diff
+@@ -218,33 +261,51 @@
+      ax.set_ylim(0, 1)
+  
+-     # Chart 2: Hallucination rate by frequency
+-     ax = axes[1]
+-     baseline_hall = [baseline_freq_metrics.get(b, {}).get("hallucination_rate", 0) for b in buckets]
+-     finetuned_hall = [finetuned_freq_metrics.get(b, {}).get("hallucination_rate", 0) for b in buckets]
+-     ax.bar(x - width/2, baseline_hall, width, label="Baseline (zero-shot)", color="#4ECDC4")
+-     ax.bar(x + width/2, finetuned_hall, width, label="Fine-tuned", color="#FF6B6B")
+-     ax.set_ylabel("Hallucination Rate")
+-     ax.set_title("Hallucination Rate by Entity Frequency")
++     # Chart 2: High-confidence error rate
++     ax = axes[0, 1]
++     b_vals = [baseline_freq_metrics.get(b, {}).get("high_conf_error_rate", 0) for b in buckets]
++     f_vals = [finetuned_freq_metrics.get(b, {}).get("high_conf_error_rate", 0) for b in buckets]
++     ax.bar(x - width/2, b_vals, width, label="Baseline (zero-shot)", color="#4ECDC4")
++     ax.bar(x + width/2, f_vals, width, label="Fine-tuned", color="#FF6B6B")
++     ax.set_ylabel("High-Confidence Error Rate")
++     ax.set_title("High-Confidence Errors by Entity Frequency")
+      ax.set_xticks(x)
+      ax.set_xticklabels(["Low", "Medium", "High"])
+      ax.legend()
+-     ax.set_ylim(0, 1)
++     ax.set_ylim(0, max(max(b_vals or [0.1]), max(f_vals or [0.1])) * 1.3)
+  
+-     # Chart 3: Overconfidence gap by frequency
+-     ax = axes[2]
+-     baseline_gap = [baseline_freq_metrics.get(b, {}).get("overconfidence_gap", 0) for b in buckets]
+-     finetuned_gap = [finetuned_freq_metrics.get(b, {}).get("overconfidence_gap", 0) for b in buckets]
+-     ax.bar(x - width/2, baseline_gap, width, label="Baseline (zero-shot)", color="#4ECDC4")
+-     ax.bar(x + width/2, finetuned_gap, width, label="Fine-tuned", color="#FF6B6B")
+-     ax.set_ylabel("Overconfidence Gap")
+-     ax.set_title("Overconfidence Gap by Entity Frequency")
++     # Chart 3: ECE
++     ax = axes[1, 0]
++     b_vals = [baseline_freq_metrics.get(b, {}).get("ece", 0) for b in buckets]
++     f_vals = [finetuned_freq_metrics.get(b, {}).get("ece", 0) for b in buckets]
++     ax.bar(x - width/2, b_vals, width, label="Baseline (zero-shot)", color="#4ECDC4")
++     ax.bar(x + width/2, f_vals, width, label="Fine-tuned", color="#FF6B6B")
++     ax.set_ylabel("ECE")
++     ax.set_title("Expected Calibration Error by Entity Frequency")
+      ax.set_xticks(x)
+      ax.set_xticklabels(["Low", "Medium", "High"])
+      ax.legend()
++ 
++     # Chart 4: Avg confidence (correct vs wrong)
++     ax = axes[1, 1]
++     b_correct = [baseline_freq_metrics.get(b, {}).get("avg_conf_correct", 0) for b in buckets]
++     b_wrong = [baseline_freq_metrics.get(b, {}).get("avg_conf_wrong", 0) for b in buckets]
++     f_correct = [finetuned_freq_metrics.get(b, {}).get("avg_conf_correct", 0) for b in buckets]
++     f_wrong = [finetuned_freq_metrics.get(b, {}).get("avg_conf_wrong", 0) for b in buckets]
++     w = 0.2
++     ax.bar(x - 1.5*w, b_correct, w, label="Baseline correct", color="#4ECDC4")
++     ax.bar(x - 0.5*w, b_wrong, w, label="Baseline wrong", color="#4ECDC4", alpha=0.5)
++     ax.bar(x + 0.5*w, f_correct, w, label="Fine-tuned correct", color="#FF6B6B")
++     ax.bar(x + 1.5*w, f_wrong, w, label="Fine-tuned wrong", color="#FF6B6B", alpha=0.5)
++     ax.set_ylabel("Avg Confidence")
++     ax.set_title("Confidence: Correct vs Wrong Predictions")
++     ax.set_xticks(x)
++     ax.set_xticklabels(["Low", "Medium", "High"])
++     ax.legend(fontsize=8)
++     ax.set_ylim(0, 1)
+  
+      plt.tight_layout()
+      chart_path = f"{config.OUTPUT_DIR}/frequency_analysis.png"
+      plt.savefig(chart_path, dpi=150)
+-     print(f"\n📊 Chart saved to {chart_path}")
++     print(f"\n📊 Frequency analysis chart saved to {chart_path}")
+      plt.close()
+  
+```
+
+**Chunk 12**
+Lines added: undefined, lines removed: 1
+
+```diff
+@@ -258,5 +319,4 @@
+      correct = np.array([1 if r["predicted_idx"] == r["true_label"] else 0 for r in results])
+  
+-     # Bin predictions by confidence
+      n_bins = 10
+      bin_edges = np.linspace(0, 1, n_bins + 1)
+```
+
+**Chunk 13**
+Lines added: 4, lines removed: 2
+
+```diff
+@@ -270,13 +330,15 @@
+              bin_accs.append(correct[mask].mean())
+              bin_confs.append(confidences[mask].mean())
+-             bin_counts.append(mask.sum())
++             bin_counts.append(int(mask.sum()))
+          else:
+              bin_accs.append(0)
+              bin_confs.append((bin_edges[i] + bin_edges[i + 1]) / 2)
+              bin_counts.append(0)
+  
++     ece = compute_ece(results)
++ 
+      fig, ax = plt.subplots(1, 1, figsize=(7, 7))
+      ax.plot([0, 1], [0, 1], "k--", label="Perfectly calibrated")
+-     ax.bar(bin_confs, bin_accs, width=0.08, alpha=0.7, color="#FF6B6B", label=mode_name)
++     ax.bar(bin_confs, bin_accs, width=0.08, alpha=0.7, color="#FF6B6B", label=f"{mode_name} (ECE={ece:.4f})")
+      ax.set_xlabel("Mean Predicted Confidence")
+      ax.set_ylabel("Actual Accuracy")
+```
+
+**Chunk 14**
+Lines added: 1, lines removed: undefined
+
+```diff
+@@ -296,4 +358,5 @@
+      print("=" * 60)
+      print("FEVER Hallucination &amp; Calibration Analysis")
++     print("Binary Classification: SUPPORTS vs REFUTES")
+      print("=" * 60)
+  
+```
+
+**Chunk 15**
+Lines added: 1, lines removed: 1
+
+```diff
+@@ -347,5 +410,5 @@
+              plot_calibration_curve(finetuned_results, "Fine-tuned")
+  
+-     # Comparison charts
++     # Comparison
+      if baseline_results and finetuned_results and not baseline_only:
+          print(f"\n{'#'*60}")
+```
+
+**Chunk 16**
+Lines added: 1, lines removed: 1
+
+```diff
+@@ -358,5 +421,5 @@
+          print(f"\n  {'Metric':&lt;30} {'Baseline':&gt;10} {'Fine-tuned':&gt;10} {'Delta':&gt;10}")
+          print(f"  {'-'*62}")
+-         for key in ["accuracy", "avg_confidence", "hallucination_rate", "overconfidence_gap"]:
++         for key in ["accuracy", "avg_confidence", "high_conf_error_rate", "ece", "overconfidence_gap"]:
+              b_val = b_overall.get(key, 0)
+              f_val = f_overall.get(key, 0)
+```
+
+**Chunk 17**
+Lines added: undefined, lines removed: 1
+
+```diff
+@@ -371,5 +434,4 @@
+  
+      # Save full analysis
+-     # Convert numpy types to native Python for JSON serialization
+      def convert(obj):
+          if isinstance(obj, (np.integer,)):
+```
+
+</details>
+
+</tool-use>
+
+---
+
+
+
+---
+
+Now let me update `config.py` and `train.py`:
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: C:\Users\dhalperin\OneDrive - NVIDIA Corporation\Documents\DL\DL-PROJECT\config.py</summary>
+
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: C:\Users\dhalperin\OneDrive - NVIDIA Corporation\Documents\DL\DL-PROJECT\train.py</summary>
+
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="task" data-tool-name="todo_write">
+<details><summary>Tool use: **todo_write** • Todo List</summary>
+
+- [x] Update preprocess_data.py: drop NEI, binary only, max freq multi-page
+- [x] Update analyze.py: add ECE metric, clean up for binary classification
+- [-] Update config.py and train.py if needed for binary setup
+- [ ] Push all changes to git
+- [ ] Retrain + re-evaluate on VM
+
+</details>
+</tool-use>
+
+---
+
+`train.py` is already solid — it pulls from `load_and_preprocess_fever()` which now handles the binary filtering. The only thing to update is `verify_setup.py` to reflect the new binary setup. Let me also update the `run_test_training.sh` to use the new pipeline:
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: C:\Users\dhalperin\OneDrive - NVIDIA Corporation\Documents\DL\DL-PROJECT\verify_setup.py</summary>
+
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: C:\Users\dhalperin\OneDrive - NVIDIA Corporation\Documents\DL\DL-PROJECT\run_test_training.sh</summary>
+
+</details>
+</tool-use>
+
+---
+
+Now let me update the `run_test_training.sh` to also run evaluation after training:
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="write">
+
+<details><summary>Tool use: **write** • Edit file: C:\Users\dhalperin\OneDrive - NVIDIA Corporation\Documents\DL\DL-PROJECT\run_test_training.sh</summary>
+
+**Chunk 1**
+Lines added: 6, lines removed: 5
+
+```diff
+@@ -1,12 +1,13 @@
+  #!/bin/bash
+- # Script to run test training and stop VM automatically
+- # This saves money by stopping the VM when training completes
++ # Full pipeline: preprocess → train → evaluate (baseline + finetuned) → analyze → stop VM
++ # Binary classification (SUPPORTS vs REFUTES only)
+  
+  echo "============================================================"
+- echo "Test Training with Auto-Shutdown"
++ echo "FEVER Full Pipeline (Test Mode)"
++ echo "Binary: SUPPORTS vs REFUTES"
+  echo "============================================================"
+  
+- # Step 1: Update config for test run
+- echo "Updating config for test run..."
++ # Step 1: Use test config
++ echo "Setting up test config (1000 train, 200 eval, 1 epoch)..."
+  cat &gt; config_test.py &lt;&lt; 'EOF'
+  """
+```
+
+**Chunk 2**
+Lines added: 1, lines removed: 1
+
+```diff
+@@ -19,5 +20,5 @@
+  MAX_SEQ_LEN = 512
+  
+- # Training Configuration - TEST MODE (small run)
++ # Training Configuration - TEST MODE
+  BATCH_SIZE = 4
+  GRADIENT_ACCUMULATION_STEPS = 4
+```
+
+**Chunk 3**
+Lines added: 1, lines removed: 1
+
+```diff
+@@ -41,5 +42,5 @@
+  EVAL_STEPS = 50
+  SAVE_STEPS = 50
+- REPORT_TO = "none"  # Disable wandb for test
++ REPORT_TO = "none"
+  
+  # Quantization (4-bit QLoRA)
+```
+
+**Chunk 4**
+Lines added: 60, lines removed: 14
+
+```diff
+@@ -50,31 +51,77 @@
+  EOF
+  
+- # Backup original config
+  cp config.py config_original.py
+- 
+- # Use test config
+  cp config_test.py config.py
+- 
+- echo "✅ Config updated for test run (1000 samples, 1 epoch)"
++ echo "✅ Config updated for test run"
++ 
++ # Step 2: Preprocess data (generates eval_metadata.json)
++ echo ""
++ echo "============================================================"
++ echo "Step 1/5: Preprocessing data..."
++ echo "============================================================"
++ python preprocess_data.py
++ if [ $? -ne 0 ]; then
++     echo "❌ Preprocessing failed!"
++     cp config_original.py config.py
++     exit 1
++ fi
+  
+- # Step 2: Run training
++ # Step 3: Baseline evaluation (zero-shot, before fine-tuning)
+  echo ""
+- echo "Starting training..."
+- echo "⚠️  VM will stop automatically when training completes"
++ echo "============================================================"
++ echo "Step 2/5: Baseline evaluation (zero-shot)..."
++ echo "============================================================"
++ python evaluate.py --mode baseline
++ if [ $? -ne 0 ]; then
++     echo "❌ Baseline evaluation failed!"
++     cp config_original.py config.py
++     exit 1
++ fi
++ 
++ # Step 4: Fine-tune
+  echo ""
+- 
++ echo "============================================================"
++ echo "Step 3/5: Fine-tuning..."
++ echo "============================================================"
+  python train.py
+- 
+- # Step 3: Restore original config
++ if [ $? -ne 0 ]; then
++     echo "❌ Training failed!"
++     cp config_original.py config.py
++     exit 1
++ fi
++ 
++ # Step 5: Fine-tuned evaluation
++ echo ""
++ echo "============================================================"
++ echo "Step 4/5: Fine-tuned evaluation..."
++ echo "============================================================"
++ python evaluate.py --mode finetuned
++ if [ $? -ne 0 ]; then
++     echo "❌ Fine-tuned evaluation failed!"
++     cp config_original.py config.py
++     exit 1
++ fi
++ 
++ # Step 6: Analysis
++ echo ""
++ echo "============================================================"
++ echo "Step 5/5: Analysis..."
++ echo "============================================================"
++ python analyze.py
++ if [ $? -ne 0 ]; then
++     echo "⚠️  Analysis had issues (non-fatal)"
++ fi
++ 
++ # Restore config
+  cp config_original.py config.py
++ echo ""
+  echo "✅ Original config restored"
+  
+- # Step 4: Stop VM
++ # Stop VM
+  echo ""
+  echo "============================================================"
+- echo "Training complete! Stopping VM to save money..."
++ echo "Pipeline complete! Stopping VM to save money..."
+  echo "============================================================"
+  
+- # Try to stop VM using gcloud
+  INSTANCE_NAME=$(curl -s -H "Metadata-Flavor: Google" http://metadata.google.internal/computeMetadata/v1/instance/name)
+  ZONE=$(curl -s -H "Metadata-Flavor: Google" http://metadata.google.internal/computeMetadata/v1/instance/zone | cut -d/ -f4)
+```
+
+**Chunk 5**
+Lines added: 10, lines removed: 12
+
+```diff
+@@ -83,23 +130,21 @@
+      echo "Stopping VM: $INSTANCE_NAME in zone: $ZONE"
+      gcloud compute instances stop "$INSTANCE_NAME" --zone="$ZONE" 2&gt;/dev/null
+-     
+      if [ $? -eq 0 ]; then
+-         echo "✅ VM stop command sent successfully!"
+-         echo "VM will shut down in a few moments"
++         echo "✅ VM stop command sent!"
+      else
+-         echo "⚠️  Could not stop VM automatically (gcloud not configured)"
+-         echo "Please stop it manually from GCP Console"
++         echo "⚠️  Could not stop VM automatically"
++         echo "   Please stop it manually from GCP Console"
+      fi
+  else
+      echo "⚠️  Could not detect VM info"
+-     echo "Please stop VM manually from GCP Console"
++     echo "   Please stop VM manually from GCP Console"
+  fi
+  
+  echo ""
+- echo "✅ Results saved to: ./results/"
+- echo "✅ You can start the VM again anytime to continue work"
+- echo ""
+- echo "To start VM again:"
+- echo "  gcloud compute instances start $INSTANCE_NAME --zone=$ZONE"
+- echo "  Or use GCP Console → VM instances → Start"
++ echo "✅ All results saved to: ./results/"
++ echo "   eval_results_baseline.json"
++ echo "   eval_results_finetuned.json"
++ echo "   full_analysis.json"
++ echo "   calibration_*.png"
++ echo "   frequency_analysis.png"
+  
+```
+
+</details>
+
+</tool-use>
+
+---
+
+<tool-use data-tool-type="task" data-tool-name="todo_write">
+<details><summary>Tool use: **todo_write** • Todo List</summary>
+
+- [x] Update preprocess_data.py: drop NEI, binary only, max freq multi-page
+- [x] Update analyze.py: add ECE metric, clean up for binary classification
+- [x] Update config.py and train.py if needed for binary setup
+- [-] Push all changes to git
+- [ ] Retrain + re-evaluate on VM
+
+</details>
+</tool-use>
+
+---
+
+Let me check for any lint issues before pushing:
+
+---
+
+<tool-use data-tool-type="generic" data-tool-name="read_lints">
+<details>
+          <summary>Tool use: **read_lints** • Read lints for 3 files</summary>
+      
+Lint paths:
+
+- `C:\Users\dhalperin\OneDrive - NVIDIA Corporation\Documents\DL\DL-PROJECT\preprocess_data.py`
+- `C:\Users\dhalperin\OneDrive - NVIDIA Corporation\Documents\DL\DL-PROJECT\evaluate.py`
+- `C:\Users\dhalperin\OneDrive - NVIDIA Corporation\Documents\DL\DL-PROJECT\analyze.py`
+
+Lint results
+
+
+**No lint errors found**
+</details>
+</tool-use>
+
+---
+
+Clean. Now let's push to git:
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **run_terminal_cmd** • Run command: cd "C:\Users\dhalperin\OneDrive - NVIDIA Corporation\Documents\DL\DL-PROJECT" && git add -A && git commit -m "Binary classification: drop NEI, add ECE, max-freq multi-page, full pipeline" && git push</summary>
+
+```bash
+cd "C:\Users\dhalperin\OneDrive - NVIDIA Corporation\Documents\DL\DL-PROJECT" && git add -A && git commit -m "Binary classification: drop NEI, add ECE, max-freq multi-page, full pipeline" && git push
+```
+
+```
+At C:\Users\dhalperin\AppData\Local\Temp\ps-script-a79694cc-4eda-4739-b443-9b3495b1fbf7.ps1:83 char:79
++ ... rin\OneDrive - NVIDIA Corporation\Documents\DL\DL-PROJECT" &amp;&amp; git add ...
++                                                                ~~
+The token '&amp;&amp;' is not a valid statement separator in this version.
+At C:\Users\dhalperin\AppData\Local\Temp\ps-script-a79694cc-4eda-4739-b443-9b3495b1fbf7.ps1:83 char:93
++ ...  NVIDIA Corporation\Documents\DL\DL-PROJECT" &amp;&amp; git add -A &amp;&amp; git com ...
++                                                                ~~
+The token '&amp;&amp;' is not a valid statement separator in this version.
+At C:\Users\dhalperin\AppData\Local\Temp\ps-script-a79694cc-4eda-4739-b443-9b3495b1fbf7.ps1:83 char:189
++ ... on: drop NEI, add ECE, max-freq multi-page, full pipeline" &amp;&amp; git pus ...
++                                                                ~~
+The token '&amp;&amp;' is not a valid statement separator in this version.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : InvalidEndOfLine
+ 
+
+```
+</details>
+</tool-use>
+
+---
+
+PowerShell needs semicolons instead of `&&`:
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **run_terminal_cmd** • Run command: cd "C:\Users\dhalperin\OneDrive - NVIDIA Corporation\Documents\DL\DL-PROJECT"; git add -A; git commit -m "Binary classification: drop NEI, add ECE, max-freq multi-page, full pipeline"; git push</summary>
+
+```bash
+cd "C:\Users\dhalperin\OneDrive - NVIDIA Corporation\Documents\DL\DL-PROJECT"; git add -A; git commit -m "Binary classification: drop NEI, add ECE, max-freq multi-page, full pipeline"; git push
+```
+
+```
+git : The term 'git' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the 
+spelling of the name, or if a path was included, verify that the path is correct and try again.
+At C:\Users\dhalperin\AppData\Local\Temp\ps-script-61a11d68-17eb-4857-8455-05575f6ff516.ps1:83 char:80
++ ... n\OneDrive - NVIDIA Corporation\Documents\DL\DL-PROJECT"; git add -A; ...
++                                                               ~~~
+    + CategoryInfo          : ObjectNotFound: (git:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+git : The term 'git' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the 
+spelling of the name, or if a path was included, verify that the path is correct and try again.
+At C:\Users\dhalperin\AppData\Local\Temp\ps-script-61a11d68-17eb-4857-8455-05575f6ff516.ps1:83 char:92
++ ...  NVIDIA Corporation\Documents\DL\DL-PROJECT"; git add -A; git commit  ...
++                                                               ~~~
+    + CategoryInfo          : ObjectNotFound: (git:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+git : The term 'git' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the 
+spelling of the name, or if a path was included, verify that the path is correct and try again.
+At C:\Users\dhalperin\AppData\Local\Temp\ps-script-61a11d68-17eb-4857-8455-05575f6ff516.ps1:83 char:186
++ ... ion: drop NEI, add ECE, max-freq multi-page, full pipeline"; git push
++                                                                  ~~~
+    + CategoryInfo          : ObjectNotFound: (git:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+
+```
+</details>
+</tool-use>
+
+---
+
+Need to use the full path to git:
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **run_terminal_cmd** • Run command: & "C:\Program Files\Git\bin\git.exe" -C "C:\Users\dhalperin\OneDrive - NVIDIA Corporation\Documents\DL\DL-PROJECT" add -A</summary>
+
+```bash
+& "C:\Program Files\Git\bin\git.exe" -C "C:\Users\dhalperin\OneDrive - NVIDIA Corporation\Documents\DL\DL-PROJECT" add -A
+```
+
+```
+warning: in the working copy of 'run_test_training.sh', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'create_files_on_vm.sh', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'fix_issues.sh', LF will be replaced by CRLF the next time Git touches it
+
+```
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **run_terminal_cmd** • Run command: & "C:\Program Files\Git\bin\git.exe" -C "C:\Users\dhalperin\OneDrive - NVIDIA Corporation\Documents\DL\DL-PROJECT" commit -m "Binary classification: drop NEI, add ECE, max-freq multi-page, full pipeline"</summary>
+
+```bash
+& "C:\Program Files\Git\bin\git.exe" -C "C:\Users\dhalperin\OneDrive - NVIDIA Corporation\Documents\DL\DL-PROJECT" commit -m "Binary classification: drop NEI, add ECE, max-freq multi-page, full pipeline"
+```
+
+```
+[main 5b88fd0] Binary classification: drop NEI, add ECE, max-freq multi-page, full pipeline
+ 11 files changed, 12081 insertions(+), 146 deletions(-)
+ create mode 100644 PAPERS/on calibration of modern NN.pdf
+ create mode 100644 UPLOAD_INSTRUCTIONS.md
+ create mode 100644 create_files_on_vm.sh
+ create mode 100644 fix_issues.sh
+ create mode 100644 train_and_shutdown.py
+
+```
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **run_terminal_cmd** • Run command: & "C:\Program Files\Git\bin\git.exe" -C "C:\Users\dhalperin\OneDrive - NVIDIA Corporation\Documents\DL\DL-PROJECT" push</summary>
+
+```bash
+& "C:\Program Files\Git\bin\git.exe" -C "C:\Users\dhalperin\OneDrive - NVIDIA Corporation\Documents\DL\DL-PROJECT" push
+```
+
+```
+To https://github.com/DCodeGenius/DL-PROJECT.git
+   5255643..5b88fd0  main -&gt; main
+
+```
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="task" data-tool-name="todo_write">
+<details><summary>Tool use: **todo_write** • Todo List</summary>
+
+- [x] Update preprocess_data.py: drop NEI, binary only, max freq multi-page
+- [x] Update analyze.py: add ECE metric, clean up for binary classification
+- [x] Update config.py and train.py if needed for binary setup
+- [x] Push all changes to git
+- [-] Retrain + re-evaluate on VM
+
+</details>
+</tool-use>
+
+---
+
+All code is pushed. Here's a summary of everything that changed and what to do on the VM:
+
+---
+
+## ✅ All changes pushed to git
+
+### What changed:
+
+**`preprocess_data.py`** — Major rewrite:
+- **Drops NEI** — only keeps SUPPORTS (0) and REFUTES (1)
+- **Handles multi-page claims** — uses `max(freq)` across all referenced pages
+- **Computes frequencies on train split only** — no data leakage
+- **Saves `page_frequencies.json`** with full frequency data
+- Prompts updated to binary: "SUPPORTS (true) or REFUTES (false)"
+
+**`evaluate.py`** — Rewritten for cleaner confidence extraction:
+- Gets logits for the two label tokens (SUPPORTS, REFUTES) only
+- Applies softmax over just those two → gives proper probability-based confidence
+- Saves `prob_supports` and `prob_refutes` per example for analysis
+
+**`analyze.py`** — Added ECE and restructured:
+- **ECE (Expected Calibration Error)** — proper 10-bin calibration metric
+- **High-confidence error rate** — our "hallucination" metric (wrong + confidence > 0.7)
+- **Overconfidence gap** = avg_confidence − accuracy
+- Frequency bucketing uses terciles (33rd/66th percentiles)
+- Charts: calibration curves, 4-panel frequency comparison
+
+**`run_test_training.sh`** — Now runs the **full pipeline**:
+1. Preprocess → 2. Baseline eval → 3. Train → 4. Fine-tuned eval → 5. Analyze → Stop VM
+
+### On the VM, run:
+
+```bash
+cd ~/DL-PROJECT
+git stash
+git pull
+source venv/bin/activate
+bash run_test_training.sh
+```
+
+This will run the entire pipeline (test mode: 1000 train, 200 eval, 1 epoch) and auto-stop the VM when done. All results will be in `./results/`.
+
+---
+
+_**User (2026-02-12 12:54Z)**_
+
+Question: do NEI labeled samples also have a wikipedia page connected to them as evidence? we can classify their freq?
+
+---
+
+_**Agent (model claude-4.6-opus-high-thinking, mode Agent)**_
+
+
+
+
+
+---
+
+<think><details><summary>Thought Process</summary>
+The user is asking whether NEI (Not Enough Info) examples in the FEVER dataset also have Wikipedia page references in their evidence fields. This is a good question — let me think about what I know about the FEVER dataset structure.
+
+In the FEVER dataset:
+- **SUPPORTS** and **REFUTES** claims have gold evidence — specific sentences from specific Wikipedia pages that support or refute the claim.
+- **NOT ENOUGH INFO (NEI)** claims do **not** have gold evidence. The dataset was constructed so that NEI claims are claims for which annotators could not find sufficient evidence in Wikipedia to either support or refute.
+
+However, in the HuggingFace version of the dataset, the `evidence_wiki_url` field might still contain something for NEI examples — it could be empty, a placeholder, or potentially reference a page that was considered but deemed insufficient.
+
+
+Based on what we observed in our earlier analysis, NEI examples had empty or missing evidence URLs, which explains why we encountered 477 "UNKNOWN" wiki pages — those were the NEI claims without valid evidence references. The original FEVER dataset structure stores evidence as lists of tuples containing annotation IDs, evidence IDs, wiki URLs, and sentence IDs for SUPPORTS/REFUTES claims, but NEI claims simply lack this structured evidence data. For NEI examples, the evidence fields are intentionally empty or contain placeholders—that's the fundamental design of the dataset. While a claim might reference a specific entity like "Barack Obama," FEVER doesn't explicitly store which Wikipedia page should have been checked; the evidence structure itself is what determines the link to Wikipedia, and for NEI that's blank by design.</details></think>
+
+---
+
+Great question. Short answer: **mostly no**, and that's exactly why dropping NEI is the clean choice.
+
+Here's how it works in FEVER:
+
+| Label | Gold evidence? | `evidence_wiki_url` field |
+|-------|---------------|--------------------------|
+| **SUPPORTS** | ✅ Yes — specific Wikipedia sentences | Populated (e.g., `"Barack_Obama"`) |
+| **REFUTES** | ✅ Yes — specific Wikipedia sentences | Populated |
+| **NEI** | ❌ No gold evidence | Empty `""` or placeholder |
+
+NEI was constructed by design: annotators wrote claims for which they *couldn't find* sufficient evidence in Wikipedia. So the dataset intentionally leaves the evidence fields empty/undefined for NEI.
+
+That's why we were seeing ~477 examples with `wiki_page = "UNKNOWN"` in the earlier analysis — those were the NEI examples with no evidence page to map to a frequency.
+
+**Could you infer the page from the claim text?** Technically yes (e.g., "Tom Hanks was born in 1990" → probably about the "Tom Hanks" page). But that would require:
+- Named entity recognition or string matching against Wikipedia titles
+- It's noisy and introduces a new variable into your experiment
+
+**Bottom line:** By keeping only SUPPORTS and REFUTES, every example has a clean gold-evidence page → clean frequency mapping → clean experimental comparison. NEI adds noise without adding signal for your specific research question (does training exposure frequency affect hallucination?).
+
+You're already set — the code we just pushed filters NEI out. Ready to run on the VM whenever you are.
+
+---
+
+_**User (2026-02-12 12:54Z)**_
+
+have you cahnged also the instructions for the model to know that now it cant predict NEI?
+
+---
+
+_**Agent (model claude-4.6-opus-high-thinking, mode Agent)**_
+
+
+
+Yes! The prompt was updated in both `preprocess_data.py` (training) and `evaluate.py` (inference). Here's what changed:
+
+**Before (3-way):**
+> "classify the following claim as SUPPORTS (true), REFUTES (false), or NOT ENOUGH INFO"
+
+**After (binary):**
+> "classify the following claim as SUPPORTS (true) or REFUTES (false)"
+
+You can see it in the two files:
+
+**`preprocess_data.py`** — training prompt (line ~82):
+
+```82:87:C:\Users\dhalperin\OneDrive - NVIDIA Corporation\Documents\DL\DL-PROJECT\preprocess_data.py
+        text = (
+            f"### Instruction:\n"
+            f"Based on your knowledge, classify the following claim as "
+            f"SUPPORTS (true) or REFUTES (false).\n\n"
+            f"### Claim:\n{claim}\n\n"
+            f"### Answer:\n{label}"
+```
+
+**`evaluate.py`** — inference prompt (line ~77):
+
+```76:83:C:\Users\dhalperin\OneDrive - NVIDIA Corporation\Documents\DL\DL-PROJECT\evaluate.py
+def build_prompt(claim):
+    """Build claim-only prompt matching the training format (binary)."""
+    return (
+        f"### Instruction:\n"
+        f"Based on your knowledge, classify the following claim as "
+        f"SUPPORTS (true) or REFUTES (false).\n\n"
+        f"### Claim:\n{claim}\n\n"
+        f"### Answer:\n"
+```
+
+And in `evaluate.py`, the confidence is computed by taking softmax over **only** the SUPPORTS and REFUTES token logits — so even if the model "wants" to say something else, we force it into a binary choice and get a clean probability distribution between the two labels. This is already pushed to git.
+
+---
+
+_**User (2026-02-12 12:54Z)**_
+
+ i did git pull know what?
+
+---
+
+_**Agent (model claude-4.6-opus-high-thinking, mode Agent)**_
+
+
+
+Now run the full pipeline! On the VM:
+
+```bash
+source venv/bin/activate
+bash run_test_training.sh
+```
+
+This will execute all 5 steps automatically:
+1. **Preprocess** — filter to binary, compute page frequencies
+2. **Baseline eval** — zero-shot model on 200 eval examples
+3. **Train** — fine-tune on 1000 examples, 1 epoch (test mode)
+4. **Fine-tuned eval** — evaluate the trained model
+5. **Analyze** — generate metrics, charts, ECE
+
+Then it auto-stops the VM to save money. All results will be saved in `./results/`.
+
+---
+
+_**User (2026-02-12 12:54Z)**_
+
+(venv) danielh3@fever-gpu-vm:~/DL-PROJECT$ bash run_test_training.sh
+============================================================
+FEVER Full Pipeline (Test Mode)
+Binary: SUPPORTS vs REFUTES
+============================================================
+Setting up test config (1000 train, 200 eval, 1 epoch)...
+✅ Config updated for test run
+
+============================================================
+Step 1/5: Preprocessing data...
+============================================================
+Loading FEVER dataset...
+Using the latest cached version of the dataset since fever couldn't be found on the Hugging Face Hub
+Found the latest cached dataset configuration 'v1.0' at /home/danielh3/.cache/huggingface/datasets/fever/v1.0/1.0.0/7f8936e0558704771b08c7ce9cc202071b29a0050603374507ba61d23c00a58e (last modified on Sat Feb 14 12:33:11 2026).
+Full train size: 311431
+Full labelled dev size: 37566
+
+Filtering to binary classification (dropping NEI)...
+Filter: 100%|███████████████████████████████████████████████████████████████████████████████| 311431/311431 [00:02<00:00, 142622.67 examples/s]
+Filter: 100%|█████████████████████████████████████████████████████████████████████████████████| 37566/37566 [00:00<00:00, 143548.05 examples/s]
+Binary train size: 263822
+Binary dev size: 28625
+
+Computing Wikipedia page frequencies (train split only)...
+Found 12641 unique Wikipedia pages
+Saved page frequencies to ./results/page_frequencies.json
+
+Frequency stats across 12641 pages:
+  Min: 1, Max: 713, Mean: 21.0, Median: 3
+
+Preprocessing training data...
+Map: 100%|████████████████████████████████████████████████████████████████████████████████████████| 1000/1000 [00:00<00:00, 7820.90 examples/s]
+Preprocessing evaluation data...
+Map: 100%|██████████████████████████████████████████████████████████████████████████████████████████| 200/200 [00:00<00:00, 7123.96 examples/s]
+Saved eval metadata to ./results/eval_metadata.json
+
+✅ Preprocessing complete!
+Train examples: 1000
+Eval examples: 200
+
+Sample formatted example:
+### Instruction:
+Based on your knowledge, classify the following claim as SUPPORTS (true) or REFUTES (false).
+
+### Claim:
+Aishwarya Rai refused to be in any Tamil film.
+
+### Answer:
+REFUTES...
+Wiki page: Aishwarya Rai
+Page frequency: 182
+
+✅ Data ready for training!
+
+============================================================
+Step 2/5: Baseline evaluation (zero-shot)...
+============================================================
+Loaded 200 eval examples
+Loading model in baseline mode...
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights: 100%|████████████████████████████████████████████████| 291/291 [02:16<00:00,  2.13it/s, Materializing param=model.norm.weight]
+✅ Model loaded!
+
+Label token IDs:
+  SUPPORTS → token 50 ('S')
+  REFUTES → token 6124 ('REF')
+
+🚀 Running baseline evaluation on 200 examples...
+Evaluating: 100%|████████████████████████████████████████████████████████████████████████████████████████████| 200/200 [00:34<00:00,  5.79it/s]
+
+============================================================
+Results (baseline)
+============================================================
+Accuracy: 165/200 = 0.8250 (82.5%)
+  SUPPORTS: 88/95 = 0.9263
+  REFUTES: 77/105 = 0.7333
+
+Avg confidence (all):     0.8209
+Avg confidence (correct): 0.8415
+Avg confidence (wrong):   0.7240
+
+✅ Results saved to ./results/eval_results_baseline.json
+✅ Summary saved to ./results/eval_summary_baseline.json
+
+============================================================
+Step 3/5: Fine-tuning...
+============================================================
+============================================================
+FEVER Fine-Tuning Pipeline
+============================================================
+Loading FEVER dataset...
+Using the latest cached version of the dataset since fever couldn't be found on the Hugging Face Hub
+Found the latest cached dataset configuration 'v1.0' at /home/danielh3/.cache/huggingface/datasets/fever/v1.0/1.0.0/7f8936e0558704771b08c7ce9cc202071b29a0050603374507ba61d23c00a58e (last modified on Sat Feb 14 13:03:04 2026).
+Full train size: 311431
+Full labelled dev size: 37566
+
+Filtering to binary classification (dropping NEI)...
+Filter: 100%|███████████████████████████████████████████████████████████████████████████████| 311431/311431 [00:02<00:00, 136103.54 examples/s]
+Filter: 100%|█████████████████████████████████████████████████████████████████████████████████| 37566/37566 [00:00<00:00, 143919.64 examples/s]
+Binary train size: 263822
+Binary dev size: 28625
+
+Computing Wikipedia page frequencies (train split only)...
+Found 12641 unique Wikipedia pages
+Saved page frequencies to ./results/page_frequencies.json
+
+Frequency stats across 12641 pages:
+  Min: 1, Max: 713, Mean: 21.0, Median: 3
+
+Preprocessing training data...
+Map: 100%|████████████████████████████████████████████████████████████████████████████████████████| 1000/1000 [00:00<00:00, 6970.19 examples/s]
+Preprocessing evaluation data...
+Map: 100%|██████████████████████████████████████████████████████████████████████████████████████████| 200/200 [00:00<00:00, 6200.24 examples/s]
+Saved eval metadata to ./results/eval_metadata.json
+
+✅ Preprocessing complete!
+Train examples: 1000
+Eval examples: 200
+
+Sample formatted example:
+### Instruction:
+Based on your knowledge, classify the following claim as SUPPORTS (true) or REFUTES (false).
+
+### Claim:
+Aishwarya Rai refused to be in any Tamil film.
+
+### Answer:
+REFUTES...
+Wiki page: Aishwarya Rai
+Page frequency: 182
+Loading model: meta-llama/Meta-Llama-3.1-8B-Instruct
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights: 100%|████████████████████████████████████████████████| 291/291 [01:18<00:00,  3.70it/s, Materializing param=model.norm.weight]
+✅ Model and tokenizer loaded!
+trainable params: 41,943,040 || all params: 8,072,204,288 || trainable%: 0.5196
+
+Tokenizing datasets...
+Map: 100%|█████████████████████████████████████████████████████████████████████████████████████████| 1000/1000 [00:01<00:00, 857.38 examples/s]
+Map: 100%|██████████████████████████████████████████████████████████████████████████████████████████| 200/200 [00:00<00:00, 1702.89 examples/s]
+✅ Tokenization complete!
+
+🚀 Starting training...
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'eos_token_id': 128009, 'pad_token_id': 128009}.
+{'loss': '1.193', 'grad_norm': '0.6211', 'learning_rate': '0.0001675', 'epoch': '0.4'}                                                         
+{'loss': '0.6299', 'grad_norm': '0.5518', 'learning_rate': '3.25e-05', 'epoch': '0.8'}                                                         
+{'eval_loss': '0.7177', 'eval_runtime': '62.58', 'eval_samples_per_second': '3.196', 'eval_steps_per_second': '0.399', 'epoch': '0.8'}         
+{'train_runtime': '1130', 'train_samples_per_second': '0.885', 'train_steps_per_second': '0.056', 'train_loss': '0.8477', 'epoch': '1'}        
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 63/63 [18:49<00:00, 17.93s/it]
+
+✅ Training complete! Model saved to: ./results/final_model
+
+============================================================
+Step 4/5: Fine-tuned evaluation...
+============================================================
+Loaded 200 eval examples
+Loading model in finetuned mode...
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights: 100%|████████████████████████████████████████████████| 291/291 [01:44<00:00,  2.79it/s, Materializing param=model.norm.weight]
+✅ Model loaded!
+
+Label token IDs:
+  SUPPORTS → token 50 ('S')
+  REFUTES → token 6124 ('REF')
+
+🚀 Running finetuned evaluation on 200 examples...
+Evaluating: 100%|████████████████████████████████████████████████████████████████████████████████████████████| 200/200 [00:40<00:00,  4.94it/s]
+
+============================================================
+Results (finetuned)
+============================================================
+Accuracy: 164/200 = 0.8200 (82.0%)
+  SUPPORTS: 91/95 = 0.9579
+  REFUTES: 73/105 = 0.6952
+
+Avg confidence (all):     0.8767
+Avg confidence (correct): 0.9070
+Avg confidence (wrong):   0.7384
+
+✅ Results saved to ./results/eval_results_finetuned.json
+✅ Summary saved to ./results/eval_summary_finetuned.json
+
+============================================================
+Step 5/5: Analysis...
+============================================================
+============================================================
+FEVER Hallucination & Calibration Analysis
+Binary Classification: SUPPORTS vs REFUTES
+============================================================
+  Merged wiki page data for 200/200 examples
+  Merged wiki page data for 200/200 examples
+
+############################################################
+# BASELINE (Zero-Shot)
+############################################################
+
+--- OVERALL ---
+
+  Metric                              Value
+  ------------------------------------------
+  Total examples                        200
+  Correct                               165
+  Accuracy                           0.8250
+  Avg confidence (all)               0.8209
+  Avg confidence (correct)           0.8415
+  Avg confidence (wrong)             0.7240
+  High-conf error count                  21
+  High-conf error rate               0.1050
+  ECE                                0.0326
+  Overconfidence gap                -0.0041
+
+============================================================
+Frequency Analysis: Baseline
+============================================================
+
+Frequency distribution (200 examples with known pages):
+  Min: 0, Max: 83, Mean: 2.1
+  Low/Medium boundary: 6
+  Medium/High boundary: 17
+  low: 185 examples
+  medium: 10 examples
+  high: 5 examples
+
+--- LOW frequency (185 examples) ---
+
+  Metric                              Value
+  ------------------------------------------
+  Total examples                        185
+  Correct                               152
+  Accuracy                           0.8216
+  Avg confidence (all)               0.8192
+  Avg confidence (correct)           0.8414
+  Avg confidence (wrong)             0.7168
+  High-conf error count                  19
+  High-conf error rate               0.1027
+  ECE                                0.0371
+  Overconfidence gap                -0.0025
+
+--- MEDIUM frequency (10 examples) ---
+
+  Metric                              Value
+  ------------------------------------------
+  Total examples                         10
+  Correct                                 9
+  Accuracy                           0.9000
+  Avg confidence (all)               0.8357
+  Avg confidence (correct)           0.8446
+  Avg confidence (wrong)             0.7549
+  High-conf error count                   1
+  High-conf error rate               0.1000
+  ECE                                0.1663
+  Overconfidence gap                -0.0643
+
+--- HIGH frequency (5 examples) ---
+
+  Metric                              Value
+  ------------------------------------------
+  Total examples                          5
+  Correct                                 4
+  Accuracy                           0.8000
+  Avg confidence (all)               0.8568
+  Avg confidence (correct)           0.8378
+  Avg confidence (wrong)             0.9325
+  High-conf error count                   1
+  High-conf error rate               0.2000
+  ECE                                0.2820
+  Overconfidence gap                 0.0568
+
+============================================================
+Per-Label Analysis: Baseline
+============================================================
+
+--- SUPPORTS (95 examples) ---
+
+  Metric                              Value
+  ------------------------------------------
+  Total examples                         95
+  Correct                                88
+  Accuracy                           0.9263
+  Avg confidence (all)               0.8459
+  Avg confidence (correct)           0.8637
+  Avg confidence (wrong)             0.6226
+  High-conf error count                   2
+  High-conf error rate               0.0211
+  ECE                                0.1067
+  Overconfidence gap                -0.0804
+
+--- REFUTES (105 examples) ---
+
+  Metric                              Value
+  ------------------------------------------
+  Total examples                        105
+  Correct                                77
+  Accuracy                           0.7333
+  Avg confidence (all)               0.7984
+  Avg confidence (correct)           0.8162
+  Avg confidence (wrong)             0.7494
+  High-conf error count                  19
+  High-conf error rate               0.1810
+  ECE                                0.0952
+  Overconfidence gap                 0.0650
+📊 Calibration chart saved to ./results/calibration_baseline.png
+
+############################################################
+# FINE-TUNED
+############################################################
+
+--- OVERALL ---
+
+  Metric                              Value
+  ------------------------------------------
+  Total examples                        200
+  Correct                               164
+  Accuracy                           0.8200
+  Avg confidence (all)               0.8767
+  Avg confidence (correct)           0.9070
+  Avg confidence (wrong)             0.7384
+  High-conf error count                  21
+  High-conf error rate               0.1050
+  ECE                                0.0616
+  Overconfidence gap                 0.0567
+
+============================================================
+Frequency Analysis: Fine-tuned
+============================================================
+
+Frequency distribution (200 examples with known pages):
+  Min: 0, Max: 83, Mean: 2.1
+  Low/Medium boundary: 6
+  Medium/High boundary: 17
+  low: 185 examples
+  medium: 10 examples
+  high: 5 examples
+
+--- LOW frequency (185 examples) ---
+
+  Metric                              Value
+  ------------------------------------------
+  Total examples                        185
+  Correct                               151
+  Accuracy                           0.8162
+  Avg confidence (all)               0.8731
+  Avg confidence (correct)           0.9059
+  Avg confidence (wrong)             0.7279
+  High-conf error count                  19
+  High-conf error rate               0.1027
+  ECE                                0.0623
+  Overconfidence gap                 0.0569
+
+--- MEDIUM frequency (10 examples) ---
+
+  Metric                              Value
+  ------------------------------------------
+  Total examples                         10
+  Correct                                 9
+  Accuracy                           0.9000
+  Avg confidence (all)               0.9288
+  Avg confidence (correct)           0.9327
+  Avg confidence (wrong)             0.8933
+  High-conf error count                   1
+  High-conf error rate               0.1000
+  ECE                                0.1499
+  Overconfidence gap                 0.0288
+
+--- HIGH frequency (5 examples) ---
+
+  Metric                              Value
+  ------------------------------------------
+  Total examples                          5
+  Correct                                 4
+  Accuracy                           0.8000
+  Avg confidence (all)               0.9030
+  Avg confidence (correct)           0.8938
+  Avg confidence (wrong)             0.9399
+  High-conf error count                   1
+  High-conf error rate               0.2000
+  ECE                                0.2398
+  Overconfidence gap                 0.1030
+
+============================================================
+Per-Label Analysis: Fine-tuned
+============================================================
+
+--- SUPPORTS (95 examples) ---
+
+  Metric                              Value
+  ------------------------------------------
+  Total examples                         95
+  Correct                                91
+  Accuracy                           0.9579
+  Avg confidence (all)               0.9158
+  Avg confidence (correct)           0.9279
+  Avg confidence (wrong)             0.6403
+  High-conf error count                   1
+  High-conf error rate               0.0105
+  ECE                                0.0578
+  Overconfidence gap                -0.0421
+
+--- REFUTES (105 examples) ---
+
+  Metric                              Value
+  ------------------------------------------
+  Total examples                        105
+  Correct                                73
+  Accuracy                           0.6952
+  Avg confidence (all)               0.8413
+  Avg confidence (correct)           0.8810
+  Avg confidence (wrong)             0.7506
+  High-conf error count                  20
+  High-conf error rate               0.1905
+  ECE                                0.1460
+  Overconfidence gap                 0.1460
+📊 Calibration chart saved to ./results/calibration_fine-tuned.png
+
+############################################################
+# COMPARISON: Baseline vs Fine-tuned
+############################################################
+
+  Metric                           Baseline Fine-tuned      Delta
+  --------------------------------------------------------------
+  accuracy                           0.8250     0.8200   -0.0050
+  avg_confidence                     0.8209     0.8767 +   0.0557
+  high_conf_error_rate               0.1050     0.1050    0.0000
+  ece                                0.0326     0.0616 +   0.0290
+  overconfidence_gap                -0.0041     0.0567 +   0.0607
+
+📊 Frequency analysis chart saved to ./results/frequency_analysis.png
+
+✅ Full analysis saved to ./results/full_analysis.json
+
+✅ Original config restored
+
+============================================================
+Pipeline complete! Stopping VM to save money...
+============================================================
+Stopping VM: fever-gpu-vm in zone: us-central1-a
+⚠️  Could not stop VM automatically
+   Please stop it manually from GCP Console
+
+✅ All results saved to: ./results/
+   eval_results_baseline.json
+   eval_results_finetuned.json
+   full_analysis.json
+   calibration_*.png
+   frequency_analysis.png
+
+---
+
+_**Agent (model claude-4.6-opus-high-thinking, mode Agent)**_
+
+
+
+
+
+---
+
+<think><details><summary>Thought Process</summary>
+The pipeline ran successfully! Let me analyze the results carefully.
+
+Key observations:
+
+1. **Preprocessing worked perfectly**: Binary filtering dropped NEI, leaving 263K train / 28K dev. Page frequencies computed correctly (12,641 unique pages, median freq = 3, max = 713).
+
+2. **Frequency bucket problem**: The distribution is extremely skewed. 185/200 eval examples are "low", only 10 "medium" and 5 "high". This is because the eval set is only 200 examples — too small to get meaningful frequency analysis. The tercile boundaries (6 and 17) are being applied to a very small sample.
+
+3. **Baseline results** (82.5% accuracy):
+
+
+The model is well-calibrated with an ECE of 0.0326 and almost no overconfidence, showing strong recall on SUPPORTS (92.6%) but weaker on REFUTES (73.3%), with confidence scores of 0.84 when correct and 0.72 when wrong.
+
+4. **Fine-tuned results** (82.0% accuracy):
+Fine-tuning slightly decreased accuracy by 0.5% while increasing confidence by 5.6%, which caused calibration to degrade—ECE nearly doubled from 0.032 to 0.062 and the model shifted from being slightly underconfident to overconfident.
+
+5. **Key finding**: The fine-tuned model became more confident without improving accuracy, which is a meaningful result showing how fine-tuning can introduce overconfidence; SUPPORTS recall improved to 95.8% but REFUTES recall dropped to 69.5%, revealing a class bias.
+
+6. **Issues to address**: The evaluation set is too small with imbalanced frequency buckets, the training set of 1000 examples is minimal compared to the planned 20K for the full run, and the model developed a SUPPORTS bias after fine-tuning that hurt performance on REFUTES cases.
+
+I should present these findings clearly to the user and outline what needs to change for the real experiment.</details></think>
+
+---
+
+The full pipeline ran perfectly! Let me break down the results — there's already an interesting finding here.
+
+## Results Summary (Test Run: 1000 train, 200 eval, 1 epoch)
+
+| Metric | Baseline | Fine-tuned | Delta |
+|--------|----------|------------|-------|
+| **Accuracy** | 82.5% | 82.0% | -0.5% |
+| **Avg Confidence** | 0.821 | 0.877 | **+5.6%** |
+| **ECE** | 0.033 | 0.062 | **+0.029** (worse) |
+| **Overconfidence Gap** | -0.004 | +0.057 | **+0.061** (worse) |
+| **High-conf error rate** | 10.5% | 10.5% | 0% |
+
+## What the data tells us
+
+**The fine-tuned model became MORE confident but NOT more accurate.** This is textbook overconfidence:
+- Baseline was almost perfectly calibrated (ECE = 0.033, gap ≈ 0)
+- Fine-tuning pushed confidence up (+5.6%) without improving accuracy → ECE nearly doubled
+- SUPPORTS got better (92.6% → 95.8%) but REFUTES got worse (73.3% → 69.5%) — the model developed a **SUPPORTS bias**
+
+## Two issues to fix for the real run
+
+**1. Frequency buckets are too imbalanced** — 185 low / 10 medium / 5 high. With only 200 eval examples, almost everything falls in "low". The frequency analysis is meaningless at this scale.
+
+**2. Training was too small** — 1000 examples, 1 epoch is barely enough to learn anything (loss went from 1.19 → 0.63, still high).
+
+## For the real run
+
+You should increase the data and eval size. I'd recommend updating `config.py` to:
+- `TRAIN_SAMPLES = 20000`
+- `EVAL_SAMPLES = 2000` 
+- `NUM_EPOCHS = 3`
+
+This will give ~2000 eval examples → much better frequency bucket distribution (roughly 660 per bucket). And 20K × 3 epochs will give the fine-tuning enough signal to actually change behavior.
+
+Want me to update `config.py` for the full run and push? It'll take roughly **2-3 hours** on the L4 GPU (vs 19 minutes for the test). Also — **stop the VM manually from GCP Console** since the auto-stop didn't work, so you're not burning money while we decide.
+
+---
+
+_**User (2026-02-12 12:54Z)**_
+
+ok yeah let's do it. 
+
+it is reasonable ECE error will rise what do you think? results make sense?
+
+---
+
+_**Agent (model claude-4.6-opus-high-thinking, mode Agent)**_
+
+
+
+
+
+---
+
+<think><details><summary>Thought Process</summary>
+The user is asking two things:
+1. Update config.py for the full run and push
+2. Whether the ECE increase makes sense / is reasonable
+
+Let me think about whether the results make sense...
+
+Yes, the ECE increase is actually very reasonable and expected. Here's why:
+
+1. **Fine-tuning on a small dataset makes models overconfident** — This is a well-documented phenomenon. When you fine-tune a large pre-trained model on a small dataset, the model learns to be very confident about the patterns in the training data (it overfits the confidence), but this doesn't generalize well. The model becomes more "sure of itself" without being more accurate.
+
+
+2. **The baseline already has good calibration** — Llama 3.1's instruction-tuning with RLHF produces well-calibrated outputs, but fine-tuning on a small domain-specific dataset disrupts that. The model also developed a SUPPORTS bias, improving on that class while degrading on REFUTES, which explains the miscalibration.
+
+3. **Scaling up training could amplify the problem** — With more data and epochs, I'd expect better accuracy but potentially worse overconfidence unless regularized, and the real question is whether this overconfidence affects high-frequency entities differently than low-frequency ones since the model sees them with different frequencies.
+
+4. **The evaluation dataset size matters** — With only 200 examples I couldn't detect these patterns, but 2000 should reveal whether fine-tuning makes the model overconfident specifically on entities it's seen more often versus those with less training signal.</details></think>
+
+---
+
+Great question — yes, the ECE increase **absolutely makes sense**. Here's why:
+
+**The baseline Llama 3.1 is already well-calibrated.** Large instruction-tuned models go through RLHF, which tends to produce well-calibrated confidence. Our baseline ECE of 0.033 confirms this — nearly perfect calibration.
+
+**Fine-tuning on a small dataset disrupts that calibration.** The model learns to "commit harder" to patterns it sees in training, pushing confidence up, but 1000 examples isn't enough to also make it more *accurate*. So confidence rises (+5.6%) while accuracy stays flat → ECE goes up. This is a known phenomenon (it's actually discussed in the "On Calibration of Modern Neural Networks" paper you have in your PAPERS folder).
+
+**The SUPPORTS bias is also expected.** The model saw SUPPORTS examples that are easier to memorize (factual statements), so it learned to lean toward SUPPORTS. REFUTES examples require recognizing subtle incorrectness — harder to learn from just 1000 examples.
+
+**The key question for the real run:** With 20K training examples and proper frequency buckets, does the overconfidence hit **low-frequency entities harder** (less training exposure → worse calibration) or **high-frequency entities** (more exposure → more memorization → more confident even when wrong)? That's the core finding for your paper.
+
+Let me push the full-run config:
 
 ---
 
