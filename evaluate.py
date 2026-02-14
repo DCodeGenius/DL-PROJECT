@@ -13,6 +13,7 @@ Usage:
 """
 
 import argparse
+import gc
 import json
 import os
 from collections import Counter
@@ -22,6 +23,8 @@ from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 from peft import PeftModel
 from tqdm import tqdm
 import config
+
+os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
 
 LABEL_OPTIONS = ["SUPPORTS", "REFUTES"]
 
@@ -60,7 +63,10 @@ def load_model(mode):
         tokenizer.pad_token = tokenizer.eos_token
 
     model.eval()
-    print("Model loaded!")
+    gc.collect()
+    torch.cuda.empty_cache()
+    print(f"Model loaded! GPU mem: {torch.cuda.memory_allocated()/1e9:.2f} GiB allocated, "
+          f"{torch.cuda.memory_reserved()/1e9:.2f} GiB reserved")
     return model, tokenizer
 
 
@@ -86,15 +92,16 @@ def get_label_token_ids(tokenizer):
 def predict(model, tokenizer, claim, label_token_ids):
     """Get prediction and confidence via softmax over label logits."""
     prompt = build_prompt(claim)
-    inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
+    inputs = tokenizer(prompt, return_tensors="pt", truncation=True, max_length=256).to(model.device)
 
-    with torch.no_grad():
-        logits = model(**inputs).logits[0, -1, :]
+    with torch.inference_mode():
+        outputs = model(**inputs)
+        sup_logit = outputs.logits[0, -1, label_token_ids["SUPPORTS"]].item()
+        ref_logit = outputs.logits[0, -1, label_token_ids["REFUTES"]].item()
+        del outputs
+    del inputs
 
-    label_logits = torch.tensor([
-        logits[label_token_ids["SUPPORTS"]].item(),
-        logits[label_token_ids["REFUTES"]].item(),
-    ])
+    label_logits = torch.tensor([sup_logit, ref_logit])
     probs = torch.softmax(label_logits, dim=0).numpy()
     pred_idx = int(np.argmax(probs))
 
@@ -132,7 +139,7 @@ def run_evaluation(mode, test_set):
     print(f"\nEvaluating: {run_name} ({len(test_metadata)} examples)...")
 
     results = []
-    for meta in tqdm(test_metadata, desc=f"Eval {run_name}"):
+    for i, meta in enumerate(tqdm(test_metadata, desc=f"Eval {run_name}")):
         pred = predict(model, tokenizer, meta["claim"], label_token_ids)
         results.append({
             "claim": meta["claim"],
@@ -142,6 +149,8 @@ def run_evaluation(mode, test_set):
             "page_frequency": meta["page_frequency"],
             **pred,
         })
+        if i % 50 == 0:
+            torch.cuda.empty_cache()
 
     # Print summary
     correct = sum(1 for r in results if r["predicted_idx"] == r["true_label"])
