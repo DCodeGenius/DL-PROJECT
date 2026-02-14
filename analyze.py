@@ -25,13 +25,38 @@ except ImportError:
     print("   Install with: pip install matplotlib")
 
 
+def load_eval_metadata():
+    """Load eval metadata with correct wiki page info."""
+    meta_path = f"{config.OUTPUT_DIR}/eval_metadata.json"
+    if not os.path.exists(meta_path):
+        return None
+    with open(meta_path, "r") as f:
+        return json.load(f)
+
+
 def load_results(mode):
-    """Load evaluation results for a given mode."""
+    """Load evaluation results and merge with current eval metadata."""
     path = f"{config.OUTPUT_DIR}/eval_results_{mode}.json"
     if not os.path.exists(path):
         return None
     with open(path, "r") as f:
-        return json.load(f)
+        results = json.load(f)
+
+    # Merge wiki page data from eval_metadata (in case results have stale data)
+    metadata = load_eval_metadata()
+    if metadata and len(metadata) == len(results):
+        # Match by claim text
+        meta_by_claim = {m["claim"]: m for m in metadata}
+        updated = 0
+        for r in results:
+            meta = meta_by_claim.get(r["claim"])
+            if meta:
+                r["wiki_page"] = meta["wiki_page"]
+                r["page_frequency"] = meta["page_frequency"]
+                updated += 1
+        print(f"  Merged wiki page data for {updated}/{len(results)} examples")
+
+    return results
 
 
 def assign_frequency_buckets(results, method="quartile"):
