@@ -16290,3 +16290,706 @@ Let me push the full-run config:
 
 ---
 
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: C:\Users\dhalperin\OneDrive - NVIDIA Corporation\Documents\DL\DL-PROJECT\config.py</summary>
+
+</details>
+</tool-use>
+
+---
+
+Config already has 20K train, 2000 eval, 3 epochs — that's exactly right for the full run. Now I need to update the `run_test_training.sh` to use the **real** config instead of overriding with test config:
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="write">
+
+<details><summary>Tool use: **write** • Edit file: C:\Users\dhalperin\OneDrive - NVIDIA Corporation\Documents\DL\DL-PROJECT\run_full_pipeline.sh</summary>
+
+**Chunk 1**
+Lines added: 97, lines removed: 1
+
+```diff
+@@ -1,1 +1,97 @@
+- 
++ #!/bin/bash
++ # Full pipeline: preprocess → train → evaluate (baseline + finetuned) → analyze → stop VM
++ # Binary classification (SUPPORTS vs REFUTES only)
++ # Uses config.py as-is (20K train, 2000 eval, 3 epochs)
++ 
++ echo "============================================================"
++ echo "FEVER Full Pipeline (FULL RUN)"
++ echo "Binary: SUPPORTS vs REFUTES"
++ echo "20K train, 2000 eval, 3 epochs"
++ echo "============================================================"
++ 
++ # Step 1: Preprocess data (generates eval_metadata.json)
++ echo ""
++ echo "============================================================"
++ echo "Step 1/5: Preprocessing data..."
++ echo "============================================================"
++ python preprocess_data.py
++ if [ $? -ne 0 ]; then
++     echo "❌ Preprocessing failed!"
++     exit 1
++ fi
++ 
++ # Step 2: Baseline evaluation (zero-shot, before fine-tuning)
++ echo ""
++ echo "============================================================"
++ echo "Step 2/5: Baseline evaluation (zero-shot)..."
++ echo "============================================================"
++ python evaluate.py --mode baseline
++ if [ $? -ne 0 ]; then
++     echo "❌ Baseline evaluation failed!"
++     exit 1
++ fi
++ 
++ # Step 3: Fine-tune
++ echo ""
++ echo "============================================================"
++ echo "Step 3/5: Fine-tuning (20K examples, 3 epochs)..."
++ echo "This will take ~2-3 hours on L4 GPU"
++ echo "============================================================"
++ python train.py
++ if [ $? -ne 0 ]; then
++     echo "❌ Training failed!"
++     exit 1
++ fi
++ 
++ # Step 4: Fine-tuned evaluation
++ echo ""
++ echo "============================================================"
++ echo "Step 4/5: Fine-tuned evaluation..."
++ echo "============================================================"
++ python evaluate.py --mode finetuned
++ if [ $? -ne 0 ]; then
++     echo "❌ Fine-tuned evaluation failed!"
++     exit 1
++ fi
++ 
++ # Step 5: Analysis
++ echo ""
++ echo "============================================================"
++ echo "Step 5/5: Analysis..."
++ echo "============================================================"
++ python analyze.py
++ if [ $? -ne 0 ]; then
++     echo "⚠️  Analysis had issues (non-fatal)"
++ fi
++ 
++ # Stop VM
++ echo ""
++ echo "============================================================"
++ echo "Pipeline complete! Stopping VM to save money..."
++ echo "============================================================"
++ 
++ INSTANCE_NAME=$(curl -s -H "Metadata-Flavor: Google" http://metadata.google.internal/computeMetadata/v1/instance/name)
++ ZONE=$(curl -s -H "Metadata-Flavor: Google" http://metadata.google.internal/computeMetadata/v1/instance/zone | cut -d/ -f4)
++ 
++ if [ -n "$INSTANCE_NAME" ] &amp;&amp; [ -n "$ZONE" ]; then
++     echo "Stopping VM: $INSTANCE_NAME in zone: $ZONE"
++     sudo shutdown -h now 2&gt;/dev/null || gcloud compute instances stop "$INSTANCE_NAME" --zone="$ZONE" 2&gt;/dev/null
++     if [ $? -eq 0 ]; then
++         echo "✅ VM shutting down!"
++     else
++         echo "⚠️  Could not stop VM automatically"
++         echo "   Please stop it manually from GCP Console"
++     fi
++ else
++     echo "⚠️  Could not detect VM info. Trying sudo shutdown..."
++     sudo shutdown -h now 2&gt;/dev/null
++ fi
++ 
++ echo ""
++ echo "✅ All results saved to: ./results/"
++ echo "   eval_results_baseline.json"
++ echo "   eval_results_finetuned.json"
++ echo "   full_analysis.json"
++ echo "   calibration_*.png"
++ echo "   frequency_analysis.png"
++ 
+```
+
+</details>
+
+</tool-use>
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **run_terminal_cmd** • Run command: & "C:\Program Files\Git\bin\git.exe" -C "C:\Users\dhalperin\OneDrive - NVIDIA Corporation\Documents\DL\DL-PROJECT" add -A</summary>
+
+```bash
+& "C:\Program Files\Git\bin\git.exe" -C "C:\Users\dhalperin\OneDrive - NVIDIA Corporation\Documents\DL\DL-PROJECT" add -A
+```
+
+```
+warning: in the working copy of 'run_full_pipeline.sh', LF will be replaced by CRLF the next time Git touches it
+
+```
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **run_terminal_cmd** • Run command: & "C:\Program Files\Git\bin\git.exe" -C "C:\Users\dhalperin\OneDrive - NVIDIA Corporation\Documents\DL\DL-PROJECT" commit -m "Add full pipeline script (20K train, 2000 eval, 3 epochs)"</summary>
+
+```bash
+& "C:\Program Files\Git\bin\git.exe" -C "C:\Users\dhalperin\OneDrive - NVIDIA Corporation\Documents\DL\DL-PROJECT" commit -m "Add full pipeline script (20K train, 2000 eval, 3 epochs)"
+```
+
+```
+[main de87cf3] Add full pipeline script (20K train, 2000 eval, 3 epochs)
+ 2 files changed, 1708 insertions(+)
+ create mode 100644 run_full_pipeline.sh
+
+```
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **run_terminal_cmd** • Run command: & "C:\Program Files\Git\bin\git.exe" -C "C:\Users\dhalperin\OneDrive - NVIDIA Corporation\Documents\DL\DL-PROJECT" push</summary>
+
+```bash
+& "C:\Program Files\Git\bin\git.exe" -C "C:\Users\dhalperin\OneDrive - NVIDIA Corporation\Documents\DL\DL-PROJECT" push
+```
+
+```
+To https://github.com/DCodeGenius/DL-PROJECT.git
+   5b88fd0..de87cf3  main -&gt; main
+
+```
+</details>
+</tool-use>
+
+---
+
+Pushed. On the VM, run:
+
+```bash
+cd ~/DL-PROJECT
+git stash
+git pull
+source venv/bin/activate
+nohup bash run_full_pipeline.sh > full_run.log 2>&1 &
+```
+
+The `nohup` is important — it keeps the pipeline running even if your SSH disconnects. You can check progress anytime with:
+
+```bash
+tail -f full_run.log
+```
+
+**Estimated time:** ~2-3 hours for training + ~15 min for both evaluations + a few seconds for analysis. The VM will auto-shutdown when done (this time using `sudo shutdown` as a fallback).
+
+**Don't forget to stop the VM manually from GCP Console if you're not starting the run right now** — you're paying while it's idle!
+
+---
+
+_**User (2026-02-12 12:54Z)**_
+
+ok what to run now to check again
+
+---
+
+_**Agent (model claude-4.6-opus-high-thinking, mode Agent)**_
+
+
+
+On the VM:
+
+```bash
+cd ~/DL-PROJECT
+git stash
+git pull
+source venv/bin/activate
+nohup bash run_full_pipeline.sh > full_run.log 2>&1 &
+```
+
+Then you can disconnect from SSH safely. To check progress anytime:
+
+```bash
+tail -f full_run.log
+```
+
+Press `Ctrl+C` to stop watching the log (the pipeline keeps running).
+
+---
+
+_**User (2026-02-12 12:54Z)**_
+
+which command to check if it finished
+
+---
+
+_**Agent (model claude-4.6-opus-high-thinking, mode Agent)**_
+
+
+
+```bash
+tail -20 full_run.log
+```
+
+If it's **still running**, you'll see whatever step it's on (e.g., training progress bars).
+
+If it's **finished**, you'll see something like:
+
+```
+✅ All results saved to: ./results/
+   eval_results_baseline.json
+   eval_results_finetuned.json
+   full_analysis.json
+```
+
+You can also check if the process is still alive:
+
+```bash
+jobs
+```
+
+If it shows `Running`, it's still going. If nothing shows up, it's done.
+
+---
+
+_**User (2026-02-12 12:54Z)**_
+
+did you balecned the freq buckets as we discuused
+
+---
+
+_**Agent (model claude-4.6-opus-high-thinking, mode Agent)**_
+
+
+
+
+
+---
+
+<think><details><summary>Thought Process</summary>
+The user is asking whether I balanced the frequency buckets in the training data as discussed in the feedback. Let me re-read the feedback:
+
+> The experimental design (high-only / low-only / balanced + mixed eval) is a proper controlled manipulation.
+
+The feedback mentioned creating controlled training splits:
+- Train on high-frequency only
+- Train on low-frequency only
+- Train on balanced mix
+- Evaluate all on a mixed eval set
+
+But what I actually implemented is just a random sample of 20K from the full binary training set, with frequency bucketing only applied during **analysis** (post-hoc). I did NOT create separate training splits filtered by frequency.
+
+This is actually a design decision point. There are two approaches:
+
+
+I'm weighing whether to do post-hoc analysis on a single model trained on random data versus the stronger experimental approach of training separate models on high-frequency-only, low-frequency-only, and balanced datasets—the latter directly tests whether training distribution affects hallucination patterns but costs 3x more in compute.
+
+Given the project constraints, I should clarify with the user that I didn't actually balance the frequency buckets; both training and eval sets are random samples, so the frequency analysis is purely retrospective grouping based on whatever distribution naturally emerges in the eval set.</details></think>
+
+---
+
+Honest answer: **No, I didn't.** Right now both training and eval are just random samples. The frequency bucketing only happens at analysis time (post-hoc grouping).
+
+That's why in the test run we got **185 low / 10 medium / 5 high** — most Wikipedia pages have few claims (median frequency = 3), so random sampling gives a heavily skewed distribution.
+
+With 2000 eval examples it'll be better, but still skewed. We should at least **stratify the eval set** so each frequency bucket has enough examples for meaningful comparison.
+
+Want me to update `preprocess_data.py` to:
+
+1. **Stratified eval sampling** — ensure roughly equal numbers of low/medium/high frequency examples in the eval set (e.g., ~660 each)
+2. **Training stays random** — this is fine, it represents the natural distribution
+
+This way the frequency analysis will have enough statistical power in each bucket. The training set doesn't need balancing because we're studying "how does the model behave on different frequency buckets" — the eval set balance is what matters.
+
+Or, if you want the stronger experimental design from the feedback (train 3 separate models: high-only, low-only, balanced), that would cost 3× GPU time (~6-9 hours). Up to you — for a class project, stratified eval alone is solid.
+
+---
+
+_**User (2026-02-12 12:54Z)**_
+
+what do you think about this proporsel? feel free to critisize.
+
+Here’s a structure that is **simple, defensible, and realistic for 2–3 weeks**, assuming you go **binary (SUPPORTS/REFUTES)** and you compute page-frequency **from FEVER-train only**.
+
+## Step 0: Define frequency buckets on TRAIN
+
+* Compute `page_freq` using **train** only.
+* For each example, compute `example_freq = max(page_freq[p] for p in evidence_pages)`.
+
+Then bucket examples by quantiles (don’t overthink exact thresholds):
+
+* **High-frequency group (H):** top **30%** of train by `example_freq`
+* **Low-frequency group (L):** bottom **30%**
+* (Optional) ignore the middle 40% to keep separation strong.
+
+This gives you two clearly separated regimes.
+
+---
+
+## Eval set (the one you report on)
+
+Make eval from **FEVER-dev**, labeled into H/L using the **train-derived** `page_freq`.
+
+### Recommended eval composition
+
+* **Balanced across frequency groups:** 50% H, 50% L
+* **Balanced across labels inside each group:** 50% SUPPORTS, 50% REFUTES
+
+So overall eval is “balanced-balanced”:
+
+* 25% H+SUPPORTS
+* 25% H+REFUTES
+* 25% L+SUPPORTS
+* 25% L+REFUTES
+
+### Size
+
+* If you want fast iteration: **2,000 examples total** (500 per cell)
+* If compute is cheap: **4,000 total** (1,000 per cell)
+
+This makes comparisons clean and stable.
+
+---
+
+## Train sets (what you fine-tune on)
+
+You want to run **2 (or 3) fine-tunes** where the *only* thing that changes is frequency mix.
+
+### Train Set A: High-only
+
+* 100% from H (top 30%)
+* Keep labels balanced: 50% SUPPORTS / 50% REFUTES
+
+### Train Set B: Low-only
+
+* 100% from L (bottom 30%)
+* Labels balanced: 50/50
+
+### Train Set C (optional but nice): Balanced mix
+
+* 50% H + 50% L
+* Labels balanced overall (and ideally within H and L too)
+
+### Size (very practical)
+
+Pick one size you can actually train in hours, not days:
+
+* **10k total** per training set if you’re tight on GPU / time
+* **20k–30k total** per training set if you have decent GPU and stable pipeline
+
+(Keeping the sizes equal across A/B/C matters more than making them huge.)
+
+---
+
+## Why this structure works
+
+* Eval is **fixed and balanced**, so differences are interpretable.
+* Train sets are **controlled**: same size, same label balance, same hyperparams → only frequency differs.
+* You can report results separately on eval-H and eval-L, plus overall.
+
+---
+
+## Extra “good science” (if you can do it easily)
+
+Do **3 random seeds** for sampling each train set (same size), and report mean±std.
+If not, do 1 seed, but don’t oversell the results.
+
+---
+
+## One important pitfall to avoid
+
+Don’t let the exact same claim appear in both train and eval (dedupe by claim string).
+(Leakage can happen if you accidentally mix splits or regenerate samples.)
+
+---
+
+## TL;DR you can copy into your plan
+
+* **Buckets:** H = top 30% by page frequency, L = bottom 30% (train-defined).
+* **Eval:** dev, 50% H / 50% L and within each 50/50 SUPPORTS/REFUTES. Size 2k–4k.
+* **Train:** build A (H-only), B (L-only), optional C (50/50). Size 10k–30k each, labels balanced.
+
+If you tell me your GPU (VRAM + what machine), I’ll recommend the exact train size + epochs/steps so it finishes reliably within your timeline.
+
+
+---
+
+_**Agent (model claude-4.6-opus-high-thinking, mode Agent)**_
+
+<think><details><summary>Thought Process</summary>
+This is a really well-structured experimental design proposal. Let me analyze it critically.
+
+**What's strong:**
+1. The 30/30 split with the middle 40% dropped is clean — it creates clear separation between high and low frequency groups.
+2. The balanced-balanced eval (25% per cell: H+SUP, H+REF, L+SUP, L+REF) is excellent for clean comparisons.
+3. Training 2-3 models (high-only, low-only, balanced) with the ONLY difference being frequency mix is proper controlled experimentation.
+4. Fixed eval set across all models is essential.
+5. Label balancing within each group removes confounds.
+
+
+6. The deduplication warning is important.
+
+**My concerns/critiques:**
+
+1. **3 separate fine-tunes vs 1**: This is 3x GPU cost, but with an L4 (24GB VRAM), training 10K examples for 3 epochs takes roughly 1-1.5 hours, so 3 runs = 3-4.5 hours total. With 20K examples it stretches to 6-9 hours, which is still feasible within budget.
+
+2. **Dropping the middle 40%**: This is good for separation but means throwing away 40% of your data. For the eval set this is less of a concern, but for training it's a significant loss of potential signal.
+
+3. **The "controlled manipulation" approach is stronger than post-hoc analysis**: Instead of asking whether the model performs differently on high vs low frequency examples, you're asking whether training on these different distributions causes different patterns — that's a causal claim, which is much more compelling for a paper.
+
+4. **Practical concern: time**: Running 3 fine-tunes plus evaluations is manageable since the baseline only needs to run once, so the main cost is the three training runs and their corresponding evaluations.
+
+5. **Multiple seeds**: Probably not necessary for a class project unless there's extra time.
+
+6. **The key insight for the evaluation**: Setting up a 2×2 matrix where you train models on high-frequency-only and low-frequency-only data, then evaluate each on both high and low frequency test sets, gives you a much cleaner story about how training distribution affects generalization.
+
+7. **Budget is solid**: At $0.81/hour on L4, the 3-4 hour runtime will cost around $6, well within their $100 total budget.
+
+I'm going to recommend they move forward with this approach—train on 10K examples per set, use 2000 for evaluation, focus on the two main fine-tunes (H-only and L-only), and run a baseline eval, which should wrap up in 3-4 hours total.
+
+Now I need to refactor the data pipeline to compute frequency thresholds on the full training set, stratify the evaluation data across the four conditions, create the two training datasets, and save everything. Then I'll update the training script to accept different dataset arguments and the evaluation script to handle multiple models, with the cleanest structure being a preprocessing step that generates all datasets upfront, followed by training and evaluation scripts that take dataset and model arguments.</details></think>
+
+---
+
+This is a **very good experimental design**. Honestly, I'd follow it almost exactly. A few thoughts:
+
+## What I like
+- **Dropping the middle 40%** — creates clean separation, removes ambiguity
+- **Balanced-balanced eval** (25% per cell) — makes every comparison interpretable
+- **Same-size, label-balanced training sets** — the only variable is frequency → proper causal claim
+- **Deduplication warning** — essential, easy to miss
+
+## My one critique
+**Skip Train Set C (balanced mix) for now.** With 2 models (H-only, L-only) + baseline, you already have a 3×2 comparison matrix:
+
+| | Eval-High | Eval-Low |
+|---|---|---|
+| **Baseline (zero-shot)** | ? | ? |
+| **Trained on High** | ? | ? |
+| **Trained on Low** | ? | ? |
+
+That's 6 cells of accuracy + ECE + confidence — plenty for a paper. Add C only if you have time.
+
+## Budget check
+- L4 GPU ≈ $0.81/hour
+- 10K training × 3 epochs ≈ 1.5 hours per fine-tune
+- 2 fine-tunes + evals ≈ **4 hours total ≈ $3.25**
+- Well within your $100 budget
+
+## Let me implement it
+
+I'll restructure the code to support this design:
+
+---
+
+<tool-use data-tool-type="task" data-tool-name="todo_write">
+<details><summary>Tool use: **todo_write** • Todo List</summary>
+
+- [-] Rewrite preprocess_data.py for H/L buckets + stratified eval/train
+- [ ] Update train.py to accept --experiment (high/low) flag
+- [ ] Update evaluate.py to accept --experiment flag
+- [ ] Rewrite analyze.py for 3x2 comparison matrix
+- [ ] Update config.py for new experimental design
+- [ ] Create run_full_pipeline.sh for 2-model experiment
+- [ ] Push to git
+
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="write">
+
+<details><summary>Tool use: **write** • Edit file: C:\Users\dhalperin\OneDrive - NVIDIA Corporation\Documents\DL\DL-PROJECT\preprocess_data.py</summary>
+
+Status: **loading**
+
+```python
+"""
+Data preprocessing for FEVER hallucination study.
+Binary classification (SUPPORTS vs REFUTES only).
+Controlled frequency manipulation: High-only vs Low-only training.
+
+Experimental design:
+  - Frequency = #train claims referencing a Wikipedia page (train-derived only)
+  - H = top 30% by example_freq, L = bottom 30%, middle 40% dropped
+  - Eval: balanced 50% H / 50% L, within each 50% SUP / 50% REF (4 cells)
+  - Train A (high-only): 100% H, 50/50 labels
+  - Train B (low-only):  100% L, 50/50 labels
+"""
+
+import json
+import os
+from collections import Counter
+from datasets import load_dataset, Dataset
+import numpy as np
+import config
+
+LABEL_MAP = {0: "SUPPORTS", 1: "REFUTES"}
+LABEL_MAP_REVERSE = {"SUPPORTS": 0, "REFUTES": 1}
+
+
+def extract_wiki_pages(example):
+    """Extract all Wikipedia page titles referenced by this claim."""
+    pages = []
+    wiki_url = example.get("evidence_wiki_url", "")
+    if wiki_url:
+        raw = str(wiki_url)
+        for part in raw.split(","):
+            page = part.strip().replace("_", " ")
+            page = page.replace("-LRB-", "(").replace("-RRB-", ")")
+            if page and page not in pages:
+                pages.append(page)
+    return pages
+
+
+def compute_page_frequencies(dataset):
+    """Count how many claims reference each Wikipedia page."""
+    counter = Counter()
+    for example in dataset:
+        for page in extract_wiki_pages(example):
+            counter[page] += 1
+    return counter
+
+
+def example_freq(pages, page_frequencies):
+    """max(freq) across all referenced pages."""
+    if not pages:
+        return 0
+    return max(page_frequencies.get(p, 0) for p in pages)
+
+
+def filter_binary(dataset):
+    """Keep only SUPPORTS and REFUTES."""
+    sample = dataset[0]["label"]
+    if isinstance(sample, str):
+        return dataset.filter(lambda x: x["label"] in ("SUPPORTS", "REFUTES"))
+    else:
+        return dataset.filter(lambda x: x["label"] in (0, 1))
+
+
+def get_label_int(example):
+    """Normalize label to int."""
+    lab = example["label"]
+    if isinstance(lab, str):
+        return LABEL_MAP_REVERSE.get(lab, -1)
+    return lab
+
+
+def build_prompt(claim, label_str=None):
+    """Build claim-only prompt. If label_str given, append it (for training)."""
+    prompt = (
+        f"### Instruction:\n"
+        f"Based on your knowledge, classify the following claim as "
+        f"SUPPORTS (true) or REFUTES (false).\n\n"
+        f"### Claim:\n{claim}\n\n"
+        f"### Answer:\n"
+    )
+    if label_str is not None:
+        prompt += label_str
+    return prompt
+
+
+def annotate_with_frequency(dataset, page_frequencies):
+    """Add wiki_page, page_frequency, label_int, freq_bucket to each example."""
+    annotated = []
+    for example in dataset:
+        pages = extract_wiki_pages(example)
+        primary_page = pages[0] if pages else "UNKNOWN"
+        freq = example_freq(pages, page_frequencies)
+        label_int = get_label_int(example)
+        label_str = LABEL_MAP.get(label_int, str(example["label"]))
+        annotated.append({
+            "claim": example["claim"],
+            "label_int": label_int,
+            "label_str": label_str,
+            "wiki_page": primary_page,
+            "page_frequency": freq,
+        })
+    return annotated
+
+
+def compute_frequency_thresholds(annotated_train):
+    """Compute H/L thresholds: top 30% = H, bottom 30% = L."""
+    freqs = [ex["page_frequency"] for ex in annotated_train if ex["wiki_page"] != "UNKNOWN"]
+    freqs_arr = np.array(freqs)
+
+    p30 = np.percentile(freqs_arr, 30)
+    p70 = np.percentile(freqs_arr, 70)
+
+    print(f"\nFrequency thresholds (train-derived):")
+    print(f"  Total examples: {len(freqs)}")
+    print(f"  Min: {freqs_arr.min()}, Max: {freqs_arr.max()}, "
+          f"Mean: {freqs_arr.mean():.1f}, Median: {np.median(freqs_arr):.0f}")
+    print(f"  30th percentile (L ceiling): {p30}")
+    print(f"  70th percentile (H floor):   {p70}")
+
+    return p30, p70
+
+
+def assign_bucket(freq, p30, p70):
+    """Assign H, L, or MID bucket."""
+    if freq <= p30:
+        return "L"
+    elif freq >= p70:
+        return "H"
+    else:
+        return "MID"
+
+
+def stratified_sample(annotated, bucket, label_int, n, seed=42):
+    """Sample n examples matching a given bucket and label."""
+    candidates = [ex for ex in annotated if ex["bucket"] == bucket and ex["label_int"] == label_int]
+    rng = np.random.RandomState(seed)
+    if len(candidates) < n:
+        print(f"  ⚠️  Only {len(candidates)} candidates for bucket={bucket}, label={label_int}, need {n}")
+        return candidates
+    indices = rng.choice(len(candidates), size=n, replace=False)
+    return [candidates[i] for i in indices]
+
+
+def build_hf_dataset(examples):
+    """Convert list of dicts to HuggingFace Dataset with 'text' column for training."""
+    records = []
+    for ex in examples:
+        text = build_prompt(ex["claim"], label_str=ex["label_str"])
+        records.append({
+            "text": text,
+            "claim": ex["claim"],
+            "label": ex["label_int"],
+            "wiki_page": ex["wiki_page"],
+            "page_frequency": ex["page_frequency"],
+            "bucket": ex["bucket"],
+        })
+    return Dataset.from_list(records)
+
+
+def deduplicate_eval_from_train(eval_examples, train_examples):
+    """Remove any eval claims that appear in the training set."""
+    train_claims = set(ex["claim"] for ex in train_examples)
+    before = len(eval_examples)
+    filtered = [ex for ex in eval_examples if ex["claim"] not in train_claims]
+    removed = before - len(filtered)
+    if removed > 0:
+        print(f"  Removed {removed} eval examples that overlap with training")
+    return filtered
+
+
+def load_and_preprocess_fever():
+    """
+    Main preprocessing
+```
+
+</details>
+
+</tool-use>
+
+---
+
+
+
+---
+
