@@ -9,52 +9,50 @@ from transformers import (
     AutoTokenizer,
     BitsAndBytesConfig,
     TrainingArguments,
+    Trainer,
+    DataCollatorForLanguageModeling,
 )
 from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training
-from trl import SFTTrainer
 import config
 from preprocess_data import load_and_preprocess_fever
+
 
 def setup_model_and_tokenizer():
     """Load model and tokenizer with 4-bit quantization."""
     print(f"Loading model: {config.MODEL_ID}")
-    
-    # 4-bit quantization config
+
     bnb_config = BitsAndBytesConfig(
         load_in_4bit=config.USE_4BIT,
         bnb_4bit_quant_type=config.BNB_4BIT_QUANT_TYPE,
         bnb_4bit_compute_dtype=getattr(torch, config.BNB_4BIT_COMPUTE_DTYPE),
         bnb_4bit_use_double_quant=config.BNB_4BIT_USE_DOUBLE_QUANT,
     )
-    
-    # Load tokenizer
+
     tokenizer = AutoTokenizer.from_pretrained(config.MODEL_ID)
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
     tokenizer.padding_side = "right"
-    
-    # Load model with quantization
+
     model = AutoModelForCausalLM.from_pretrained(
         config.MODEL_ID,
         quantization_config=bnb_config,
         device_map="auto",
-        dtype=torch.bfloat16,
+        torch_dtype=torch.bfloat16,
     )
-    
-    # Prepare for k-bit training
+
     model = prepare_model_for_kbit_training(model)
-    
+
     print("✅ Model and tokenizer loaded!")
     return model, tokenizer
 
+
 def setup_lora(model):
     """Configure LoRA adapters."""
-    # Target modules for Llama-3.1 architecture
     target_modules = [
         "q_proj", "k_proj", "v_proj", "o_proj",
         "gate_proj", "up_proj", "down_proj"
     ]
-    
+
     lora_config = LoraConfig(
         r=config.LORA_R,
         lora_alpha=config.LORA_ALPHA,
@@ -63,25 +61,58 @@ def setup_lora(model):
         bias="none",
         task_type="CAUSAL_LM",
     )
-    
+
     model = get_peft_model(model, lora_config)
     model.print_trainable_parameters()
-    
+
     return model
+
+
+def tokenize_dataset(dataset, tokenizer, max_length):
+    """Tokenize dataset for causal language modeling."""
+    def tokenize_fn(examples):
+        tokenized = tokenizer(
+            examples["text"],
+            truncation=True,
+            max_length=max_length,
+            padding="max_length",
+        )
+        tokenized["labels"] = tokenized["input_ids"].copy()
+        return tokenized
+
+    tokenized = dataset.map(
+        tokenize_fn,
+        batched=True,
+        remove_columns=dataset.column_names,
+    )
+    return tokenized
+
 
 def main():
     """Main training pipeline."""
     print("=" * 60)
     print("FEVER Fine-Tuning Pipeline")
     print("=" * 60)
-    
+
     # Load and preprocess data
     train_ds, eval_ds = load_and_preprocess_fever()
-    
+
     # Setup model
     model, tokenizer = setup_model_and_tokenizer()
     model = setup_lora(model)
-    
+
+    # Tokenize datasets
+    print("\nTokenizing datasets...")
+    train_ds = tokenize_dataset(train_ds, tokenizer, config.MAX_SEQ_LEN)
+    eval_ds = tokenize_dataset(eval_ds, tokenizer, config.MAX_SEQ_LEN)
+    print("✅ Tokenization complete!")
+
+    # Data collator for causal LM (no masking)
+    data_collator = DataCollatorForLanguageModeling(
+        tokenizer=tokenizer,
+        mlm=False,
+    )
+
     # Training arguments
     training_args = TrainingArguments(
         output_dir=config.OUTPUT_DIR,
@@ -103,27 +134,27 @@ def main():
         metric_for_best_model="eval_loss",
         greater_is_better=False,
     )
-    
-    # Initialize trainer
-    trainer = SFTTrainer(
+
+    # Initialize trainer (using standard Trainer, not SFTTrainer)
+    trainer = Trainer(
         model=model,
+        args=training_args,
         train_dataset=train_ds,
         eval_dataset=eval_ds,
-        args=training_args,
+        data_collator=data_collator,
         processing_class=tokenizer,
-        max_seq_length=config.MAX_SEQ_LEN,
-        dataset_text_field="text",
     )
-    
-    # Train!
+
+    # Train
     print("\n🚀 Starting training...")
     trainer.train()
-    
+
     # Save final model
     final_model_path = f"{config.OUTPUT_DIR}/final_model"
     trainer.save_model(final_model_path)
     tokenizer.save_pretrained(final_model_path)
     print(f"\n✅ Training complete! Model saved to: {final_model_path}")
+
 
 if __name__ == "__main__":
     main()
