@@ -42,8 +42,7 @@ def load_model(mode):
         base_model = AutoModelForCausalLM.from_pretrained(
             config.MODEL_ID,
             quantization_config=bnb_config,
-            device_map={"": 0},
-            low_cpu_mem_usage=True,
+            device_map="auto",
             torch_dtype=torch.bfloat16,
         )
         model = PeftModel.from_pretrained(base_model, model_path)
@@ -53,8 +52,7 @@ def load_model(mode):
         model = AutoModelForCausalLM.from_pretrained(
             config.MODEL_ID,
             quantization_config=bnb_config,
-            device_map={"": 0},
-            low_cpu_mem_usage=True,
+            device_map="auto",
             torch_dtype=torch.bfloat16,
         )
 
@@ -168,4 +166,5 @@ if __name__ == "__main__":
                         help="Which test set to evaluate on")
     args = parser.parse_args()
     run_evaluation(args.mode, args.test_set)
+
 

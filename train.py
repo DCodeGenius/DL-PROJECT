@@ -39,8 +39,7 @@ def setup_model_and_tokenizer():
     model = AutoModelForCausalLM.from_pretrained(
         config.MODEL_ID,
         quantization_config=bnb_config,
-        device_map={"": 0},
-        low_cpu_mem_usage=True,
+        device_map="auto",
         torch_dtype=torch.bfloat16,
     )
 
@@ -140,4 +139,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 

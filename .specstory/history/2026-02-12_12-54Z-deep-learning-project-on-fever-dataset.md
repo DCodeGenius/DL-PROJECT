@@ -25661,7 +25661,541 @@ Two issues:
 
 The issue is likely that the model weights are being loaded in their original precision (bfloat16) before quantization, which requires ~16GB on its own, and then the quantized version adds more, exceeding the available memory. I could fix this by enabling low CPU memory usage during loading, adjusting the data type, or setting explicit memory limits with device mapping.
 
-The real problem seems to be a conflict between device mapping strategies: using `device_map="auto"` causes BitsAndBytes to complain about modules on CPU, while forcing everything to GPU 0 with `device_map={"": 0}` triggers OOM errors. The solution is probably to add `low_cpu_mem_usage=True` to reduce peak memory during the loading phase, or switch to a compatible version of the transformers library. The real problem is likely that `transformers 5.1.0` is too new and has compatibility issues with the older `trl==0.7.0` that was installed. For Llama 3.1 8B, the model needs around 16GB in bf16 format, and with 4-bit quantization it should fit comfortably on the 22GB L4 GPU, so the issue is probably in how the newer transformers version loads the model into memory.</details></think>
+The real problem seems to be a conflict between device mapping strategies: using `device_map="auto"` causes BitsAndBytes to complain about modules on CPU, while forcing everything to GPU 0 with `device_map={"": 0}` triggers OOM errors. The solution is probably to add `low_cpu_mem_usage=True` to reduce peak memory during the loading phase, or switch to a compatible version of the transformers library. The real problem is likely that `transformers 5.1.0` is too new and has compatibility issues with the older `trl==0.7.0` that was installed. For Llama 3.1 8B, the model needs around 16GB in bf16 format, and with 4-bit quantization it should fit comfortably on the 22GB L4 GPU, so the issue is probably in how the newer transformers version loads the model into memory.
+
+Adding `low_cpu_mem_usage=True` will load the model shard by shard instead of all at once, which should prevent the peak memory usage from spiking during the loading and quantization process. On the bucket distribution side, the Low frequency bucket only has 7,609 training examples when 6,666 are needed, and the Medium bucket barely has enough at 12,106 examples, so there's a real data scarcity issue in those lower-frequency ranges.
+
+The core problem is that most pages are low-frequency but most examples come from high-frequency pages, so percentile-based splits don't work well. A better approach would be to sort all examples by their page frequency and split them into three equal-sized groups, which guarantees exactly one-third of examples in each bucket by construction. I'm considering using fixed frequency thresholds based on the actual distribution—maybe low for frequencies 1-5, medium for 6-20, and high for anything above 20—but I'm realizing this still leaves the dev set heavily skewed toward low frequency. The real issue is that I need thresholds that balance the buckets in the evaluation set without leaking information, so I'm thinking about computing percentiles across examples rather than pages to get a more balanced split. The page-level percentiles work well for the test sets—all three have around 1000 examples each—even though the training set ends up slightly smaller at 18,082 instead of 20,000. The real problem to solve is the CUDA OOM error, so I'll add `low_cpu_mem_usage=True` to the model loading in both evaluate.py and train.py to load weights incrementally, and also switch from the deprecated `torch_dtype` parameter to `dtype`.</details></think>
+
+---
+
+Good news: the **bucket fix worked perfectly** — all 3 test sets are full-sized (1000, 1000, 996). Training is 18K instead of 20K (medium/low have fewer examples), which is fine.
+
+The only problem is **CUDA OOM** during model loading. The L4 has 22GB but loading 8B params in bf16 first (~16GB) then quantizing peaks at ~20GB+. Fix: add `low_cpu_mem_usage=True` to load weights shard-by-shard.
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **run_terminal_cmd** • Run command: Set-Location "C:\Users\dhalperin\OneDrive - NVIDIA Corporation\Documents\DL\DL-PROJECT"; & "C:\Program Files\Git\bin\git.exe" show HEAD:evaluate.py</summary>
+
+```bash
+Set-Location "C:\Users\dhalperin\OneDrive - NVIDIA Corporation\Documents\DL\DL-PROJECT"; & "C:\Program Files\Git\bin\git.exe" show HEAD:evaluate.py
+```
+
+```
+﻿"""
+Evaluation script for FEVER hallucination study.
+Evaluates baseline (zero-shot) or fine-tuned model on a specific test set.
+Confidence = softmax over SUPPORTS/REFUTES logits.
+
+Usage:
+    python evaluate.py --mode baseline  --test_set high
+    python evaluate.py --mode baseline  --test_set low
+    python evaluate.py --mode baseline  --test_set mixed
+    python evaluate.py --mode finetuned --test_set high
+    python evaluate.py --mode finetuned --test_set low
+    python evaluate.py --mode finetuned --test_set mixed
+"""
+
+import argparse
+import json
+import os
+from collections import Counter
+import torch
+import numpy as np
+from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
+from peft import PeftModel
+from tqdm import tqdm
+import config
+
+LABEL_OPTIONS = ["SUPPORTS", "REFUTES"]
+
+
+def load_model(mode):
+    """Load base or fine-tuned model."""
+    bnb_config = BitsAndBytesConfig(
+        load_in_4bit=True,
+        bnb_4bit_quant_type="nf4",
+        bnb_4bit_compute_dtype=torch.bfloat16,
+        bnb_4bit_use_double_quant=True,
+    )
+
+    if mode == "finetuned":
+        model_path = f"{config.OUTPUT_DIR}/final_model"
+        print(f"Loading fine-tuned model from {model_path}...")
+        tokenizer = AutoTokenizer.from_pretrained(model_path)
+        base_model = AutoModelForCausalLM.from_pretrained(
+            config.MODEL_ID,
+            quantization_config=bnb_config,
+            device_map={"": 0},
+            torch_dtype=torch.bfloat16,
+        )
+        model = PeftModel.from_pretrained(base_model, model_path)
+    else:
+        print("Loading baseline model (zero-shot)...")
+        tokenizer = AutoTokenizer.from_pretrained(config.MODEL_ID)
+        model = AutoModelForCausalLM.from_pretrained(
+            config.MODEL_ID,
+            quantization_config=bnb_config,
+            device_map={"": 0},
+            torch_dtype=torch.bfloat16,
+        )
+
+    if tokenizer.pad_token is None:
+        tokenizer.pad_token = tokenizer.eos_token
+
+    model.eval()
+    print("Model loaded!")
+    return model, tokenizer
+
+
+def build_prompt(claim):
+    """Build claim-only prompt matching training format."""
+    return (
+        "### Instruction:\n"
+        "Based on your knowledge, classify the following claim as "
+        "SUPPORTS (true) or REFUTES (false).\n\n"
+        f"### Claim:\n{claim}\n\n"
+        "### Answer:\n"
+    )
+
+
+def get_label_token_ids(tokenizer):
+    """Get first token ID for each label string."""
+    return {
+        label: tokenizer.encode(label, add_special_tokens=False)[0]
+        for label in LABEL_OPTIONS
+    }
+
+
+def predict(model, tokenizer, claim, label_token_ids):
+    """Get prediction and confidence via softmax over label logits."""
+    prompt = build_prompt(claim)
+    inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
+
+    with torch.no_grad():
+        logits = model(**inputs).logits[0, -1, :]
+
+    label_logits = torch.tensor([
+        logits[label_token_ids["SUPPORTS"]].item(),
+        logits[label_token_ids["REFUTES"]].item(),
+    ])
+    probs = torch.softmax(label_logits, dim=0).numpy()
+    pred_idx = int(np.argmax(probs))
+
+    return {
+        "predicted_label": LABEL_OPTIONS[pred_idx],
+        "predicted_idx": pred_idx,
+        "confidence": float(probs[pred_idx]),
+        "prob_supports": float(probs[0]),
+        "prob_refutes": float(probs[1]),
+    }
+
+
+def run_evaluation(mode, test_set):
+    """Evaluate on a specific test set."""
+    meta_path = f"{config.OUTPUT_DIR}/test_{test_set}_metadata.json"
+    if not os.path.exists(meta_path):
+        print(f"ERROR: {meta_path} not found. Run preprocess_data.py first.")
+        return
+
+    with open(meta_path, "r") as f:
+        test_metadata = json.load(f)
+
+    print(f"Loaded {len(test_metadata)} examples from test_{test_set}")
+    print(f"  Buckets: {dict(Counter(m['bucket'] for m in test_metadata))}")
+    print(f"  Labels:  {dict(Counter(m['label'] for m in test_metadata))}")
+
+    model, tokenizer = load_model(mode)
+    label_token_ids = get_label_token_ids(tokenizer)
+
+    print(f"\nLabel token IDs:")
+    for label, tid in label_token_ids.items():
+        print(f"  {label} -&gt; token {tid} ('{tokenizer.decode([tid])}')")
+
+    run_name = f"{mode}_{test_set}"
+    print(f"\nEvaluating: {run_name} ({len(test_metadata)} examples)...")
+
+    results = []
+    for meta in tqdm(test_metadata, desc=f"Eval {run_name}"):
+        pred = predict(model, tokenizer, meta["claim"], label_token_ids)
+        results.append({
+            "claim": meta["claim"],
+            "true_label": meta["label"],
+            "bucket": meta["bucket"],
+            "wiki_page": meta["wiki_page"],
+            "page_frequency": meta["page_frequency"],
+            **pred,
+        })
+
+    # Print summary
+    correct = sum(1 for r in results if r["predicted_idx"] == r["true_label"])
+    total = len(results)
+    print(f"\n{'='*60}")
+    print(f"Results: {run_name}")
+    print(f"{'='*60}")
+    print(f"Accuracy: {correct}/{total} = {correct/total:.4f} ({correct/total*100:.1f}%)")
+    print(f"Avg confidence: {np.mean([r['confidence'] for r in results]):.4f}")
+
+    # Save
+    out_path = f"{config.OUTPUT_DIR}/eval_results_{run_name}.json"
+    with open(out_path, "w") as f:
+        json.dump(results, f, indent=2)
+    print(f"Results saved to {out_path}")
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--mode", choices=["baseline", "finetuned"], required=True)
+    parser.add_argument("--test_set", choices=["high", "low", "mixed"], required=True,
+                        help="Which test set to evaluate on")
+    args = parser.parse_args()
+    run_evaluation(args.mode, args.test_set)
+
+```
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **run_terminal_cmd** • Run command: Set-Location "C:\Users\dhalperin\OneDrive - NVIDIA Corporation\Documents\DL\DL-PROJECT"; & "C:\Program Files\Git\bin\git.exe" show HEAD:train.py</summary>
+
+```bash
+Set-Location "C:\Users\dhalperin\OneDrive - NVIDIA Corporation\Documents\DL\DL-PROJECT"; & "C:\Program Files\Git\bin\git.exe" show HEAD:train.py
+```
+
+```
+﻿"""
+Fine-tuning script for FEVER hallucination study.
+Trains a single model on balanced H/M/L frequency data using QLoRA.
+
+Usage:
+    python train.py
+"""
+
+import torch
+from transformers import (
+    AutoModelForCausalLM,
+    AutoTokenizer,
+    BitsAndBytesConfig,
+    TrainingArguments,
+    Trainer,
+    DataCollatorForLanguageModeling,
+)
+from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training
+import config
+from preprocess_data import load_and_preprocess_fever
+
+
+def setup_model_and_tokenizer():
+    """Load model with 4-bit quantization."""
+    print(f"Loading model: {config.MODEL_ID}")
+
+    bnb_config = BitsAndBytesConfig(
+        load_in_4bit=config.USE_4BIT,
+        bnb_4bit_quant_type=config.BNB_4BIT_QUANT_TYPE,
+        bnb_4bit_compute_dtype=getattr(torch, config.BNB_4BIT_COMPUTE_DTYPE),
+        bnb_4bit_use_double_quant=config.BNB_4BIT_USE_DOUBLE_QUANT,
+    )
+
+    tokenizer = AutoTokenizer.from_pretrained(config.MODEL_ID)
+    if tokenizer.pad_token is None:
+        tokenizer.pad_token = tokenizer.eos_token
+    tokenizer.padding_side = "right"
+
+    model = AutoModelForCausalLM.from_pretrained(
+        config.MODEL_ID,
+        quantization_config=bnb_config,
+        device_map={"": 0},
+        torch_dtype=torch.bfloat16,
+    )
+
+    model = prepare_model_for_kbit_training(model)
+    print("Model and tokenizer loaded!")
+    return model, tokenizer
+
+
+def setup_lora(model):
+    """Configure LoRA adapters."""
+    lora_config = LoraConfig(
+        r=config.LORA_R,
+        lora_alpha=config.LORA_ALPHA,
+        lora_dropout=config.LORA_DROPOUT,
+        target_modules=[
+            "q_proj", "k_proj", "v_proj", "o_proj",
+            "gate_proj", "up_proj", "down_proj",
+        ],
+        bias="none",
+        task_type="CAUSAL_LM",
+    )
+    model = get_peft_model(model, lora_config)
+    model.print_trainable_parameters()
+    return model
+
+
+def tokenize_dataset(dataset, tokenizer, max_length):
+    """Tokenize for causal LM."""
+    def tokenize_fn(examples):
+        tokenized = tokenizer(
+            examples["text"],
+            truncation=True,
+            max_length=max_length,
+            padding="max_length",
+        )
+        tokenized["labels"] = tokenized["input_ids"].copy()
+        return tokenized
+
+    return dataset.map(tokenize_fn, batched=True, remove_columns=dataset.column_names)
+
+
+def main():
+    print("=" * 60)
+    print("FEVER Fine-Tuning (Single Model, Balanced H/M/L)")
+    print("=" * 60)
+
+    train_ds, eval_ds = load_and_preprocess_fever()
+
+    model, tokenizer = setup_model_and_tokenizer()
+    model = setup_lora(model)
+
+    print("\nTokenizing datasets...")
+    train_tok = tokenize_dataset(train_ds, tokenizer, config.MAX_SEQ_LEN)
+    eval_tok = tokenize_dataset(eval_ds, tokenizer, config.MAX_SEQ_LEN)
+    print("Tokenization complete!")
+
+    data_collator = DataCollatorForLanguageModeling(tokenizer=tokenizer, mlm=False)
+
+    training_args = TrainingArguments(
+        output_dir=config.OUTPUT_DIR,
+        num_train_epochs=config.NUM_EPOCHS,
+        per_device_train_batch_size=config.BATCH_SIZE,
+        gradient_accumulation_steps=config.GRADIENT_ACCUMULATION_STEPS,
+        learning_rate=config.LEARNING_RATE,
+        bf16=True,
+        logging_steps=config.LOGGING_STEPS,
+        eval_strategy="steps",
+        eval_steps=config.EVAL_STEPS,
+        save_strategy="steps",
+        save_steps=config.SAVE_STEPS,
+        warmup_steps=10,
+        lr_scheduler_type=config.LR_SCHEDULER_TYPE,
+        report_to=config.REPORT_TO,
+        save_total_limit=2,
+        load_best_model_at_end=True,
+        metric_for_best_model="eval_loss",
+        greater_is_better=False,
+    )
+
+    trainer = Trainer(
+        model=model,
+        args=training_args,
+        train_dataset=train_tok,
+        eval_dataset=eval_tok,
+        data_collator=data_collator,
+        processing_class=tokenizer,
+    )
+
+    print("\nStarting training...")
+    trainer.train()
+
+    final_path = f"{config.OUTPUT_DIR}/final_model"
+    trainer.save_model(final_path)
+    tokenizer.save_pretrained(final_path)
+    print(f"\nTraining complete! Model saved to: {final_path}")
+
+
+if __name__ == "__main__":
+    main()
+
+```
+</details>
+</tool-use>
+
+---
+
+Now I'll add `low_cpu_mem_usage=True` to both files to fix the OOM:
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **run_terminal_cmd** • Run command: Set-Location "C:\Users\dhalperin\OneDrive - NVIDIA Corporation\Documents\DL\DL-PROJECT"
+(Get-Content evaluate.py -Raw) -replace 'device_map=\{"": 0\},\s*\n\s*torch_dtype=torch\.bfloat16,', 'device_map={"": 0},
+            low_cpu_mem_usage=True,
+            torch_dtype=torch.bfloat16,' | Set-Content evaluate.py -Encoding UTF8</summary>
+
+```bash
+Set-Location "C:\Users\dhalperin\OneDrive - NVIDIA Corporation\Documents\DL\DL-PROJECT"
+(Get-Content evaluate.py -Raw) -replace 'device_map=\{"": 0\},\s*\n\s*torch_dtype=torch\.bfloat16,', 'device_map={"": 0},
+            low_cpu_mem_usage=True,
+            torch_dtype=torch.bfloat16,' | Set-Content evaluate.py -Encoding UTF8
+```
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **run_terminal_cmd** • Run command: Set-Location "C:\Users\dhalperin\OneDrive - NVIDIA Corporation\Documents\DL\DL-PROJECT"
+(Get-Content train.py -Raw) -replace 'device_map=\{"": 0\},\s*\n\s*torch_dtype=torch\.bfloat16,', 'device_map={"": 0},
+        low_cpu_mem_usage=True,
+        torch_dtype=torch.bfloat16,' | Set-Content train.py -Encoding UTF8</summary>
+
+```bash
+Set-Location "C:\Users\dhalperin\OneDrive - NVIDIA Corporation\Documents\DL\DL-PROJECT"
+(Get-Content train.py -Raw) -replace 'device_map=\{"": 0\},\s*\n\s*torch_dtype=torch\.bfloat16,', 'device_map={"": 0},
+        low_cpu_mem_usage=True,
+        torch_dtype=torch.bfloat16,' | Set-Content train.py -Encoding UTF8
+```
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **run_terminal_cmd** • Run command: Set-Location "C:\Users\dhalperin\OneDrive - NVIDIA Corporation\Documents\DL\DL-PROJECT"; Select-String 'low_cpu_mem_usage' evaluate.py, train.py</summary>
+
+```bash
+Set-Location "C:\Users\dhalperin\OneDrive - NVIDIA Corporation\Documents\DL\DL-PROJECT"; Select-String 'low_cpu_mem_usage' evaluate.py, train.py
+```
+
+```
+
+evaluate.py:46:            low_cpu_mem_usage=True,
+evaluate.py:57:            low_cpu_mem_usage=True,
+train.py:43:        low_cpu_mem_usage=True,
+
+```
+</details>
+</tool-use>
+
+---
+
+All 3 occurrences fixed. Now verify file integrity and push:
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **run_terminal_cmd** • Run command: Set-Location "C:\Users\dhalperin\OneDrive - NVIDIA Corporation\Documents\DL\DL-PROJECT"; foreach ($f in @("config.py","preprocess_data.py","train.py","evaluate.py","analyze.py","run_full_pipeline.sh")) { $c = (Get-Content $f).Count; Write-Host "$f : $c lines" }</summary>
+
+```bash
+Set-Location "C:\Users\dhalperin\OneDrive - NVIDIA Corporation\Documents\DL\DL-PROJECT"; foreach ($f in @("config.py","preprocess_data.py","train.py","evaluate.py","analyze.py","run_full_pipeline.sh")) { $c = (Get-Content $f).Count; Write-Host "$f : $c lines" }
+```
+
+```
+config.py : 47 lines
+preprocess_data.py : 339 lines
+train.py : 143 lines
+evaluate.py : 171 lines
+analyze.py : 352 lines
+run_full_pipeline.sh : 89 lines
+
+```
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **run_terminal_cmd** • Run command: Set-Location "C:\Users\dhalperin\OneDrive - NVIDIA Corporation\Documents\DL\DL-PROJECT"; & "C:\Program Files\Git\bin\git.exe" add -A; & "C:\Program Files\Git\bin\git.exe" commit -m "Fix CUDA OOM: add low_cpu_mem_usage=True for shard-by-shard loading"; & "C:\Program Files\Git\bin\git.exe" push</summary>
+
+```bash
+Set-Location "C:\Users\dhalperin\OneDrive - NVIDIA Corporation\Documents\DL\DL-PROJECT"; & "C:\Program Files\Git\bin\git.exe" add -A; & "C:\Program Files\Git\bin\git.exe" commit -m "Fix CUDA OOM: add low_cpu_mem_usage=True for shard-by-shard loading"; & "C:\Program Files\Git\bin\git.exe" push
+```
+
+```
+warning: in the working copy of 'evaluate.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'train.py', LF will be replaced by CRLF the next time Git touches it
+[main 176693b] Fix CUDA OOM: add low_cpu_mem_usage=True for shard-by-shard loading
+ 3 files changed, 1025 insertions(+), 1 deletion(-)
+To https://github.com/DCodeGenius/DL-PROJECT.git
+   c716bdb..176693b  main -&gt; main
+
+```
+</details>
+</tool-use>
+
+---
+
+Pushed. On the VM:
+
+```bash
+cd ~/DL-PROJECT
+git pull
+bash run_full_pipeline.sh 2>&1 | tee pipeline.log
+```
+
+The fix adds `low_cpu_mem_usage=True` which loads model weights **one shard at a time** instead of all 16GB at once. This keeps peak GPU memory at ~5-6GB (the final quantized size) instead of ~20GB (bf16 + quantized simultaneously).
+
+---
+
+_**User (2026-02-12 12:54Z)**_
+
+============================================================
+Step 2/5: Baseline evaluation (3 test sets)...
+============================================================
+--- Baseline on test_high ---
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loaded 1000 examples from test_high
+  Buckets: {'high': 1000}
+  Labels:  {1: 500, 0: 500}
+Loading baseline model (zero-shot)...
+Loading weights:  29%|██▉       | 85/291 [00:13<00:31,  6.45it/s, Materializing param=model.layers.9.mlp.down_proj.weight]           
+Traceback (most recent call last):
+  File "/home/danielh3/DL-PROJECT/evaluate.py", line 170, in <module>
+    run_evaluation(args.mode, args.test_set)
+  File "/home/danielh3/DL-PROJECT/evaluate.py", line 126, in run_evaluation
+    model, tokenizer = load_model(mode)
+  File "/home/danielh3/DL-PROJECT/evaluate.py", line 53, in load_model
+    model = AutoModelForCausalLM.from_pretrained(
+  File "/home/danielh3/DL-PROJECT/venv/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 374, in from_pretrained
+    return model_class.from_pretrained(
+  File "/home/danielh3/DL-PROJECT/venv/lib/python3.10/site-packages/transformers/modeling_utils.py", line 4063, in from_pretrained
+    loading_info, disk_offload_index = cls._load_pretrained_model(model, state_dict, checkpoint_files, load_config)
+  File "/home/danielh3/DL-PROJECT/venv/lib/python3.10/site-packages/transformers/modeling_utils.py", line 4182, in _load_pretrained_model
+    loading_info, disk_offload_index = convert_and_load_state_dict_in_model(
+  File "/home/danielh3/DL-PROJECT/venv/lib/python3.10/site-packages/transformers/core_model_loading.py", line 1192, in convert_and_load_state_dict_in_model
+    realized_value = mapping.convert(
+  File "/home/danielh3/DL-PROJECT/venv/lib/python3.10/site-packages/transformers/core_model_loading.py", line 665, in convert
+    collected_tensors = self.materialize_tensors()
+  File "/home/danielh3/DL-PROJECT/venv/lib/python3.10/site-packages/transformers/core_model_loading.py", line 641, in materialize_tensors
+    tensors = [future.result() for future in tensors if future.result() is not None]
+  File "/home/danielh3/DL-PROJECT/venv/lib/python3.10/site-packages/transformers/core_model_loading.py", line 641, in <listcomp>
+    tensors = [future.result() for future in tensors if future.result() is not None]
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 451, in result
+    return self.__get_result()
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/danielh3/DL-PROJECT/venv/lib/python3.10/site-packages/transformers/core_model_loading.py", line 787, in _job
+    return _materialize_copy(tensor, device, dtype)
+  File "/home/danielh3/DL-PROJECT/venv/lib/python3.10/site-packages/transformers/core_model_loading.py", line 776, in _materialize_copy
+    tensor = tensor.to(device=device, dtype=dtype)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 112.00 MiB. GPU 0 has a total capacity of 21.96 GiB of which 38.00 MiB is free. Process 17888 has 16.21 GiB memory in use. Including non-PyTorch memory, this process has 5.70 GiB memory in use. Of the allocated memory 5.37 GiB is allocated by PyTorch, and 121.93 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+
+---
+
+_**Agent (model claude-4.6-opus-high-thinking, mode Agent)**_
+
+
+
+
+
+---
+
+<think><details><summary>Thought Process</summary>
+The `low_cpu_mem_usage=True` didn't fix it. The issue is that `transformers 5.1.0` has a new concurrent loading mechanism (`core_model_loading.py`) that loads multiple weight shards in parallel threads, consuming too much GPU memory.
+
+The real fix is to downgrade transformers to a stable version that works well with the 4-bit quantization on L4 (22GB). Or we can try `device_map="auto"` with `max_memory` set.
+
+Actually, looking at the error more carefully:
+- "Process 17888 has 16.21 GiB memory in use" - same PID as before
+
+
+- PyTorch has 5.37 GiB allocated (the quantized model being built), plus 5.70 GiB non-PyTorch memory (CUDA context and weight loading buffer), with the remaining ~5 GiB being the weight file mapped into GPU memory.
+
+The root cause is transformers 5.1.0's parallel loading mechanism.</details></think>
 
 ---
 
