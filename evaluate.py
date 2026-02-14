@@ -1,4 +1,4 @@
-"""
+﻿"""
 Evaluation script for FEVER hallucination study.
 Evaluates baseline (zero-shot) or fine-tuned model on a specific test set.
 Confidence = softmax over SUPPORTS/REFUTES logits.
@@ -42,7 +42,7 @@ def load_model(mode):
         base_model = AutoModelForCausalLM.from_pretrained(
             config.MODEL_ID,
             quantization_config=bnb_config,
-            device_map="auto",
+            device_map={"": 0},
             torch_dtype=torch.bfloat16,
         )
         model = PeftModel.from_pretrained(base_model, model_path)
@@ -52,7 +52,7 @@ def load_model(mode):
         model = AutoModelForCausalLM.from_pretrained(
             config.MODEL_ID,
             quantization_config=bnb_config,
-            device_map="auto",
+            device_map={"": 0},
             torch_dtype=torch.bfloat16,
         )
 

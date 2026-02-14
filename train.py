@@ -1,4 +1,4 @@
-"""
+﻿"""
 Fine-tuning script for FEVER hallucination study.
 Trains a single model on balanced H/M/L frequency data using QLoRA.
 
@@ -39,7 +39,7 @@ def setup_model_and_tokenizer():
     model = AutoModelForCausalLM.from_pretrained(
         config.MODEL_ID,
         quantization_config=bnb_config,
-        device_map="auto",
+        device_map={"": 0},
         torch_dtype=torch.bfloat16,
     )
 

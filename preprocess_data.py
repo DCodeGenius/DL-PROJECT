@@ -9,12 +9,12 @@ Builds:
       test_low:   1000 examples from Low-frequency bucket
       test_mixed: 1000 examples (~333 H + ~333 M + ~333 L)
 
-Frequency bucketing: percentile-based (adapts to dataset size).
-  We compute page_freq for every train example, then use the 33rd and 66th
-  percentiles to define three equal-sized buckets:
-    Low:    page_freq <= p33
-    Medium: p33 < page_freq <= p67
-    High:   page_freq > p67
+Frequency bucketing: percentile-based on UNIQUE PAGE frequencies.
+  We compute page_freq for every Wikipedia page in train, then use the 33rd
+  and 66th percentiles of that page-level distribution to define buckets:
+    Low:    example_freq <= p33_of_pages
+    Medium: p33 < example_freq <= p67
+    High:   example_freq > p67
   Dev examples are bucketed using the SAME thresholds derived from train.
 """
 
@@ -68,17 +68,17 @@ def get_label_int(example):
     return lab
 
 
-def compute_freq_thresholds(annotated_examples):
+def compute_freq_thresholds(page_frequencies):
     """
-    Compute percentile-based frequency thresholds from annotated train examples.
-    Returns (low_cutoff, high_cutoff) such that:
-      Low:    freq <= low_cutoff
-      Medium: low_cutoff < freq <= high_cutoff
-      High:   freq > high_cutoff
+    Compute percentile-based thresholds on the UNIQUE PAGE frequency distribution.
+    This avoids skew from popular pages that generate many examples.
+    Returns (low_cutoff, high_cutoff).
     """
-    freqs = np.array([e["page_frequency"] for e in annotated_examples])
-    low_cutoff = np.percentile(freqs, config.FREQ_LOW_PERCENTILE)
-    high_cutoff = np.percentile(freqs, config.FREQ_HIGH_PERCENTILE)
+    unique_freqs = np.array(list(page_frequencies.values()))
+    low_cutoff = np.percentile(unique_freqs, config.FREQ_LOW_PERCENTILE)
+    high_cutoff = np.percentile(unique_freqs, config.FREQ_HIGH_PERCENTILE)
+    print(f"  Page frequency stats: min={unique_freqs.min()}, median={np.median(unique_freqs):.0f}, "
+          f"mean={unique_freqs.mean():.1f}, max={unique_freqs.max()}")
     return float(low_cutoff), float(high_cutoff)
 
 
@@ -207,19 +207,19 @@ def load_and_preprocess_fever():
     with open(f"{config.OUTPUT_DIR}/page_frequencies.json", "w") as f:
         json.dump(dict(page_frequencies.most_common()), f, indent=2)
 
+    # Compute percentile-based thresholds on UNIQUE PAGE frequencies
+    print("\nComputing percentile thresholds on unique page frequencies...")
+    low_cutoff, high_cutoff = compute_freq_thresholds(page_frequencies)
+    print(f"  p{config.FREQ_LOW_PERCENTILE} = {low_cutoff:.0f}  (Low: freq <= {low_cutoff:.0f})")
+    print(f"  p{config.FREQ_HIGH_PERCENTILE} = {high_cutoff:.0f}  (High: freq > {high_cutoff:.0f})")
+    print(f"  Medium: {low_cutoff:.0f} < freq <= {high_cutoff:.0f}")
+
     # Annotate all examples (frequency + label, no bucket yet)
     print("\nAnnotating examples with frequency...")
     ann_train = annotate_examples_raw(train_full, page_frequencies)
     ann_dev = annotate_examples_raw(dev_full, page_frequencies)
 
-    # Compute percentile-based thresholds from TRAIN data
-    low_cutoff, high_cutoff = compute_freq_thresholds(ann_train)
-    print(f"\nPercentile-based frequency thresholds (from train):")
-    print(f"  p{config.FREQ_LOW_PERCENTILE} = {low_cutoff:.0f}  (Low: freq <= {low_cutoff:.0f})")
-    print(f"  p{config.FREQ_HIGH_PERCENTILE} = {high_cutoff:.0f}  (High: freq > {high_cutoff:.0f})")
-    print(f"  Medium: {low_cutoff:.0f} < freq <= {high_cutoff:.0f}")
-
-    # Apply buckets using SAME train-derived thresholds
+    # Apply buckets using train-derived thresholds to BOTH sets
     ann_train = apply_buckets(ann_train, low_cutoff, high_cutoff)
     ann_dev = apply_buckets(ann_dev, low_cutoff, high_cutoff)
 
@@ -231,7 +231,7 @@ def load_and_preprocess_fever():
             print(f"  {b}: {counts.get(b, 0)}")
 
     # ---- BUILD TRAINING SET ------------------------------------------------
-    n_per_label_per_bucket = config.TRAIN_PER_BUCKET // 2  # 3333 per label per bucket
+    n_per_label_per_bucket = config.TRAIN_PER_BUCKET // 2
     print(f"\nBuilding training set: {config.TRAIN_PER_BUCKET} per bucket "
           f"({n_per_label_per_bucket} per label), 3 buckets")
 
@@ -245,13 +245,12 @@ def load_and_preprocess_fever():
     print(f"Total training examples: {len(train_examples)}")
 
     # ---- BUILD TEST SETS (from dev, no claim overlap) ----------------------
-    # Remove any dev examples whose claim appears in training
     ann_dev_clean = [e for e in ann_dev if e["claim"] not in train_claims]
     removed = len(ann_dev) - len(ann_dev_clean)
     if removed > 0:
         print(f"\nRemoved {removed} dev examples that overlap with training claims")
 
-    test_per_label = config.TEST_SAMPLES_PER_SET // 2  # 500 per label
+    test_per_label = config.TEST_SAMPLES_PER_SET // 2
 
     # Test-High
     print(f"\nBuilding test sets: {config.TEST_SAMPLES_PER_SET} per set ({test_per_label} per label)")
@@ -266,7 +265,6 @@ def load_and_preprocess_fever():
     mixed_per_bucket = config.TEST_SAMPLES_PER_SET // 3
     mixed_per_label_per_bucket = mixed_per_bucket // 2
 
-    # Exclude examples already used in test_high or test_low
     used_claims = set(e["claim"] for e in test_high + test_low)
     ann_dev_remaining = [e for e in ann_dev_clean if e["claim"] not in used_claims]
 
@@ -300,7 +298,7 @@ def load_and_preprocess_fever():
 
     # Save experiment info
     exp_info = {
-        "bucketing_method": "percentile",
+        "bucketing_method": "percentile_on_unique_pages",
         "low_percentile": config.FREQ_LOW_PERCENTILE,
         "high_percentile": config.FREQ_HIGH_PERCENTILE,
         "low_cutoff": low_cutoff,
@@ -321,8 +319,6 @@ def load_and_preprocess_fever():
 
     # ---- CONVERT TO HF DATASETS -------------------------------------------
     train_ds = to_hf_dataset(train_examples)
-
-    # For training eval loss, use a small slice of test_mixed
     eval_ds = to_hf_dataset(test_mixed)
 
     print(f"\n{'='*60}")
