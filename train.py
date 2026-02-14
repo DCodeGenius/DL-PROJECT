@@ -1,14 +1,11 @@
 """
 Fine-tuning script for FEVER hallucination study.
-Uses QLoRA (4-bit quantization + LoRA).
-Accepts --experiment flag to select training set (high or low frequency).
+Trains a single model on balanced H/M/L frequency data using QLoRA.
 
 Usage:
-    python train.py --experiment high
-    python train.py --experiment low
+    python train.py
 """
 
-import argparse
 import torch
 from transformers import (
     AutoModelForCausalLM,
@@ -24,7 +21,7 @@ from preprocess_data import load_and_preprocess_fever
 
 
 def setup_model_and_tokenizer():
-    """Load model and tokenizer with 4-bit quantization."""
+    """Load model with 4-bit quantization."""
     print(f"Loading model: {config.MODEL_ID}")
 
     bnb_config = BitsAndBytesConfig(
@@ -47,7 +44,7 @@ def setup_model_and_tokenizer():
     )
 
     model = prepare_model_for_kbit_training(model)
-    print("✅ Model and tokenizer loaded!")
+    print("Model and tokenizer loaded!")
     return model, tokenizer
 
 
@@ -64,7 +61,6 @@ def setup_lora(model):
         bias="none",
         task_type="CAUSAL_LM",
     )
-
     model = get_peft_model(model, lora_config)
     model.print_trainable_parameters()
     return model
@@ -82,49 +78,28 @@ def tokenize_dataset(dataset, tokenizer, max_length):
         tokenized["labels"] = tokenized["input_ids"].copy()
         return tokenized
 
-    return dataset.map(
-        tokenize_fn,
-        batched=True,
-        remove_columns=dataset.column_names,
-    )
+    return dataset.map(tokenize_fn, batched=True, remove_columns=dataset.column_names)
 
 
 def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument(
-        "--experiment",
-        choices=["high", "low"],
-        required=True,
-        help="Which frequency bucket to train on: 'high' or 'low'",
-    )
-    args = parser.parse_args()
-
-    # Set experiment in config so preprocess picks the right training set
-    config.EXPERIMENT = args.experiment
-    experiment = args.experiment
-    output_dir = f"{config.OUTPUT_DIR}/{experiment}"
-
     print("=" * 60)
-    print(f"FEVER Fine-Tuning: {experiment.upper()}-frequency training")
+    print("FEVER Fine-Tuning (Single Model, Balanced H/M/L)")
     print("=" * 60)
 
-    # Load data
     train_ds, eval_ds = load_and_preprocess_fever()
 
-    # Setup model
     model, tokenizer = setup_model_and_tokenizer()
     model = setup_lora(model)
 
-    # Tokenize
     print("\nTokenizing datasets...")
     train_tok = tokenize_dataset(train_ds, tokenizer, config.MAX_SEQ_LEN)
     eval_tok = tokenize_dataset(eval_ds, tokenizer, config.MAX_SEQ_LEN)
-    print("✅ Tokenization complete!")
+    print("Tokenization complete!")
 
     data_collator = DataCollatorForLanguageModeling(tokenizer=tokenizer, mlm=False)
 
     training_args = TrainingArguments(
-        output_dir=output_dir,
+        output_dir=config.OUTPUT_DIR,
         num_train_epochs=config.NUM_EPOCHS,
         per_device_train_batch_size=config.BATCH_SIZE,
         gradient_accumulation_steps=config.GRADIENT_ACCUMULATION_STEPS,
@@ -153,14 +128,13 @@ def main():
         processing_class=tokenizer,
     )
 
-    print(f"\n🚀 Starting training ({experiment} frequency)...")
+    print("\nStarting training...")
     trainer.train()
 
-    # Save final model
-    final_path = f"{output_dir}/final_model"
+    final_path = f"{config.OUTPUT_DIR}/final_model"
     trainer.save_model(final_path)
     tokenizer.save_pretrained(final_path)
-    print(f"\n✅ Training complete! Model saved to: {final_path}")
+    print(f"\nTraining complete! Model saved to: {final_path}")
 
 
 if __name__ == "__main__":

@@ -1,5 +1,5 @@
 """
-Quick verification script — tests GPU, HuggingFace login, model access, and data loading.
+Quick verification — GPU, HuggingFace, model access, data loading.
 """
 
 import sys
@@ -11,61 +11,57 @@ import config
 def check_gpu():
     print("Checking GPU...")
     if torch.cuda.is_available():
-        print(f"✅ GPU: {torch.cuda.get_device_name(0)} ({torch.cuda.get_device_properties(0).total_mem / 1e9:.1f} GB)")
+        props = torch.cuda.get_device_properties(0)
+        print(f"  GPU: {torch.cuda.get_device_name(0)} ({props.total_mem / 1e9:.1f} GB)")
         return True
-    print("⚠️  No GPU detected.")
+    print("  WARNING: No GPU detected.")
     return False
 
 
-def check_hf_login():
-    print("\nChecking HuggingFace auth...")
+def check_hf():
+    print("Checking HuggingFace auth...")
     try:
         from huggingface_hub import whoami
-        print(f"✅ Logged in as: {whoami()['name']}")
+        print(f"  Logged in as: {whoami()['name']}")
         return True
     except Exception as e:
-        print(f"❌ Not logged in: {e}")
+        print(f"  ERROR: {e}")
         return False
 
 
 def check_model():
-    print(f"\nChecking model access: {config.MODEL_ID}...")
+    print(f"Checking model: {config.MODEL_ID}...")
     try:
         AutoTokenizer.from_pretrained(config.MODEL_ID)
-        print("✅ Model accessible!")
+        print("  Model accessible!")
         return True
     except Exception as e:
-        print(f"❌ Cannot access model: {e}")
+        print(f"  ERROR: {e}")
         return False
 
 
 def check_data():
-    print("\nChecking FEVER data loading (binary, frequency-bucketed)...")
+    print("Checking data loading...")
     try:
-        config.EXPERIMENT = "high"
         from preprocess_data import load_and_preprocess_fever
         train_ds, eval_ds = load_and_preprocess_fever()
-        print(f"✅ Train: {len(train_ds)}, Eval: {len(eval_ds)}")
+        print(f"  Train: {len(train_ds)}, Eval: {len(eval_ds)}")
         return True
     except Exception as e:
-        print(f"❌ Data loading failed: {e}")
+        print(f"  ERROR: {e}")
         import traceback
         traceback.print_exc()
         return False
 
 
-def main():
+if __name__ == "__main__":
     print("=" * 60)
     print("Setup Verification")
     print("=" * 60)
-    checks = [check_gpu(), check_hf_login(), check_model(), check_data()]
+    ok = all([check_gpu(), check_hf(), check_model(), check_data()])
     print("\n" + "=" * 60)
-    if all(checks):
-        print("✅ All checks passed! Ready to run experiment.")
+    if ok:
+        print("All checks passed! Ready to run.")
     else:
-        print("❌ Some checks failed.")
+        print("Some checks failed.")
         sys.exit(1)
-
-
-if __name__ == "__main__":
-    main()
