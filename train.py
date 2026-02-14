@@ -40,6 +40,7 @@ def setup_model_and_tokenizer():
         config.MODEL_ID,
         quantization_config=bnb_config,
         device_map={"": 0},
+        low_cpu_mem_usage=True,
         torch_dtype=torch.bfloat16,
     )
 
@@ -139,3 +140,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
