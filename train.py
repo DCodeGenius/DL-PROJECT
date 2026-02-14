@@ -38,7 +38,7 @@ def setup_model_and_tokenizer():
         config.MODEL_ID,
         quantization_config=bnb_config,
         device_map="auto",
-        torch_dtype=torch.bfloat16,
+        dtype=torch.bfloat16,
     )
     
     # Prepare for k-bit training
@@ -95,7 +95,7 @@ def main():
         eval_steps=config.EVAL_STEPS,
         save_strategy="steps",
         save_steps=config.SAVE_STEPS,
-        warmup_ratio=config.WARMUP_RATIO,
+        warmup_steps=10,
         lr_scheduler_type=config.LR_SCHEDULER_TYPE,
         report_to=config.REPORT_TO,
         save_total_limit=3,
@@ -110,7 +110,7 @@ def main():
         train_dataset=train_ds,
         eval_dataset=eval_ds,
         args=training_args,
-        tokenizer=tokenizer,
+        processing_class=tokenizer,
         max_seq_length=config.MAX_SEQ_LEN,
         dataset_text_field="text",
     )
