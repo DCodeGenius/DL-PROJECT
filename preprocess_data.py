@@ -23,25 +23,23 @@ LABEL_MAP_REVERSE = {
 }
 
 
-def extract_wiki_pages(example):
-    """Extract Wikipedia page titles from evidence metadata."""
-    pages = []
-    if "evidence" in example and example["evidence"]:
-        for ev_group in example["evidence"]:
-            for ev in ev_group:
-                if len(ev) >= 3 and ev[2] is not None:
-                    page = str(ev[2]).replace("_", " ")
-                    if page and page not in pages:
-                        pages.append(page)
-    return pages
+def extract_wiki_page(example):
+    """Extract Wikipedia page title from evidence_wiki_url field."""
+    wiki_url = example.get("evidence_wiki_url", "")
+    if wiki_url:
+        page = str(wiki_url).replace("_", " ")
+        # Clean up wiki formatting like -LRB- and -RRB- (left/right brackets)
+        page = page.replace("-LRB-", "(").replace("-RRB-", ")")
+        return page.strip()
+    return ""
 
 
 def compute_page_frequencies(dataset):
     """Count how many claims reference each Wikipedia page across the full dataset."""
     page_counter = Counter()
     for example in dataset:
-        pages = extract_wiki_pages(example)
-        for page in pages:
+        page = extract_wiki_page(example)
+        if page:
             page_counter[page] += 1
     return page_counter
 
@@ -59,8 +57,9 @@ def create_format_fn(page_frequencies):
             label = LABEL_MAP[label_raw]
             label_int = label_raw
 
-        wiki_pages = extract_wiki_pages(example)
-        wiki_page = wiki_pages[0] if wiki_pages else "UNKNOWN"
+        wiki_page = extract_wiki_page(example)
+        if not wiki_page:
+            wiki_page = "UNKNOWN"
         freq = page_frequencies.get(wiki_page, 0) if wiki_page != "UNKNOWN" else 0
 
         # Claim-only prompt — no evidence provided
