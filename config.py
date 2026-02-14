@@ -30,7 +30,7 @@ RANDOM_SEED = 42
 LOGGING_STEPS = 25
 EVAL_STEPS = 200
 SAVE_STEPS = 200
-REPORT_TO = "wandb"  # Set to "none" if you don't want wandb
+REPORT_TO = "none"  # Set to "wandb" if you want experiment tracking
 
 # Quantization (4-bit QLoRA)
 USE_4BIT = True
