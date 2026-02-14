@@ -1,5 +1,5 @@
 """
-Evaluation script for FEVER fine-tuned model.
+Evaluation script for FEVER fine-tuned model (binary: SUPPORTS vs REFUTES).
 Runs model on eval set, extracts predictions and confidence scores.
 Supports both zero-shot (baseline) and fine-tuned evaluation.
 
@@ -18,12 +18,11 @@ from peft import PeftModel
 from tqdm import tqdm
 import config
 
-LABEL_OPTIONS = ["SUPPORTS", "REFUTES", "NOT ENOUGH INFO"]
+LABEL_OPTIONS = ["SUPPORTS", "REFUTES"]
 
 LABEL_TO_INT = {
     "SUPPORTS": 0,
     "REFUTES": 1,
-    "NOT ENOUGH INFO": 2,
 }
 
 
@@ -65,11 +64,11 @@ def load_model(mode):
 
 
 def build_prompt(claim):
-    """Build claim-only prompt matching the training format."""
+    """Build claim-only prompt matching the training format (binary)."""
     return (
         f"### Instruction:\n"
         f"Based on your knowledge, classify the following claim as "
-        f"SUPPORTS (true), REFUTES (false), or NOT ENOUGH INFO.\n\n"
+        f"SUPPORTS (true) or REFUTES (false).\n\n"
         f"### Claim:\n{claim}\n\n"
         f"### Answer:\n"
     )
@@ -87,7 +86,7 @@ def get_label_token_ids(tokenizer):
 def predict_with_confidence(model, tokenizer, claim, label_token_ids):
     """
     Get model prediction and confidence for a single claim.
-    Confidence = softmax probability over the three label tokens at the next-token position.
+    Confidence = softmax probability over the two label tokens (SUPPORTS, REFUTES).
     """
     prompt = build_prompt(claim)
     inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
@@ -96,14 +95,13 @@ def predict_with_confidence(model, tokenizer, claim, label_token_ids):
         outputs = model(**inputs)
         next_token_logits = outputs.logits[0, -1, :]
 
-    # Extract logits for the three label tokens only
+    # Extract logits for the two label tokens only
     label_logits = torch.tensor([
         next_token_logits[label_token_ids["SUPPORTS"]].item(),
         next_token_logits[label_token_ids["REFUTES"]].item(),
-        next_token_logits[label_token_ids["NOT ENOUGH INFO"]].item(),
     ])
 
-    # Softmax over just these three options → confidence scores
+    # Softmax over just these two options → confidence scores
     probs = torch.softmax(label_logits, dim=0).numpy()
 
     predicted_idx = np.argmax(probs)
@@ -116,16 +114,14 @@ def predict_with_confidence(model, tokenizer, claim, label_token_ids):
         "confidence": confidence,
         "prob_supports": float(probs[0]),
         "prob_refutes": float(probs[1]),
-        "prob_nei": float(probs[2]),
     }
 
 
 def run_evaluation(mode):
     """Run evaluation on the full eval set."""
-    # Load eval metadata
     meta_path = f"{config.OUTPUT_DIR}/eval_metadata.json"
     if not os.path.exists(meta_path):
-        print(f"❌ {meta_path} not found. Run train.py first to generate eval metadata.")
+        print(f"❌ {meta_path} not found. Run 'python preprocess_data.py' first.")
         return
 
     with open(meta_path, "r") as f:
@@ -168,7 +164,6 @@ def run_evaluation(mode):
     print(f"{'='*60}")
     print(f"Accuracy: {correct}/{total} = {accuracy:.4f} ({accuracy*100:.1f}%)")
 
-    # Accuracy per label
     for label_name, label_int in LABEL_TO_INT.items():
         label_examples = [r for r in results if r["true_label"] == label_int]
         if label_examples:
@@ -176,7 +171,6 @@ def run_evaluation(mode):
             label_acc = label_correct / len(label_examples)
             print(f"  {label_name}: {label_correct}/{len(label_examples)} = {label_acc:.4f}")
 
-    # Average confidence
     avg_conf = np.mean([r["confidence"] for r in results])
     avg_conf_correct = np.mean([r["confidence"] for r in results if r["predicted_idx"] == r["true_label"]] or [0])
     avg_conf_wrong = np.mean([r["confidence"] for r in results if r["predicted_idx"] != r["true_label"]] or [0])
@@ -191,7 +185,6 @@ def run_evaluation(mode):
         json.dump(results, f, indent=2)
     print(f"\n✅ Results saved to {output_path}")
 
-    # Save summary
     summary = {
         "mode": mode,
         "total": total,

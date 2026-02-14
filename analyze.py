@@ -1,7 +1,8 @@
 """
 Analysis script for FEVER hallucination and confidence calibration study.
+Binary classification (SUPPORTS vs REFUTES).
 Compares baseline vs fine-tuned model across frequency buckets.
-Produces charts and summary statistics.
+Produces charts and summary statistics including ECE.
 
 Usage:
     python analyze.py                          # Analyze whatever results exist
@@ -42,10 +43,9 @@ def load_results(mode):
     with open(path, "r") as f:
         results = json.load(f)
 
-    # Merge wiki page data from eval_metadata (in case results have stale data)
+    # Merge wiki page data from eval_metadata
     metadata = load_eval_metadata()
     if metadata and len(metadata) == len(results):
-        # Match by claim text
         meta_by_claim = {m["claim"]: m for m in metadata}
         updated = 0
         for r in results:
@@ -59,13 +59,12 @@ def load_results(mode):
     return results
 
 
-def assign_frequency_buckets(results, method="quartile"):
+def assign_frequency_buckets(results):
     """
-    Assign frequency buckets to each result.
-    method: 'quartile' (data-driven) or 'fixed' (predefined thresholds)
+    Assign frequency buckets based on page_frequency.
+    Uses percentile-based bucketing on known pages.
     """
-    # Get all frequencies (excluding UNKNOWN pages)
-    known_results = [r for r in results if r["wiki_page"] != "UNKNOWN"]
+    known_results = [r for r in results if r.get("wiki_page", "UNKNOWN") != "UNKNOWN"]
     freqs = [r["page_frequency"] for r in known_results]
 
     if not freqs:
@@ -73,32 +72,71 @@ def assign_frequency_buckets(results, method="quartile"):
         return results
 
     freqs_arr = np.array(freqs)
-    q25 = np.percentile(freqs_arr, 25)
-    q50 = np.percentile(freqs_arr, 50)
-    q75 = np.percentile(freqs_arr, 75)
+    q33 = np.percentile(freqs_arr, 33)
+    q66 = np.percentile(freqs_arr, 66)
 
-    print(f"\nFrequency distribution:")
+    # If percentiles collapse (very skewed), use fixed thresholds
+    if q33 == q66:
+        unique_freqs = sorted(set(freqs))
+        if len(unique_freqs) >= 3:
+            q33 = unique_freqs[len(unique_freqs) // 3]
+            q66 = unique_freqs[2 * len(unique_freqs) // 3]
+        elif len(unique_freqs) == 2:
+            q33 = unique_freqs[0]
+            q66 = unique_freqs[1]
+
+    print(f"\nFrequency distribution ({len(known_results)} examples with known pages):")
     print(f"  Min: {freqs_arr.min()}, Max: {freqs_arr.max()}, Mean: {freqs_arr.mean():.1f}")
-    print(f"  25th percentile: {q25:.0f}")
-    print(f"  50th percentile (median): {q50:.0f}")
-    print(f"  75th percentile: {q75:.0f}")
+    print(f"  Low/Medium boundary: {q33:.0f}")
+    print(f"  Medium/High boundary: {q66:.0f}")
 
     for r in results:
-        freq = r["page_frequency"]
-        if r["wiki_page"] == "UNKNOWN":
+        if r.get("wiki_page", "UNKNOWN") == "UNKNOWN":
             r["freq_bucket"] = "UNKNOWN"
-        elif freq <= q25:
+        elif r["page_frequency"] <= q33:
             r["freq_bucket"] = "low"
-        elif freq <= q75:
+        elif r["page_frequency"] <= q66:
             r["freq_bucket"] = "medium"
         else:
             r["freq_bucket"] = "high"
 
+    # Print bucket sizes
+    for bucket in ["low", "medium", "high", "UNKNOWN"]:
+        count = sum(1 for r in results if r.get("freq_bucket") == bucket)
+        if count > 0:
+            print(f"  {bucket}: {count} examples")
+
     return results
 
 
+def compute_ece(results, n_bins=10):
+    """
+    Compute Expected Calibration Error (ECE).
+    ECE = sum over bins of (bin_size/total) * |accuracy(bin) - confidence(bin)|
+    """
+    if not results:
+        return 0.0
+
+    confidences = np.array([r["confidence"] for r in results])
+    correct = np.array([1 if r["predicted_idx"] == r["true_label"] else 0 for r in results])
+    total = len(results)
+
+    bin_edges = np.linspace(0, 1, n_bins + 1)
+    ece = 0.0
+
+    for i in range(n_bins):
+        mask = (confidences >= bin_edges[i]) & (confidences < bin_edges[i + 1])
+        bin_size = mask.sum()
+        if bin_size > 0:
+            bin_acc = correct[mask].mean()
+            bin_conf = confidences[mask].mean()
+            ece += (bin_size / total) * abs(bin_acc - bin_conf)
+
+    return ece
+
+
 def compute_metrics(results, label=""):
-    """Compute accuracy, confidence, and hallucination metrics."""
+    """Compute accuracy, confidence, hallucination, and ECE metrics."""
     if not results:
         return {}
 
@@ -115,11 +153,14 @@ def compute_metrics(results, label=""):
     avg_conf_correct = np.mean(correct_confs) if correct_confs else 0
     avg_conf_wrong = np.mean(wrong_confs) if wrong_confs else 0
 
-    # Hallucination: wrong prediction with high confidence (>0.7)
-    hallucinations = [r for r in results if r["predicted_idx"] != r["true_label"] and r["confidence"] > 0.7]
-    hallucination_rate = len(hallucinations) / total if total > 0 else 0
+    # High-confidence error rate (our "hallucination" metric)
+    high_conf_errors = [r for r in results if r["predicted_idx"] != r["true_label"] and r["confidence"] > 0.7]
+    high_conf_error_rate = len(high_conf_errors) / total if total > 0 else 0
 
-    # Overconfidence gap: avg confidence minus accuracy
+    # ECE
+    ece = compute_ece(results)
+
+    # Overconfidence gap
     overconfidence_gap = avg_confidence - accuracy
 
     return {
@@ -130,8 +171,9 @@ def compute_metrics(results, label=""):
         "avg_confidence": avg_confidence,
         "avg_conf_correct": avg_conf_correct,
         "avg_conf_wrong": avg_conf_wrong,
-        "hallucination_count": len(hallucinations),
-        "hallucination_rate": hallucination_rate,
+        "high_conf_error_count": len(high_conf_errors),
+        "high_conf_error_rate": high_conf_error_rate,
+        "ece": ece,
         "overconfidence_gap": overconfidence_gap,
     }
 
@@ -148,8 +190,9 @@ def print_metrics(metrics):
     print(f"  {'Avg confidence (all)':<30} {metrics['avg_confidence']:>10.4f}")
     print(f"  {'Avg confidence (correct)':<30} {metrics['avg_conf_correct']:>10.4f}")
     print(f"  {'Avg confidence (wrong)':<30} {metrics['avg_conf_wrong']:>10.4f}")
-    print(f"  {'Hallucination count':<30} {metrics['hallucination_count']:>10}")
-    print(f"  {'Hallucination rate':<30} {metrics['hallucination_rate']:>10.4f}")
+    print(f"  {'High-conf error count':<30} {metrics['high_conf_error_count']:>10}")
+    print(f"  {'High-conf error rate':<30} {metrics['high_conf_error_rate']:>10.4f}")
+    print(f"  {'ECE':<30} {metrics['ece']:>10.4f}")
     print(f"  {'Overconfidence gap':<30} {metrics['overconfidence_gap']:>10.4f}")
 
 
@@ -162,7 +205,7 @@ def analyze_by_frequency(results, mode_name):
     results = assign_frequency_buckets(results)
 
     all_metrics = {}
-    for bucket in ["low", "medium", "high", "UNKNOWN"]:
+    for bucket in ["low", "medium", "high"]:
         bucket_results = [r for r in results if r.get("freq_bucket") == bucket]
         if bucket_results:
             metrics = compute_metrics(bucket_results, label=f"{mode_name} - {bucket} freq")
@@ -179,7 +222,7 @@ def analyze_by_label(results, mode_name):
     print(f"Per-Label Analysis: {mode_name}")
     print(f"{'='*60}")
 
-    label_names = {0: "SUPPORTS", 1: "REFUTES", 2: "NOT ENOUGH INFO"}
+    label_names = {0: "SUPPORTS", 1: "REFUTES"}
     all_metrics = {}
 
     for label_int, label_name in label_names.items():
@@ -202,14 +245,14 @@ def plot_frequency_comparison(baseline_freq_metrics, finetuned_freq_metrics):
     x = np.arange(len(buckets))
     width = 0.35
 
-    fig, axes = plt.subplots(1, 3, figsize=(18, 5))
+    fig, axes = plt.subplots(2, 2, figsize=(14, 10))
 
-    # Chart 1: Accuracy by frequency
-    ax = axes[0]
-    baseline_acc = [baseline_freq_metrics.get(b, {}).get("accuracy", 0) for b in buckets]
-    finetuned_acc = [finetuned_freq_metrics.get(b, {}).get("accuracy", 0) for b in buckets]
-    bars1 = ax.bar(x - width/2, baseline_acc, width, label="Baseline (zero-shot)", color="#4ECDC4")
-    bars2 = ax.bar(x + width/2, finetuned_acc, width, label="Fine-tuned", color="#FF6B6B")
+    # Chart 1: Accuracy
+    ax = axes[0, 0]
+    b_vals = [baseline_freq_metrics.get(b, {}).get("accuracy", 0) for b in buckets]
+    f_vals = [finetuned_freq_metrics.get(b, {}).get("accuracy", 0) for b in buckets]
+    ax.bar(x - width/2, b_vals, width, label="Baseline (zero-shot)", color="#4ECDC4")
+    ax.bar(x + width/2, f_vals, width, label="Fine-tuned", color="#FF6B6B")
     ax.set_ylabel("Accuracy")
     ax.set_title("Accuracy by Entity Frequency")
     ax.set_xticks(x)
@@ -217,35 +260,53 @@ def plot_frequency_comparison(baseline_freq_metrics, finetuned_freq_metrics):
     ax.legend()
     ax.set_ylim(0, 1)
 
-    # Chart 2: Hallucination rate by frequency
-    ax = axes[1]
-    baseline_hall = [baseline_freq_metrics.get(b, {}).get("hallucination_rate", 0) for b in buckets]
-    finetuned_hall = [finetuned_freq_metrics.get(b, {}).get("hallucination_rate", 0) for b in buckets]
-    ax.bar(x - width/2, baseline_hall, width, label="Baseline (zero-shot)", color="#4ECDC4")
-    ax.bar(x + width/2, finetuned_hall, width, label="Fine-tuned", color="#FF6B6B")
-    ax.set_ylabel("Hallucination Rate")
-    ax.set_title("Hallucination Rate by Entity Frequency")
+    # Chart 2: High-confidence error rate
+    ax = axes[0, 1]
+    b_vals = [baseline_freq_metrics.get(b, {}).get("high_conf_error_rate", 0) for b in buckets]
+    f_vals = [finetuned_freq_metrics.get(b, {}).get("high_conf_error_rate", 0) for b in buckets]
+    ax.bar(x - width/2, b_vals, width, label="Baseline (zero-shot)", color="#4ECDC4")
+    ax.bar(x + width/2, f_vals, width, label="Fine-tuned", color="#FF6B6B")
+    ax.set_ylabel("High-Confidence Error Rate")
+    ax.set_title("High-Confidence Errors by Entity Frequency")
     ax.set_xticks(x)
     ax.set_xticklabels(["Low", "Medium", "High"])
     ax.legend()
-    ax.set_ylim(0, 1)
+    ax.set_ylim(0, max(max(b_vals or [0.1]), max(f_vals or [0.1])) * 1.3)
 
-    # Chart 3: Overconfidence gap by frequency
-    ax = axes[2]
-    baseline_gap = [baseline_freq_metrics.get(b, {}).get("overconfidence_gap", 0) for b in buckets]
-    finetuned_gap = [finetuned_freq_metrics.get(b, {}).get("overconfidence_gap", 0) for b in buckets]
-    ax.bar(x - width/2, baseline_gap, width, label="Baseline (zero-shot)", color="#4ECDC4")
-    ax.bar(x + width/2, finetuned_gap, width, label="Fine-tuned", color="#FF6B6B")
-    ax.set_ylabel("Overconfidence Gap")
-    ax.set_title("Overconfidence Gap by Entity Frequency")
+    # Chart 3: ECE
+    ax = axes[1, 0]
+    b_vals = [baseline_freq_metrics.get(b, {}).get("ece", 0) for b in buckets]
+    f_vals = [finetuned_freq_metrics.get(b, {}).get("ece", 0) for b in buckets]
+    ax.bar(x - width/2, b_vals, width, label="Baseline (zero-shot)", color="#4ECDC4")
+    ax.bar(x + width/2, f_vals, width, label="Fine-tuned", color="#FF6B6B")
+    ax.set_ylabel("ECE")
+    ax.set_title("Expected Calibration Error by Entity Frequency")
     ax.set_xticks(x)
     ax.set_xticklabels(["Low", "Medium", "High"])
     ax.legend()
+
+    # Chart 4: Avg confidence (correct vs wrong)
+    ax = axes[1, 1]
+    b_correct = [baseline_freq_metrics.get(b, {}).get("avg_conf_correct", 0) for b in buckets]
+    b_wrong = [baseline_freq_metrics.get(b, {}).get("avg_conf_wrong", 0) for b in buckets]
+    f_correct = [finetuned_freq_metrics.get(b, {}).get("avg_conf_correct", 0) for b in buckets]
+    f_wrong = [finetuned_freq_metrics.get(b, {}).get("avg_conf_wrong", 0) for b in buckets]
+    w = 0.2
+    ax.bar(x - 1.5*w, b_correct, w, label="Baseline correct", color="#4ECDC4")
+    ax.bar(x - 0.5*w, b_wrong, w, label="Baseline wrong", color="#4ECDC4", alpha=0.5)
+    ax.bar(x + 0.5*w, f_correct, w, label="Fine-tuned correct", color="#FF6B6B")
+    ax.bar(x + 1.5*w, f_wrong, w, label="Fine-tuned wrong", color="#FF6B6B", alpha=0.5)
+    ax.set_ylabel("Avg Confidence")
+    ax.set_title("Confidence: Correct vs Wrong Predictions")
+    ax.set_xticks(x)
+    ax.set_xticklabels(["Low", "Medium", "High"])
+    ax.legend(fontsize=8)
+    ax.set_ylim(0, 1)
 
     plt.tight_layout()
     chart_path = f"{config.OUTPUT_DIR}/frequency_analysis.png"
     plt.savefig(chart_path, dpi=150)
-    print(f"\n📊 Chart saved to {chart_path}")
+    print(f"\n📊 Frequency analysis chart saved to {chart_path}")
     plt.close()
 
 
@@ -257,7 +318,6 @@ def plot_calibration_curve(results, mode_name):
     confidences = np.array([r["confidence"] for r in results])
     correct = np.array([1 if r["predicted_idx"] == r["true_label"] else 0 for r in results])
 
-    # Bin predictions by confidence
     n_bins = 10
     bin_edges = np.linspace(0, 1, n_bins + 1)
     bin_accs = []
@@ -269,15 +329,17 @@ def plot_calibration_curve(results, mode_name):
         if mask.sum() > 0:
             bin_accs.append(correct[mask].mean())
             bin_confs.append(confidences[mask].mean())
-            bin_counts.append(mask.sum())
+            bin_counts.append(int(mask.sum()))
         else:
             bin_accs.append(0)
             bin_confs.append((bin_edges[i] + bin_edges[i + 1]) / 2)
             bin_counts.append(0)
 
+    ece = compute_ece(results)
+
     fig, ax = plt.subplots(1, 1, figsize=(7, 7))
     ax.plot([0, 1], [0, 1], "k--", label="Perfectly calibrated")
-    ax.bar(bin_confs, bin_accs, width=0.08, alpha=0.7, color="#FF6B6B", label=mode_name)
+    ax.bar(bin_confs, bin_accs, width=0.08, alpha=0.7, color="#FF6B6B", label=f"{mode_name} (ECE={ece:.4f})")
     ax.set_xlabel("Mean Predicted Confidence")
     ax.set_ylabel("Actual Accuracy")
     ax.set_title(f"Calibration Curve — {mode_name}")
@@ -295,6 +357,7 @@ def main(baseline_only=False):
     """Run full analysis."""
     print("=" * 60)
     print("FEVER Hallucination & Calibration Analysis")
+    print("Binary Classification: SUPPORTS vs REFUTES")
     print("=" * 60)
 
     baseline_results = load_results("baseline")
@@ -346,7 +409,7 @@ def main(baseline_only=False):
         if HAS_MATPLOTLIB:
             plot_calibration_curve(finetuned_results, "Fine-tuned")
 
-    # Comparison charts
+    # Comparison
     if baseline_results and finetuned_results and not baseline_only:
         print(f"\n{'#'*60}")
         print(f"# COMPARISON: Baseline vs Fine-tuned")
@@ -357,7 +420,7 @@ def main(baseline_only=False):
 
         print(f"\n  {'Metric':<30} {'Baseline':>10} {'Fine-tuned':>10} {'Delta':>10}")
         print(f"  {'-'*62}")
-        for key in ["accuracy", "avg_confidence", "hallucination_rate", "overconfidence_gap"]:
+        for key in ["accuracy", "avg_confidence", "high_conf_error_rate", "ece", "overconfidence_gap"]:
             b_val = b_overall.get(key, 0)
             f_val = f_overall.get(key, 0)
             delta = f_val - b_val
@@ -370,7 +433,6 @@ def main(baseline_only=False):
             plot_frequency_comparison(b_freq, f_freq)
 
     # Save full analysis
-    # Convert numpy types to native Python for JSON serialization
     def convert(obj):
         if isinstance(obj, (np.integer,)):
             return int(obj)

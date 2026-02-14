@@ -1,7 +1,9 @@
 """
 Data preprocessing for FEVER dataset.
+Binary classification (SUPPORTS vs REFUTES only — NEI excluded).
 Claim-only prompts (no evidence) for hallucination analysis.
-Extracts Wikipedia page metadata for frequency analysis.
+Extracts Wikipedia page metadata and computes per-example frequency
+using max(freq) across all referenced pages.
 """
 
 import json
@@ -13,35 +15,49 @@ import config
 LABEL_MAP = {
     0: "SUPPORTS",
     1: "REFUTES",
-    2: "NOT ENOUGH INFO"
 }
 
 LABEL_MAP_REVERSE = {
     "SUPPORTS": 0,
     "REFUTES": 1,
-    "NOT ENOUGH INFO": 2
 }
 
 
-def extract_wiki_page(example):
-    """Extract Wikipedia page title from evidence_wiki_url field."""
+def extract_wiki_pages(example):
+    """
+    Extract all Wikipedia page titles referenced by this claim.
+    Returns a list of cleaned page names.
+    """
+    pages = []
     wiki_url = example.get("evidence_wiki_url", "")
     if wiki_url:
-        page = str(wiki_url).replace("_", " ")
-        # Clean up wiki formatting like -LRB- and -RRB- (left/right brackets)
-        page = page.replace("-LRB-", "(").replace("-RRB-", ")")
-        return page.strip()
-    return ""
+        raw = str(wiki_url)
+        for part in raw.split(","):
+            page = part.strip().replace("_", " ")
+            page = page.replace("-LRB-", "(").replace("-RRB-", ")")
+            if page and page not in pages:
+                pages.append(page)
+    return pages
 
 
 def compute_page_frequencies(dataset):
-    """Count how many claims reference each Wikipedia page across the full dataset."""
+    """Count how many claims reference each Wikipedia page (train split only)."""
     page_counter = Counter()
     for example in dataset:
-        page = extract_wiki_page(example)
-        if page:
+        for page in extract_wiki_pages(example):
             page_counter[page] += 1
     return page_counter
+
+
+def compute_example_freq(pages, page_frequencies):
+    """
+    Compute a single frequency value for a claim.
+    Uses max(freq) across all referenced pages.
+    """
+    if not pages:
+        return 0
+    freqs = [page_frequencies.get(p, 0) for p in pages]
+    return max(freqs)
 
 
 def create_format_fn(page_frequencies):
@@ -52,21 +68,20 @@ def create_format_fn(page_frequencies):
         label_raw = example["label"]
         if isinstance(label_raw, str):
             label = label_raw
-            label_int = LABEL_MAP_REVERSE.get(label_raw, 0)
+            label_int = LABEL_MAP_REVERSE.get(label_raw, -1)
         else:
-            label = LABEL_MAP[label_raw]
+            label = LABEL_MAP.get(label_raw, "")
             label_int = label_raw
 
-        wiki_page = extract_wiki_page(example)
-        if not wiki_page:
-            wiki_page = "UNKNOWN"
-        freq = page_frequencies.get(wiki_page, 0) if wiki_page != "UNKNOWN" else 0
+        wiki_pages = extract_wiki_pages(example)
+        primary_page = wiki_pages[0] if wiki_pages else "UNKNOWN"
+        freq = compute_example_freq(wiki_pages, page_frequencies)
 
         # Claim-only prompt — no evidence provided
         text = (
             f"### Instruction:\n"
             f"Based on your knowledge, classify the following claim as "
-            f"SUPPORTS (true), REFUTES (false), or NOT ENOUGH INFO.\n\n"
+            f"SUPPORTS (true) or REFUTES (false).\n\n"
             f"### Claim:\n{claim}\n\n"
             f"### Answer:\n{label}"
         )
@@ -75,14 +90,24 @@ def create_format_fn(page_frequencies):
             "text": text,
             "label": label_int,
             "claim": claim,
-            "wiki_page": wiki_page,
+            "wiki_page": primary_page,
             "page_frequency": freq,
         }
     return format_prompt
 
 
+def filter_binary(dataset):
+    """Filter dataset to only SUPPORTS (0) and REFUTES (1), removing NEI."""
+    label_col = dataset[0]["label"] if len(dataset) > 0 else None
+
+    if isinstance(label_col, str):
+        return dataset.filter(lambda x: x["label"] in ("SUPPORTS", "REFUTES"))
+    else:
+        return dataset.filter(lambda x: x["label"] in (0, 1))
+
+
 def load_and_preprocess_fever():
-    """Load FEVER dataset and apply preprocessing."""
+    """Load FEVER dataset and apply preprocessing (binary, claim-only)."""
     print("Loading FEVER dataset...")
     import warnings
     warnings.filterwarnings("ignore", category=UserWarning)
@@ -96,7 +121,6 @@ def load_and_preprocess_fever():
             dataset = load_dataset("fever", "v1.0", trust_remote_code=True)
         except Exception as e2:
             print(f"Loading with trust_remote_code failed: {e2}")
-            print("Attempting alternative loading method...")
             try:
                 from datasets import load_dataset_builder
                 builder = load_dataset_builder("fever", "v1.0")
@@ -104,42 +128,55 @@ def load_and_preprocess_fever():
                 dataset = builder.as_dataset()
             except Exception as e3:
                 print(f"Builder method failed: {e3}")
-                print("Trying to load from cache or different method...")
                 dataset = load_dataset("fever", "v1.0", verification_mode="no_checks")
 
-    print(f"Train size: {len(dataset['train'])}")
-    print(f"Labelled dev size: {len(dataset['labelled_dev'])}")
+    print(f"Full train size: {len(dataset['train'])}")
+    print(f"Full labelled dev size: {len(dataset['labelled_dev'])}")
 
-    # Compute page frequencies on the FULL training set (before sampling)
-    print("Computing Wikipedia page frequencies on full dataset...")
-    page_frequencies = compute_page_frequencies(dataset["train"])
+    # Filter to binary (SUPPORTS + REFUTES only)
+    print("\nFiltering to binary classification (dropping NEI)...")
+    train_full = filter_binary(dataset["train"])
+    dev_full = filter_binary(dataset["labelled_dev"])
+    print(f"Binary train size: {len(train_full)}")
+    print(f"Binary dev size: {len(dev_full)}")
+
+    # Compute page frequencies on the FULL binary training set
+    print("\nComputing Wikipedia page frequencies (train split only)...")
+    page_frequencies = compute_page_frequencies(train_full)
     print(f"Found {len(page_frequencies)} unique Wikipedia pages")
 
-    # Save frequency data for later analysis
+    # Save frequency data
     os.makedirs(config.OUTPUT_DIR, exist_ok=True)
     freq_path = f"{config.OUTPUT_DIR}/page_frequencies.json"
     with open(freq_path, "w") as f:
         json.dump(dict(page_frequencies.most_common()), f, indent=2)
     print(f"Saved page frequencies to {freq_path}")
 
-    # Create formatting function with frequency data
+    # Print frequency distribution stats
+    freq_values = list(page_frequencies.values())
+    print(f"\nFrequency stats across {len(freq_values)} pages:")
+    print(f"  Min: {min(freq_values)}, Max: {max(freq_values)}, "
+          f"Mean: {sum(freq_values)/len(freq_values):.1f}, "
+          f"Median: {sorted(freq_values)[len(freq_values)//2]}")
+
+    # Create formatting function
     format_fn = create_format_fn(page_frequencies)
 
     # Process training set
-    print("Preprocessing training data...")
-    train_ds = dataset["train"].shuffle(seed=config.RANDOM_SEED)
+    print("\nPreprocessing training data...")
+    train_ds = train_full.shuffle(seed=config.RANDOM_SEED)
     if config.TRAIN_SAMPLES:
         train_ds = train_ds.select(range(min(config.TRAIN_SAMPLES, len(train_ds))))
-    train_ds = train_ds.map(format_fn, remove_columns=dataset["train"].column_names)
+    train_ds = train_ds.map(format_fn, remove_columns=train_full.column_names)
 
     # Process eval set
     print("Preprocessing evaluation data...")
-    eval_ds = dataset["labelled_dev"].shuffle(seed=config.RANDOM_SEED)
+    eval_ds = dev_full.shuffle(seed=config.RANDOM_SEED)
     if config.EVAL_SAMPLES:
         eval_ds = eval_ds.select(range(min(config.EVAL_SAMPLES, len(eval_ds))))
-    eval_ds = eval_ds.map(format_fn, remove_columns=dataset["labelled_dev"].column_names)
+    eval_ds = eval_ds.map(format_fn, remove_columns=dev_full.column_names)
 
-    # Save eval metadata for later analysis (before tokenization drops these columns)
+    # Save eval metadata for analysis
     eval_metadata = []
     for i in range(len(eval_ds)):
         eval_metadata.append({
