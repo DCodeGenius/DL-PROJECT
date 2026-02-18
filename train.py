@@ -1,4 +1,4 @@
-﻿"""
+"""
 Fine-tuning script for FEVER hallucination study.
 Trains a single model on balanced H/M/L frequency data using QLoRA.
 
@@ -125,7 +125,7 @@ def main():
         train_dataset=train_tok,
         eval_dataset=eval_tok,
         data_collator=data_collator,
-        processing_class=tokenizer,
+        tokenizer=tokenizer,
     )
 
     print("\nStarting training...")
