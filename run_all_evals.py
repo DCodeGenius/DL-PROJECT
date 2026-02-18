@@ -29,6 +29,25 @@ LABEL_OPTIONS = ["SUPPORTS", "REFUTES"]
 TEST_SETS = ["high", "low", "mixed"]
 
 
+def patch_adapter_config(model_path):
+    """Remove unknown keys from adapter_config.json to handle PEFT version mismatches."""
+    cfg_path = os.path.join(model_path, "adapter_config.json")
+    if not os.path.exists(cfg_path):
+        return
+    with open(cfg_path, "r") as f:
+        cfg = json.load(f)
+    from peft import LoraConfig
+    import inspect
+    valid_keys = set(inspect.signature(LoraConfig.__init__).parameters.keys())
+    removed = [k for k in list(cfg.keys()) if k not in valid_keys and k not in ("peft_type", "task_type", "base_model_name_or_path", "revision")]
+    if removed:
+        print(f"  Patching adapter_config.json: removing unsupported keys {removed}")
+        for k in removed:
+            del cfg[k]
+        with open(cfg_path, "w") as f:
+            json.dump(cfg, f, indent=2)
+
+
 def load_model(mode):
     bnb_config = BitsAndBytesConfig(
         load_in_4bit=True,
@@ -40,6 +59,7 @@ def load_model(mode):
     if mode == "finetuned":
         model_path = f"{config.OUTPUT_DIR}/final_model"
         print(f"Loading fine-tuned model from {model_path}...")
+        patch_adapter_config(model_path)
         tokenizer = AutoTokenizer.from_pretrained(config.MODEL_ID)
         base_model = AutoModelForCausalLM.from_pretrained(
             config.MODEL_ID,
