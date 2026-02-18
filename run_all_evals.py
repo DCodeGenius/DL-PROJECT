@@ -40,7 +40,7 @@ def load_model(mode):
     if mode == "finetuned":
         model_path = f"{config.OUTPUT_DIR}/final_model"
         print(f"Loading fine-tuned model from {model_path}...")
-        tokenizer = AutoTokenizer.from_pretrained(model_path)
+        tokenizer = AutoTokenizer.from_pretrained(config.MODEL_ID)
         base_model = AutoModelForCausalLM.from_pretrained(
             config.MODEL_ID,
             quantization_config=bnb_config,
