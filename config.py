@@ -1,4 +1,4 @@
-﻿"""
+"""
 Configuration for FEVER hallucination study.
 Single model, frequency-stratified training and evaluation.
 """
@@ -6,7 +6,7 @@ Single model, frequency-stratified training and evaluation.
 # Model
 MODEL_ID = "meta-llama/Meta-Llama-3.1-8B-Instruct"
 OUTPUT_DIR = "./results"
-MAX_SEQ_LEN = 512
+MAX_SEQ_LEN = 256
 
 # Frequency bucketing: percentile-based (adapts to data)
 # Bottom 33% of examples = Low, middle 33% = Medium, top 33% = High
@@ -21,9 +21,9 @@ TRAIN_PER_BUCKET = 6666
 TEST_SAMPLES_PER_SET = 1000
 
 # Training hyperparameters
-BATCH_SIZE = 4
-GRADIENT_ACCUMULATION_STEPS = 4  # effective batch = 16
-NUM_EPOCHS = 3
+BATCH_SIZE = 8
+GRADIENT_ACCUMULATION_STEPS = 2  # effective batch = 16
+NUM_EPOCHS = 2
 LEARNING_RATE = 2e-4
 WARMUP_RATIO = 0.05
 LR_SCHEDULER_TYPE = "cosine"
