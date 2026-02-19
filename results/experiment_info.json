@@ -1,0 +1,15 @@
+{
+  "bucketing_method": "percentile_on_unique_pages",
+  "low_percentile": 33,
+  "high_percentile": 67,
+  "low_cutoff": 2.0,
+  "high_cutoff": 7.0,
+  "bucket_rule": "Low: freq <= 2, Medium: 2 < freq <= 7, High: freq > 7",
+  "train_size": 18082,
+  "train_per_bucket": 6666,
+  "test_high_size": 1000,
+  "test_low_size": 1000,
+  "test_mixed_size": 996,
+  "seed": 42,
+  "claims_removed_overlap": 0
+}

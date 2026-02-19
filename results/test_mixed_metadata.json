@@ -1,0 +1,6974 @@
+[
+  {
+    "claim": "The Chrysler Building was always the world's shortest building.",
+    "label": 1,
+    "wiki_page": "Chrysler Building",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "The Danish language is spoken in Spain.",
+    "label": 0,
+    "wiki_page": "Danish language",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Mel B died before releasing \"I Want You Back\".",
+    "label": 1,
+    "wiki_page": "Mel B",
+    "page_frequency": 27,
+    "bucket": "high"
+  },
+  {
+    "claim": "House is a Fox prime-time drama.",
+    "label": 0,
+    "wiki_page": "House (TV series)",
+    "page_frequency": 21,
+    "bucket": "high"
+  },
+  {
+    "claim": "John S. McCain Jr. went to school in Annapolis, Maryland.",
+    "label": 0,
+    "wiki_page": "United States Naval Academy",
+    "page_frequency": 59,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Brat Pack is a nickname given to a group of young actors.",
+    "label": 1,
+    "wiki_page": "Brat Pack (actors)",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "In 1987, Cher was released.",
+    "label": 0,
+    "wiki_page": "Cher (1987 album)",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "There are no musical or creative works in existence that have been created by Phillip Glass.",
+    "label": 1,
+    "wiki_page": "Philip Glass",
+    "page_frequency": 5,
+    "bucket": "medium"
+  },
+  {
+    "claim": "English people are descended from the Angles as a result of migration.",
+    "label": 0,
+    "wiki_page": "English people",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Floyd Mayweather Jr. has a record 26 world title wins without a loss from boxing professionally.",
+    "label": 0,
+    "wiki_page": "Floyd Mayweather Jr.",
+    "page_frequency": 126,
+    "bucket": "high"
+  },
+  {
+    "claim": "Andrew Kevin Walker was born in 1964.",
+    "label": 0,
+    "wiki_page": "Andrew Kevin Walker",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Rio's sequel is an American musical comedy film.",
+    "label": 0,
+    "wiki_page": "Rio 2",
+    "page_frequency": 5,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Guillermo del Toro is not Mexican.",
+    "label": 1,
+    "wiki_page": "Guillermo del Toro",
+    "page_frequency": 11,
+    "bucket": "high"
+  },
+  {
+    "claim": "A Canadian made One Dance.",
+    "label": 0,
+    "wiki_page": "One Dance",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Battle of the Bastards is a battle that occurred in World War I.",
+    "label": 1,
+    "wiki_page": "Battle of the Bastards",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Robinson Crusoe on Mars was distributed by an American film studio in 2006.",
+    "label": 1,
+    "wiki_page": "Robinson Crusoe on Mars",
+    "page_frequency": 5,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Meteora is not Linkin Park's second studio album.",
+    "label": 1,
+    "wiki_page": "Meteora (album)",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Anne Sullivan was born in 1866.",
+    "label": 0,
+    "wiki_page": "Anne Sullivan",
+    "page_frequency": 7,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Hinduism has zero textual resources.",
+    "label": 1,
+    "wiki_page": "Hindu texts",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "The Raven (2012 film) was released in a sovereign country in western Europe in March of 2012.",
+    "label": 0,
+    "wiki_page": "Republic of Ireland",
+    "page_frequency": 55,
+    "bucket": "high"
+  },
+  {
+    "claim": "The New York Knicks are one of the professional teams in the National Basketball Association's Eastern Conference.",
+    "label": 0,
+    "wiki_page": "New York Knicks",
+    "page_frequency": 14,
+    "bucket": "high"
+  },
+  {
+    "claim": "Despicable Me 2 was produced by a company.",
+    "label": 0,
+    "wiki_page": "Illumination Entertainment",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Barcelona is the least populated municipality in Spain.",
+    "label": 0,
+    "wiki_page": "Barcelona",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Home for the Holidays stars a famous American actor.",
+    "label": 0,
+    "wiki_page": "Anne Bancroft",
+    "page_frequency": 112,
+    "bucket": "high"
+  },
+  {
+    "claim": "In the country Germany, Blank Space is on a top 10 list.",
+    "label": 0,
+    "wiki_page": "Blank Space",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Japan is represented by one centralized federal government.",
+    "label": 0,
+    "wiki_page": "Japan",
+    "page_frequency": 22,
+    "bucket": "high"
+  },
+  {
+    "claim": "James Earl Jones is known for his live-action roles.",
+    "label": 1,
+    "wiki_page": "James Earl Jones",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Mike Friedrich writes for comic books.",
+    "label": 0,
+    "wiki_page": "Mike Friedrich",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Michaela Watkins is incapable of humor.",
+    "label": 1,
+    "wiki_page": "Michaela Watkins",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Northwestern University is a recently added member of the Big Ten Conference.",
+    "label": 1,
+    "wiki_page": "Northwestern University",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "Appropriation (art) played a significant role in visual arts.",
+    "label": 0,
+    "wiki_page": "Appropriation (art)",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Savages is an American thriller film.",
+    "label": 0,
+    "wiki_page": "Savages (2012 film)",
+    "page_frequency": 13,
+    "bucket": "high"
+  },
+  {
+    "claim": "Harvard University is not a research university.",
+    "label": 0,
+    "wiki_page": "Harvard University",
+    "page_frequency": 13,
+    "bucket": "high"
+  },
+  {
+    "claim": "Muscarinic acetylcholine receptors are in the cell membranes of certain codes.",
+    "label": 1,
+    "wiki_page": "Muscarinic acetylcholine receptor",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Due Date was shot in space.",
+    "label": 1,
+    "wiki_page": "Due Date",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Eurotas (river) is one of the major rivers of Peloponnese.",
+    "label": 0,
+    "wiki_page": "Eurotas (river)",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Riverdale's executive producer is someone other than Greg Berlanti.",
+    "label": 1,
+    "wiki_page": "Riverdale (2017 TV series)",
+    "page_frequency": 2,
+    "bucket": "low"
+  },
+  {
+    "claim": "Creedence Clearwater Revival had John Fogerty as lead vocalist and guitarist for the song Fortunate Son.",
+    "label": 0,
+    "wiki_page": "Creedence Clearwater Revival",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Kaya Scodelario performed in teen drama Skins.",
+    "label": 0,
+    "wiki_page": "Kaya Scodelario",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "John Goodman had the lead role in The Babe.",
+    "label": 0,
+    "wiki_page": "John Goodman",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Argentina is not subdivided into twenty-three provinces.",
+    "label": 1,
+    "wiki_page": "Argentina",
+    "page_frequency": 7,
+    "bucket": "medium"
+  },
+  {
+    "claim": "So You Think You Can Dance is a competition.",
+    "label": 0,
+    "wiki_page": "So You Think You Can Dance (U.S. TV series)",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Nuuk is the seat of government of Germany.",
+    "label": 1,
+    "wiki_page": "Nuuk",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "B. R. Ambedkar died before 1910.",
+    "label": 1,
+    "wiki_page": "B. R. Ambedkar",
+    "page_frequency": 1,
+    "bucket": "low"
+  },
+  {
+    "claim": "Brie Larson and Destin Daniel worked together.",
+    "label": 0,
+    "wiki_page": "Short Term 12",
+    "page_frequency": 37,
+    "bucket": "high"
+  },
+  {
+    "claim": "Multiple American actors starred in Underdog.",
+    "label": 0,
+    "wiki_page": "Amy Adams",
+    "page_frequency": 70,
+    "bucket": "high"
+  },
+  {
+    "claim": "Roswell was developed by Jason Katims.",
+    "label": 0,
+    "wiki_page": "Roswell (TV series)",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Moves Like Jagger is on Overexposed.",
+    "label": 1,
+    "wiki_page": "Moves like Jagger",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Cordilleran Ice Sheet was located in North America.",
+    "label": 0,
+    "wiki_page": "Cordilleran Ice Sheet",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Mary of Teck was never queen mother.",
+    "label": 1,
+    "wiki_page": "George VI",
+    "page_frequency": 65,
+    "bucket": "high"
+  },
+  {
+    "claim": "Toy Story 2 is a computer-animated movie.",
+    "label": 0,
+    "wiki_page": "Toy Story 2",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Harris Jayaraj is a stateless person.",
+    "label": 1,
+    "wiki_page": "Harris Jayaraj",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Bea Arthur was a dancer, clown, and rapper.",
+    "label": 1,
+    "wiki_page": "Bea Arthur",
+    "page_frequency": 5,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Alice Cooper's career spans over five decades.",
+    "label": 0,
+    "wiki_page": "Alice Cooper",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Move (Little Mix song) was released in the UK in 2013.",
+    "label": 0,
+    "wiki_page": "Move (Little Mix song)",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Taylor Lautner was on television situational comedies.",
+    "label": 0,
+    "wiki_page": "Taylor Lautner",
+    "page_frequency": 6,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Murda Beatz is from North America.",
+    "label": 0,
+    "wiki_page": "Murda Beatz",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "The American Civil War started on February 6, 1861.",
+    "label": 1,
+    "wiki_page": "American Civil War",
+    "page_frequency": 5,
+    "bucket": "medium"
+  },
+  {
+    "claim": "There are film scores in existence that have been composed by Phillip Glass.",
+    "label": 0,
+    "wiki_page": "Philip Glass",
+    "page_frequency": 5,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Marcus Bentley has zero middle names.",
+    "label": 1,
+    "wiki_page": "Marcus Bentley",
+    "page_frequency": 6,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Guns N' Roses started in 1995.",
+    "label": 1,
+    "wiki_page": "Guns N' Roses",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Birthday Song's (2 Chainz song) producer was Kanye West.",
+    "label": 1,
+    "wiki_page": "Birthday Song (2 Chainz song)",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Nicolas Roeg did the cinematography of Far from the Madding Crowd.",
+    "label": 0,
+    "wiki_page": "Far from the Madding Crowd (1967 film)",
+    "page_frequency": 2,
+    "bucket": "low"
+  },
+  {
+    "claim": "Emilia Clarke is an actress.",
+    "label": 0,
+    "wiki_page": "Emilia Clarke",
+    "page_frequency": 7,
+    "bucket": "medium"
+  },
+  {
+    "claim": "DNA is exclusively a song.",
+    "label": 1,
+    "wiki_page": "DNA (Little Mix album)",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "The American Civil War lasted 4 years.",
+    "label": 0,
+    "wiki_page": "American Civil War",
+    "page_frequency": 5,
+    "bucket": "medium"
+  },
+  {
+    "claim": "A French business publishes Michelin Guides.",
+    "label": 0,
+    "wiki_page": "Michelin Guide",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "The Daily Show is comedy focused.",
+    "label": 0,
+    "wiki_page": "The Daily Show",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "The Bahamas is a cat.",
+    "label": 1,
+    "wiki_page": "The Bahamas",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Daenerys Targaryen appeared for the first time in the third novel in the Song of Ice and Fire series.",
+    "label": 1,
+    "wiki_page": "A Clash of Kings",
+    "page_frequency": 54,
+    "bucket": "high"
+  },
+  {
+    "claim": "Manchester United is based in New England.",
+    "label": 1,
+    "wiki_page": "Manchester United F.C.",
+    "page_frequency": 59,
+    "bucket": "high"
+  },
+  {
+    "claim": "In the 1960's, Heavy Metal music was developed.",
+    "label": 0,
+    "wiki_page": "Heavy metal music",
+    "page_frequency": 7,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Danny Brown is incapable of being a musician.",
+    "label": 1,
+    "wiki_page": "Danny Brown",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "There is a science fiction film with Riddick.",
+    "label": 0,
+    "wiki_page": "Riddick (film)",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Morse Code is used in air traffic control.",
+    "label": 0,
+    "wiki_page": "Morse code",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Simon Pegg is a cat.",
+    "label": 1,
+    "wiki_page": "Simon Pegg",
+    "page_frequency": 20,
+    "bucket": "high"
+  },
+  {
+    "claim": "Rupert Murdoch never formed BSkyB.",
+    "label": 1,
+    "wiki_page": "Rupert Murdoch",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Physics' main goal is to understand the behavior of the universe.",
+    "label": 0,
+    "wiki_page": "Physics",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Aparshakti Khurana is an actor.",
+    "label": 0,
+    "wiki_page": "Aparshakti Khurana",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Estonia is a country.",
+    "label": 0,
+    "wiki_page": "Estonians",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "The setting of No Country for Old Men is the 1980's West Texas desert.",
+    "label": 0,
+    "wiki_page": "No Country for Old Men (film)",
+    "page_frequency": 14,
+    "bucket": "high"
+  },
+  {
+    "claim": "A Milli is a song by someone born in 1992.",
+    "label": 1,
+    "wiki_page": "Lil Wayne",
+    "page_frequency": 151,
+    "bucket": "high"
+  },
+  {
+    "claim": "Johnny Van Zant is incapable of being a musician.",
+    "label": 1,
+    "wiki_page": "Johnny Van Zant",
+    "page_frequency": 7,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Danny Brown is incapable of being a musician.",
+    "label": 1,
+    "wiki_page": "Danny Brown",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "American Library Association is anything except the oldest of its kind.",
+    "label": 1,
+    "wiki_page": "American Library Association",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Sejong the Great was a ruler.",
+    "label": 0,
+    "wiki_page": "Sejong the Great",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Terrence Howard reprised the role of James Rhodes in the video game adaptation.",
+    "label": 0,
+    "wiki_page": "Terrence Howard",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Baadshah was only dubbed into English.",
+    "label": 1,
+    "wiki_page": "Baadshah (2013 film)",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Aristotle spent time in Athens.",
+    "label": 0,
+    "wiki_page": "Aristotle",
+    "page_frequency": 17,
+    "bucket": "high"
+  },
+  {
+    "claim": "Meteora is an album.",
+    "label": 0,
+    "wiki_page": "Meteora (album)",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "One True Thing was directed by a child.",
+    "label": 1,
+    "wiki_page": "One True Thing",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Psych's protagonist is not played by an American actor.",
+    "label": 1,
+    "wiki_page": "James Roday",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Finding Dory was written by Andrei Zvyagintsev.",
+    "label": 1,
+    "wiki_page": "Finding Dory",
+    "page_frequency": 16,
+    "bucket": "high"
+  },
+  {
+    "claim": "Buffy the Vampire Slayer is exclusively a Japanese television series.",
+    "label": 1,
+    "wiki_page": "Buffy the Vampire Slayer",
+    "page_frequency": 1,
+    "bucket": "low"
+  },
+  {
+    "claim": "Japan consists of islands.",
+    "label": 0,
+    "wiki_page": "Japan",
+    "page_frequency": 22,
+    "bucket": "high"
+  },
+  {
+    "claim": "Bryan Howd was a Golden Globe nominee.",
+    "label": 0,
+    "wiki_page": "Byron Howard",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "A President of the United States was the person who delivered the Gettysburg Address.",
+    "label": 0,
+    "wiki_page": "Abraham Lincoln",
+    "page_frequency": 396,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Office (US) ran for seasons.",
+    "label": 0,
+    "wiki_page": "The Office (U.S. TV series)",
+    "page_frequency": 5,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Cary Elwes has yet to try acting.",
+    "label": 1,
+    "wiki_page": "Cary Elwes",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "The Wonder Years was a boardgame.",
+    "label": 1,
+    "wiki_page": "The Wonder Years",
+    "page_frequency": 2,
+    "bucket": "low"
+  },
+  {
+    "claim": "Stephen Colbert is on CBS as host of The Late Show.",
+    "label": 0,
+    "wiki_page": "Stephen Colbert",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "The Man in the Iron Mask was directed by Randall Wallace.",
+    "label": 0,
+    "wiki_page": "The Man in the Iron Mask (1998 film)",
+    "page_frequency": 7,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Brown University's main campus is located in the second largest city in New England.",
+    "label": 1,
+    "wiki_page": "Brown University",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Bea Arthur died on August 22nd, 2001.",
+    "label": 1,
+    "wiki_page": "Bea Arthur",
+    "page_frequency": 5,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Barbarella is not non-fiction.",
+    "label": 0,
+    "wiki_page": "Barbarella (film)",
+    "page_frequency": 11,
+    "bucket": "high"
+  },
+  {
+    "claim": "Estelle Getty appeared only in television.",
+    "label": 1,
+    "wiki_page": "Estelle Getty",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Honeymoon is a major-label record by Lana Del Rey.",
+    "label": 0,
+    "wiki_page": "Honeymoon (Lana Del Rey album)",
+    "page_frequency": 5,
+    "bucket": "medium"
+  },
+  {
+    "claim": "The Greek language is spoken only outside of Albania.",
+    "label": 1,
+    "wiki_page": "Greek language",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Ang Lee is has directed more than 4 films.",
+    "label": 0,
+    "wiki_page": "Ang Lee",
+    "page_frequency": 5,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Zoey Deutch died on November 10, 1994.",
+    "label": 1,
+    "wiki_page": "Zoey Deutch",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "The Quran is a WWE wrestler..",
+    "label": 1,
+    "wiki_page": "Quran",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Bruce Shand was unable to earn the Military Cross.",
+    "label": 1,
+    "wiki_page": "Bruce Shand",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Connie Nielsen acted in a Fox American television series.",
+    "label": 0,
+    "wiki_page": "The Following (season 2)",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Janelle Mon\u00e1e has only ever been a plumber.",
+    "label": 1,
+    "wiki_page": "Janelle Mona\u0301e",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Jos\u00e9 Ferrer was a director of plays.",
+    "label": 0,
+    "wiki_page": "Jose\u0301 Ferrer",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Taylor Lautner was born after the finale of The Bernie Mac Show.",
+    "label": 1,
+    "wiki_page": "Taylor Lautner",
+    "page_frequency": 6,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Guillermo del Toro was born on October 9, 1964.",
+    "label": 0,
+    "wiki_page": "Guillermo del Toro",
+    "page_frequency": 11,
+    "bucket": "high"
+  },
+  {
+    "claim": "Part of Dilwale Dulhania Le Jayenge was shot in August.",
+    "label": 0,
+    "wiki_page": "Dilwale Dulhania Le Jayenge",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Ukrainian Soviet Socialist Republic was a founding participant of the UN.",
+    "label": 0,
+    "wiki_page": "United Nations",
+    "page_frequency": 103,
+    "bucket": "high"
+  },
+  {
+    "claim": "The album Cher was created only by Bon Jovi.",
+    "label": 1,
+    "wiki_page": "Cher (1987 album)",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Camp Flog Gnaw was created by musicians.",
+    "label": 0,
+    "wiki_page": "Tyler",
+    "page_frequency": 87,
+    "bucket": "high"
+  },
+  {
+    "claim": "Bethany Hamilton's biopic had a director.",
+    "label": 0,
+    "wiki_page": "Bethany Hamilton",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Anushka Sharma won a Filmfare Award.",
+    "label": 0,
+    "wiki_page": "Anushka Sharma",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Andrew Kevin Walker is only Chinese.",
+    "label": 1,
+    "wiki_page": "Andrew Kevin Walker",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "A polynomial consists of exclusively indeterminates.",
+    "label": 1,
+    "wiki_page": "Polynomial",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Samsung entered the electronics industry in the late 1960s.",
+    "label": 0,
+    "wiki_page": "Samsung",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Simi Valley, California, reported a median household income of $87,894 in 2012.",
+    "label": 0,
+    "wiki_page": "Simi Valley",
+    "page_frequency": 330,
+    "bucket": "high"
+  },
+  {
+    "claim": "Murda Beatz is a record producer.",
+    "label": 0,
+    "wiki_page": "Murda Beatz",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Youtube is listed as the second most popular website on the planet.",
+    "label": 0,
+    "wiki_page": "YouTube",
+    "page_frequency": 72,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Brat Pack is only a nickname given to a group of old actors.",
+    "label": 1,
+    "wiki_page": "Brat Pack (actors)",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Taylor Lautner appeared in The Bernie Mac Show in 2001.",
+    "label": 1,
+    "wiki_page": "Taylor Lautner",
+    "page_frequency": 6,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Birmingham is in the ocean.",
+    "label": 1,
+    "wiki_page": "Birmingham",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Southpaw is only a sports drama book.",
+    "label": 1,
+    "wiki_page": "Southpaw (film)",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Heavy Metal music was developed in Europe.",
+    "label": 1,
+    "wiki_page": "Heavy metal music",
+    "page_frequency": 7,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Mariah Carey is a mute.",
+    "label": 1,
+    "wiki_page": "Mariah Carey",
+    "page_frequency": 205,
+    "bucket": "high"
+  },
+  {
+    "claim": "Port of Spain is a city.",
+    "label": 0,
+    "wiki_page": "Port of Spain",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Bhagat Singh was murdered.",
+    "label": 1,
+    "wiki_page": "Bhagat Singh",
+    "page_frequency": 1,
+    "bucket": "low"
+  },
+  {
+    "claim": "Adidas designs things that you can wear.",
+    "label": 0,
+    "wiki_page": "Adidas",
+    "page_frequency": 1,
+    "bucket": "low"
+  },
+  {
+    "claim": "Mani Ratnam is a filmmaker.",
+    "label": 0,
+    "wiki_page": "Mani Ratnam",
+    "page_frequency": 1,
+    "bucket": "low"
+  },
+  {
+    "claim": "Topman only sells women's clothing.",
+    "label": 1,
+    "wiki_page": "Topman",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Benzodiazepine is a medication.",
+    "label": 0,
+    "wiki_page": "Benzodiazepine",
+    "page_frequency": 6,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Eva Green had a career in film.",
+    "label": 0,
+    "wiki_page": "Eva Green",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "There are eleven symphonic works in existence that have been composed by Phillip Glass.",
+    "label": 0,
+    "wiki_page": "Philip Glass",
+    "page_frequency": 5,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Two and a Half Men featured Charlie Sheen.",
+    "label": 0,
+    "wiki_page": "Two and a Half Men",
+    "page_frequency": 7,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Maggie Q only acts on film.",
+    "label": 1,
+    "wiki_page": "Nikita (TV series)",
+    "page_frequency": 77,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Millers has no cancellation announcements.",
+    "label": 1,
+    "wiki_page": "The Millers",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Colin Kaepernick is a person.",
+    "label": 0,
+    "wiki_page": "Colin Kaepernick",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Half Girlfriend was partially filmed in Delhi.",
+    "label": 0,
+    "wiki_page": "Half Girlfriend (film)",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Watertown, Massachusetts is in the Northern United States.",
+    "label": 0,
+    "wiki_page": "Greater Boston",
+    "page_frequency": 1,
+    "bucket": "low"
+  },
+  {
+    "claim": "Poseidon grossed money.",
+    "label": 0,
+    "wiki_page": "Poseidon (film)",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Pattie Boyd and George Harrison were married.",
+    "label": 0,
+    "wiki_page": "George Harrison",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "Roland Emmerich is a campaigner for the LGBT community.",
+    "label": 0,
+    "wiki_page": "Roland Emmerich",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Angelsberg is a country.",
+    "label": 1,
+    "wiki_page": "Angelsberg",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "The Gettysburg Address is a well-known speech delivered by Herbert Hoover.",
+    "label": 1,
+    "wiki_page": "Gettysburg Address",
+    "page_frequency": 7,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Two and a Half Men starred Jamie Fox.",
+    "label": 1,
+    "wiki_page": "Two and a Half Men",
+    "page_frequency": 7,
+    "bucket": "medium"
+  },
+  {
+    "claim": "The current President of Lockheed Martin was born in 1955.",
+    "label": 1,
+    "wiki_page": "Lockheed Martin",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Estonia is a state.",
+    "label": 0,
+    "wiki_page": "Estonia",
+    "page_frequency": 2,
+    "bucket": "low"
+  },
+  {
+    "claim": "Robert Lopez has won a Tony Award.",
+    "label": 0,
+    "wiki_page": "Robert Lopez",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Ed Gein had worked at several local graveyards.",
+    "label": 0,
+    "wiki_page": "Ed Gein",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Massachusetts contains Watertown, Massachusetts.",
+    "label": 0,
+    "wiki_page": "Watertown",
+    "page_frequency": 34,
+    "bucket": "high"
+  },
+  {
+    "claim": "Birmingham is a suburban borough.",
+    "label": 1,
+    "wiki_page": "Birmingham",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Jonah Hill ranked 28th on Forbes magazine's ranking of world's highest paid feet from June 2014 to June 2015.",
+    "label": 1,
+    "wiki_page": "Jonah Hill",
+    "page_frequency": 31,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Independent Spirit Awards are held the day before the Golden Globe Awards.",
+    "label": 1,
+    "wiki_page": "Independent Spirit Awards",
+    "page_frequency": 6,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Seohyun is a dog.",
+    "label": 1,
+    "wiki_page": "Seohyun",
+    "page_frequency": 7,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Hermit crabs belong to a superfamily.",
+    "label": 0,
+    "wiki_page": "Hermit crab",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "China is incapable of being a country.",
+    "label": 1,
+    "wiki_page": "China",
+    "page_frequency": 19,
+    "bucket": "high"
+  },
+  {
+    "claim": "Finding Dory was written by Harry S. Truman.",
+    "label": 1,
+    "wiki_page": "Finding Dory",
+    "page_frequency": 16,
+    "bucket": "high"
+  },
+  {
+    "claim": "Danny Brown named his third album XXXX.",
+    "label": 1,
+    "wiki_page": "Danny Brown",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Samsung was separated into four business groups in Italy.",
+    "label": 1,
+    "wiki_page": "Samsung",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Washington Wizards lost the conference title in 1975.",
+    "label": 1,
+    "wiki_page": "Washington Wizards",
+    "page_frequency": 5,
+    "bucket": "medium"
+  },
+  {
+    "claim": "An American singer-songwriter made Hourglass.",
+    "label": 0,
+    "wiki_page": "James Taylor",
+    "page_frequency": 43,
+    "bucket": "high"
+  },
+  {
+    "claim": "Java is an landform.",
+    "label": 0,
+    "wiki_page": "Island",
+    "page_frequency": 17,
+    "bucket": "high"
+  },
+  {
+    "claim": "Cars 3 will be directed by someone working for a computer animation company.",
+    "label": 0,
+    "wiki_page": "Cars (film)",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Underdog was directed by Frederik Du Chau.",
+    "label": 0,
+    "wiki_page": "Underdog (film)",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Simon Pegg is a person who acts.",
+    "label": 0,
+    "wiki_page": "Simon Pegg",
+    "page_frequency": 20,
+    "bucket": "high"
+  },
+  {
+    "claim": "Uranium is an elemental chemical.",
+    "label": 0,
+    "wiki_page": "Uranium",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Arizona is a state in the United States.",
+    "label": 0,
+    "wiki_page": "Arizona",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Carol Danvers only appears in German comic books.",
+    "label": 1,
+    "wiki_page": "Avengers (comics)",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "Boxing Helena debuted at the Toronto International Film Festival.",
+    "label": 1,
+    "wiki_page": "Boxing Helena",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Ian Brennan is a director.",
+    "label": 0,
+    "wiki_page": "Ian Brennan (writer)",
+    "page_frequency": 1,
+    "bucket": "low"
+  },
+  {
+    "claim": "Sausage Party is a horror film.",
+    "label": 1,
+    "wiki_page": "Sausage Party",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Roland Emmerich campaigns for the LGBT community.",
+    "label": 0,
+    "wiki_page": "Roland Emmerich",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Tennessee is a state in the United States.",
+    "label": 0,
+    "wiki_page": "Tennessee",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Home for the Holidays stars a producer from the United States.",
+    "label": 0,
+    "wiki_page": "Holly Hunter",
+    "page_frequency": 72,
+    "bucket": "high"
+  },
+  {
+    "claim": "Home for the Holidays stars no actors or actresses.",
+    "label": 1,
+    "wiki_page": "Holly Hunter",
+    "page_frequency": 72,
+    "bucket": "high"
+  },
+  {
+    "claim": "Practical Magic is based on a novel that was written by Waluigi.",
+    "label": 1,
+    "wiki_page": "Practical Magic",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "It is customary to wear outfits while Trick-or-Treating.",
+    "label": 0,
+    "wiki_page": "Trick-or-treating",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Burbank, California has always been completely void of industry.",
+    "label": 1,
+    "wiki_page": "Burbank",
+    "page_frequency": 330,
+    "bucket": "high"
+  },
+  {
+    "claim": "Phoenix, Arizona is a capital.",
+    "label": 0,
+    "wiki_page": "Phoenix",
+    "page_frequency": 5,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Food Network is available in the United States.",
+    "label": 0,
+    "wiki_page": "Food Network",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Island Records was founded in the late 1950s.",
+    "label": 0,
+    "wiki_page": "Island Records",
+    "page_frequency": 26,
+    "bucket": "high"
+  },
+  {
+    "claim": "Sausage Party was only released in 2011.",
+    "label": 1,
+    "wiki_page": "Sausage Party",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "2006 was the year when Lockhead Martin F-35 Lightning II first flew.",
+    "label": 0,
+    "wiki_page": "Lockheed Martin F-35 Lightning II",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Warren Beatty worked with Trevor Griffiths.",
+    "label": 0,
+    "wiki_page": "Reds (film)",
+    "page_frequency": 49,
+    "bucket": "high"
+  },
+  {
+    "claim": "Practical Magic is an American romantic comedy film.",
+    "label": 0,
+    "wiki_page": "Practical Magic",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Samsung entered the electronics industry in the late 1970s.",
+    "label": 1,
+    "wiki_page": "Samsung",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Marcus Bentley is incapable of being a voice-over artist.",
+    "label": 1,
+    "wiki_page": "Marcus Bentley",
+    "page_frequency": 6,
+    "bucket": "medium"
+  },
+  {
+    "claim": "The Alfred P. Murrah Federal Building was demolished at 200 N.W. 5th Street.",
+    "label": 0,
+    "wiki_page": "Alfred P. Murrah Federal Building",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Jonah Hill did not make $16 million dollars in 2014.",
+    "label": 1,
+    "wiki_page": "Jonah Hill",
+    "page_frequency": 31,
+    "bucket": "high"
+  },
+  {
+    "claim": "St. Anger is the second studio album by Metallica.",
+    "label": 1,
+    "wiki_page": "St. Anger",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Alvin and the Chipmunks is an American comedy film.",
+    "label": 0,
+    "wiki_page": "Alvin and the Chipmunks (film)",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Samsung never entered the construction industry.",
+    "label": 1,
+    "wiki_page": "Samsung",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Prescott, Arizona is outside of the United States.",
+    "label": 1,
+    "wiki_page": "Prescott",
+    "page_frequency": 5,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Regina King is an actress.",
+    "label": 0,
+    "wiki_page": "Regina King",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "St. Anger is a restaurant.",
+    "label": 1,
+    "wiki_page": "St. Anger",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Gin derives its main flavour from strawberries.",
+    "label": 1,
+    "wiki_page": "Gin",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Arizona is in the southern United States.",
+    "label": 0,
+    "wiki_page": "Arizona",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Samsung was separated into four business groups in Italy.",
+    "label": 1,
+    "wiki_page": "Shinsegae",
+    "page_frequency": 56,
+    "bucket": "high"
+  },
+  {
+    "claim": "Johnny Van Zant always refused to become the lead vocalist for Lynyrd Skynyrd.",
+    "label": 1,
+    "wiki_page": "Johnny Van Zant",
+    "page_frequency": 7,
+    "bucket": "medium"
+  },
+  {
+    "claim": "The Gettysburg Address was delivered by a President of the United States.",
+    "label": 0,
+    "wiki_page": "Gettysburg Address",
+    "page_frequency": 7,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Move (Little Mix song) was released on an album.",
+    "label": 0,
+    "wiki_page": "Move (Little Mix song)",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Due Date is only a television show.",
+    "label": 1,
+    "wiki_page": "Due Date",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Meteora is an album by Fall Out Boy.",
+    "label": 1,
+    "wiki_page": "Meteora (album)",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Excluded from Saw (franchise) is the 2004 film.",
+    "label": 1,
+    "wiki_page": "Saw (franchise)",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Home for the Holidays stars an American actress.",
+    "label": 0,
+    "wiki_page": "Holly Hunter",
+    "page_frequency": 72,
+    "bucket": "high"
+  },
+  {
+    "claim": "Vampires frequently paid visits to loved ones.",
+    "label": 0,
+    "wiki_page": "Vampire",
+    "page_frequency": 5,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Punch-Drunk Love was distributed by Revolution Studios.",
+    "label": 1,
+    "wiki_page": "Punch-Drunk Love",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Hush (2016 film) was directed by Jason Blum.",
+    "label": 1,
+    "wiki_page": "Hush (2016 film)",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Roberto Orci wrote Star Trek Into Darkness.",
+    "label": 0,
+    "wiki_page": "Star Trek Into Darkness",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "An Education was created by a writer Lynn Barber.",
+    "label": 1,
+    "wiki_page": "An Education",
+    "page_frequency": 2,
+    "bucket": "low"
+  },
+  {
+    "claim": "The Adventures of Pluto Nash was directed by Ron Underwood in 2006.",
+    "label": 1,
+    "wiki_page": "The Adventures of Pluto Nash",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Edmund H. North was a Gemini.",
+    "label": 1,
+    "wiki_page": "Pisces (astrology)",
+    "page_frequency": 15,
+    "bucket": "high"
+  },
+  {
+    "claim": "Seohyun is only a director.",
+    "label": 1,
+    "wiki_page": "Seohyun",
+    "page_frequency": 7,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Amyotrophic lateral sclerosis starts later in inherited cases.",
+    "label": 0,
+    "wiki_page": "Amyotrophic lateral sclerosis",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Issa Rae features various content created by people of color and has had success.",
+    "label": 0,
+    "wiki_page": "Issa Rae",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Stripes featured only John Denver in a role.",
+    "label": 1,
+    "wiki_page": "Stripes (film)",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Keith Stanfield is from America.",
+    "label": 0,
+    "wiki_page": "Keith Stanfield",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Finding Dory was directed by anyone except Angus MacLane.",
+    "label": 1,
+    "wiki_page": "Finding Dory",
+    "page_frequency": 16,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Best Contemporary Song award went to Rehab.",
+    "label": 0,
+    "wiki_page": "Rehab (Amy Winehouse song)",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Research is incapable of testing the validity of procedures.",
+    "label": 1,
+    "wiki_page": "Research",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Prague's historic center is not on UNESCO's list of World Heritage Sites.",
+    "label": 1,
+    "wiki_page": "Prague",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Milk is a biographical film starring Sean Penn.",
+    "label": 0,
+    "wiki_page": "Milk (film)",
+    "page_frequency": 5,
+    "bucket": "medium"
+  },
+  {
+    "claim": "The Thin Red Line (1998 film) portrays only frogs.",
+    "label": 1,
+    "wiki_page": "Nick Nolte",
+    "page_frequency": 132,
+    "bucket": "high"
+  },
+  {
+    "claim": "Emma Watson is an Italian actress.",
+    "label": 1,
+    "wiki_page": "Emma Watson",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "Tremont Street Subway is incapable of being part of the MBTA.",
+    "label": 1,
+    "wiki_page": "Tremont Street Subway",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Estelle Getty refuses to produce humorous actions, thoughts, or images to others.",
+    "label": 1,
+    "wiki_page": "Estelle Getty",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Catherine Keener appeared in a movie.",
+    "label": 0,
+    "wiki_page": "Catherine Keener",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Jeb Bush is the younger brother of Ronald Reagan.",
+    "label": 1,
+    "wiki_page": "Jeb Bush",
+    "page_frequency": 24,
+    "bucket": "high"
+  },
+  {
+    "claim": "Raven-Symon\u00e9 is an entertainer.",
+    "label": 0,
+    "wiki_page": "Raven-Symone\u0301",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Floyd Mayweather Jr. has made 30 career boxing knockouts in different special event professional boxing fights.",
+    "label": 0,
+    "wiki_page": "Floyd Mayweather Jr.",
+    "page_frequency": 126,
+    "bucket": "high"
+  },
+  {
+    "claim": "Hammer Film Productions focuses solely on comedy films.",
+    "label": 1,
+    "wiki_page": "Hammer Film Productions",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Hannah and Her Sisters is an American comedy-drama from 1986.",
+    "label": 0,
+    "wiki_page": "Hannah and Her Sisters",
+    "page_frequency": 6,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Super Bowl XLV was the second time the Super Bowl was played in the Dallas-Fort Worth area.",
+    "label": 1,
+    "wiki_page": "Super Bowl XLV",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Touch My Body is a law.",
+    "label": 1,
+    "wiki_page": "Touch My Body",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Manchester United has had multiple home stadiums.",
+    "label": 1,
+    "wiki_page": "Manchester United F.C.",
+    "page_frequency": 59,
+    "bucket": "high"
+  },
+  {
+    "claim": "Manchester United F.C. was one of the world's highest-earning football clubs for a season.",
+    "label": 0,
+    "wiki_page": "Manchester United F.C.",
+    "page_frequency": 59,
+    "bucket": "high"
+  },
+  {
+    "claim": "Byron Howard co-directed Zootopia with Jill Stein.",
+    "label": 1,
+    "wiki_page": "Zootopia",
+    "page_frequency": 117,
+    "bucket": "high"
+  },
+  {
+    "claim": "Oliver Stone heavily revised the screenplay for Natural Born Killers.",
+    "label": 0,
+    "wiki_page": "Natural Born Killers",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "The Adventures of Pluto Nash is an Australian-American science fiction action comedy film from the 1960s.",
+    "label": 1,
+    "wiki_page": "The Adventures of Pluto Nash",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Victor Frankenstein is a 2015 American film.",
+    "label": 0,
+    "wiki_page": "Victor Frankenstein (film)",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Gamal Abdel Nasser's only funeral was in Britain.",
+    "label": 1,
+    "wiki_page": "Gamal Abdel Nasser",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Mount Hood is in the Northeast.",
+    "label": 1,
+    "wiki_page": "Portland",
+    "page_frequency": 6,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Nina Jacobson has no experience in film.",
+    "label": 1,
+    "wiki_page": "Nina Jacobson",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Rob McElhenney plays Mac on a TBS horror series.",
+    "label": 1,
+    "wiki_page": "It's Always Sunny in Philadelphia",
+    "page_frequency": 55,
+    "bucket": "high"
+  },
+  {
+    "claim": "Harold Macmillan was born on February 10, 1794.",
+    "label": 1,
+    "wiki_page": "Harold Macmillan",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Jens Stoltenberg only served one term as Prime Minister of Norway.",
+    "label": 1,
+    "wiki_page": "Jens Stoltenberg",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Temple of the Dog celebrated the 25th anniversary of their album.",
+    "label": 0,
+    "wiki_page": "Temple of the Dog",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Watertown, Massachusetts is in the least populous state in New England.",
+    "label": 1,
+    "wiki_page": "Watertown",
+    "page_frequency": 34,
+    "bucket": "high"
+  },
+  {
+    "claim": "Floyd Mayweather Jr. has a record 27 world title wins without a loss.",
+    "label": 1,
+    "wiki_page": "Floyd Mayweather Jr.",
+    "page_frequency": 126,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Daily Show is incapable of being satire focused.",
+    "label": 1,
+    "wiki_page": "The Daily Show",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "There are no musical or creative works in existence that have been created by Phillip Glass.",
+    "label": 1,
+    "wiki_page": "Philip Glass",
+    "page_frequency": 5,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Solanum contains flora that have fruit.",
+    "label": 0,
+    "wiki_page": "Solanum",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "John Goodman did not star in 10 Cloverfield Lane.",
+    "label": 1,
+    "wiki_page": "John Goodman",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Secretary's cast included James Spader.",
+    "label": 0,
+    "wiki_page": "James Spader",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Selena Gomez & the Scene's debut album was released in any month except September.",
+    "label": 1,
+    "wiki_page": "Selena Gomez & the Scene",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Nero's death sparked a brief period of civil wars in Russia.",
+    "label": 1,
+    "wiki_page": "Year of the Four Emperors",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "The Faroe Islands are no longer part of a kingdom.",
+    "label": 1,
+    "wiki_page": "Faroe Islands",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "The American Civil War happened within the United States.",
+    "label": 0,
+    "wiki_page": "South Carolina",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Mel B released a song on Virgin Records in 2007.",
+    "label": 0,
+    "wiki_page": "Mel B",
+    "page_frequency": 27,
+    "bucket": "high"
+  },
+  {
+    "claim": "Virginia's largest export by monetary value is oranges.",
+    "label": 1,
+    "wiki_page": "Virginia",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "North Vietnam was a state in a region.",
+    "label": 0,
+    "wiki_page": "Southeast Asia",
+    "page_frequency": 5,
+    "bucket": "medium"
+  },
+  {
+    "claim": "The KGB was governed by military laws and regulations.",
+    "label": 0,
+    "wiki_page": "KGB",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Girl is by at least one singer.",
+    "label": 0,
+    "wiki_page": "Girl (Pharrell Williams album)",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Gotham premiered on USA.",
+    "label": 0,
+    "wiki_page": "Fox Broadcasting Company",
+    "page_frequency": 26,
+    "bucket": "high"
+  },
+  {
+    "claim": "Paramore is not a rock band.",
+    "label": 1,
+    "wiki_page": "Paramore",
+    "page_frequency": 6,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Acetylcholine induces neuromodulation.",
+    "label": 0,
+    "wiki_page": "Neuromodulation",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Robert Lopez has won an Award.",
+    "label": 0,
+    "wiki_page": "Robert Lopez",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Wales has a large region rich in coal deposits called the South Wales Coalfield.",
+    "label": 0,
+    "wiki_page": "South Wales Coalfield",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Joseph Merrick was the producer of the play The Elephant Man.",
+    "label": 1,
+    "wiki_page": "Joseph Merrick",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Paris saw the Warcraft movie before America.",
+    "label": 0,
+    "wiki_page": "Warcraft (film)",
+    "page_frequency": 15,
+    "bucket": "high"
+  },
+  {
+    "claim": "South Island is separated from North Island by the Gibraltar Strait.",
+    "label": 1,
+    "wiki_page": "Cook Strait",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "The American Civil War took place in Canada.",
+    "label": 1,
+    "wiki_page": "American Civil War",
+    "page_frequency": 5,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Yara Shahidi is a person.",
+    "label": 0,
+    "wiki_page": "Yara Shahidi",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Morse Code is communication.",
+    "label": 0,
+    "wiki_page": "Morse code",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "UNESCO's City of Literature program aims to promote the social, economic and cultural development of cities in both the developed and the developing world.",
+    "label": 0,
+    "wiki_page": "City of Literature",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Brad Wilk died before starting his career as a drummer.",
+    "label": 1,
+    "wiki_page": "Prophets of Rage",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Camden, New Jersey is in a county in New Jersey.",
+    "label": 1,
+    "wiki_page": "Camden",
+    "page_frequency": 2,
+    "bucket": "low"
+  },
+  {
+    "claim": "The IPhone 4 is a smartphone owned by Microsoft.",
+    "label": 1,
+    "wiki_page": "IPhone",
+    "page_frequency": 30,
+    "bucket": "high"
+  },
+  {
+    "claim": "The SpongeBob SquarePants Movie was directed by a person.",
+    "label": 0,
+    "wiki_page": "The SpongeBob SquarePants Movie",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "French Indochina was a grouping of French colonial territories in Southeast Asia in 1996.",
+    "label": 1,
+    "wiki_page": "French Indochina",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Angela Bassett is president.",
+    "label": 1,
+    "wiki_page": "Angela Bassett",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Knocked Up was released worldwide in 2003.",
+    "label": 1,
+    "wiki_page": "Knocked Up",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Zac Efron was born in 1950.",
+    "label": 1,
+    "wiki_page": "Zac Efron",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "The Greek language is spoken in Greece.",
+    "label": 0,
+    "wiki_page": "Greek language",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Chris Benoit held a professional career as a wrestler.",
+    "label": 0,
+    "wiki_page": "Professional wrestling championship",
+    "page_frequency": 15,
+    "bucket": "high"
+  },
+  {
+    "claim": "China has no government.",
+    "label": 1,
+    "wiki_page": "China",
+    "page_frequency": 19,
+    "bucket": "high"
+  },
+  {
+    "claim": "Buffy Summers has been portrayed by an actress.",
+    "label": 0,
+    "wiki_page": "Buffy Summers",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "There are 30 knockouts part of the career boxing record of Floyd Mayweather Jr.",
+    "label": 0,
+    "wiki_page": "Floyd Mayweather Jr.",
+    "page_frequency": 126,
+    "bucket": "high"
+  },
+  {
+    "claim": "Prescott, Arizona is in Arizona.",
+    "label": 0,
+    "wiki_page": "Prescott",
+    "page_frequency": 5,
+    "bucket": "medium"
+  },
+  {
+    "claim": "L.A. Reid has served as the CEO of Epic Records.",
+    "label": 0,
+    "wiki_page": "Fifth Harmony",
+    "page_frequency": 39,
+    "bucket": "high"
+  },
+  {
+    "claim": "Barcelona is the capitol city of New Jersey.",
+    "label": 1,
+    "wiki_page": "Barcelona",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "A&E is a German channel.",
+    "label": 1,
+    "wiki_page": "A&E (TV channel)",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Benzodiazepines are always safe.",
+    "label": 1,
+    "wiki_page": "Benzodiazepine",
+    "page_frequency": 6,
+    "bucket": "medium"
+  },
+  {
+    "claim": "There is a novel named The Hunger Games.",
+    "label": 0,
+    "wiki_page": "The Hunger Games (novel)",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Carol Danvers appears only in comic books published by DC.",
+    "label": 1,
+    "wiki_page": "Avengers (comics)",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Good Wife is not on network television.",
+    "label": 1,
+    "wiki_page": "CBS",
+    "page_frequency": 48,
+    "bucket": "high"
+  },
+  {
+    "claim": "Beaverton, Oregon's city center is in the Grand Canyon.",
+    "label": 1,
+    "wiki_page": "Beaverton",
+    "page_frequency": 6,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Home for the Holidays stars an American actor.",
+    "label": 0,
+    "wiki_page": "Charles Durning",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "The Quran is Buddhist.",
+    "label": 1,
+    "wiki_page": "Quran",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "The Raven (2012 film) was released in a sovereign country in western Europe in March of 2012.",
+    "label": 0,
+    "wiki_page": "United Kingdom",
+    "page_frequency": 303,
+    "bucket": "high"
+  },
+  {
+    "claim": "Cheese in the Trap (TV series) is a television series.",
+    "label": 0,
+    "wiki_page": "Cheese in the Trap (TV series)",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Larry Wilmore is a person who performs comedy.",
+    "label": 0,
+    "wiki_page": "The Daily Show",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "The Winds of Winter is the eighth book in a series.",
+    "label": 1,
+    "wiki_page": "The Winds of Winter",
+    "page_frequency": 6,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Raees (film) has an all-American cast.",
+    "label": 1,
+    "wiki_page": "Shah Rukh Khan",
+    "page_frequency": 37,
+    "bucket": "high"
+  },
+  {
+    "claim": "Bones is a television series.",
+    "label": 0,
+    "wiki_page": "Bones (TV series)",
+    "page_frequency": 1,
+    "bucket": "low"
+  },
+  {
+    "claim": "Andrew Kevin Walker is Irish.",
+    "label": 1,
+    "wiki_page": "Andrew Kevin Walker",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Mariah Carey is a mute.",
+    "label": 1,
+    "wiki_page": "Mariah Carey",
+    "page_frequency": 205,
+    "bucket": "high"
+  },
+  {
+    "claim": "English people are descended from the Saxons,",
+    "label": 0,
+    "wiki_page": "English people",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Linkin Park released Meteora in 2003.",
+    "label": 0,
+    "wiki_page": "Linkin Park",
+    "page_frequency": 99,
+    "bucket": "high"
+  },
+  {
+    "claim": "Aparshakti Khurana appeared in a film.",
+    "label": 0,
+    "wiki_page": "Dangal (film)",
+    "page_frequency": 32,
+    "bucket": "high"
+  },
+  {
+    "claim": "Guns N' Roses formed in Nevada.",
+    "label": 1,
+    "wiki_page": "Guns N' Roses",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Simon Pegg is a dog.",
+    "label": 1,
+    "wiki_page": "Simon Pegg",
+    "page_frequency": 20,
+    "bucket": "high"
+  },
+  {
+    "claim": "Point guard was a position of Magic Johnson.",
+    "label": 0,
+    "wiki_page": "Magic Johnson",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Barbarella was directed solely by George Lucas.",
+    "label": 1,
+    "wiki_page": "Barbarella (film)",
+    "page_frequency": 11,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Fame was released in February 2016.",
+    "label": 1,
+    "wiki_page": "The Fame",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Punch-Drunk Love was produced by Revolution Studios and New Line Cinema in 2008.",
+    "label": 1,
+    "wiki_page": "Punch-Drunk Love",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "The horse did not begin to become domesticated around 4000 BC.",
+    "label": 1,
+    "wiki_page": "Horse",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "A&E has always been called A&E.",
+    "label": 1,
+    "wiki_page": "A&E (TV channel)",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Hunger Games' second film is Catching Fire in 2013.",
+    "label": 0,
+    "wiki_page": "The Hunger Games (film)",
+    "page_frequency": 140,
+    "bucket": "high"
+  },
+  {
+    "claim": "Meteora is an album.",
+    "label": 0,
+    "wiki_page": "Meteora (album)",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "The album Cher was created by Cher.",
+    "label": 0,
+    "wiki_page": "Cher (1987 album)",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Eva Green had a theatre career.",
+    "label": 0,
+    "wiki_page": "Eva Green",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Tylenol is advertised for worsening the symptoms of allergies.",
+    "label": 1,
+    "wiki_page": "Tylenol (brand)",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Clueless (film) was followed by books.",
+    "label": 0,
+    "wiki_page": "Clueless (film)",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Invasion literature was a niche genre with very little sociopolitical impact.",
+    "label": 1,
+    "wiki_page": "Invasion literature",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Jimi Hendrix received training for air assault operations.",
+    "label": 0,
+    "wiki_page": "101st Airborne Division",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Vampires were undead beings.",
+    "label": 0,
+    "wiki_page": "Vampire",
+    "page_frequency": 5,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Poseidon grossed less than $1 million at the worldwide box office.",
+    "label": 1,
+    "wiki_page": "Poseidon (film)",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Washington Wizards have won zero division titles.",
+    "label": 1,
+    "wiki_page": "Washington Wizards",
+    "page_frequency": 5,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Nothing was ever produced in Burbank, California.",
+    "label": 1,
+    "wiki_page": "Burbank",
+    "page_frequency": 330,
+    "bucket": "high"
+  },
+  {
+    "claim": "Saxony only has a population of 2 million people.",
+    "label": 1,
+    "wiki_page": "Saxony",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Hunger Games is unwritten.",
+    "label": 1,
+    "wiki_page": "The Hunger Games (novel)",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Awkward Black Girl was created by Issa Rae in 2017.",
+    "label": 1,
+    "wiki_page": "Awkward Black Girl",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Home for the Holidays stars a producer from the United States.",
+    "label": 0,
+    "wiki_page": "Home for the Holidays (1995 film)",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "The Big Country is a novel.",
+    "label": 1,
+    "wiki_page": "The Big Country",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Saxony is the sixth least populous German state.",
+    "label": 1,
+    "wiki_page": "Saxony",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Fred Armisen is a screenwriter.",
+    "label": 0,
+    "wiki_page": "Fred Armisen",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "The Hunger Games is a piece of glass blown art.",
+    "label": 1,
+    "wiki_page": "The Hunger Games (novel)",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Flaked is a brand of cereal.",
+    "label": 1,
+    "wiki_page": "Flaked",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Phillip Glass has written scores.",
+    "label": 0,
+    "wiki_page": "Philip Glass",
+    "page_frequency": 5,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Samsung never entered the electronics industry.",
+    "label": 1,
+    "wiki_page": "Samsung",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Lincoln-Douglas debates happened in Freeport, Illinois.",
+    "label": 0,
+    "wiki_page": "Lincoln\u2013Douglas debates",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Tijuana is in Southwestern Mexico.",
+    "label": 1,
+    "wiki_page": "Tijuana",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "A tourist destination is Croatia.",
+    "label": 0,
+    "wiki_page": "Croatia",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Elizabeth I was the daughter of a salesman.",
+    "label": 1,
+    "wiki_page": "Elizabeth I of England",
+    "page_frequency": 77,
+    "bucket": "high"
+  },
+  {
+    "claim": "Rio's sequel is a 2014 horror film.",
+    "label": 1,
+    "wiki_page": "Rio (2011 film)",
+    "page_frequency": 7,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Johnny Van Zant creates music.",
+    "label": 0,
+    "wiki_page": "Johnny Van Zant",
+    "page_frequency": 7,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Anthony Scaramucci is not an entrepreneur.",
+    "label": 1,
+    "wiki_page": "Anthony Scaramucci",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Talulah Riley did not appear in Inception.",
+    "label": 1,
+    "wiki_page": "Talulah Riley",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Uganda is in the Arctic Circle.",
+    "label": 1,
+    "wiki_page": "Uganda",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Mount Rushmore was made from 1927-1956.",
+    "label": 1,
+    "wiki_page": "Mount Rushmore",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Wales has a large region rich in coal deposits called the South Wales Coalfield.",
+    "label": 0,
+    "wiki_page": "Wales",
+    "page_frequency": 7,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Premam is only a book.",
+    "label": 1,
+    "wiki_page": "Premam",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Islamabad is a capital city.",
+    "label": 0,
+    "wiki_page": "Islamabad",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "The Hunger Games is a piece of glass blown art.",
+    "label": 1,
+    "wiki_page": "The Hunger Games (novel)",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Matteo Renzi's date of birth is January 11th, 1975.",
+    "label": 0,
+    "wiki_page": "Matteo Renzi",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "No Country for Old Men starred actors.",
+    "label": 0,
+    "wiki_page": "No Country for Old Men (film)",
+    "page_frequency": 14,
+    "bucket": "high"
+  },
+  {
+    "claim": "Johnny Van Zant is from Japan.",
+    "label": 1,
+    "wiki_page": "Johnny Van Zant",
+    "page_frequency": 7,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Sandra Bullock was part of the George Lopez crew.",
+    "label": 0,
+    "wiki_page": "Sandra Bullock",
+    "page_frequency": 6,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Carol Danvers only appears in German comic books.",
+    "label": 1,
+    "wiki_page": "Marvel Comics",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Bee Gees wrote music.",
+    "label": 0,
+    "wiki_page": "Bee Gees",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Magic Johnson was an athlete.",
+    "label": 0,
+    "wiki_page": "Magic Johnson",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "There are one or more seasons of Heroes.",
+    "label": 0,
+    "wiki_page": "Heroes (TV series)",
+    "page_frequency": 6,
+    "bucket": "medium"
+  },
+  {
+    "claim": "The U-2 spy planes were produced in Burbank, California.",
+    "label": 0,
+    "wiki_page": "Burbank",
+    "page_frequency": 330,
+    "bucket": "high"
+  },
+  {
+    "claim": "Sky UK is a company which serves a sovereign country in western Eurasia.",
+    "label": 0,
+    "wiki_page": "United Kingdom",
+    "page_frequency": 303,
+    "bucket": "high"
+  },
+  {
+    "claim": "In America, Warcraft was released by Columbia.",
+    "label": 1,
+    "wiki_page": "Warcraft (film)",
+    "page_frequency": 15,
+    "bucket": "high"
+  },
+  {
+    "claim": "Edgar Wright is a producer.",
+    "label": 0,
+    "wiki_page": "Edgar Wright",
+    "page_frequency": 1,
+    "bucket": "low"
+  },
+  {
+    "claim": "Brian De Palma is a screenwriter.",
+    "label": 0,
+    "wiki_page": "Brian De Palma",
+    "page_frequency": 1,
+    "bucket": "low"
+  },
+  {
+    "claim": "Danny Brown is from the U.S.",
+    "label": 0,
+    "wiki_page": "Danny Brown",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "July 1974 is the birthday of Jed Whedon.",
+    "label": 0,
+    "wiki_page": "Jed Whedon",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Mel B died before releasing a song on Virgin Records.",
+    "label": 1,
+    "wiki_page": "Mel B",
+    "page_frequency": 27,
+    "bucket": "high"
+  },
+  {
+    "claim": "Lucy Hale works in the entertainment industry.",
+    "label": 0,
+    "wiki_page": "American Idol",
+    "page_frequency": 13,
+    "bucket": "high"
+  },
+  {
+    "claim": "Mogadishu is a book.",
+    "label": 1,
+    "wiki_page": "Mogadishu",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Finding Dory was directed.",
+    "label": 0,
+    "wiki_page": "Finding Dory",
+    "page_frequency": 16,
+    "bucket": "high"
+  },
+  {
+    "claim": "The University of Leicester contributed to the identification of the remains of King Richard III.",
+    "label": 0,
+    "wiki_page": "University of Leicester",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Janet Leigh was from America.",
+    "label": 0,
+    "wiki_page": "Janet Leigh",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Selena Gomez & the Scene's debut album was released in 2008.",
+    "label": 1,
+    "wiki_page": "Selena Gomez & the Scene",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "The New York Knicks are in the Eastern Conference at the Guggenheim Museum.",
+    "label": 1,
+    "wiki_page": "New York Knicks",
+    "page_frequency": 14,
+    "bucket": "high"
+  },
+  {
+    "claim": "Magic Johnson did not play for the Lakers.",
+    "label": 1,
+    "wiki_page": "Magic Johnson",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Raees (film) stars an Indian film actor born in 1965.",
+    "label": 0,
+    "wiki_page": "Shah Rukh Khan",
+    "page_frequency": 37,
+    "bucket": "high"
+  },
+  {
+    "claim": "Matteo Renzi was born on March 22nd, 1908.",
+    "label": 1,
+    "wiki_page": "Matteo Renzi",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Estonia does not border the Baltic Sea.",
+    "label": 1,
+    "wiki_page": "Estonia",
+    "page_frequency": 2,
+    "bucket": "low"
+  },
+  {
+    "claim": "Jefferson Davis grew up in England.",
+    "label": 1,
+    "wiki_page": "Jefferson Davis",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Truman Capote is an American writer.",
+    "label": 0,
+    "wiki_page": "Truman Capote",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Finding Dory was directed.",
+    "label": 0,
+    "wiki_page": "Finding Dory",
+    "page_frequency": 16,
+    "bucket": "high"
+  },
+  {
+    "claim": "Deepika Padukone played the lead role in a Hindi romantic drama.",
+    "label": 0,
+    "wiki_page": "Love Aaj Kal",
+    "page_frequency": 40,
+    "bucket": "high"
+  },
+  {
+    "claim": "Wish Upon did not star Ryan Phillipe.",
+    "label": 1,
+    "wiki_page": "Wish Upon",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "A solo career was had by Mel B.",
+    "label": 0,
+    "wiki_page": "Mel B",
+    "page_frequency": 27,
+    "bucket": "high"
+  },
+  {
+    "claim": "Among the teams in the Atlantic Division of the National Basketball Association's Eastern Conference are the New York Knicks.",
+    "label": 0,
+    "wiki_page": "New York Knicks",
+    "page_frequency": 14,
+    "bucket": "high"
+  },
+  {
+    "claim": "Trevor Griffiths was only born on April 14, 1935.",
+    "label": 1,
+    "wiki_page": "Trevor Griffiths",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Seohyun is only a director.",
+    "label": 1,
+    "wiki_page": "Seohyun",
+    "page_frequency": 7,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Libya is an African country.",
+    "label": 0,
+    "wiki_page": "Libya",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Saw II came out in a digital optical disc storage format.",
+    "label": 0,
+    "wiki_page": "DVD",
+    "page_frequency": 7,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Kleshas are religious.",
+    "label": 0,
+    "wiki_page": "Buddhism",
+    "page_frequency": 131,
+    "bucket": "high"
+  },
+  {
+    "claim": "GLOW (TV series) is incapable of being released.",
+    "label": 0,
+    "wiki_page": "GLOW (TV series)",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Goosebumps (film) is based on The Hobbit by Scott Alexander and Larry Karaszewski.",
+    "label": 1,
+    "wiki_page": "Goosebumps (film)",
+    "page_frequency": 2,
+    "bucket": "low"
+  },
+  {
+    "claim": "Battle of the Bastards is a battle that occurred in World War I.",
+    "label": 1,
+    "wiki_page": "Battle of the Bastards",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "The Greek language is spoken in Albania.",
+    "label": 0,
+    "wiki_page": "Greek language",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "EA Black Box was based in a country.",
+    "label": 0,
+    "wiki_page": "Canada",
+    "page_frequency": 193,
+    "bucket": "high"
+  },
+  {
+    "claim": "Mandy Moore is not a musician.",
+    "label": 1,
+    "wiki_page": "Recording Industry Association of America",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "House of Balloons is by an award-winning Canadian singer.",
+    "label": 0,
+    "wiki_page": "The Weeknd",
+    "page_frequency": 194,
+    "bucket": "high"
+  },
+  {
+    "claim": "Legendary Entertainment is owned by a Dutch conglomerate.",
+    "label": 1,
+    "wiki_page": "Legendary Entertainment",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Fidaa is in an Iranian language.",
+    "label": 1,
+    "wiki_page": "Fidaa",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Syco was founded by Simon Cowell.",
+    "label": 0,
+    "wiki_page": "Syco",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Jefferson Davis grew up on cotton plantations in the United States.",
+    "label": 0,
+    "wiki_page": "Jefferson Davis",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Henry Condell had a widow that was buried in the early 1600s.",
+    "label": 0,
+    "wiki_page": "Henry Condell",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Finding Dory was penned by Victoria Strouse.",
+    "label": 0,
+    "wiki_page": "Finding Dory",
+    "page_frequency": 16,
+    "bucket": "high"
+  },
+  {
+    "claim": "Prescott, Arizona is an album.",
+    "label": 1,
+    "wiki_page": "Prescott",
+    "page_frequency": 5,
+    "bucket": "medium"
+  },
+  {
+    "claim": "One Flew Over the Cuckoo's Nest won Best Actor at the Academy Awards.",
+    "label": 0,
+    "wiki_page": "Academy Award for Best Actor",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Seohyun is only a director.",
+    "label": 1,
+    "wiki_page": "Seohyun",
+    "page_frequency": 7,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Catherine Keener appeared in the 1997 film Synecdoche, New York.",
+    "label": 1,
+    "wiki_page": "Catherine Keener",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "The Giver is only a book.",
+    "label": 1,
+    "wiki_page": "The Giver (film)",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Times Higher Education World University Rankings is a publication of unranked universities.",
+    "label": 1,
+    "wiki_page": "Times Higher Education World University Rankings",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Vietnam is the 14th most populous country in the world 92.7 million inhabitants.",
+    "label": 0,
+    "wiki_page": "Vietnam",
+    "page_frequency": 2,
+    "bucket": "low"
+  },
+  {
+    "claim": "Prague's historic center was first included in the UNESCO list of World Heritage Sites in 1937.",
+    "label": 1,
+    "wiki_page": "Prague",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Maggie Q starred in a TV series.",
+    "label": 0,
+    "wiki_page": "Nikita (TV series)",
+    "page_frequency": 77,
+    "bucket": "high"
+  },
+  {
+    "claim": "Meteora is an album.",
+    "label": 0,
+    "wiki_page": "Meteora (album)",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Pearl Jam does not play rock music.",
+    "label": 1,
+    "wiki_page": "Pearl Jam",
+    "page_frequency": 26,
+    "bucket": "high"
+  },
+  {
+    "claim": "Ed Decter produced the film Fargo.",
+    "label": 1,
+    "wiki_page": "Fargo (film)",
+    "page_frequency": 17,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Fame has sold over 4.5 billion copies.",
+    "label": 1,
+    "wiki_page": "The Fame",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Victor Frankenstein is only a Spanish film from 2014.",
+    "label": 1,
+    "wiki_page": "Victor Frankenstein (film)",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Sausage Party is a computer-animated horror comedy.",
+    "label": 1,
+    "wiki_page": "Sausage Party",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Zac Efron is a citizen.",
+    "label": 0,
+    "wiki_page": "Zac Efron",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "LinkedIn is available in zero languages as of 2013.",
+    "label": 1,
+    "wiki_page": "LinkedIn",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Elizabeth I was the sister of Anne Boleyn.",
+    "label": 1,
+    "wiki_page": "Elizabeth I of England",
+    "page_frequency": 77,
+    "bucket": "high"
+  },
+  {
+    "claim": "Sausage Party is a comedy.",
+    "label": 0,
+    "wiki_page": "Sausage Party",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Catherine Keener appeared in a movie.",
+    "label": 0,
+    "wiki_page": "Get Out (film)",
+    "page_frequency": 77,
+    "bucket": "high"
+  },
+  {
+    "claim": "St. Anger was released by Sub Pop Records.",
+    "label": 1,
+    "wiki_page": "St. Anger",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Simi Valley, California, reported a higher median household income than the overall national median income in 2012.",
+    "label": 0,
+    "wiki_page": "Simi Valley",
+    "page_frequency": 330,
+    "bucket": "high"
+  },
+  {
+    "claim": "Aarhus is the second-largest city in Germany.",
+    "label": 1,
+    "wiki_page": "Aarhus",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "William Blackstone attended Charterhouse School, where he was educated.",
+    "label": 0,
+    "wiki_page": "William Blackstone",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Sayyeshaa made her Bollywood debut in the 2016 film Shivaay.",
+    "label": 0,
+    "wiki_page": "Sayyeshaa",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Charlotte, North Carolina is the fifth-biggest banking center in the country.",
+    "label": 1,
+    "wiki_page": "Charlotte",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Pink is a dancer.",
+    "label": 0,
+    "wiki_page": "Pink (singer)",
+    "page_frequency": 5,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Ron Dennis is the owner of Absolute Taste.",
+    "label": 0,
+    "wiki_page": "Ron Dennis",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Kevin Kline stars in The Road to El Dorado.",
+    "label": 0,
+    "wiki_page": "The Road to El Dorado",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Foot Locker's headquarters are in Mobile, Alabama.",
+    "label": 1,
+    "wiki_page": "Foot Locker",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Jarhead starred Jake Gyllenhaal as Polish president Lech Walesa.",
+    "label": 1,
+    "wiki_page": "Jarhead (film)",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "In 1977, the undergraduate college of Harvard University became coeducational.",
+    "label": 0,
+    "wiki_page": "Harvard University",
+    "page_frequency": 13,
+    "bucket": "high"
+  },
+  {
+    "claim": "Manchester by the Sea is a movie.",
+    "label": 0,
+    "wiki_page": "Manchester by the Sea (film)",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Lost has twelve seasons.",
+    "label": 1,
+    "wiki_page": "Lost (TV series)",
+    "page_frequency": 2,
+    "bucket": "low"
+  },
+  {
+    "claim": "Frozen is a film from 2003.",
+    "label": 1,
+    "wiki_page": "Frozen (2013 film)",
+    "page_frequency": 1,
+    "bucket": "low"
+  },
+  {
+    "claim": "Peking University is in a unitary sovereign state that's located in East Asia.",
+    "label": 1,
+    "wiki_page": "Peking University",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Joseph Merrick's was the subject of thousands of hate tweets.",
+    "label": 1,
+    "wiki_page": "Twitter",
+    "page_frequency": 76,
+    "bucket": "high"
+  },
+  {
+    "claim": "John Goodman starred in Cloverfield.",
+    "label": 1,
+    "wiki_page": "John Goodman",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "See You on the Other Side was certified gold in the US in January 2016.",
+    "label": 1,
+    "wiki_page": "See You on the Other Side (Korn album)",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Physics' main goal is to understand the behavior of eels.",
+    "label": 1,
+    "wiki_page": "Physics",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Daag is a Telugu film.",
+    "label": 1,
+    "wiki_page": "Bollywood",
+    "page_frequency": 47,
+    "bucket": "high"
+  },
+  {
+    "claim": "DNA features songs only written by other girl groups besides Little Mix.",
+    "label": 1,
+    "wiki_page": "DNA (Little Mix album)",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Japan consists of islands.",
+    "label": 0,
+    "wiki_page": "Japan",
+    "page_frequency": 22,
+    "bucket": "high"
+  },
+  {
+    "claim": "Baadshah was dubbed into at least three other languages in 2002.",
+    "label": 1,
+    "wiki_page": "Baadshah (2013 film)",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Poldark has not been commissioned for a third series.",
+    "label": 1,
+    "wiki_page": "Poldark (2015 TV series)",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Osamu Tezuka was a young child in 2000.",
+    "label": 1,
+    "wiki_page": "Osamu Tezuka",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Roswell is exclusively a mystery TV series.",
+    "label": 1,
+    "wiki_page": "Roswell (TV series)",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "B. R. Ambedkar spent his whole life in Portugal.",
+    "label": 1,
+    "wiki_page": "B. R. Ambedkar",
+    "page_frequency": 1,
+    "bucket": "low"
+  },
+  {
+    "claim": "Raees (film) prominently features an Indian movie actor who was born in 1965.",
+    "label": 0,
+    "wiki_page": "Shah Rukh Khan",
+    "page_frequency": 37,
+    "bucket": "high"
+  },
+  {
+    "claim": "Toy Story 2 was manufactured by General Electric.",
+    "label": 1,
+    "wiki_page": "Toy Story 2",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Simi Valley, California, reported that its median household income was $87,894 in the 2012 U.S. Census.",
+    "label": 0,
+    "wiki_page": "Simi Valley",
+    "page_frequency": 330,
+    "bucket": "high"
+  },
+  {
+    "claim": "Robert Palmer (writer) isn't a journalist.",
+    "label": 1,
+    "wiki_page": "Robert Palmer (writer)",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Michigan is the eighth most populous of the 50 United States.",
+    "label": 1,
+    "wiki_page": "Michigan",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Julianne Moore was in the film As the World Turns.",
+    "label": 1,
+    "wiki_page": "As the World Turns",
+    "page_frequency": 55,
+    "bucket": "high"
+  },
+  {
+    "claim": "Blank Space is on a list in a country.",
+    "label": 0,
+    "wiki_page": "Blank Space",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Julianne Moore created the television series As the World Turns.",
+    "label": 1,
+    "wiki_page": "As the World Turns",
+    "page_frequency": 55,
+    "bucket": "high"
+  },
+  {
+    "claim": "Hourglass is performed by an Australian singer-songwriter.",
+    "label": 1,
+    "wiki_page": "James Taylor",
+    "page_frequency": 43,
+    "bucket": "high"
+  },
+  {
+    "claim": "Jarhead, a 2005 American biographical war drama, was directed by Sam Mendes.",
+    "label": 0,
+    "wiki_page": "Jarhead (film)",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "The English Wikipedia is the English-language edition of Wikipedia.",
+    "label": 0,
+    "wiki_page": "English Wikipedia",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Google Search shows no home information.",
+    "label": 1,
+    "wiki_page": "Google Search",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Robert Zemeckis has rarely made movies for adults.",
+    "label": 1,
+    "wiki_page": "Robert Zemeckis",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Due Date was shot in Montana.",
+    "label": 1,
+    "wiki_page": "Due Date",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Zac Efron's middle names are David and Alexander.",
+    "label": 0,
+    "wiki_page": "Zac Efron",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Nina Jacobson was born in 1965.",
+    "label": 0,
+    "wiki_page": "Nina Jacobson",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Two and a Half Men featured Charlie Sheen.",
+    "label": 0,
+    "wiki_page": "Two and a Half Men",
+    "page_frequency": 7,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Buffy Summers appears in only in a film.",
+    "label": 1,
+    "wiki_page": "Buffy the Vampire Slayer Season Eight",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "There is a French-British actress named Emma Watson.",
+    "label": 0,
+    "wiki_page": "Emma Watson",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "Libya is a country outside of Africa.",
+    "label": 1,
+    "wiki_page": "Libya",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Halsey signed her first recording contract in 1914.",
+    "label": 1,
+    "wiki_page": "Halsey (singer)",
+    "page_frequency": 6,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Toy Story 2 was released in 2004.",
+    "label": 1,
+    "wiki_page": "Toy Story 2",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Clueless (film) was preceded by a spin-off television sitcom.",
+    "label": 1,
+    "wiki_page": "Clueless (film)",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Live Nation Entertainment formed from the merger of Live Nation and Ticketmaster in 1999.",
+    "label": 1,
+    "wiki_page": "Live Nation Entertainment",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Kenneth Branagh stars in The Road to El Dorado.",
+    "label": 0,
+    "wiki_page": "The Road to El Dorado",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Dakota Fanning was involved with a film called Coraline.",
+    "label": 0,
+    "wiki_page": "Dakota Fanning",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Keith Stanfield died on August 12, 1991.",
+    "label": 1,
+    "wiki_page": "Keith Stanfield",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Vietnam is the ninth most populous European country.",
+    "label": 1,
+    "wiki_page": "Vietnam",
+    "page_frequency": 2,
+    "bucket": "low"
+  },
+  {
+    "claim": "Simon Pegg is a producer.",
+    "label": 0,
+    "wiki_page": "Simon Pegg",
+    "page_frequency": 20,
+    "bucket": "high"
+  },
+  {
+    "claim": "The wedding of Prince Charles and Lady Diana was in London, UK.",
+    "label": 0,
+    "wiki_page": "Wedding of Charles",
+    "page_frequency": 130,
+    "bucket": "high"
+  },
+  {
+    "claim": "Global warming is expected to shrink glaciers.",
+    "label": 0,
+    "wiki_page": "Retreat of glaciers since 1850",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Carol Danvers is a character who is not a real person.",
+    "label": 0,
+    "wiki_page": "Avengers (comics)",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "TV Choice runs from Monday to Friday.",
+    "label": 1,
+    "wiki_page": "TV Choice",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "First Motion Picture Unit produced films.",
+    "label": 0,
+    "wiki_page": "First Motion Picture Unit",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "American Library Association is the smallest of its kind.",
+    "label": 1,
+    "wiki_page": "American Library Association",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "The King and I is based on a play.",
+    "label": 1,
+    "wiki_page": "The King and I",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Manchester by the Sea has grossed money.",
+    "label": 0,
+    "wiki_page": "Manchester by the Sea (film)",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "The House of the Spirits is about the life of a young man named Frank during the military dictatorship in Morocco.",
+    "label": 1,
+    "wiki_page": "The House of the Spirits (film)",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Kesha has a full name.",
+    "label": 0,
+    "wiki_page": "Kesha",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Knocked Up is a work of art.",
+    "label": 0,
+    "wiki_page": "Knocked Up",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Trouble with the Curve stars a cat.",
+    "label": 1,
+    "wiki_page": "Trouble with the Curve",
+    "page_frequency": 1,
+    "bucket": "low"
+  },
+  {
+    "claim": "Highway to Heaven ended its run before the 1990's.",
+    "label": 0,
+    "wiki_page": "Highway to Heaven",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "A monster is often hideous.",
+    "label": 0,
+    "wiki_page": "Monster",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Daenerys Targaryen was introduced in a novel.",
+    "label": 0,
+    "wiki_page": "A Game of Thrones",
+    "page_frequency": 195,
+    "bucket": "high"
+  },
+  {
+    "claim": "Southpaw is an American novel.",
+    "label": 1,
+    "wiki_page": "Southpaw (film)",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "The Challenge XXX: Dirty 30 is a season of an American TV show.",
+    "label": 0,
+    "wiki_page": "MTV",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Bad Romance was successful around the 60s.",
+    "label": 1,
+    "wiki_page": "Bad Romance",
+    "page_frequency": 1,
+    "bucket": "low"
+  },
+  {
+    "claim": "Mike Huckabee is a Republican.",
+    "label": 0,
+    "wiki_page": "Mike Huckabee",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "The Thin Red Line (1998 film) exclusively features performances by Catalonian actors.",
+    "label": 1,
+    "wiki_page": "Nick Nolte",
+    "page_frequency": 132,
+    "bucket": "high"
+  },
+  {
+    "claim": "The site of the battle of the Trebia was south from the confluence of the Po and Trebbia rivers.",
+    "label": 0,
+    "wiki_page": "Battle of the Trebia",
+    "page_frequency": 2,
+    "bucket": "low"
+  },
+  {
+    "claim": "Julie Bowen is American.",
+    "label": 0,
+    "wiki_page": "Julie Bowen",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Ann Richards was the Governor of Texas from 1991 to 1995.",
+    "label": 0,
+    "wiki_page": "Ann Richards",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Blade Runner 2049 stars the actor Ryan Gosling.",
+    "label": 0,
+    "wiki_page": "Ryan Gosling",
+    "page_frequency": 79,
+    "bucket": "high"
+  },
+  {
+    "claim": "One Flew Over the Cuckoo's Nest won Best Actor at the Academy Awards.",
+    "label": 0,
+    "wiki_page": "Academy Award for Best Actor",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "DodgeBall: A True Underdog Story has Vince Vaughn and Ben Stiller in starring roles.",
+    "label": 0,
+    "wiki_page": "DodgeBall-COLON- A True Underdog Story",
+    "page_frequency": 2,
+    "bucket": "low"
+  },
+  {
+    "claim": "Emmanuel Macron worked as a banker.",
+    "label": 0,
+    "wiki_page": "Emmanuel Macron",
+    "page_frequency": 5,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Middle-earth was created by a Canadian writer.",
+    "label": 1,
+    "wiki_page": "J. R. R. Tolkien",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Chris Bosh attended college in Miami.",
+    "label": 1,
+    "wiki_page": "Georgia Institute of Technology",
+    "page_frequency": 41,
+    "bucket": "high"
+  },
+  {
+    "claim": "Sandra Bullock was an executive producer of George Lopez.",
+    "label": 0,
+    "wiki_page": "Sandra Bullock",
+    "page_frequency": 6,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Poseidon had a budget of $160 million.",
+    "label": 0,
+    "wiki_page": "Poseidon (film)",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Kung Fu Panda was released in theaters in 2006.",
+    "label": 1,
+    "wiki_page": "Kung Fu Panda",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Murda Beatz is a hip hop record producer.",
+    "label": 0,
+    "wiki_page": "Murda Beatz",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "In America, Warcraft was released by Universal Pictures.",
+    "label": 0,
+    "wiki_page": "Warcraft (film)",
+    "page_frequency": 15,
+    "bucket": "high"
+  },
+  {
+    "claim": "Story credit for Natural Born Killers went to Quentin Tarantino.",
+    "label": 0,
+    "wiki_page": "Natural Born Killers",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "There are no musical or creative works in existence that have been created by Phillip Glass.",
+    "label": 1,
+    "wiki_page": "Philip Glass",
+    "page_frequency": 5,
+    "bucket": "medium"
+  },
+  {
+    "claim": "On September 26, 1937 Bessie Smith died.",
+    "label": 0,
+    "wiki_page": "Bessie Smith",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "The current President of Lockheed Martin holds no other positions in the company.",
+    "label": 1,
+    "wiki_page": "Lockheed Martin",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Chadwick Boseman refused to ever portray a character in any Marvel Studios film.",
+    "label": 1,
+    "wiki_page": "Black Panther (film)",
+    "page_frequency": 125,
+    "bucket": "high"
+  },
+  {
+    "claim": "Aristotle never visited Athens.",
+    "label": 1,
+    "wiki_page": "Aristotle",
+    "page_frequency": 17,
+    "bucket": "high"
+  },
+  {
+    "claim": "No Country for Old Men was chosen as the highest acclaimed of 2007 by the National Board of Review.",
+    "label": 0,
+    "wiki_page": "No Country for Old Men (film)",
+    "page_frequency": 14,
+    "bucket": "high"
+  },
+  {
+    "claim": "Therasia is in the volcanic island group of Visayas.",
+    "label": 1,
+    "wiki_page": "Santorini",
+    "page_frequency": 83,
+    "bucket": "high"
+  },
+  {
+    "claim": "Sacre-Coeur, Paris is publicly dedicated to the Sacred Heart of Jesus and it is in France.",
+    "label": 0,
+    "wiki_page": "Sacre\u0301-C\u0153ur",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Edmund H. North was a Gemini.",
+    "label": 1,
+    "wiki_page": "Edmund H. North",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "There is a science fiction film with Riddick.",
+    "label": 0,
+    "wiki_page": "The Chronicles of Riddick",
+    "page_frequency": 5,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Simon Cowell was not a part of a reality show.",
+    "label": 1,
+    "wiki_page": "The X Factor (UK TV series)",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "John Goodman played himself in The Babe.",
+    "label": 1,
+    "wiki_page": "John Goodman",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Home for the Holidays stars the fourth child of Charlie Chaplin.",
+    "label": 0,
+    "wiki_page": "Home for the Holidays (1995 film)",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Coins of the Swiss franc are only unofficial coins.",
+    "label": 1,
+    "wiki_page": "Coins of the Swiss franc",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Regina King refuses to be an actress.",
+    "label": 1,
+    "wiki_page": "Regina King",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Joe Walsh was barely inducted in 2001.",
+    "label": 1,
+    "wiki_page": "Joe Walsh",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "In 2012, Simi Valley, California reported that its median household income dropped below the national average for the first time in a decade.",
+    "label": 1,
+    "wiki_page": "Simi Valley",
+    "page_frequency": 330,
+    "bucket": "high"
+  },
+  {
+    "claim": "Riverdale's executive producer is Greg Berlanti.",
+    "label": 0,
+    "wiki_page": "Riverdale (2017 TV series)",
+    "page_frequency": 2,
+    "bucket": "low"
+  },
+  {
+    "claim": "San Francisco Bay Area is home to approximately 10 million people.",
+    "label": 1,
+    "wiki_page": "San Francisco Bay Area",
+    "page_frequency": 15,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Republic of Macedonia is a disputed territory.",
+    "label": 1,
+    "wiki_page": "Republic of Macedonia",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Due Date was only shot in India.",
+    "label": 1,
+    "wiki_page": "Due Date",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Elizabeth Olsen was born in 1970.",
+    "label": 1,
+    "wiki_page": "Elizabeth Olsen",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Blue Jasmine takes place in Africa.",
+    "label": 1,
+    "wiki_page": "Blue Jasmine",
+    "page_frequency": 2,
+    "bucket": "low"
+  },
+  {
+    "claim": "Aristotle spent the majority of his life in Athens.",
+    "label": 0,
+    "wiki_page": "Aristotle",
+    "page_frequency": 17,
+    "bucket": "high"
+  },
+  {
+    "claim": "Seohyun is a squid.",
+    "label": 1,
+    "wiki_page": "Seohyun",
+    "page_frequency": 7,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Prescott, Arizona is outside of the United States.",
+    "label": 1,
+    "wiki_page": "Prescott",
+    "page_frequency": 5,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Pen\u00e9lope Cruz has done modeling.",
+    "label": 0,
+    "wiki_page": "Pene\u0301lope Cruz",
+    "page_frequency": 16,
+    "bucket": "high"
+  },
+  {
+    "claim": "Christa McAuliffe was a teacher at Concord High School.",
+    "label": 0,
+    "wiki_page": "Christa McAuliffe",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "How to Train Your Dragon 2 used scalable multicore processing.",
+    "label": 0,
+    "wiki_page": "How to Train Your Dragon 2",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "One Dance has always been banned in the Netherlands.",
+    "label": 1,
+    "wiki_page": "One Dance",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "A staging area is only an unused piece of land.",
+    "label": 1,
+    "wiki_page": "Staging area",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Juventus F.C. rejected their traditional black-and-white-striped home uniform in 1903.",
+    "label": 1,
+    "wiki_page": "Juventus F.C.",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Samwell Tarly appears in the A Song of Ice and Fire series book A Clash of Kings.",
+    "label": 0,
+    "wiki_page": "A Clash of Kings",
+    "page_frequency": 54,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Independent Spirit Awards are held in Santa Monica, California.",
+    "label": 0,
+    "wiki_page": "Independent Spirit Awards",
+    "page_frequency": 6,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Aaron Burr was a pacifist.",
+    "label": 1,
+    "wiki_page": "Aaron Burr",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "The soundtrack of Far from the Madding Crowd was only by a French composer.",
+    "label": 1,
+    "wiki_page": "Richard Rodney Bennett",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Mount Hood is in the Northeast.",
+    "label": 1,
+    "wiki_page": "Mount Hood",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Temple Grandin is a biographical film from 2010.",
+    "label": 0,
+    "wiki_page": "Biographical film",
+    "page_frequency": 16,
+    "bucket": "high"
+  },
+  {
+    "claim": "Murda Beatz is a gospel record producer.",
+    "label": 1,
+    "wiki_page": "Murda Beatz",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "The Endless River is an album by a band formed solely in Boston.",
+    "label": 1,
+    "wiki_page": "Pink Floyd",
+    "page_frequency": 154,
+    "bucket": "high"
+  },
+  {
+    "claim": "Manchester by the Sea is a movie.",
+    "label": 0,
+    "wiki_page": "Manchester by the Sea (film)",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Croatia is a sparrow destination.",
+    "label": 1,
+    "wiki_page": "Croatia",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Home for the Holidays stars the grandchild of Charlie Chaplin",
+    "label": 1,
+    "wiki_page": "Geraldine Chaplin",
+    "page_frequency": 203,
+    "bucket": "high"
+  },
+  {
+    "claim": "DNA is uninvolved with Little Mix.",
+    "label": 1,
+    "wiki_page": "DNA (Little Mix album)",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Magic Johnson was an athlete.",
+    "label": 0,
+    "wiki_page": "Magic Johnson",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Neil Diamond has a middle name called Leslie.",
+    "label": 0,
+    "wiki_page": "Neil Diamond",
+    "page_frequency": 28,
+    "bucket": "high"
+  },
+  {
+    "claim": "Danny Brown is incapable of being a musician.",
+    "label": 1,
+    "wiki_page": "Danny Brown",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Reanimation is not a remix album.",
+    "label": 1,
+    "wiki_page": "Reanimation (Linkin Park album)",
+    "page_frequency": 1,
+    "bucket": "low"
+  },
+  {
+    "claim": "Home for the Holidays stars a famous American actor.",
+    "label": 0,
+    "wiki_page": "Home for the Holidays (1995 film)",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Pen\u00e9lope Cruz refused to model for Ralph Lauren.",
+    "label": 1,
+    "wiki_page": "Pene\u0301lope Cruz",
+    "page_frequency": 16,
+    "bucket": "high"
+  },
+  {
+    "claim": "George Harrison got divorced from Pattie Boyd in 1979.",
+    "label": 1,
+    "wiki_page": "George Harrison",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "Northwestern University is the only private university of the Big Ten Conference since 1968.",
+    "label": 1,
+    "wiki_page": "Northwestern University",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "The American Civil War ended in 1862.",
+    "label": 1,
+    "wiki_page": "American Civil War",
+    "page_frequency": 5,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Move (Little Mix song) was released on the radio in September of 2013.",
+    "label": 0,
+    "wiki_page": "Move (Little Mix song)",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Google Search is not the product of an American multinational technology company.",
+    "label": 1,
+    "wiki_page": "Google",
+    "page_frequency": 204,
+    "bucket": "high"
+  },
+  {
+    "claim": "Python features memory management.",
+    "label": 0,
+    "wiki_page": "High-level programming language",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "There was a song performed on Britain's Got Talent called Rhythm Nation.",
+    "label": 0,
+    "wiki_page": "Rhythm Nation",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Birmingham is a sports team.",
+    "label": 1,
+    "wiki_page": "Birmingham",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Vic Mensa has never been to Illinois.",
+    "label": 1,
+    "wiki_page": "Vic Mensa",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "The New York Knicks are in the Eastern Conference at the Guggenheim Museum.",
+    "label": 1,
+    "wiki_page": "New York Knicks",
+    "page_frequency": 14,
+    "bucket": "high"
+  },
+  {
+    "claim": "Theresa May has always been unemployed.",
+    "label": 1,
+    "wiki_page": "Theresa May",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Syracuse, New York, had a metropolitan area with a population of more than 600,000 residents according to the 2010 Census.",
+    "label": 0,
+    "wiki_page": "Syracuse",
+    "page_frequency": 67,
+    "bucket": "high"
+  },
+  {
+    "claim": "The current President of Lockheed Martin was born in 1955.",
+    "label": 1,
+    "wiki_page": "Marillyn Hewson",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Physics is not a scientific discipline.",
+    "label": 1,
+    "wiki_page": "Physics",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Producing jazz records is a career of Fred Seibert.",
+    "label": 0,
+    "wiki_page": "Fred Seibert",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Dulquer Salmaan acted in a 2012 film.",
+    "label": 0,
+    "wiki_page": "Ustad Hotel",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Aristotle never visited Athens.",
+    "label": 1,
+    "wiki_page": "Aristotle",
+    "page_frequency": 17,
+    "bucket": "high"
+  },
+  {
+    "claim": "Melilla is located on the North Carolina basketball team.",
+    "label": 1,
+    "wiki_page": "Melilla",
+    "page_frequency": 1,
+    "bucket": "low"
+  },
+  {
+    "claim": "DNA features songs.",
+    "label": 0,
+    "wiki_page": "DNA (Little Mix album)",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Manchester United is based in Bolton, Greater Manchester, England.",
+    "label": 1,
+    "wiki_page": "Manchester United F.C.",
+    "page_frequency": 59,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Hundred Years' War includes a war.",
+    "label": 0,
+    "wiki_page": "Hundred Years' War",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Aparshakti Khurana acts.",
+    "label": 0,
+    "wiki_page": "Dangal (film)",
+    "page_frequency": 32,
+    "bucket": "high"
+  },
+  {
+    "claim": "Poseidon grossed $1.40.",
+    "label": 1,
+    "wiki_page": "Poseidon (film)",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Magic Johnson was an athlete.",
+    "label": 0,
+    "wiki_page": "Magic Johnson",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "The Brat Pack is a nickname for dogs.",
+    "label": 1,
+    "wiki_page": "Brat Pack (actors)",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "During 1927 - 1941 Mount Rushmore was created.",
+    "label": 0,
+    "wiki_page": "Mount Rushmore",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Chris Bosh won his first NBA Finals title in 2012 against Oklahoma City Thunder.",
+    "label": 0,
+    "wiki_page": "Chris Bosh",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Meteora is an album.",
+    "label": 0,
+    "wiki_page": "Meteora (album)",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "The Daily Show is comedy focused.",
+    "label": 0,
+    "wiki_page": "The Daily Show",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Francis I of France spent his entire life as a peasant farmer.",
+    "label": 1,
+    "wiki_page": "Francis I of France",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "In a Lonely Place was based on a book called The Hobbit.",
+    "label": 1,
+    "wiki_page": "In a Lonely Place",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Jack Falahee's birth month is February.",
+    "label": 0,
+    "wiki_page": "Jack Falahee",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Jason Katims is credited as Roswell's producer.",
+    "label": 0,
+    "wiki_page": "Roswell (TV series)",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "A Canadian film director rejected all offers to direct The Cincinnati Kid.",
+    "label": 1,
+    "wiki_page": "The Cincinnati Kid",
+    "page_frequency": 1,
+    "bucket": "low"
+  },
+  {
+    "claim": "Tatum O'Neal spent her whole life single.",
+    "label": 1,
+    "wiki_page": "Tatum O'Neal",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Harvard University is small.",
+    "label": 1,
+    "wiki_page": "Harvard University",
+    "page_frequency": 13,
+    "bucket": "high"
+  },
+  {
+    "claim": "Musala is a mountain.",
+    "label": 0,
+    "wiki_page": "Musala",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Dan Trachtenberg has refused to host any podcasts.",
+    "label": 1,
+    "wiki_page": "Dan Trachtenberg",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Omar Khadr was sentenced.",
+    "label": 0,
+    "wiki_page": "Omar Khadr",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Meteora is an album.",
+    "label": 0,
+    "wiki_page": "Meteora (album)",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Pen\u00e9lope Cruz refused to model for L'Or\u00e9al.",
+    "label": 1,
+    "wiki_page": "Pene\u0301lope Cruz",
+    "page_frequency": 16,
+    "bucket": "high"
+  },
+  {
+    "claim": "Joe Walsh was inducted into the Vocal Group Hall of Fame.",
+    "label": 0,
+    "wiki_page": "Joe Walsh",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Manchester United is based in Old Trafford, Greater Manchester, England.",
+    "label": 0,
+    "wiki_page": "Manchester United F.C.",
+    "page_frequency": 59,
+    "bucket": "high"
+  },
+  {
+    "claim": "Hermit crabs are animals.",
+    "label": 0,
+    "wiki_page": "Crustacean",
+    "page_frequency": 7,
+    "bucket": "medium"
+  },
+  {
+    "claim": "The Road to El Dorado is a dog.",
+    "label": 1,
+    "wiki_page": "The Road to El Dorado",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Kerplunk was Green Day's third album with Tr\u00e9 Cool as their drummer.",
+    "label": 1,
+    "wiki_page": "Kerplunk (album)",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Natural Born Killers was based upon a true crime novel by Truman Capote.",
+    "label": 1,
+    "wiki_page": "Natural Born Killers",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Emilia Clarke is a car.",
+    "label": 1,
+    "wiki_page": "Emilia Clarke",
+    "page_frequency": 7,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Finding Dory was directed by Ingmar Bergman.",
+    "label": 1,
+    "wiki_page": "Finding Dory",
+    "page_frequency": 16,
+    "bucket": "high"
+  },
+  {
+    "claim": "Watertown, Massachusetts is a city in Middlesex County.",
+    "label": 0,
+    "wiki_page": "Watertown",
+    "page_frequency": 34,
+    "bucket": "high"
+  },
+  {
+    "claim": "Ghost was reviewed, favorably, by Richard Nixon in 2015.",
+    "label": 1,
+    "wiki_page": "Richard Nixon",
+    "page_frequency": 180,
+    "bucket": "high"
+  },
+  {
+    "claim": "Kuching is a politician in Malaysia.",
+    "label": 1,
+    "wiki_page": "Kuching",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "House of Balloons is by a woman singer.",
+    "label": 1,
+    "wiki_page": "The Weeknd",
+    "page_frequency": 194,
+    "bucket": "high"
+  },
+  {
+    "claim": "Forceps are a wheeled instrument.",
+    "label": 1,
+    "wiki_page": "Forceps",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Sherilyn Fenn is not an actress.",
+    "label": 1,
+    "wiki_page": "Sherilyn Fenn",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Simon Pegg was born on February 14th, 1860.",
+    "label": 1,
+    "wiki_page": "Simon Pegg",
+    "page_frequency": 20,
+    "bucket": "high"
+  },
+  {
+    "claim": "Peking University was founded as the first school.",
+    "label": 1,
+    "wiki_page": "Boston Latin School",
+    "page_frequency": 33,
+    "bucket": "high"
+  },
+  {
+    "claim": "Tiber Oil Field is operated by BP.",
+    "label": 0,
+    "wiki_page": "Tiber Oil Field",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Samsung entered the construction and shipbuilding industries in the mid-1950s.",
+    "label": 1,
+    "wiki_page": "Samsung",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Philomena was nominated for three Golden Globe Awards.",
+    "label": 0,
+    "wiki_page": "Philomena (film)",
+    "page_frequency": 7,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Joe Walsh was written on the official roster of an organization in 2001.",
+    "label": 1,
+    "wiki_page": "Joe Walsh",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Delivery of the Gettysburg Address was by an important person that was murdered.",
+    "label": 0,
+    "wiki_page": "Abraham Lincoln",
+    "page_frequency": 396,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Good Wife produced a full 300 episode season.",
+    "label": 1,
+    "wiki_page": "The Good Wife",
+    "page_frequency": 2,
+    "bucket": "low"
+  },
+  {
+    "claim": "John S. McCain Jr. studied in Annapolis, Maryland.",
+    "label": 0,
+    "wiki_page": "United States Naval Academy",
+    "page_frequency": 59,
+    "bucket": "high"
+  },
+  {
+    "claim": "Baadshah was dubbed into a language.",
+    "label": 0,
+    "wiki_page": "Baadshah (2013 film)",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Syracuse, New York, had a population of 145,170 according to the 2010 United States Census.",
+    "label": 0,
+    "wiki_page": "Syracuse",
+    "page_frequency": 67,
+    "bucket": "high"
+  },
+  {
+    "claim": "Part of Dilwale Dulhania Le Jayenge was filmed in Super 8.",
+    "label": 1,
+    "wiki_page": "Dilwale Dulhania Le Jayenge",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Helmand Province contains Lashkargah.",
+    "label": 0,
+    "wiki_page": "Helmand Province",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Mandy Moore did not have a career in music.",
+    "label": 1,
+    "wiki_page": "Mandy Moore",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Finding Dory was directed.",
+    "label": 0,
+    "wiki_page": "Finding Dory",
+    "page_frequency": 16,
+    "bucket": "high"
+  },
+  {
+    "claim": "American Library Association is the most large library association.",
+    "label": 0,
+    "wiki_page": "American Library Association",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Milk is based on the life of a person.",
+    "label": 0,
+    "wiki_page": "Milk (film)",
+    "page_frequency": 5,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Shooter cast a dog in the lead role.",
+    "label": 1,
+    "wiki_page": "Ryan Phillippe",
+    "page_frequency": 89,
+    "bucket": "high"
+  },
+  {
+    "claim": "French Indochina was officially known as the Indochinese Federation after 1955.",
+    "label": 1,
+    "wiki_page": "French Indochina",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "LinkedIn is based on Earth.",
+    "label": 0,
+    "wiki_page": "United States",
+    "page_frequency": 280,
+    "bucket": "high"
+  },
+  {
+    "claim": "Simon Cowell has donated zero dollars to anything ever.",
+    "label": 1,
+    "wiki_page": "Philanthropy",
+    "page_frequency": 2,
+    "bucket": "low"
+  },
+  {
+    "claim": "The United Nations Charter was vetoed in San Francisco, United States.",
+    "label": 1,
+    "wiki_page": "United Nations Charter",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "A Milli is by Justin Bieber.",
+    "label": 1,
+    "wiki_page": "Tha Carter III",
+    "page_frequency": 7,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Jarhead, a 2005 American biographical war drama, was directed by the award-winning auteur Sam Mendes.",
+    "label": 0,
+    "wiki_page": "Jarhead (film)",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Neil Diamond finished college on January 24th, 1941.",
+    "label": 1,
+    "wiki_page": "Neil Diamond",
+    "page_frequency": 28,
+    "bucket": "high"
+  },
+  {
+    "claim": "George Clooney starred in the film The Good German.",
+    "label": 0,
+    "wiki_page": "The Good German",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "The Originals (TV series) has aired on an American German language broadcast television network.",
+    "label": 1,
+    "wiki_page": "The CW",
+    "page_frequency": 16,
+    "bucket": "high"
+  },
+  {
+    "claim": "Sean Gunn is best known for his role as Kirk Gleason on Gilmore Girls.",
+    "label": 0,
+    "wiki_page": "Sean Gunn",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Juventus F.C. competes at Juventus Stadium in Turin, Italy.",
+    "label": 0,
+    "wiki_page": "Juventus F.C.",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Alice Cooper was born on July 3rd, 1922.",
+    "label": 1,
+    "wiki_page": "Alice Cooper",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Resident Evil is a film.",
+    "label": 0,
+    "wiki_page": "Resident Evil (film)",
+    "page_frequency": 5,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Riverdale's executive producer is Greg Berlanti since 2012.",
+    "label": 1,
+    "wiki_page": "Riverdale (2017 TV series)",
+    "page_frequency": 2,
+    "bucket": "low"
+  },
+  {
+    "claim": "Shadowhunters did not begin its second season in January 2017.",
+    "label": 0,
+    "wiki_page": "Shadowhunters",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Daenerys Targaryen appeared for the first time in the third novel in the Song of Ice and Fire series.",
+    "label": 1,
+    "wiki_page": "A Game of Thrones",
+    "page_frequency": 195,
+    "bucket": "high"
+  },
+  {
+    "claim": "Youtube is ranked as the second most popular site in the world.",
+    "label": 0,
+    "wiki_page": "YouTube",
+    "page_frequency": 72,
+    "bucket": "high"
+  },
+  {
+    "claim": "Arizona is a state of the United States.",
+    "label": 0,
+    "wiki_page": "Arizona",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Ian Gillan is a dog.",
+    "label": 1,
+    "wiki_page": "Ian Gillan",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Toy Story 2 was released by a production company.",
+    "label": 0,
+    "wiki_page": "Pixar",
+    "page_frequency": 92,
+    "bucket": "high"
+  },
+  {
+    "claim": "Knocked Up grossed $259 million worldwide.",
+    "label": 1,
+    "wiki_page": "Knocked Up",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Rob Sheridan is an American who assembles together images, typography, or motion graphics to create a piece of design.",
+    "label": 0,
+    "wiki_page": "Rob Sheridan",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Australia (2008 film) production took place in Bowen.",
+    "label": 0,
+    "wiki_page": "Australia (2008 film)",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Hannah and Her Sisters is a 1967 film.",
+    "label": 1,
+    "wiki_page": "Hannah and Her Sisters",
+    "page_frequency": 6,
+    "bucket": "medium"
+  },
+  {
+    "claim": "John Dolmayan is only a chef.",
+    "label": 1,
+    "wiki_page": "System of a Down",
+    "page_frequency": 34,
+    "bucket": "high"
+  },
+  {
+    "claim": "Honeymoon is Lana Del Rey's fourth restaurant.",
+    "label": 1,
+    "wiki_page": "Honeymoon (Lana Del Rey album)",
+    "page_frequency": 5,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Honeymoon is Lana Del Rey's fourth restaurant.",
+    "label": 1,
+    "wiki_page": "Honeymoon (Lana Del Rey album)",
+    "page_frequency": 5,
+    "bucket": "medium"
+  },
+  {
+    "claim": "The Gettysburg Address is a speech.",
+    "label": 0,
+    "wiki_page": "Gettysburg Address",
+    "page_frequency": 7,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Tuscaloosa, Alabama is a place where Due Date was shot.",
+    "label": 0,
+    "wiki_page": "Due Date",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Chris Bosh is incapable of playing in the National Basketball Association.",
+    "label": 1,
+    "wiki_page": "Chris Bosh",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Ang Lee's date of birth is October 23, 1954.",
+    "label": 0,
+    "wiki_page": "Ang Lee",
+    "page_frequency": 5,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Color of Night was released in 1994.",
+    "label": 0,
+    "wiki_page": "Color of Night",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "The Thin Red Line (1998 film) exclusively features performances by Catalonian actors.",
+    "label": 1,
+    "wiki_page": "The Thin Red Line (1998 film)",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Michigan is a U.S. state and a leading destination for recreational boating.",
+    "label": 0,
+    "wiki_page": "Michigan",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Salt River Valley is in Arizona.",
+    "label": 0,
+    "wiki_page": "Salt River Valley",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Sam Claflin is an actor.",
+    "label": 0,
+    "wiki_page": "Me Before You (film)",
+    "page_frequency": 72,
+    "bucket": "high"
+  },
+  {
+    "claim": "Neil Diamond is a Canadian bullfighter.",
+    "label": 1,
+    "wiki_page": "Neil Diamond",
+    "page_frequency": 28,
+    "bucket": "high"
+  },
+  {
+    "claim": "Elizabeth I was the daughter of Vladimir Putin.",
+    "label": 1,
+    "wiki_page": "Elizabeth I of England",
+    "page_frequency": 77,
+    "bucket": "high"
+  },
+  {
+    "claim": "Bea Arthur graduated college on May 13th, 1922.",
+    "label": 1,
+    "wiki_page": "Bea Arthur",
+    "page_frequency": 5,
+    "bucket": "medium"
+  },
+  {
+    "claim": "You Belong with Me was performed live on tour.",
+    "label": 0,
+    "wiki_page": "You Belong with Me",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Veep has not won an award in Comedy.",
+    "label": 1,
+    "wiki_page": "Veep",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Juventus F.C. is the second oldest soccer team in Italy.",
+    "label": 0,
+    "wiki_page": "Juventus F.C.",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Alex Jones is exclusively a game show host.",
+    "label": 1,
+    "wiki_page": "Alex Jones (radio host)",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Terrence Howard was in the film Iron Man.",
+    "label": 0,
+    "wiki_page": "Iron Man (2008 film)",
+    "page_frequency": 100,
+    "bucket": "high"
+  },
+  {
+    "claim": "Ragtime features a Star Wars actor.",
+    "label": 0,
+    "wiki_page": "Samuel L. Jackson",
+    "page_frequency": 71,
+    "bucket": "high"
+  },
+  {
+    "claim": "Aparshakti Khurana directed Dangal.",
+    "label": 1,
+    "wiki_page": "Dangal (film)",
+    "page_frequency": 32,
+    "bucket": "high"
+  },
+  {
+    "claim": "Vampires frequently paid visits to loved ones.",
+    "label": 0,
+    "wiki_page": "Vampire",
+    "page_frequency": 5,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Wales' population changed.",
+    "label": 0,
+    "wiki_page": "Wales",
+    "page_frequency": 7,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Ang Lee is a film director.",
+    "label": 0,
+    "wiki_page": "Ang Lee",
+    "page_frequency": 5,
+    "bucket": "medium"
+  },
+  {
+    "claim": "In 2016, Sausage Party was released.",
+    "label": 0,
+    "wiki_page": "Sausage Party",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Recovery features Rihanna on the track Love the Way You Lie.",
+    "label": 0,
+    "wiki_page": "Recovery (Eminem album)",
+    "page_frequency": 13,
+    "bucket": "high"
+  },
+  {
+    "claim": "Basildon is in Denmark.",
+    "label": 1,
+    "wiki_page": "Basildon",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Prague's historic center was never included in the UNESCO list of World Heritage Sites.",
+    "label": 1,
+    "wiki_page": "Prague",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Emilia Clarke is an actress.",
+    "label": 0,
+    "wiki_page": "Emilia Clarke",
+    "page_frequency": 7,
+    "bucket": "medium"
+  },
+  {
+    "claim": "The Winds of Winter is a novel in the epic fantasy genre.",
+    "label": 0,
+    "wiki_page": "The Winds of Winter",
+    "page_frequency": 6,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Magic Johnson was a basketball player for the Lakers.",
+    "label": 0,
+    "wiki_page": "Magic Johnson",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "The Wonder Years was a boardgame.",
+    "label": 1,
+    "wiki_page": "The Wonder Years",
+    "page_frequency": 2,
+    "bucket": "low"
+  },
+  {
+    "claim": "The Church of Jesus Christ of Latter-day Saints declined to ever set a Sabbath.",
+    "label": 1,
+    "wiki_page": "The Church of Jesus Christ of Latter-day Saints",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Mariah Carey sang Touch My Body.",
+    "label": 0,
+    "wiki_page": "Touch My Body",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Stan Beeman is only in shows on BBC.",
+    "label": 1,
+    "wiki_page": "Stan Beeman",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Highway to Heaven ran until 1989.",
+    "label": 0,
+    "wiki_page": "Highway to Heaven",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Phoenix, Arizona is in southwestern Mexico.",
+    "label": 1,
+    "wiki_page": "Phoenix",
+    "page_frequency": 5,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Sora (Kingdom Hearts) is a character in the world of Kingdom Hearts.",
+    "label": 0,
+    "wiki_page": "Sora (Kingdom Hearts)",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Rupert Murdoch is a broadcaster, forming BSkyB.",
+    "label": 1,
+    "wiki_page": "Rupert Murdoch",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Google Search is the product of an Iranian multinational technology company.",
+    "label": 1,
+    "wiki_page": "Google",
+    "page_frequency": 204,
+    "bucket": "high"
+  },
+  {
+    "claim": "Brad Wilk died before starting his career as a drummer.",
+    "label": 1,
+    "wiki_page": "Rage Against the Machine",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Johnny Van Zant still performs with Lynyrd Skynyrd as the lead vocalist.",
+    "label": 0,
+    "wiki_page": "Johnny Van Zant",
+    "page_frequency": 7,
+    "bucket": "medium"
+  },
+  {
+    "claim": "The Independent Spirit Awards are held the day after the Academy Awards.",
+    "label": 1,
+    "wiki_page": "Independent Spirit Awards",
+    "page_frequency": 6,
+    "bucket": "medium"
+  },
+  {
+    "claim": "John Dolmayan is a cat.",
+    "label": 1,
+    "wiki_page": "John Dolmayan",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Super Bowl XLV was played in Arlington, Texas in 1999.",
+    "label": 1,
+    "wiki_page": "Super Bowl XLV",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Riz Ahmed acted in an 8-part crime drama miniseries.",
+    "label": 0,
+    "wiki_page": "The Night Of",
+    "page_frequency": 104,
+    "bucket": "high"
+  },
+  {
+    "claim": "There are no musical or creative works in existence that have been created by Phillip Glass.",
+    "label": 1,
+    "wiki_page": "Philip Glass",
+    "page_frequency": 5,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Chadwick Boseman refused to ever portray a character in any Marvel Studios film.",
+    "label": 1,
+    "wiki_page": "Black Panther (film)",
+    "page_frequency": 125,
+    "bucket": "high"
+  },
+  {
+    "claim": "The French Resistance committed zero acts of sabotage.",
+    "label": 1,
+    "wiki_page": "French Resistance",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Heath Ledger won an award posthumously.",
+    "label": 0,
+    "wiki_page": "Heath Ledger",
+    "page_frequency": 1,
+    "bucket": "low"
+  },
+  {
+    "claim": "DNA is an album.",
+    "label": 0,
+    "wiki_page": "DNA (Little Mix album)",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Heaven Can Wait is a film adaptation of Harry Segall's play \"Hamlet\".",
+    "label": 1,
+    "wiki_page": "Heaven Can Wait (1978 film)",
+    "page_frequency": 1,
+    "bucket": "low"
+  },
+  {
+    "claim": "The Good Wife is not on network television.",
+    "label": 1,
+    "wiki_page": "CBS",
+    "page_frequency": 48,
+    "bucket": "high"
+  },
+  {
+    "claim": "Emilia Clarke is an actress.",
+    "label": 0,
+    "wiki_page": "Emilia Clarke",
+    "page_frequency": 7,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Pink is a Dutch singer.",
+    "label": 1,
+    "wiki_page": "Pink (singer)",
+    "page_frequency": 5,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Punch-Drunk Love was distributed by Columbia Pictures.",
+    "label": 0,
+    "wiki_page": "Punch-Drunk Love",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Watertown, Massachusetts is outside of any named county.",
+    "label": 1,
+    "wiki_page": "Watertown",
+    "page_frequency": 34,
+    "bucket": "high"
+  },
+  {
+    "claim": "1990 was the year Emma Watson was born.",
+    "label": 0,
+    "wiki_page": "Emma Watson",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "Half Girlfriend was partially filmed in India.",
+    "label": 0,
+    "wiki_page": "New York City",
+    "page_frequency": 110,
+    "bucket": "high"
+  },
+  {
+    "claim": "Resident Evil is the first installment in the Resident Evil video game series.",
+    "label": 1,
+    "wiki_page": "Resident Evil (film)",
+    "page_frequency": 5,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Seohyun was born on April 28, 1991.",
+    "label": 1,
+    "wiki_page": "Seohyun",
+    "page_frequency": 7,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Two and a Half Men originally aired on FOX.",
+    "label": 1,
+    "wiki_page": "Two and a Half Men",
+    "page_frequency": 7,
+    "bucket": "medium"
+  },
+  {
+    "claim": "The Republic of Macedonia is a country.",
+    "label": 0,
+    "wiki_page": "Republic of Macedonia",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Youtube is ranked as one of the top three most popular sites in the world.",
+    "label": 0,
+    "wiki_page": "YouTube",
+    "page_frequency": 72,
+    "bucket": "high"
+  },
+  {
+    "claim": "The first NBA Finals title Chris Bosh won was in 2012.",
+    "label": 0,
+    "wiki_page": "Chris Bosh",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "There was zero genocides that took place in Rwanda.",
+    "label": 1,
+    "wiki_page": "Rwanda",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Kung Fu Panda grossed $70,300,000 on opening day.",
+    "label": 1,
+    "wiki_page": "Kung Fu Panda",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "The English Wikipedia is the English-language edition of a free online encyclopedia.",
+    "label": 0,
+    "wiki_page": "English Wikipedia",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "NRG Recording Studios is located in Venice, California.",
+    "label": 1,
+    "wiki_page": "NRG Recording Studios",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "John Goodman is a singer.",
+    "label": 1,
+    "wiki_page": "John Goodman",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "There are no musical or creative works in existence that have been created by Phillip Glass.",
+    "label": 1,
+    "wiki_page": "Philip Glass",
+    "page_frequency": 5,
+    "bucket": "medium"
+  },
+  {
+    "claim": "A&E is an Australian channel only.",
+    "label": 1,
+    "wiki_page": "A&E (TV channel)",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Rio's sequel is an American musical comedy newspaper.",
+    "label": 1,
+    "wiki_page": "Rio (2011 film)",
+    "page_frequency": 7,
+    "bucket": "medium"
+  },
+  {
+    "claim": "I Kissed a Girl was only recorded by Donald Trump.",
+    "label": 1,
+    "wiki_page": "I Kissed a Girl",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Victor Frankenstein is a film.",
+    "label": 0,
+    "wiki_page": "Victor Frankenstein (film)",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Phoenix, Arizona is not a U.S. state.",
+    "label": 0,
+    "wiki_page": "Phoenix",
+    "page_frequency": 5,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Harry Fraud is a hip hop producer.",
+    "label": 0,
+    "wiki_page": "Pusha T",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Truman Capote avoided writing his entire life.",
+    "label": 1,
+    "wiki_page": "Truman Capote",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Adobe Photoshop is part of the American company Adobe Systems.",
+    "label": 0,
+    "wiki_page": "Adobe Systems",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Estelle Getty was physically incapable of acting her entire life.",
+    "label": 1,
+    "wiki_page": "Estelle Getty",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Emilia Clarke is an actress.",
+    "label": 0,
+    "wiki_page": "Emilia Clarke",
+    "page_frequency": 7,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Samwell Tarly appears in the A Song of Ice and Fire series book A Clash of Kings.",
+    "label": 0,
+    "wiki_page": "Samwell Tarly",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Houses became Virginia's most valuable export in 2002.",
+    "label": 1,
+    "wiki_page": "Virginia",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "Valencia is in America.",
+    "label": 1,
+    "wiki_page": "Valencia",
+    "page_frequency": 1,
+    "bucket": "low"
+  },
+  {
+    "claim": "The Good Wife is not on network television.",
+    "label": 1,
+    "wiki_page": "The Good Wife",
+    "page_frequency": 2,
+    "bucket": "low"
+  },
+  {
+    "claim": "English people are descended from the Angles.",
+    "label": 0,
+    "wiki_page": "English people",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Jamie Lee Curtis made her film debut in 1978.",
+    "label": 0,
+    "wiki_page": "Jamie Lee Curtis",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Marcus Bentley is a broadcaster.",
+    "label": 0,
+    "wiki_page": "Marcus Bentley",
+    "page_frequency": 6,
+    "bucket": "medium"
+  },
+  {
+    "claim": "The Indian Army is a military force.",
+    "label": 0,
+    "wiki_page": "Indian Army",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Pink is an American dancer.",
+    "label": 0,
+    "wiki_page": "Pink (singer)",
+    "page_frequency": 5,
+    "bucket": "medium"
+  },
+  {
+    "claim": "The Baja 1000 was organized by Vince Vaughn beginning in 1967.",
+    "label": 1,
+    "wiki_page": "Vince Vaughn",
+    "page_frequency": 60,
+    "bucket": "high"
+  },
+  {
+    "claim": "Macklemore's song \"Thrift Shop\" was number one in America in 2013.",
+    "label": 0,
+    "wiki_page": "Macklemore",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Starrcade was an annual professional wrestling event.",
+    "label": 0,
+    "wiki_page": "Starrcade",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Emma Watson was born in the 15th of April 1990.",
+    "label": 0,
+    "wiki_page": "Emma Watson",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "Milk is based on the life of a businessman.",
+    "label": 1,
+    "wiki_page": "Milk (film)",
+    "page_frequency": 5,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Shadowhunters premiered in the 21st century.",
+    "label": 0,
+    "wiki_page": "21st century",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "A manga series illustrated by Takeshi Obata is the basis for the Japanese television drama series Death Note.",
+    "label": 0,
+    "wiki_page": "Death Note (2015 TV series)",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "DNA features songs.",
+    "label": 0,
+    "wiki_page": "DNA (Little Mix album)",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Cher is Cher's eighteenth album.",
+    "label": 0,
+    "wiki_page": "Cher (1987 album)",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Clueless (film) was followed by a spin-off film.",
+    "label": 1,
+    "wiki_page": "Clueless (film)",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "X-Men: Apocalypse had a story.",
+    "label": 0,
+    "wiki_page": "X-Men-COLON- Apocalypse",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "The Man in the Iron Mask was directed by Randall Wallace.",
+    "label": 0,
+    "wiki_page": "The Man in the Iron Mask (1998 film)",
+    "page_frequency": 7,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Prague's historic center is considered a World Heritage Site.",
+    "label": 0,
+    "wiki_page": "Prague",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Deepika Padukone's acting career includes comedies, dramas, and romances.",
+    "label": 0,
+    "wiki_page": "Deepika Padukone",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Clueless (film) was followed by a series of young adult organizations.",
+    "label": 1,
+    "wiki_page": "Clueless (film)",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Pen\u00e9lope Cruz has done modeling.",
+    "label": 0,
+    "wiki_page": "Pene\u0301lope Cruz",
+    "page_frequency": 16,
+    "bucket": "high"
+  },
+  {
+    "claim": "One Dance reached number one in the Netherlands in 2010.",
+    "label": 1,
+    "wiki_page": "One Dance",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Jarhead, a 2005 American biographical war drama, was directed by Jim Jarmusch.",
+    "label": 1,
+    "wiki_page": "Jarhead (film)",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Phoenix, Arizona is not the capital of Arizona.",
+    "label": 1,
+    "wiki_page": "Phoenix",
+    "page_frequency": 5,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Johanna Braddy is known to have no appearances on television.",
+    "label": 1,
+    "wiki_page": "Quantico (TV series)",
+    "page_frequency": 6,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Cthulhu is a gigantic deity.",
+    "label": 0,
+    "wiki_page": "Cthulhu",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Fidel Castro lost all elections for President of Cuba.",
+    "label": 1,
+    "wiki_page": "Fidel Castro",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "The Airbus A380 made its first flight on April 27, 2015.",
+    "label": 0,
+    "wiki_page": "Airbus A380",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Veep has not won an award in Comedy.",
+    "label": 1,
+    "wiki_page": "Veep",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Proponents of globalism tend to advocate for changes to global policy.",
+    "label": 0,
+    "wiki_page": "Globalism",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Awkward Black Girl was created by Lena Dunham.",
+    "label": 1,
+    "wiki_page": "Issa Rae",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "The Maze Runner earned over $348 million worldwide at the box office.",
+    "label": 0,
+    "wiki_page": "The Maze Runner (film)",
+    "page_frequency": 16,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Burj Khalifa contains 8 escalators.",
+    "label": 0,
+    "wiki_page": "Burj Khalifa",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Vera Wang's middle name is Jessica.",
+    "label": 1,
+    "wiki_page": "Vera Wang",
+    "page_frequency": 1,
+    "bucket": "low"
+  },
+  {
+    "claim": "Simi Valley, California, reported a median household income of $87,894 in 2012.",
+    "label": 0,
+    "wiki_page": "Simi Valley",
+    "page_frequency": 330,
+    "bucket": "high"
+  },
+  {
+    "claim": "Recognition has been given to Bala for his work.",
+    "label": 0,
+    "wiki_page": "Bala (director)",
+    "page_frequency": 2,
+    "bucket": "low"
+  },
+  {
+    "claim": "The 66th Primetime Emmy Awards was hosted by the host of Late Night.",
+    "label": 0,
+    "wiki_page": "66th Primetime Emmy Awards",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Inside Llewyn Davis was screened for the Cannes Film Festival on May 19th, 2013.",
+    "label": 0,
+    "wiki_page": "Inside Llewyn Davis",
+    "page_frequency": 7,
+    "bucket": "medium"
+  },
+  {
+    "claim": "American Library Association has more than 62,000,000 members.",
+    "label": 1,
+    "wiki_page": "American Library Association",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "The Burj Khalifa contains 65 escalators.",
+    "label": 1,
+    "wiki_page": "Burj Khalifa",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Palo Alto, California's location is the San Francisco Bay Area.",
+    "label": 0,
+    "wiki_page": "Palo Alto",
+    "page_frequency": 330,
+    "bucket": "high"
+  },
+  {
+    "claim": "Phoenix, Arizona is not the capital of Arizona.",
+    "label": 1,
+    "wiki_page": "Phoenix",
+    "page_frequency": 5,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Sonny & Cher sing R&B.",
+    "label": 0,
+    "wiki_page": "Sonny & Cher",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "The Republic of China and the People's Republic of China claim to be the official governments of China.",
+    "label": 1,
+    "wiki_page": "China",
+    "page_frequency": 19,
+    "bucket": "high"
+  },
+  {
+    "claim": "The New England Patriots holds the record for most Super Bowls reached.",
+    "label": 0,
+    "wiki_page": "New England Patriots",
+    "page_frequency": 1,
+    "bucket": "low"
+  },
+  {
+    "claim": "Croatia is a popular tourist destination.",
+    "label": 0,
+    "wiki_page": "Croatia",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Saw II came out on DVD.",
+    "label": 0,
+    "wiki_page": "Saw II",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Keegan-Michael Key played a character.",
+    "label": 0,
+    "wiki_page": "Keegan-Michael Key",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "The principal photography of The Disaster Artist (film) started on the 9th.",
+    "label": 1,
+    "wiki_page": "The Disaster Artist (film)",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Juventus F.C. has long worn a black-and-white-striped home uniform.",
+    "label": 0,
+    "wiki_page": "Juventus F.C.",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Boeing 767 became the most frequently used airliner for transatlantic flights between North America and Europe.",
+    "label": 0,
+    "wiki_page": "Boeing 767",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Prescott, Arizona is in Arizona.",
+    "label": 0,
+    "wiki_page": "Yavapai County",
+    "page_frequency": 5,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Michigan is not a U.S. state.",
+    "label": 1,
+    "wiki_page": "U.S. state",
+    "page_frequency": 24,
+    "bucket": "high"
+  },
+  {
+    "claim": "Clueless (film) was followed by a spin-off television sitcom.",
+    "label": 0,
+    "wiki_page": "Clueless (film)",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "A player-coach may be responsible for playing and coaching.",
+    "label": 0,
+    "wiki_page": "Player-coach",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Robinson Crusoe on Mars was a sitcom.",
+    "label": 1,
+    "wiki_page": "Robinson Crusoe on Mars",
+    "page_frequency": 5,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Uranium-235 was discovered by nobody.",
+    "label": 1,
+    "wiki_page": "Uranium-235",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "The Greek language is spoken only outside of Cyprus.",
+    "label": 1,
+    "wiki_page": "Greek language",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Sheryl Lee has yet to appear in a film.",
+    "label": 1,
+    "wiki_page": "Sheryl Lee",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "The King and I is based on Anna and the King of Siam.",
+    "label": 0,
+    "wiki_page": "The King and I",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Sandra Bullock knew about George Lopez.",
+    "label": 0,
+    "wiki_page": "Sandra Bullock",
+    "page_frequency": 6,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Sausage Party is a motion picture.",
+    "label": 0,
+    "wiki_page": "Sausage Party",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Oscar Isaac did not play the fictional character Poe Dameron.",
+    "label": 1,
+    "wiki_page": "Oscar Isaac",
+    "page_frequency": 19,
+    "bucket": "high"
+  },
+  {
+    "claim": "Milk is a biographical film starring Sean Penn.",
+    "label": 0,
+    "wiki_page": "Milk (film)",
+    "page_frequency": 5,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Guns N' Roses began in 1985.",
+    "label": 0,
+    "wiki_page": "Guns N' Roses",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Touch My Body was released in 2008.",
+    "label": 0,
+    "wiki_page": "Touch My Body",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Birmingham is a large town.",
+    "label": 0,
+    "wiki_page": "Birmingham City F.C.",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Port of Spain is a retail and administrative center.",
+    "label": 0,
+    "wiki_page": "Port of Spain",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Recovery only has one singer on it, Drake.",
+    "label": 1,
+    "wiki_page": "Recovery (Eminem album)",
+    "page_frequency": 13,
+    "bucket": "high"
+  },
+  {
+    "claim": "Balibo (film) starts in the year 1975.",
+    "label": 0,
+    "wiki_page": "Balibo (film)",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Zoroastrianism has no major features.",
+    "label": 1,
+    "wiki_page": "Zoroastrianism",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Exit the King premiered in 1964.",
+    "label": 1,
+    "wiki_page": "Exit the King",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Halsey signed her first recording contract in 1914.",
+    "label": 1,
+    "wiki_page": "Halsey (singer)",
+    "page_frequency": 6,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Floyd Mayweather Jr. has a record 26 world title wins without a loss from boxing professionally.",
+    "label": 0,
+    "wiki_page": "Floyd Mayweather Jr.",
+    "page_frequency": 126,
+    "bucket": "high"
+  },
+  {
+    "claim": "Barbarella is a 1988 film.",
+    "label": 1,
+    "wiki_page": "Barbarella (film)",
+    "page_frequency": 11,
+    "bucket": "high"
+  },
+  {
+    "claim": "Guns N' Roses is a Californian hard rock band.",
+    "label": 0,
+    "wiki_page": "Guns N' Roses",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "An island is part of the ABC Islands.",
+    "label": 0,
+    "wiki_page": "ABC islands (Lesser Antilles)",
+    "page_frequency": 2,
+    "bucket": "low"
+  },
+  {
+    "claim": "The Africa Cup of Nations had its schedule changed in 2013 to avoid conflict with the World Cup.",
+    "label": 0,
+    "wiki_page": "Africa Cup of Nations",
+    "page_frequency": 1,
+    "bucket": "low"
+  },
+  {
+    "claim": "Diana, Princess of Wales divorced on August 28, 1996 after 4 years of marriage.",
+    "label": 1,
+    "wiki_page": "Wedding of Charles",
+    "page_frequency": 130,
+    "bucket": "high"
+  },
+  {
+    "claim": "Blue Jasmine is an American film that has Australian actress Cate Blanchett acting in it.",
+    "label": 0,
+    "wiki_page": "Cate Blanchett",
+    "page_frequency": 220,
+    "bucket": "high"
+  },
+  {
+    "claim": "Homo sapiens live on the only object in the Universe known to harbor life.",
+    "label": 0,
+    "wiki_page": "Earth",
+    "page_frequency": 79,
+    "bucket": "high"
+  },
+  {
+    "claim": "Two and a Half Men starred Charlie Sheen in 1998.",
+    "label": 1,
+    "wiki_page": "Two and a Half Men",
+    "page_frequency": 7,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Tool is a band.",
+    "label": 0,
+    "wiki_page": "Tool (band)",
+    "page_frequency": 1,
+    "bucket": "low"
+  },
+  {
+    "claim": "On Mount Olympus, Hebe was a server of nectar and ambrosia.",
+    "label": 0,
+    "wiki_page": "Hebe (mythology)",
+    "page_frequency": 2,
+    "bucket": "low"
+  },
+  {
+    "claim": "Christa McAuliffe refused to ever work in New Hampshire.",
+    "label": 1,
+    "wiki_page": "Christa McAuliffe",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "The IPhone 4 is a type of telephone.",
+    "label": 0,
+    "wiki_page": "IPhone",
+    "page_frequency": 30,
+    "bucket": "high"
+  },
+  {
+    "claim": "Production took place in Sydney for the movie Australia (2008 film).",
+    "label": 0,
+    "wiki_page": "Australia (2008 film)",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Star Trek: Discovery is a prequel to the books.",
+    "label": 1,
+    "wiki_page": "Star Trek",
+    "page_frequency": 130,
+    "bucket": "high"
+  },
+  {
+    "claim": "Robert Palmer (writer) has written for a newspaper.",
+    "label": 0,
+    "wiki_page": "The New York Times",
+    "page_frequency": 67,
+    "bucket": "high"
+  },
+  {
+    "claim": "Michael Hutchence died in Boston.",
+    "label": 1,
+    "wiki_page": "Sydney",
+    "page_frequency": 11,
+    "bucket": "high"
+  },
+  {
+    "claim": "A staging area is only an unused piece of land.",
+    "label": 1,
+    "wiki_page": "Staging area",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Mud has an American actor in its cast.",
+    "label": 0,
+    "wiki_page": "Reese Witherspoon",
+    "page_frequency": 123,
+    "bucket": "high"
+  },
+  {
+    "claim": "PacSun sells products designed for young adults.",
+    "label": 0,
+    "wiki_page": "PacSun",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Southpaw was the fighting style Mike Tyson used.",
+    "label": 1,
+    "wiki_page": "Southpaw (film)",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "The Baltic Sea borders Estonia.",
+    "label": 0,
+    "wiki_page": "Estonia",
+    "page_frequency": 2,
+    "bucket": "low"
+  },
+  {
+    "claim": "Manchester by the Sea is a movie.",
+    "label": 0,
+    "wiki_page": "Manchester by the Sea (film)",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "The 66th Primetime Emmy Awards occurred in 1970.",
+    "label": 1,
+    "wiki_page": "66th Primetime Emmy Awards",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "No Country for Old Men is set in the tundra of Alaska.",
+    "label": 1,
+    "wiki_page": "No Country for Old Men (film)",
+    "page_frequency": 14,
+    "bucket": "high"
+  },
+  {
+    "claim": "Emmanuel Macron worked as a banker.",
+    "label": 0,
+    "wiki_page": "Emmanuel Macron",
+    "page_frequency": 5,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Jon Hamm received Primetime Emmy Award nominations for his performances in Mad Men.",
+    "label": 0,
+    "wiki_page": "Jon Hamm",
+    "page_frequency": 6,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Part of Dilwale Dulhania Le Jayenge was filmed in France.",
+    "label": 1,
+    "wiki_page": "Dilwale Dulhania Le Jayenge",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "The Bee Gees produced music.",
+    "label": 0,
+    "wiki_page": "Bee Gees",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Emmanuel Macron worked in France.",
+    "label": 0,
+    "wiki_page": "Emmanuel Macron",
+    "page_frequency": 5,
+    "bucket": "medium"
+  },
+  {
+    "claim": "The 66th Primetime Emmy Awards was hosted exclusively by Ellen DeGeneres.",
+    "label": 1,
+    "wiki_page": "66th Primetime Emmy Awards",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Barbarella is science fiction.",
+    "label": 0,
+    "wiki_page": "Barbarella (film)",
+    "page_frequency": 11,
+    "bucket": "high"
+  },
+  {
+    "claim": "Move (Little Mix song) was released for download in 2010.",
+    "label": 1,
+    "wiki_page": "Move (Little Mix song)",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "The Ellen Show refused to include Ellen DeGeneres in its cast.",
+    "label": 1,
+    "wiki_page": "The Ellen Show",
+    "page_frequency": 1,
+    "bucket": "low"
+  },
+  {
+    "claim": "Henry III assumed the throne in the middle of the First Barons' War.",
+    "label": 0,
+    "wiki_page": "Henry III of England",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Liam Neeson received nominations for three Golden Globe Awards.",
+    "label": 0,
+    "wiki_page": "Liam Neeson",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Tinker Tailor Soldier Spy only stars Jason Bateman.",
+    "label": 1,
+    "wiki_page": "Tinker Tailor Soldier Spy (film)",
+    "page_frequency": 2,
+    "bucket": "low"
+  },
+  {
+    "claim": "Pen\u00e9lope Cruz has modeled for the clothing company Mango.",
+    "label": 0,
+    "wiki_page": "Pene\u0301lope Cruz",
+    "page_frequency": 16,
+    "bucket": "high"
+  },
+  {
+    "claim": "Prescott, Arizona is a county.",
+    "label": 1,
+    "wiki_page": "Prescott",
+    "page_frequency": 5,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Elizabeth I was the aunt of Henry VIII.",
+    "label": 1,
+    "wiki_page": "Elizabeth I of England",
+    "page_frequency": 77,
+    "bucket": "high"
+  },
+  {
+    "claim": "House of Balloons is by Queen.",
+    "label": 1,
+    "wiki_page": "House of Balloons",
+    "page_frequency": 6,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Jonah Hill is a screenplay writer.",
+    "label": 0,
+    "wiki_page": "Jonah Hill",
+    "page_frequency": 31,
+    "bucket": "high"
+  },
+  {
+    "claim": "Jeb Bush's mother is Laura Bush.",
+    "label": 1,
+    "wiki_page": "Jeb Bush",
+    "page_frequency": 24,
+    "bucket": "high"
+  },
+  {
+    "claim": "A View to a Kill is the second James Bond film to be directed by John Glen.",
+    "label": 1,
+    "wiki_page": "A View to a Kill",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Guns N' Roses started in 1985.",
+    "label": 0,
+    "wiki_page": "Guns N' Roses",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Manchester by the Sea is a movie.",
+    "label": 0,
+    "wiki_page": "Manchester by the Sea (film)",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Rage Against the Machine gave performances at music festivals and live concerts.",
+    "label": 0,
+    "wiki_page": "Rage Against the Machine",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Samsung entered the electronics industry in the 1960's.",
+    "label": 0,
+    "wiki_page": "Samsung",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Australia (2008 film) production took place only in America.",
+    "label": 1,
+    "wiki_page": "Australia (2008 film)",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Leslie is not the middle name of Neil Diamond.",
+    "label": 1,
+    "wiki_page": "Neil Diamond",
+    "page_frequency": 28,
+    "bucket": "high"
+  },
+  {
+    "claim": "Sonny & Cher was made up of a couple.",
+    "label": 0,
+    "wiki_page": "Sonny & Cher",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Tilda Swinton acts.",
+    "label": 0,
+    "wiki_page": "Tilda Swinton",
+    "page_frequency": 2,
+    "bucket": "low"
+  },
+  {
+    "claim": "The Daily Show is incapable of focusing on political figures.",
+    "label": 1,
+    "wiki_page": "The Daily Show",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Jonah Hill is a screenwriter.",
+    "label": 0,
+    "wiki_page": "Jonah Hill",
+    "page_frequency": 31,
+    "bucket": "high"
+  },
+  {
+    "claim": "Lockheed Martin's CEO is now a person born in December.",
+    "label": 0,
+    "wiki_page": "Lockheed Martin",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Diana, Princess of Wales divorced on August 28, 1996 after 4 years of marriage.",
+    "label": 1,
+    "wiki_page": "Diana",
+    "page_frequency": 1,
+    "bucket": "low"
+  },
+  {
+    "claim": "Pearl Jam does not play rock music.",
+    "label": 1,
+    "wiki_page": "Pearl Jam",
+    "page_frequency": 26,
+    "bucket": "high"
+  },
+  {
+    "claim": "No Country for Old Men was chosen as the highest acclaimed of 2007 by the National Board of Review.",
+    "label": 0,
+    "wiki_page": "No Country for Old Men (film)",
+    "page_frequency": 14,
+    "bucket": "high"
+  },
+  {
+    "claim": "Saxony is only a town.",
+    "label": 1,
+    "wiki_page": "Saxony",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Nymphomaniac (film) is part of a trilogy.",
+    "label": 0,
+    "wiki_page": "Nymphomaniac (film)",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Gory Guerrero was a wrestler.",
+    "label": 0,
+    "wiki_page": "Gory Guerrero",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Brie Larson and Destin Daniel refused to ever work with each other.",
+    "label": 1,
+    "wiki_page": "Short Term 12",
+    "page_frequency": 37,
+    "bucket": "high"
+  },
+  {
+    "claim": "Two and a Half Men featured Charlie Sheen.",
+    "label": 0,
+    "wiki_page": "Two and a Half Men",
+    "page_frequency": 7,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Aaron Burr was a department store that went out of business in the eighties.",
+    "label": 1,
+    "wiki_page": "Aaron Burr",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "No Country for Old Men is a drama.",
+    "label": 1,
+    "wiki_page": "No Country for Old Men (film)",
+    "page_frequency": 14,
+    "bucket": "high"
+  },
+  {
+    "claim": "The SpongeBob SquarePants Movie only stars Donald Trump.",
+    "label": 1,
+    "wiki_page": "The SpongeBob SquarePants Movie",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "An all-seater stadium is solely a stadium meant for competitive emotional activity.",
+    "label": 1,
+    "wiki_page": "Association football",
+    "page_frequency": 68,
+    "bucket": "high"
+  },
+  {
+    "claim": "Half Girlfriend's filming locations included many towns except Cape Town.",
+    "label": 1,
+    "wiki_page": "Half Girlfriend (film)",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "For his performances in Mad Men, actor Jon Hamm was recognized with nominations for the Primetime Emmy Awards.",
+    "label": 0,
+    "wiki_page": "Jon Hamm",
+    "page_frequency": 6,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Blank Space is on a top 10 list in the country Czech Republic.",
+    "label": 0,
+    "wiki_page": "Blank Space",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Touch My Body is a recorded work.",
+    "label": 0,
+    "wiki_page": "Touch My Body",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "John Deighton developed swelling of the legs.",
+    "label": 0,
+    "wiki_page": "John Deighton",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Barcelona has a population of 1.6 million.",
+    "label": 0,
+    "wiki_page": "Barcelona",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Rio's sequel was released on a date during the 21st century.",
+    "label": 0,
+    "wiki_page": "Rio (2011 film)",
+    "page_frequency": 7,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Daenerys Targaryen was introduced in a novel.",
+    "label": 0,
+    "wiki_page": "Daenerys Targaryen",
+    "page_frequency": 2,
+    "bucket": "low"
+  },
+  {
+    "claim": "Henry Cavill is part of the DC Extended Universe.",
+    "label": 0,
+    "wiki_page": "Henry Cavill",
+    "page_frequency": 1,
+    "bucket": "low"
+  },
+  {
+    "claim": "Nymphomaniac (film) is the third installment in the unofficially titled \"Depression Trilogy\".",
+    "label": 0,
+    "wiki_page": "Nymphomaniac (film)",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Hourglass is performed by an Australian singer-songwriter.",
+    "label": 1,
+    "wiki_page": "James Taylor",
+    "page_frequency": 43,
+    "bucket": "high"
+  },
+  {
+    "claim": "The New York City Landmarks Preservation Commission includes zero architects.",
+    "label": 1,
+    "wiki_page": "New York City Landmarks Preservation Commission",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Mutiny on the Bounty is Dutch.",
+    "label": 1,
+    "wiki_page": "Mutiny on the Bounty (1962 film)",
+    "page_frequency": 5,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Aphrodite is the daughter of a Titaness in Homer's Iliad.",
+    "label": 0,
+    "wiki_page": "Aphrodite",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "The Airbus A380 entered commercial service.",
+    "label": 0,
+    "wiki_page": "Airbus A380",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "You Only Live Twice is a Bond film.",
+    "label": 0,
+    "wiki_page": "You Only Live Twice (film)",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Valencia is in a country.",
+    "label": 0,
+    "wiki_page": "Valencia",
+    "page_frequency": 1,
+    "bucket": "low"
+  },
+  {
+    "claim": "The Gettysburg Address was delivered by a President of the United States.",
+    "label": 0,
+    "wiki_page": "Abraham Lincoln",
+    "page_frequency": 396,
+    "bucket": "high"
+  },
+  {
+    "claim": "San Francisco Bay Area is incapable of having any residents.",
+    "label": 1,
+    "wiki_page": "San Francisco Bay Area",
+    "page_frequency": 15,
+    "bucket": "high"
+  },
+  {
+    "claim": "Byron Howard turned down the opportunity to direct the film Zootopia in favor of becoming a wizard.",
+    "label": 1,
+    "wiki_page": "Zootopia",
+    "page_frequency": 117,
+    "bucket": "high"
+  },
+  {
+    "claim": "Mutiny on the Bounty is a film.",
+    "label": 0,
+    "wiki_page": "Mutiny on the Bounty (1962 film)",
+    "page_frequency": 5,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Mike Huckabee is a folk religious figure with no official status.",
+    "label": 1,
+    "wiki_page": "Mike Huckabee",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Ghost is a film.",
+    "label": 0,
+    "wiki_page": "Ghost (1990 film)",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Regina King is an actress.",
+    "label": 0,
+    "wiki_page": "Regina King",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Fidaa is directed.",
+    "label": 0,
+    "wiki_page": "Fidaa",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Two and a Half Men was created in the month of February.",
+    "label": 1,
+    "wiki_page": "Two and a Half Men",
+    "page_frequency": 7,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Argentina does not have a Congress.",
+    "label": 1,
+    "wiki_page": "Argentina",
+    "page_frequency": 7,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Jack Dylan Grazer was born in California.",
+    "label": 0,
+    "wiki_page": "Jack Dylan Grazer",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "House of Balloons is by someone other than The Weeknd.",
+    "label": 1,
+    "wiki_page": "House of Balloons",
+    "page_frequency": 6,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Recovery only has one singer on it, Drake.",
+    "label": 1,
+    "wiki_page": "Recovery (Eminem album)",
+    "page_frequency": 13,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Burj Khalifa contains only 4 elevators.",
+    "label": 1,
+    "wiki_page": "Burj Khalifa",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Swordfish (film) is a film that is about a type of person.",
+    "label": 0,
+    "wiki_page": "Swordfish (film)",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Johnny Galecki's character in The Big Bang Theory had a doctoral degree.",
+    "label": 0,
+    "wiki_page": "Leonard Hofstadter",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Taran Killam isn't a comedian.",
+    "label": 1,
+    "wiki_page": "Taran Killam",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Boxing Helena featured Sherilyn Fenn.",
+    "label": 0,
+    "wiki_page": "Sherilyn Fenn",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Cars 3 is a computer animated prototype.",
+    "label": 1,
+    "wiki_page": "Cars 3",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Raees (film) stars an Indian actor.",
+    "label": 0,
+    "wiki_page": "Shah Rukh Khan",
+    "page_frequency": 37,
+    "bucket": "high"
+  },
+  {
+    "claim": "Catherine Keener appeared in a movie.",
+    "label": 0,
+    "wiki_page": "Catherine Keener",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Recovery is an album focusing on themes of isolation and addiction.",
+    "label": 1,
+    "wiki_page": "Recovery (Eminem album)",
+    "page_frequency": 13,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Burj Khalifa contains zero elevators.",
+    "label": 1,
+    "wiki_page": "Burj Khalifa",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Punch-Drunk Love was directed by Revolution Studios and New Line Cinema.",
+    "label": 1,
+    "wiki_page": "Punch-Drunk Love",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Selma to Montgomery marches were to demonstrate the desire of African-American citizens to exercise their constitutional right to vote.",
+    "label": 0,
+    "wiki_page": "Selma to Montgomery marches",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Mount Rushmore was made.",
+    "label": 0,
+    "wiki_page": "Mount Rushmore",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Toy Story 2 was released by North Korea.",
+    "label": 1,
+    "wiki_page": "Toy Story 2",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Estelle Getty performed comedy.",
+    "label": 0,
+    "wiki_page": "Estelle Getty",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Part of Dilwale Dulhania Le Jayenge was filmed in France.",
+    "label": 1,
+    "wiki_page": "Dilwale Dulhania Le Jayenge",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Paramore formed in the 2000's.",
+    "label": 0,
+    "wiki_page": "Paramore",
+    "page_frequency": 6,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Croatia is a visiting destination.",
+    "label": 0,
+    "wiki_page": "Croatia",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "The New York Knicks are in the Atlantic Division of the National Press Club's Eastern Conference.",
+    "label": 0,
+    "wiki_page": "New York Knicks",
+    "page_frequency": 14,
+    "bucket": "high"
+  },
+  {
+    "claim": "Riddick is in a film.",
+    "label": 0,
+    "wiki_page": "Riddick (character)",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "In a constitutional federal republic, the Alfred P. Murrah Federal Building was located.",
+    "label": 0,
+    "wiki_page": "United States",
+    "page_frequency": 280,
+    "bucket": "high"
+  },
+  {
+    "claim": "Antigua and Barbuda was the birthplace of Christopher Columbus.",
+    "label": 1,
+    "wiki_page": "Christopher Columbus",
+    "page_frequency": 51,
+    "bucket": "high"
+  },
+  {
+    "claim": "There is a 2007 film called P.S I Love You (film).",
+    "label": 0,
+    "wiki_page": "Hilary Swank",
+    "page_frequency": 95,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Greek language is spoken only outside of Italy.",
+    "label": 1,
+    "wiki_page": "Greek language",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "See.SZA.Run is a picture book.",
+    "label": 1,
+    "wiki_page": "See.SZA.Run",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Nawaz Sharif is a German politician.",
+    "label": 1,
+    "wiki_page": "Nawaz Sharif",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Samsung entered the shipbuilding industries in the 1970's.",
+    "label": 0,
+    "wiki_page": "Samsung",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Kung Fu Panda grossed $20,300,000 on opening day, in 2006.",
+    "label": 1,
+    "wiki_page": "Kung Fu Panda",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "The Mighty Ducks was distributed by a subsidiary of Walt Disney Studios.",
+    "label": 0,
+    "wiki_page": "Walt Disney Pictures",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Damon Albarn released his first album in 2014.",
+    "label": 0,
+    "wiki_page": "Damon Albarn",
+    "page_frequency": 1,
+    "bucket": "low"
+  },
+  {
+    "claim": "Magic Johnson was not a point guard.",
+    "label": 1,
+    "wiki_page": "Magic Johnson",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Sausage Party is a computer-animated horror comedy.",
+    "label": 1,
+    "wiki_page": "Sausage Party",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Practical Magic is solely a Canadian romantic comedy film.",
+    "label": 1,
+    "wiki_page": "Practical Magic",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Amancio Ortega was denied Spanish citizenship.",
+    "label": 1,
+    "wiki_page": "Amancio Ortega",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "The Hit is a 1984 film.",
+    "label": 0,
+    "wiki_page": "The Hit (1984 film)",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "The CONCACAF Champions League is organized for the top baseball clubs.",
+    "label": 1,
+    "wiki_page": "CONCACAF Champions League",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Home for the Holidays stars a producer.",
+    "label": 0,
+    "wiki_page": "Holly Hunter",
+    "page_frequency": 72,
+    "bucket": "high"
+  },
+  {
+    "claim": "Meteora is an album.",
+    "label": 0,
+    "wiki_page": "Meteora (album)",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Recovery is the third studio album by Marshall Mathers III.",
+    "label": 1,
+    "wiki_page": "Recovery (Eminem album)",
+    "page_frequency": 13,
+    "bucket": "high"
+  },
+  {
+    "claim": "Palo Alto, California's location is the San Francisco Bay Area.",
+    "label": 0,
+    "wiki_page": "Palo Alto",
+    "page_frequency": 330,
+    "bucket": "high"
+  },
+  {
+    "claim": "Ludwig van Beethoven was taught by his father Johann.",
+    "label": 0,
+    "wiki_page": "Ludwig van Beethoven",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Joe Walsh was inducted in 2001.",
+    "label": 0,
+    "wiki_page": "Joe Walsh",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Villa Park hosted the 2012 FA Community Shield.",
+    "label": 0,
+    "wiki_page": "Villa Park",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "No Country for Old Men starred Harrison Ford.",
+    "label": 1,
+    "wiki_page": "No Country for Old Men (film)",
+    "page_frequency": 14,
+    "bucket": "high"
+  },
+  {
+    "claim": "Solanum contains flora that have fruit.",
+    "label": 0,
+    "wiki_page": "Solanum",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "House of Balloons is a debut single.",
+    "label": 1,
+    "wiki_page": "House of Balloons",
+    "page_frequency": 6,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Mel B died before collaborating with Missy Elliott.",
+    "label": 1,
+    "wiki_page": "Mel B",
+    "page_frequency": 27,
+    "bucket": "high"
+  },
+  {
+    "claim": "Southpaw is directed by the Nile River.",
+    "label": 1,
+    "wiki_page": "Southpaw (film)",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Paramore is retired.",
+    "label": 1,
+    "wiki_page": "Paramore",
+    "page_frequency": 6,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Guillermo del Toro was born in 1700.",
+    "label": 1,
+    "wiki_page": "Guillermo del Toro",
+    "page_frequency": 11,
+    "bucket": "high"
+  },
+  {
+    "claim": "Selena Gomez & the Scene's debut album was released in September.",
+    "label": 0,
+    "wiki_page": "Selena Gomez & the Scene",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "The Lincoln-Douglas debates happened in a car.",
+    "label": 1,
+    "wiki_page": "Lincoln\u2013Douglas debates",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Samsung entered the shipbuilding industries.",
+    "label": 0,
+    "wiki_page": "Samsung",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Soyuz was part of the Soviet space program.",
+    "label": 0,
+    "wiki_page": "Soyuz (spacecraft)",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Marvel vs. Capcom is part of a trilogy.",
+    "label": 1,
+    "wiki_page": "Marvel vs. Capcom-COLON- Infinite",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "Northwestern University is a private university in Michigan.",
+    "label": 1,
+    "wiki_page": "Northwestern University",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "In 2016, Emilia Clarke was named Esquire's Sexiest Woman Alive.",
+    "label": 1,
+    "wiki_page": "Emilia Clarke",
+    "page_frequency": 7,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Simon Pegg was born on March 14th, 1970.",
+    "label": 1,
+    "wiki_page": "Simon Pegg",
+    "page_frequency": 20,
+    "bucket": "high"
+  },
+  {
+    "claim": "Clueless (film) was followed by a series of books.",
+    "label": 0,
+    "wiki_page": "Clueless (film)",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Youtube has been ranked by Alexa Internet.",
+    "label": 0,
+    "wiki_page": "YouTube",
+    "page_frequency": 72,
+    "bucket": "high"
+  },
+  {
+    "claim": "Edouard Seguin rarely worked in France.",
+    "label": 1,
+    "wiki_page": "E\u0301douard Se\u0301guin",
+    "page_frequency": 0,
+    "bucket": "low"
+  },
+  {
+    "claim": "One Dance reached number one in the Netherlands in 2010.",
+    "label": 1,
+    "wiki_page": "One Dance",
+    "page_frequency": 4,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Libya is the 16th largest country in the world.",
+    "label": 0,
+    "wiki_page": "Libya",
+    "page_frequency": 3,
+    "bucket": "medium"
+  },
+  {
+    "claim": "Therasia is a European island.",
+    "label": 0,
+    "wiki_page": "Greece",
+    "page_frequency": 142,
+    "bucket": "high"
+  }
+]

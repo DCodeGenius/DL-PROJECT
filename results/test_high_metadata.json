@@ -1,0 +1,7002 @@
+[
+  {
+    "claim": "Edgar Wright is a Gemini.",
+    "label": 1,
+    "wiki_page": "Gemini (astrology)",
+    "page_frequency": 52,
+    "bucket": "high"
+  },
+  {
+    "claim": "San Francisco Bay Area contains many airports.",
+    "label": 0,
+    "wiki_page": "San Francisco Bay Area",
+    "page_frequency": 15,
+    "bucket": "high"
+  },
+  {
+    "claim": "A Milli is by an Egyptian.",
+    "label": 1,
+    "wiki_page": "Lil Wayne",
+    "page_frequency": 151,
+    "bucket": "high"
+  },
+  {
+    "claim": "Arizona is not a state.",
+    "label": 1,
+    "wiki_page": "Arizona",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Meteora is by Linkin Park.",
+    "label": 0,
+    "wiki_page": "Linkin Park",
+    "page_frequency": 99,
+    "bucket": "high"
+  },
+  {
+    "claim": "House ran for 9 seasons.",
+    "label": 1,
+    "wiki_page": "House (TV series)",
+    "page_frequency": 21,
+    "bucket": "high"
+  },
+  {
+    "claim": "Watertown, Massachusetts is in Vermont.",
+    "label": 1,
+    "wiki_page": "Watertown",
+    "page_frequency": 34,
+    "bucket": "high"
+  },
+  {
+    "claim": "Finding Dory was written by someone.",
+    "label": 0,
+    "wiki_page": "Finding Dory",
+    "page_frequency": 16,
+    "bucket": "high"
+  },
+  {
+    "claim": "House is on Fox.",
+    "label": 0,
+    "wiki_page": "House (TV series)",
+    "page_frequency": 21,
+    "bucket": "high"
+  },
+  {
+    "claim": "Saxony is a German state.",
+    "label": 0,
+    "wiki_page": "Saxony",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Rage Against the Machine performed at live venues and festivals.",
+    "label": 0,
+    "wiki_page": "Rage Against the Machine",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Road to El Dorado stars an actor.",
+    "label": 0,
+    "wiki_page": "Kenneth Branagh",
+    "page_frequency": 43,
+    "bucket": "high"
+  },
+  {
+    "claim": "An American comedian made The Ellen Show.",
+    "label": 0,
+    "wiki_page": "Ellen DeGeneres",
+    "page_frequency": 219,
+    "bucket": "high"
+  },
+  {
+    "claim": "Floyd Mayweather Jr. is a professional boxer.",
+    "label": 0,
+    "wiki_page": "Floyd Mayweather Jr.",
+    "page_frequency": 126,
+    "bucket": "high"
+  },
+  {
+    "claim": "Andrew Kevin Walker is only a dancer.",
+    "label": 1,
+    "wiki_page": "Andrew Kevin Walker",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Ellen Show was created by an American comedian.",
+    "label": 0,
+    "wiki_page": "Ellen DeGeneres",
+    "page_frequency": 219,
+    "bucket": "high"
+  },
+  {
+    "claim": "Samsung entered the electronics industry in the the late 1960's.",
+    "label": 0,
+    "wiki_page": "Samsung",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "San Francisco Bay Area contains zero national parks.",
+    "label": 1,
+    "wiki_page": "San Francisco Bay Area",
+    "page_frequency": 15,
+    "bucket": "high"
+  },
+  {
+    "claim": "Anne Rice lived in the US.",
+    "label": 0,
+    "wiki_page": "San Francisco",
+    "page_frequency": 285,
+    "bucket": "high"
+  },
+  {
+    "claim": "John Goodman has had roles.",
+    "label": 0,
+    "wiki_page": "John Goodman",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Good Wife airs on television.",
+    "label": 0,
+    "wiki_page": "CBS",
+    "page_frequency": 48,
+    "bucket": "high"
+  },
+  {
+    "claim": "Jeb Bush grew up in Boston.",
+    "label": 1,
+    "wiki_page": "Jeb Bush",
+    "page_frequency": 24,
+    "bucket": "high"
+  },
+  {
+    "claim": "Brown University's main campus is located in the second most populous city in Rhode Island.",
+    "label": 1,
+    "wiki_page": "Providence",
+    "page_frequency": 37,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Bee Gees were producers of music.",
+    "label": 0,
+    "wiki_page": "Bee Gees",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Recovery is an Eminem album.",
+    "label": 0,
+    "wiki_page": "Recovery (Eminem album)",
+    "page_frequency": 13,
+    "bucket": "high"
+  },
+  {
+    "claim": "Lee Daniels directed a movie based off the book \"Push.\"",
+    "label": 0,
+    "wiki_page": "Precious (film)",
+    "page_frequency": 38,
+    "bucket": "high"
+  },
+  {
+    "claim": "Croatia has a king.",
+    "label": 1,
+    "wiki_page": "Croatia",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Maze Runner is a narrative in a visual medium.",
+    "label": 0,
+    "wiki_page": "20th Century Fox",
+    "page_frequency": 11,
+    "bucket": "high"
+  },
+  {
+    "claim": "Trouble with the Curve stars an actor.",
+    "label": 0,
+    "wiki_page": "Clint Eastwood",
+    "page_frequency": 210,
+    "bucket": "high"
+  },
+  {
+    "claim": "Rachel Green is one of the six main characters in the sitcom Friends aired in the 1990s.",
+    "label": 0,
+    "wiki_page": "Friends",
+    "page_frequency": 26,
+    "bucket": "high"
+  },
+  {
+    "claim": "Andrew Kevin Walker was shunned by the BAFTA for his screenwriting.",
+    "label": 1,
+    "wiki_page": "Andrew Kevin Walker",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Knocked Up is a film.",
+    "label": 0,
+    "wiki_page": "Knocked Up",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Youtube is unranked.",
+    "label": 1,
+    "wiki_page": "YouTube",
+    "page_frequency": 72,
+    "bucket": "high"
+  },
+  {
+    "claim": "Andrew Kevin Walker is a screenwriter.",
+    "label": 0,
+    "wiki_page": "Andrew Kevin Walker",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "The New York Knicks are in the Prince of Wales Conference of the National Hockey League.",
+    "label": 1,
+    "wiki_page": "Pat Riley",
+    "page_frequency": 66,
+    "bucket": "high"
+  },
+  {
+    "claim": "Virginia exports only crops.",
+    "label": 1,
+    "wiki_page": "Virginia",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "San Francisco Bay Area contains zero cities.",
+    "label": 1,
+    "wiki_page": "Oakland",
+    "page_frequency": 330,
+    "bucket": "high"
+  },
+  {
+    "claim": "Punch-Drunk Love was distributed by an American television studio.",
+    "label": 1,
+    "wiki_page": "Columbia Pictures",
+    "page_frequency": 11,
+    "bucket": "high"
+  },
+  {
+    "claim": "Tommy Lee Jones missed the chance to appear in No Country for Old Men.",
+    "label": 1,
+    "wiki_page": "No Country for Old Men (film)",
+    "page_frequency": 14,
+    "bucket": "high"
+  },
+  {
+    "claim": "Zoe Saldana is a Leo.",
+    "label": 1,
+    "wiki_page": "Leo (astrology)",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "Mohra got zero nominations from a magazine in 1995.",
+    "label": 1,
+    "wiki_page": "Filmfare",
+    "page_frequency": 38,
+    "bucket": "high"
+  },
+  {
+    "claim": "Deepika Padukone has only been in one Indian film.",
+    "label": 1,
+    "wiki_page": "Goliyon Ki Raasleela Ram-Leela",
+    "page_frequency": 32,
+    "bucket": "high"
+  },
+  {
+    "claim": "Oscar Isaac played a fictional character.",
+    "label": 0,
+    "wiki_page": "Oscar Isaac",
+    "page_frequency": 19,
+    "bucket": "high"
+  },
+  {
+    "claim": "Jonah Hill is an actor.",
+    "label": 0,
+    "wiki_page": "Jonah Hill",
+    "page_frequency": 31,
+    "bucket": "high"
+  },
+  {
+    "claim": "Daenerys Targaryen is a character in A Song of Ice and Fire.",
+    "label": 0,
+    "wiki_page": "A Clash of Kings",
+    "page_frequency": 54,
+    "bucket": "high"
+  },
+  {
+    "claim": "Canada is where EA Black Box was based.",
+    "label": 0,
+    "wiki_page": "British Columbia",
+    "page_frequency": 92,
+    "bucket": "high"
+  },
+  {
+    "claim": "Ang Lee works in the film industry.",
+    "label": 0,
+    "wiki_page": "Brokeback Mountain",
+    "page_frequency": 57,
+    "bucket": "high"
+  },
+  {
+    "claim": "John Goodman is not an actor.",
+    "label": 1,
+    "wiki_page": "John Goodman",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Ron Weasley is part of the Twilight series.",
+    "label": 1,
+    "wiki_page": "Hogwarts",
+    "page_frequency": 41,
+    "bucket": "high"
+  },
+  {
+    "claim": "Comedy is something performed by Fred Armisen.",
+    "label": 0,
+    "wiki_page": "Saturday Night Live",
+    "page_frequency": 30,
+    "bucket": "high"
+  },
+  {
+    "claim": "Watertown, Massachusetts is a city in Suffolk County.",
+    "label": 1,
+    "wiki_page": "Watertown",
+    "page_frequency": 34,
+    "bucket": "high"
+  },
+  {
+    "claim": "Arizona is not a part of the United States.",
+    "label": 1,
+    "wiki_page": "Arizona",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Roswell is a science fiction TV series on Fox.",
+    "label": 1,
+    "wiki_page": "Roswell (TV series)",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Secret and technologically advanced airplanes were produced in Burbank, California.",
+    "label": 0,
+    "wiki_page": "Burbank",
+    "page_frequency": 330,
+    "bucket": "high"
+  },
+  {
+    "claim": "Battle of the Bastards is a television episode.",
+    "label": 0,
+    "wiki_page": "Game of Thrones",
+    "page_frequency": 192,
+    "bucket": "high"
+  },
+  {
+    "claim": "Punch-Drunk Love was distributed by a film studio.",
+    "label": 0,
+    "wiki_page": "Punch-Drunk Love",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Colin Kaepernick is not a football player.",
+    "label": 1,
+    "wiki_page": "Quarterback",
+    "page_frequency": 26,
+    "bucket": "high"
+  },
+  {
+    "claim": "Veep is a show.",
+    "label": 0,
+    "wiki_page": "Veep",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Arizona is not a part of the United States.",
+    "label": 1,
+    "wiki_page": "Arizona",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Palo Alto, California's location is the United States.",
+    "label": 0,
+    "wiki_page": "Palo Alto",
+    "page_frequency": 330,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Good Wife is a movie.",
+    "label": 1,
+    "wiki_page": "Emmy Award",
+    "page_frequency": 34,
+    "bucket": "high"
+  },
+  {
+    "claim": "Punch-Drunk Love was distributed exclusively by a Czech film studio.",
+    "label": 1,
+    "wiki_page": "Columbia Pictures",
+    "page_frequency": 11,
+    "bucket": "high"
+  },
+  {
+    "claim": "Jonah Hill is an actor.",
+    "label": 0,
+    "wiki_page": "Jonah Hill",
+    "page_frequency": 31,
+    "bucket": "high"
+  },
+  {
+    "claim": "A.J. Styles won a championship.",
+    "label": 0,
+    "wiki_page": "Triple Crown (professional wrestling)",
+    "page_frequency": 23,
+    "bucket": "high"
+  },
+  {
+    "claim": "Pearl Jam sold many songs in the early 1990s.",
+    "label": 0,
+    "wiki_page": "Pearl Jam",
+    "page_frequency": 26,
+    "bucket": "high"
+  },
+  {
+    "claim": "Knocked Up is a film.",
+    "label": 0,
+    "wiki_page": "Knocked Up",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Croatia is incapable of rendering services.",
+    "label": 1,
+    "wiki_page": "Croatia",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Savages was created in 1954.",
+    "label": 1,
+    "wiki_page": "Savages (2012 film)",
+    "page_frequency": 13,
+    "bucket": "high"
+  },
+  {
+    "claim": "Guillermo del Toro is German.",
+    "label": 1,
+    "wiki_page": "Guillermo del Toro",
+    "page_frequency": 11,
+    "bucket": "high"
+  },
+  {
+    "claim": "On June 1, 2007, Knocked Up was released.",
+    "label": 0,
+    "wiki_page": "Knocked Up",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "No Country for Old Men was listed.",
+    "label": 0,
+    "wiki_page": "No Country for Old Men (film)",
+    "page_frequency": 14,
+    "bucket": "high"
+  },
+  {
+    "claim": "Emma Watson is an actress.",
+    "label": 0,
+    "wiki_page": "Emma Watson",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "Stripes had a person appear in it.",
+    "label": 0,
+    "wiki_page": "Harold Ramis",
+    "page_frequency": 51,
+    "bucket": "high"
+  },
+  {
+    "claim": "Jonah Hill is an actor.",
+    "label": 0,
+    "wiki_page": "Jonah Hill",
+    "page_frequency": 31,
+    "bucket": "high"
+  },
+  {
+    "claim": "Knocked Up was released on June 1, 2003.",
+    "label": 1,
+    "wiki_page": "Knocked Up",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Premier League Asia Trophy is for golf.",
+    "label": 1,
+    "wiki_page": "Chelsea F.C.",
+    "page_frequency": 133,
+    "bucket": "high"
+  },
+  {
+    "claim": "Punch-Drunk Love had an American film studio as a distributor.",
+    "label": 0,
+    "wiki_page": "Punch-Drunk Love",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Robert Singer (producer) worked on a tv show.",
+    "label": 0,
+    "wiki_page": "Supernatural (U.S. TV series)",
+    "page_frequency": 140,
+    "bucket": "high"
+  },
+  {
+    "claim": "George Harrison is still married to his first wife.",
+    "label": 1,
+    "wiki_page": "George Harrison",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Maze Runner is an unadapted novel.",
+    "label": 1,
+    "wiki_page": "The Maze Runner (film)",
+    "page_frequency": 16,
+    "bucket": "high"
+  },
+  {
+    "claim": "The American Civil War took place in North America.",
+    "label": 0,
+    "wiki_page": "United States",
+    "page_frequency": 280,
+    "bucket": "high"
+  },
+  {
+    "claim": "Palo Alto, California is 100 miles from the United States.",
+    "label": 1,
+    "wiki_page": "Stanford",
+    "page_frequency": 330,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Colosseum is in Europe.",
+    "label": 0,
+    "wiki_page": "Italy",
+    "page_frequency": 105,
+    "bucket": "high"
+  },
+  {
+    "claim": "Prince Charles and Lady Diana eloped in July 1981.",
+    "label": 1,
+    "wiki_page": "Wedding of Charles",
+    "page_frequency": 130,
+    "bucket": "high"
+  },
+  {
+    "claim": "Richard Fortus is a guitarist of Guns N' Roses.",
+    "label": 0,
+    "wiki_page": "Guns N' Roses",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Alexandria is in Qatar.",
+    "label": 1,
+    "wiki_page": "Qatar",
+    "page_frequency": 110,
+    "bucket": "high"
+  },
+  {
+    "claim": "Guillermo del Toro does not work in the film industry.",
+    "label": 1,
+    "wiki_page": "Guillermo del Toro",
+    "page_frequency": 11,
+    "bucket": "high"
+  },
+  {
+    "claim": "Floyd Mayweather Jr. is incapable of boxing.",
+    "label": 1,
+    "wiki_page": "Floyd Mayweather Jr.",
+    "page_frequency": 126,
+    "bucket": "high"
+  },
+  {
+    "claim": "Samsung never entered the shipbuilding industries.",
+    "label": 1,
+    "wiki_page": "Samsung",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Angelsberg is not located directly next to an ocean.",
+    "label": 0,
+    "wiki_page": "Luxembourg",
+    "page_frequency": 120,
+    "bucket": "high"
+  },
+  {
+    "claim": "Ukrainian Soviet Socialist Republic was in an international organization.",
+    "label": 0,
+    "wiki_page": "United Nations",
+    "page_frequency": 103,
+    "bucket": "high"
+  },
+  {
+    "claim": "Angela Bassett received a master of fine arts degree from Duke University.",
+    "label": 1,
+    "wiki_page": "Yale School of Drama",
+    "page_frequency": 56,
+    "bucket": "high"
+  },
+  {
+    "claim": "Manchester United F.C. was never the world's highest-earning football club.",
+    "label": 1,
+    "wiki_page": "Manchester United F.C.",
+    "page_frequency": 59,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Brat Pack appeared together in teen-oriented coming-of-age video games.",
+    "label": 1,
+    "wiki_page": "Brat Pack (actors)",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Canada is where EA Black Box was based.",
+    "label": 0,
+    "wiki_page": "Burnaby",
+    "page_frequency": 37,
+    "bucket": "high"
+  },
+  {
+    "claim": "Roswell was by Jason Katims.",
+    "label": 0,
+    "wiki_page": "Roswell (TV series)",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Arizona is a mass-marketed beverage.",
+    "label": 1,
+    "wiki_page": "Arizona",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Veep is not a television show.",
+    "label": 1,
+    "wiki_page": "Veep",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "George Harrison's first marriage started in 1966.",
+    "label": 0,
+    "wiki_page": "George Harrison",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Republic of Macedonia is in Asia.",
+    "label": 1,
+    "wiki_page": "Bulgaria",
+    "page_frequency": 36,
+    "bucket": "high"
+  },
+  {
+    "claim": "Arizona is not in the United States.",
+    "label": 1,
+    "wiki_page": "Arizona",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Arizona is a mass-marketed beverage.",
+    "label": 1,
+    "wiki_page": "Arizona",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Andrew Kevin Walker is from North America.",
+    "label": 0,
+    "wiki_page": "Andrew Kevin Walker",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Arizona is not in the United States.",
+    "label": 1,
+    "wiki_page": "Arizona",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "George Harrison was married to Pattie Boyd.",
+    "label": 0,
+    "wiki_page": "George Harrison",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "Trollhunters was created by a horse.",
+    "label": 1,
+    "wiki_page": "Guillermo del Toro",
+    "page_frequency": 11,
+    "bucket": "high"
+  },
+  {
+    "claim": "The character Poe Dameron was portrayed by Oscar Isaac.",
+    "label": 0,
+    "wiki_page": "Oscar Isaac",
+    "page_frequency": 19,
+    "bucket": "high"
+  },
+  {
+    "claim": "Rage Against the Machine was not a band.",
+    "label": 1,
+    "wiki_page": "Rage Against the Machine",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Men in Black II stars an American actor.",
+    "label": 0,
+    "wiki_page": "Tommy Lee Jones",
+    "page_frequency": 74,
+    "bucket": "high"
+  },
+  {
+    "claim": "Watchmen is a dark satirical and dystopian take on the French Revolution.",
+    "label": 1,
+    "wiki_page": "French Revolution",
+    "page_frequency": 110,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Road to El Dorado stars an actor.",
+    "label": 0,
+    "wiki_page": "Kevin Kline",
+    "page_frequency": 15,
+    "bucket": "high"
+  },
+  {
+    "claim": "Island Records was founded by only J.K. Rowling.",
+    "label": 1,
+    "wiki_page": "Island Records",
+    "page_frequency": 26,
+    "bucket": "high"
+  },
+  {
+    "claim": "Virginia keeps all computer chips manufactured within the state for use in Virginian electronics.",
+    "label": 1,
+    "wiki_page": "Virginia",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "Anne Rice lived in the US.",
+    "label": 0,
+    "wiki_page": "New Orleans",
+    "page_frequency": 79,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Greek language is spoken only outside of Greece.",
+    "label": 1,
+    "wiki_page": "Greek language",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Middlesex County is home to the city of Watertown, Massachusetts.",
+    "label": 1,
+    "wiki_page": "Watertown",
+    "page_frequency": 34,
+    "bucket": "high"
+  },
+  {
+    "claim": "Deepika Padukone has only been in one Indian film.",
+    "label": 1,
+    "wiki_page": "Love Aaj Kal",
+    "page_frequency": 40,
+    "bucket": "high"
+  },
+  {
+    "claim": "House ran for 9 seasons.",
+    "label": 1,
+    "wiki_page": "House (TV series)",
+    "page_frequency": 21,
+    "bucket": "high"
+  },
+  {
+    "claim": "Recovery is an Eminem album.",
+    "label": 0,
+    "wiki_page": "Recovery (Eminem album)",
+    "page_frequency": 13,
+    "bucket": "high"
+  },
+  {
+    "claim": "One science fiction character is the Eighth Doctor.",
+    "label": 0,
+    "wiki_page": "The Doctor (Doctor Who)",
+    "page_frequency": 54,
+    "bucket": "high"
+  },
+  {
+    "claim": "Harvard University is a research hospital.",
+    "label": 1,
+    "wiki_page": "Harvard University",
+    "page_frequency": 13,
+    "bucket": "high"
+  },
+  {
+    "claim": "Burbank, California is a location where secret and technologically advanced airplanes were produced during the cold war.",
+    "label": 0,
+    "wiki_page": "Burbank",
+    "page_frequency": 330,
+    "bucket": "high"
+  },
+  {
+    "claim": "Andrew Kevin Walker was shunned by the BAFTA for his screenwriting.",
+    "label": 1,
+    "wiki_page": "Andrew Kevin Walker",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Northwestern University is a public university.",
+    "label": 1,
+    "wiki_page": "Northwestern University",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "Guns N' Roses started in 1980.",
+    "label": 1,
+    "wiki_page": "Guns N' Roses",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Bee Gees did not produce music.",
+    "label": 1,
+    "wiki_page": "Bee Gees",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Southampton F.C. is a soccer team.",
+    "label": 0,
+    "wiki_page": "Association football",
+    "page_frequency": 68,
+    "bucket": "high"
+  },
+  {
+    "claim": "The New York Knicks are in the Prince of Wales Conference of the National Hockey League.",
+    "label": 1,
+    "wiki_page": "New York Knicks",
+    "page_frequency": 14,
+    "bucket": "high"
+  },
+  {
+    "claim": "Floyd Mayweather Jr. is a professional boxer.",
+    "label": 0,
+    "wiki_page": "Floyd Mayweather Jr.",
+    "page_frequency": 126,
+    "bucket": "high"
+  },
+  {
+    "claim": "George Harrison has yet to marry.",
+    "label": 1,
+    "wiki_page": "George Harrison",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "Guns N' Roses is an American hard rock restaurant.",
+    "label": 1,
+    "wiki_page": "Guns N' Roses",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Rage Against the Machine is a band.",
+    "label": 0,
+    "wiki_page": "Rage Against the Machine",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Jonah Hill did not star in 21 Jump Street.",
+    "label": 1,
+    "wiki_page": "Jonah Hill",
+    "page_frequency": 31,
+    "bucket": "high"
+  },
+  {
+    "claim": "Queen (band) is a British rock band that was formed in London.",
+    "label": 0,
+    "wiki_page": "Queen (band)",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Amyotrophic lateral sclerosis is a cure.",
+    "label": 1,
+    "wiki_page": "Amyotrophic lateral sclerosis",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "A relative of Elizabeth I was executed.",
+    "label": 0,
+    "wiki_page": "Elizabeth I of England",
+    "page_frequency": 77,
+    "bucket": "high"
+  },
+  {
+    "claim": "Floyd Mayweather Jr. is incapable of being a professional boxer.",
+    "label": 1,
+    "wiki_page": "Floyd Mayweather Jr.",
+    "page_frequency": 126,
+    "bucket": "high"
+  },
+  {
+    "claim": "No Country for Old Men starred Tommy Lee Jones.",
+    "label": 0,
+    "wiki_page": "No Country for Old Men (film)",
+    "page_frequency": 14,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Maze Runner had a budget of $39 million.",
+    "label": 1,
+    "wiki_page": "The Maze Runner (film)",
+    "page_frequency": 16,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Battle of the Trebia was an American Civil War battle.",
+    "label": 1,
+    "wiki_page": "Second Punic War",
+    "page_frequency": 46,
+    "bucket": "high"
+  },
+  {
+    "claim": "Saxony is a country.",
+    "label": 1,
+    "wiki_page": "Saxony",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Matteo Renzi has only ever been a plumber.",
+    "label": 1,
+    "wiki_page": "Italian constitutional referendum",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Emma Watson is an actress.",
+    "label": 0,
+    "wiki_page": "Emma Watson",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "George Harrison is still married to his first wife.",
+    "label": 1,
+    "wiki_page": "George Harrison",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "Robinson Crusoe on Mars was produced by Paramount Pictures.",
+    "label": 0,
+    "wiki_page": "Paramount Pictures",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "Henry VIII was the father of Elizabeth I.",
+    "label": 0,
+    "wiki_page": "Elizabeth I of England",
+    "page_frequency": 77,
+    "bucket": "high"
+  },
+  {
+    "claim": "Prague's historic center has been on UNESCO's list of World Heritage Sites since 1992.",
+    "label": 0,
+    "wiki_page": "Prague",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "John DiMaggio refused to work on any shows from Cartoon Network.",
+    "label": 1,
+    "wiki_page": "Futurama",
+    "page_frequency": 110,
+    "bucket": "high"
+  },
+  {
+    "claim": "The supervillain Apocalypse was portrayed by Oscar Isaac.",
+    "label": 0,
+    "wiki_page": "Oscar Isaac",
+    "page_frequency": 19,
+    "bucket": "high"
+  },
+  {
+    "claim": "Lee Daniels directed a film.",
+    "label": 0,
+    "wiki_page": "Precious (film)",
+    "page_frequency": 38,
+    "bucket": "high"
+  },
+  {
+    "claim": "Recovery is an Eminem album.",
+    "label": 0,
+    "wiki_page": "Recovery (Eminem album)",
+    "page_frequency": 13,
+    "bucket": "high"
+  },
+  {
+    "claim": "Barbarella was directed by Roger Vadim.",
+    "label": 0,
+    "wiki_page": "Barbarella (film)",
+    "page_frequency": 11,
+    "bucket": "high"
+  },
+  {
+    "claim": "I (film) was dubbed into Spanish.",
+    "label": 1,
+    "wiki_page": "I (film)",
+    "page_frequency": 11,
+    "bucket": "high"
+  },
+  {
+    "claim": "Brie Larson worked with director Destin Daniel.",
+    "label": 0,
+    "wiki_page": "Short Term 12",
+    "page_frequency": 37,
+    "bucket": "high"
+  },
+  {
+    "claim": "Rage Against the Machine stopped being together.",
+    "label": 1,
+    "wiki_page": "Rage Against the Machine",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "The ruins of the ancient Roman town of Pompeii lie near Naples.",
+    "label": 0,
+    "wiki_page": "Pompeii",
+    "page_frequency": 46,
+    "bucket": "high"
+  },
+  {
+    "claim": "Rage Against the Machine performed at live venues and festivals.",
+    "label": 0,
+    "wiki_page": "Rage Against the Machine",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Barbarella is non-fiction.",
+    "label": 1,
+    "wiki_page": "Barbarella (film)",
+    "page_frequency": 11,
+    "bucket": "high"
+  },
+  {
+    "claim": "Jeb Bush's maternal parent is Barbara Bush.",
+    "label": 0,
+    "wiki_page": "Barbara Bush",
+    "page_frequency": 53,
+    "bucket": "high"
+  },
+  {
+    "claim": "Michael Hutchence died in Sydney, Australia.",
+    "label": 0,
+    "wiki_page": "Sydney",
+    "page_frequency": 11,
+    "bucket": "high"
+  },
+  {
+    "claim": "Japan is in Africa.",
+    "label": 1,
+    "wiki_page": "Japan",
+    "page_frequency": 22,
+    "bucket": "high"
+  },
+  {
+    "claim": "Pearl Jam is a type of dressing.",
+    "label": 1,
+    "wiki_page": "Pearl Jam",
+    "page_frequency": 26,
+    "bucket": "high"
+  },
+  {
+    "claim": "George Harrison was married to Pattie Boyd in 1970.",
+    "label": 1,
+    "wiki_page": "George Harrison",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "Elizabeth I was the son of Henry VIII.",
+    "label": 1,
+    "wiki_page": "Elizabeth I of England",
+    "page_frequency": 77,
+    "bucket": "high"
+  },
+  {
+    "claim": "Pen\u00e9lope Cruz refused to model for Mango.",
+    "label": 1,
+    "wiki_page": "Pene\u0301lope Cruz",
+    "page_frequency": 16,
+    "bucket": "high"
+  },
+  {
+    "claim": "Andrew Kevin Walker is American.",
+    "label": 0,
+    "wiki_page": "Andrew Kevin Walker",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Simon Pegg is an actor.",
+    "label": 0,
+    "wiki_page": "Simon Pegg",
+    "page_frequency": 20,
+    "bucket": "high"
+  },
+  {
+    "claim": "Juventus F.C. is the second oldest ultimate frisbee club in Italy.",
+    "label": 1,
+    "wiki_page": "Juventus F.C.",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Only men are featured in Always.",
+    "label": 1,
+    "wiki_page": "Audrey Hepburn",
+    "page_frequency": 139,
+    "bucket": "high"
+  },
+  {
+    "claim": "Elizabeth Olsen refuses to act.",
+    "label": 1,
+    "wiki_page": "Elizabeth Olsen",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Linkin Park has only released one album to date.",
+    "label": 1,
+    "wiki_page": "Linkin Park",
+    "page_frequency": 99,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Brat Pack is type of name given to a group that appeared in films.",
+    "label": 0,
+    "wiki_page": "Brat Pack (actors)",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "House is a dramatic work focused on medicine.",
+    "label": 0,
+    "wiki_page": "House (TV series)",
+    "page_frequency": 21,
+    "bucket": "high"
+  },
+  {
+    "claim": "Always was directed by a director.",
+    "label": 0,
+    "wiki_page": "Steven Spielberg",
+    "page_frequency": 273,
+    "bucket": "high"
+  },
+  {
+    "claim": "Watertown, Massachusetts is in the Greater Boston Metropolitan Area.",
+    "label": 0,
+    "wiki_page": "Watertown",
+    "page_frequency": 34,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Bee Gees did not write their own songs.",
+    "label": 0,
+    "wiki_page": "Bee Gees",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Watertown, Massachusetts is the county seat of Middlesex County.",
+    "label": 1,
+    "wiki_page": "Middlesex County",
+    "page_frequency": 34,
+    "bucket": "high"
+  },
+  {
+    "claim": "Jason Katims has made no contributions to Roswell.",
+    "label": 1,
+    "wiki_page": "Roswell (TV series)",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Watertown, Massachusetts is a city.",
+    "label": 0,
+    "wiki_page": "Watertown",
+    "page_frequency": 34,
+    "bucket": "high"
+  },
+  {
+    "claim": "Veep is a show.",
+    "label": 0,
+    "wiki_page": "Veep",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Birthday Song (2 Chainz song) was produced by a producer.",
+    "label": 0,
+    "wiki_page": "Kanye West",
+    "page_frequency": 75,
+    "bucket": "high"
+  },
+  {
+    "claim": "In 1992, Prague's historic center was added to UNESCO's list of World Heritage Sites.",
+    "label": 0,
+    "wiki_page": "Prague",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Punch-Drunk Love was distributed by a thirty-year-old film studio.",
+    "label": 1,
+    "wiki_page": "Punch-Drunk Love",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Recovery is an Eminem album.",
+    "label": 0,
+    "wiki_page": "Recovery (Eminem album)",
+    "page_frequency": 13,
+    "bucket": "high"
+  },
+  {
+    "claim": "Arizona is a part of France.",
+    "label": 1,
+    "wiki_page": "Arizona",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Amyotrophic lateral sclerosis is a cure.",
+    "label": 1,
+    "wiki_page": "Amyotrophic lateral sclerosis",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Oscar Isaac acted.",
+    "label": 0,
+    "wiki_page": "Oscar Isaac",
+    "page_frequency": 19,
+    "bucket": "high"
+  },
+  {
+    "claim": "Linkin Park has only released one album to date.",
+    "label": 1,
+    "wiki_page": "Linkin Park",
+    "page_frequency": 99,
+    "bucket": "high"
+  },
+  {
+    "claim": "Ashley Cole owns the Los Angeles Galaxy.",
+    "label": 1,
+    "wiki_page": "LA Galaxy",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Palo Alto, California is 100 miles from the United States.",
+    "label": 1,
+    "wiki_page": "Palo Alto",
+    "page_frequency": 330,
+    "bucket": "high"
+  },
+  {
+    "claim": "Jos\u00e9 Ferrer was an actor in movies.",
+    "label": 1,
+    "wiki_page": "Tony Award",
+    "page_frequency": 20,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Nobel Prize in Chemistry was given to a human from Holland.",
+    "label": 0,
+    "wiki_page": "Netherlands",
+    "page_frequency": 147,
+    "bucket": "high"
+  },
+  {
+    "claim": "Amyotrophic lateral sclerosis is a disease that usually starts around the age of 60.",
+    "label": 0,
+    "wiki_page": "Amyotrophic lateral sclerosis",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Maze Runner's budget was $34 million.",
+    "label": 0,
+    "wiki_page": "The Maze Runner (film)",
+    "page_frequency": 16,
+    "bucket": "high"
+  },
+  {
+    "claim": "Neil Diamond is not a musician.",
+    "label": 1,
+    "wiki_page": "Neil Diamond",
+    "page_frequency": 28,
+    "bucket": "high"
+  },
+  {
+    "claim": "Sean Penn acts in films.",
+    "label": 0,
+    "wiki_page": "Mystic River (film)",
+    "page_frequency": 17,
+    "bucket": "high"
+  },
+  {
+    "claim": "Pearl Jam is a type of dressing.",
+    "label": 1,
+    "wiki_page": "Pearl Jam",
+    "page_frequency": 26,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Colosseum is in Europe.",
+    "label": 0,
+    "wiki_page": "Italy",
+    "page_frequency": 105,
+    "bucket": "high"
+  },
+  {
+    "claim": "Elizabeth I was the first daughter of Henry VIII.",
+    "label": 1,
+    "wiki_page": "Elizabeth I of England",
+    "page_frequency": 77,
+    "bucket": "high"
+  },
+  {
+    "claim": "Jonah Hill is an actor.",
+    "label": 0,
+    "wiki_page": "Jonah Hill",
+    "page_frequency": 31,
+    "bucket": "high"
+  },
+  {
+    "claim": "Jonah Hill made $16 million dollars in 2014.",
+    "label": 1,
+    "wiki_page": "Jonah Hill",
+    "page_frequency": 31,
+    "bucket": "high"
+  },
+  {
+    "claim": "The New York Knicks are in the Prince of Wales Conference of the National Hockey League.",
+    "label": 1,
+    "wiki_page": "New York Knicks",
+    "page_frequency": 14,
+    "bucket": "high"
+  },
+  {
+    "claim": "Woodrow Wilson did not live during World War I.",
+    "label": 1,
+    "wiki_page": "Liberty bond",
+    "page_frequency": 23,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Maze Runner is a narrative in a visual medium.",
+    "label": 0,
+    "wiki_page": "The Maze Runner (film)",
+    "page_frequency": 16,
+    "bucket": "high"
+  },
+  {
+    "claim": "Recovery features collaboration between Lil Wayne and Eminem.",
+    "label": 0,
+    "wiki_page": "Recovery (Eminem album)",
+    "page_frequency": 13,
+    "bucket": "high"
+  },
+  {
+    "claim": "Recovery features collaboration between Lil Wayne and Eminem.",
+    "label": 0,
+    "wiki_page": "Recovery (Eminem album)",
+    "page_frequency": 13,
+    "bucket": "high"
+  },
+  {
+    "claim": "Virginia has had a tourism-based economy for its full history.",
+    "label": 1,
+    "wiki_page": "Virginia",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "Syracuse, New York, had a population of 145,170 in the Census.",
+    "label": 0,
+    "wiki_page": "Syracuse",
+    "page_frequency": 67,
+    "bucket": "high"
+  },
+  {
+    "claim": "Jeb Bush is former President George H. W. Bush's daughter.",
+    "label": 1,
+    "wiki_page": "Jeb Bush",
+    "page_frequency": 24,
+    "bucket": "high"
+  },
+  {
+    "claim": "Finding Dory was written.",
+    "label": 0,
+    "wiki_page": "Finding Dory",
+    "page_frequency": 16,
+    "bucket": "high"
+  },
+  {
+    "claim": "Floyd Mayweather Jr. is a professional boxer.",
+    "label": 0,
+    "wiki_page": "Floyd Mayweather Jr.",
+    "page_frequency": 126,
+    "bucket": "high"
+  },
+  {
+    "claim": "Watertown, Massachusetts is in Missouri.",
+    "label": 1,
+    "wiki_page": "Watertown",
+    "page_frequency": 34,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Columbia River undergoes drainage.",
+    "label": 0,
+    "wiki_page": "Drainage basin",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Barbarella was directed by George Lucas.",
+    "label": 1,
+    "wiki_page": "Barbarella (film)",
+    "page_frequency": 11,
+    "bucket": "high"
+  },
+  {
+    "claim": "Poseidon had a budget of $160 million and did not make a profit.",
+    "label": 1,
+    "wiki_page": "Poseidon (film)",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Oscar Isaac did not act in X-Men: Apocalypse.",
+    "label": 1,
+    "wiki_page": "Oscar Isaac",
+    "page_frequency": 19,
+    "bucket": "high"
+  },
+  {
+    "claim": "No Country for Old Men is a cat-and-mouse drama.",
+    "label": 0,
+    "wiki_page": "No Country for Old Men (film)",
+    "page_frequency": 14,
+    "bucket": "high"
+  },
+  {
+    "claim": "Simon Pegg is only an actor.",
+    "label": 1,
+    "wiki_page": "Simon Pegg",
+    "page_frequency": 20,
+    "bucket": "high"
+  },
+  {
+    "claim": "Pattie Boyd and George Harrison divorced in 1977.",
+    "label": 0,
+    "wiki_page": "George Harrison",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "Raees (film) stars an Indian film actor born in April 1965.",
+    "label": 1,
+    "wiki_page": "Shah Rukh Khan",
+    "page_frequency": 37,
+    "bucket": "high"
+  },
+  {
+    "claim": "Rage Against the Machine performed at live venues and festivals up until 2011.",
+    "label": 0,
+    "wiki_page": "Rage Against the Machine",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Aristotle never entered formal education.",
+    "label": 1,
+    "wiki_page": "Aristotle",
+    "page_frequency": 17,
+    "bucket": "high"
+  },
+  {
+    "claim": "The supervillain Apocalypse was portrayed by Oscar Isaac.",
+    "label": 0,
+    "wiki_page": "Oscar Isaac",
+    "page_frequency": 19,
+    "bucket": "high"
+  },
+  {
+    "claim": "Guns N' Roses is an American punk band.",
+    "label": 1,
+    "wiki_page": "Guns N' Roses",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Endless River is an album solely by an Indian folk band.",
+    "label": 1,
+    "wiki_page": "Pink Floyd",
+    "page_frequency": 154,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Eighth Doctor has only ever aired on FX.",
+    "label": 1,
+    "wiki_page": "BBC",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "House ran for 9 seasons.",
+    "label": 1,
+    "wiki_page": "House (TV series)",
+    "page_frequency": 21,
+    "bucket": "high"
+  },
+  {
+    "claim": "Floyd Mayweather Jr. is a professional boxer.",
+    "label": 0,
+    "wiki_page": "Floyd Mayweather Jr.",
+    "page_frequency": 126,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Thin Red Line (1998 film) features a performance by an American actor.",
+    "label": 0,
+    "wiki_page": "Nick Nolte",
+    "page_frequency": 132,
+    "bucket": "high"
+  },
+  {
+    "claim": "Floyd Mayweather Jr. is incapable of boxing.",
+    "label": 1,
+    "wiki_page": "Floyd Mayweather Jr.",
+    "page_frequency": 126,
+    "bucket": "high"
+  },
+  {
+    "claim": "Amyotrophic lateral sclerosis is a cure.",
+    "label": 1,
+    "wiki_page": "Amyotrophic lateral sclerosis",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Elizabeth Olsen is an actress.",
+    "label": 0,
+    "wiki_page": "Elizabeth Olsen",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Veep is a show on television.",
+    "label": 0,
+    "wiki_page": "Veep",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Andrew Kevin Walker was shunned by the BAFTA for his screenwriting.",
+    "label": 1,
+    "wiki_page": "Andrew Kevin Walker",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Bee Gees did not produce music.",
+    "label": 1,
+    "wiki_page": "Bee Gees",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Harvard University has a campus.",
+    "label": 0,
+    "wiki_page": "Harvard University",
+    "page_frequency": 13,
+    "bucket": "high"
+  },
+  {
+    "claim": "Arizona is not a state.",
+    "label": 1,
+    "wiki_page": "Arizona",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Guillermo del Toro does not work in the film industry.",
+    "label": 1,
+    "wiki_page": "Guillermo del Toro",
+    "page_frequency": 11,
+    "bucket": "high"
+  },
+  {
+    "claim": "Floyd Mayweather Jr. is a professional boxer.",
+    "label": 0,
+    "wiki_page": "Floyd Mayweather Jr.",
+    "page_frequency": 126,
+    "bucket": "high"
+  },
+  {
+    "claim": "Queen (band) is a Canadian rock band.",
+    "label": 1,
+    "wiki_page": "Queen (band)",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "A View to a Kill features songs from Slipknot.",
+    "label": 1,
+    "wiki_page": "Slipknot (band)",
+    "page_frequency": 73,
+    "bucket": "high"
+  },
+  {
+    "claim": "Amyotrophic lateral sclerosis is a cure.",
+    "label": 1,
+    "wiki_page": "Amyotrophic lateral sclerosis",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "House is on Fox.",
+    "label": 0,
+    "wiki_page": "House (TV series)",
+    "page_frequency": 21,
+    "bucket": "high"
+  },
+  {
+    "claim": "The New York Knicks are in the Prince of Wales Conference of the National Hockey League.",
+    "label": 1,
+    "wiki_page": "New York Knicks",
+    "page_frequency": 14,
+    "bucket": "high"
+  },
+  {
+    "claim": "Underdog stars zero American actors.",
+    "label": 1,
+    "wiki_page": "Jason Lee (actor)",
+    "page_frequency": 22,
+    "bucket": "high"
+  },
+  {
+    "claim": "The second oldest association football (soccer) club in Italy is Juventus F.C.",
+    "label": 0,
+    "wiki_page": "Juventus F.C.",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "On June 1, 2007, Knocked Up was released.",
+    "label": 0,
+    "wiki_page": "Knocked Up",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Jeb Bush is former President George H. W. Bush's eldest son.",
+    "label": 1,
+    "wiki_page": "Jeb Bush",
+    "page_frequency": 24,
+    "bucket": "high"
+  },
+  {
+    "claim": "Joe Walsh was inducted in 2001 and he was successful.",
+    "label": 0,
+    "wiki_page": "Joe Walsh",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Pen\u00e9lope Cruz did modeling for L'Or\u00e9al.",
+    "label": 0,
+    "wiki_page": "Pene\u0301lope Cruz",
+    "page_frequency": 16,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Winds of Winter is the sixth novel in a series.",
+    "label": 0,
+    "wiki_page": "A Dance with Dragons",
+    "page_frequency": 36,
+    "bucket": "high"
+  },
+  {
+    "claim": "Sayyeshaa has yet to appear in a Bollywood film.",
+    "label": 1,
+    "wiki_page": "Bollywood",
+    "page_frequency": 47,
+    "bucket": "high"
+  },
+  {
+    "claim": "The New York Knicks compete in the National Football League (NFL).",
+    "label": 1,
+    "wiki_page": "New York Knicks",
+    "page_frequency": 14,
+    "bucket": "high"
+  },
+  {
+    "claim": "Aristotle was a student of Plato's Academy.",
+    "label": 0,
+    "wiki_page": "Aristotle",
+    "page_frequency": 17,
+    "bucket": "high"
+  },
+  {
+    "claim": "Recovery is an Eminem album.",
+    "label": 0,
+    "wiki_page": "Recovery (Eminem album)",
+    "page_frequency": 13,
+    "bucket": "high"
+  },
+  {
+    "claim": "Joe Walsh was brought into the Vocal Group Hall of Fame.",
+    "label": 0,
+    "wiki_page": "Joe Walsh",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Finding Dory was written by anyone except Victoria Strouse.",
+    "label": 1,
+    "wiki_page": "Finding Dory",
+    "page_frequency": 16,
+    "bucket": "high"
+  },
+  {
+    "claim": "House is a dramatic work focused on medicine.",
+    "label": 0,
+    "wiki_page": "House (TV series)",
+    "page_frequency": 21,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Good Wife airs on television.",
+    "label": 0,
+    "wiki_page": "CBS",
+    "page_frequency": 48,
+    "bucket": "high"
+  },
+  {
+    "claim": "Syracuse, New York, had a sparse metropolitan population of three hundred fifty in 2010.",
+    "label": 1,
+    "wiki_page": "Syracuse",
+    "page_frequency": 67,
+    "bucket": "high"
+  },
+  {
+    "claim": "Jeb Bush's maternal parent is Barbara Bush.",
+    "label": 0,
+    "wiki_page": "Jeb Bush",
+    "page_frequency": 24,
+    "bucket": "high"
+  },
+  {
+    "claim": "Jonah Hill did not star in 21 Jump Street.",
+    "label": 1,
+    "wiki_page": "21 Jump Street (film)",
+    "page_frequency": 98,
+    "bucket": "high"
+  },
+  {
+    "claim": "No Country for Old Men was selected.",
+    "label": 0,
+    "wiki_page": "No Country for Old Men (film)",
+    "page_frequency": 14,
+    "bucket": "high"
+  },
+  {
+    "claim": "Watertown, Massachusetts is a Dutch city.",
+    "label": 1,
+    "wiki_page": "Watertown",
+    "page_frequency": 34,
+    "bucket": "high"
+  },
+  {
+    "claim": "Project Y's goal was to invent the first nukes.",
+    "label": 0,
+    "wiki_page": "Nuclear weapon",
+    "page_frequency": 13,
+    "bucket": "high"
+  },
+  {
+    "claim": "Simon Pegg is only an actor.",
+    "label": 1,
+    "wiki_page": "Simon Pegg",
+    "page_frequency": 20,
+    "bucket": "high"
+  },
+  {
+    "claim": "Rage Against the Machine stopped being together.",
+    "label": 1,
+    "wiki_page": "Rage Against the Machine",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Saxony is the tenth smallest German state.",
+    "label": 1,
+    "wiki_page": "Saxony",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Uganda is in space.",
+    "label": 1,
+    "wiki_page": "Kenya",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "San Francisco Bay Area contains zero cities.",
+    "label": 1,
+    "wiki_page": "San Francisco Bay Area",
+    "page_frequency": 15,
+    "bucket": "high"
+  },
+  {
+    "claim": "Arizona is in Canada.",
+    "label": 1,
+    "wiki_page": "Arizona",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Maze Runner is a narrative in a visual medium.",
+    "label": 0,
+    "wiki_page": "The Maze Runner (film)",
+    "page_frequency": 16,
+    "bucket": "high"
+  },
+  {
+    "claim": "Linkin Park has only released one album to date.",
+    "label": 1,
+    "wiki_page": "Linkin Park",
+    "page_frequency": 99,
+    "bucket": "high"
+  },
+  {
+    "claim": "Liverpool was the town where The Beatles formed.",
+    "label": 0,
+    "wiki_page": "The Beatles",
+    "page_frequency": 401,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Premier League Asia Trophy is for golf.",
+    "label": 1,
+    "wiki_page": "Everton F.C.",
+    "page_frequency": 88,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Bengal tiger is from a region.",
+    "label": 0,
+    "wiki_page": "Bangladesh",
+    "page_frequency": 172,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Endless River is an album by a band formed in London in 1966.",
+    "label": 1,
+    "wiki_page": "Pink Floyd",
+    "page_frequency": 154,
+    "bucket": "high"
+  },
+  {
+    "claim": "Queen (band) is from the capital of Massachusetts.",
+    "label": 1,
+    "wiki_page": "Queen (band)",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "In 2012, Simi Valley, California, reported a higher median household income than that of the nation overall.",
+    "label": 0,
+    "wiki_page": "Simi Valley",
+    "page_frequency": 330,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Road to El Dorado stars an actor.",
+    "label": 0,
+    "wiki_page": "Kevin Kline",
+    "page_frequency": 15,
+    "bucket": "high"
+  },
+  {
+    "claim": "Brown University's main campus is located in the most populous city in Rhode Island.",
+    "label": 0,
+    "wiki_page": "Providence",
+    "page_frequency": 37,
+    "bucket": "high"
+  },
+  {
+    "claim": "In 1966, George Harrison got married for the first time.",
+    "label": 0,
+    "wiki_page": "George Harrison",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Wonder Years was only a book.",
+    "label": 1,
+    "wiki_page": "Fred Savage",
+    "page_frequency": 40,
+    "bucket": "high"
+  },
+  {
+    "claim": "Harvard University is a research hospital.",
+    "label": 1,
+    "wiki_page": "Harvard University",
+    "page_frequency": 13,
+    "bucket": "high"
+  },
+  {
+    "claim": "Veep has no multiple seasons.",
+    "label": 1,
+    "wiki_page": "Veep",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "John Goodman starred in 10 Cloverfield Lane.",
+    "label": 0,
+    "wiki_page": "10 Cloverfield Lane",
+    "page_frequency": 31,
+    "bucket": "high"
+  },
+  {
+    "claim": "Harvard University is a research hospital.",
+    "label": 1,
+    "wiki_page": "Harvard University",
+    "page_frequency": 13,
+    "bucket": "high"
+  },
+  {
+    "claim": "John Goodman has had roles.",
+    "label": 0,
+    "wiki_page": "John Goodman",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "House is on ABC.",
+    "label": 1,
+    "wiki_page": "House (TV series)",
+    "page_frequency": 21,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Bee Gees wrote three major hits for other artists.",
+    "label": 1,
+    "wiki_page": "Bee Gees",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Andrew Kevin Walker was born on Monday August 14, 1964.",
+    "label": 0,
+    "wiki_page": "Andrew Kevin Walker",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Clueless (film) was preceded by a series of books.",
+    "label": 1,
+    "wiki_page": "Clueless (film)",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Palo Alto, California is 100 miles from the United States.",
+    "label": 1,
+    "wiki_page": "Los Altos",
+    "page_frequency": 330,
+    "bucket": "high"
+  },
+  {
+    "claim": "John DiMaggio refused to work on any shows from Cartoon Network.",
+    "label": 1,
+    "wiki_page": "Adventure Time",
+    "page_frequency": 40,
+    "bucket": "high"
+  },
+  {
+    "claim": "Sean Gunn was in Guardians of the Galaxy in 2015.",
+    "label": 1,
+    "wiki_page": "Guardians of the Galaxy (film)",
+    "page_frequency": 62,
+    "bucket": "high"
+  },
+  {
+    "claim": "Roswell is exclusively a Turkish TV series.",
+    "label": 1,
+    "wiki_page": "Roswell (TV series)",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Knocked Up is a motion picture.",
+    "label": 0,
+    "wiki_page": "Knocked Up",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Neil Diamond is not a songwriter.",
+    "label": 1,
+    "wiki_page": "Neil Diamond",
+    "page_frequency": 28,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Hunger Games are not a film trilogy.",
+    "label": 1,
+    "wiki_page": "Jennifer Lawrence",
+    "page_frequency": 131,
+    "bucket": "high"
+  },
+  {
+    "claim": "House is a dramatic work focused on medicine.",
+    "label": 0,
+    "wiki_page": "House (TV series)",
+    "page_frequency": 21,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Brat Pack is a nickname given to a group of elderly actors.",
+    "label": 1,
+    "wiki_page": "Brat Pack (actors)",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Internet access requires the use of hardware like computer terminals.",
+    "label": 1,
+    "wiki_page": "Internet",
+    "page_frequency": 63,
+    "bucket": "high"
+  },
+  {
+    "claim": "Croatia is incapable of rendering services.",
+    "label": 1,
+    "wiki_page": "Croatia",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Heath Ledger was in a film.",
+    "label": 0,
+    "wiki_page": "The Dark Knight (film)",
+    "page_frequency": 72,
+    "bucket": "high"
+  },
+  {
+    "claim": "Jonah Hill is not a screenwriter.",
+    "label": 1,
+    "wiki_page": "Jonah Hill",
+    "page_frequency": 31,
+    "bucket": "high"
+  },
+  {
+    "claim": "The New York Knicks are in the Prince of Wales Conference of the National Hockey League.",
+    "label": 1,
+    "wiki_page": "New York Knicks",
+    "page_frequency": 14,
+    "bucket": "high"
+  },
+  {
+    "claim": "Rage Against the Machine broke up in 1999.",
+    "label": 1,
+    "wiki_page": "Rage Against the Machine",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "House is on Fox.",
+    "label": 0,
+    "wiki_page": "House (TV series)",
+    "page_frequency": 21,
+    "bucket": "high"
+  },
+  {
+    "claim": "Star Trek: Discovery is based on the series created by George Lucas.",
+    "label": 1,
+    "wiki_page": "Star Trek",
+    "page_frequency": 130,
+    "bucket": "high"
+  },
+  {
+    "claim": "Palo Alto, California is a city.",
+    "label": 0,
+    "wiki_page": "Palo Alto",
+    "page_frequency": 330,
+    "bucket": "high"
+  },
+  {
+    "claim": "Floyd Mayweather Jr. is incapable of boxing.",
+    "label": 1,
+    "wiki_page": "Floyd Mayweather Jr.",
+    "page_frequency": 126,
+    "bucket": "high"
+  },
+  {
+    "claim": "No Country for Old Men is a cat-and-mouse drama.",
+    "label": 0,
+    "wiki_page": "No Country for Old Men (film)",
+    "page_frequency": 14,
+    "bucket": "high"
+  },
+  {
+    "claim": "George Harrison has yet to marry.",
+    "label": 1,
+    "wiki_page": "George Harrison",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "Reign Over Me is a British film.",
+    "label": 1,
+    "wiki_page": "Columbia Pictures",
+    "page_frequency": 11,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Maze Runner is a film.",
+    "label": 0,
+    "wiki_page": "The Maze Runner (film)",
+    "page_frequency": 16,
+    "bucket": "high"
+  },
+  {
+    "claim": "Prague's historic center was first included in the UNESCO list of World Heritage Sites in 1992.",
+    "label": 0,
+    "wiki_page": "Prague",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Vietnam is a place.",
+    "label": 0,
+    "wiki_page": "Vietnam War",
+    "page_frequency": 99,
+    "bucket": "high"
+  },
+  {
+    "claim": "Japan is located in Asia.",
+    "label": 0,
+    "wiki_page": "Japan",
+    "page_frequency": 22,
+    "bucket": "high"
+  },
+  {
+    "claim": "Marnie was exclusively directed by a woman.",
+    "label": 1,
+    "wiki_page": "Alfred Hitchcock",
+    "page_frequency": 132,
+    "bucket": "high"
+  },
+  {
+    "claim": "No Country for Old Men is set somewhere other than the desert of 1980 West Texas.",
+    "label": 1,
+    "wiki_page": "No Country for Old Men (film)",
+    "page_frequency": 14,
+    "bucket": "high"
+  },
+  {
+    "claim": "NXT Tag Team Championship was created by a wresting entertainment company.",
+    "label": 0,
+    "wiki_page": "WWE",
+    "page_frequency": 86,
+    "bucket": "high"
+  },
+  {
+    "claim": "Guns N' Roses is a hard rock band.",
+    "label": 0,
+    "wiki_page": "Guns N' Roses",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Watertown, Massachusetts is in the most populous state in New England.",
+    "label": 0,
+    "wiki_page": "Massachusetts",
+    "page_frequency": 84,
+    "bucket": "high"
+  },
+  {
+    "claim": "Jonah Hill is an actor.",
+    "label": 0,
+    "wiki_page": "Jonah Hill",
+    "page_frequency": 31,
+    "bucket": "high"
+  },
+  {
+    "claim": "Jeb Bush is the younger male sibling of George W. Bush.",
+    "label": 0,
+    "wiki_page": "Jeb Bush",
+    "page_frequency": 24,
+    "bucket": "high"
+  },
+  {
+    "claim": "Prague's historic center was first included in the UNESCO list of World Heritage Sites in the 1990s.",
+    "label": 0,
+    "wiki_page": "Prague",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Croatia is lawless.",
+    "label": 1,
+    "wiki_page": "Croatia",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Arizona is not a part of the United States.",
+    "label": 1,
+    "wiki_page": "Arizona",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Neil Diamond is not a musician.",
+    "label": 1,
+    "wiki_page": "Neil Diamond",
+    "page_frequency": 28,
+    "bucket": "high"
+  },
+  {
+    "claim": "In 1966, George Harrison got married for the first time.",
+    "label": 0,
+    "wiki_page": "George Harrison",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "Aaron Burr engaged a Secretary of Treasury in a duel.",
+    "label": 0,
+    "wiki_page": "Alexander Hamilton",
+    "page_frequency": 49,
+    "bucket": "high"
+  },
+  {
+    "claim": "Recovery is Eminem's first album.",
+    "label": 1,
+    "wiki_page": "Recovery (Eminem album)",
+    "page_frequency": 13,
+    "bucket": "high"
+  },
+  {
+    "claim": "Homo sapiens live on the third planet from the Sun.",
+    "label": 0,
+    "wiki_page": "Earth",
+    "page_frequency": 79,
+    "bucket": "high"
+  },
+  {
+    "claim": "Jason Katims has made no contributions to Roswell.",
+    "label": 1,
+    "wiki_page": "Roswell (TV series)",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Watertown, Massachusetts is in Vermont.",
+    "label": 1,
+    "wiki_page": "Watertown",
+    "page_frequency": 34,
+    "bucket": "high"
+  },
+  {
+    "claim": "House ran for 9 seasons.",
+    "label": 1,
+    "wiki_page": "House (TV series)",
+    "page_frequency": 21,
+    "bucket": "high"
+  },
+  {
+    "claim": "Cher is Cher's eighteenth orchestra.",
+    "label": 1,
+    "wiki_page": "Cher (1987 album)",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Endless River is an album by a band formed in 1967.",
+    "label": 1,
+    "wiki_page": "Pink Floyd",
+    "page_frequency": 154,
+    "bucket": "high"
+  },
+  {
+    "claim": "Tinker Tailor Soldier Spy is a music video.",
+    "label": 1,
+    "wiki_page": "Academy Awards",
+    "page_frequency": 164,
+    "bucket": "high"
+  },
+  {
+    "claim": "Watertown, Massachusetts is in Vermont.",
+    "label": 1,
+    "wiki_page": "Watertown",
+    "page_frequency": 34,
+    "bucket": "high"
+  },
+  {
+    "claim": "Rage Against the Machine did not perform at live venues and festivals.",
+    "label": 1,
+    "wiki_page": "Rage Against the Machine",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Tenacious D is made up of zero Americans.",
+    "label": 1,
+    "wiki_page": "Jack Black",
+    "page_frequency": 77,
+    "bucket": "high"
+  },
+  {
+    "claim": "Stan Beeman is in a show on FX.",
+    "label": 0,
+    "wiki_page": "The Americans (2013 TV series)",
+    "page_frequency": 65,
+    "bucket": "high"
+  },
+  {
+    "claim": "Punch-Drunk Love was distributed by a thirty-year-old film studio.",
+    "label": 1,
+    "wiki_page": "Columbia Pictures",
+    "page_frequency": 11,
+    "bucket": "high"
+  },
+  {
+    "claim": "Tool is a rock band that formed in 1990.",
+    "label": 0,
+    "wiki_page": "Danny Carey",
+    "page_frequency": 36,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Monster is a song by an American rapper.",
+    "label": 0,
+    "wiki_page": "Eminem",
+    "page_frequency": 382,
+    "bucket": "high"
+  },
+  {
+    "claim": "Amyotrophic lateral sclerosis is a cure.",
+    "label": 1,
+    "wiki_page": "Amyotrophic lateral sclerosis",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Amyotrophic lateral sclerosis is a cure.",
+    "label": 1,
+    "wiki_page": "Amyotrophic lateral sclerosis",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Pen\u00e9lope Cruz did modeling for Ralph Lauren.",
+    "label": 0,
+    "wiki_page": "Pene\u0301lope Cruz",
+    "page_frequency": 16,
+    "bucket": "high"
+  },
+  {
+    "claim": "Ronaldinho has scored 33 goals for the Brazil national football team.",
+    "label": 0,
+    "wiki_page": "Brazil national football team",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Republic of Macedonia is in Europe.",
+    "label": 0,
+    "wiki_page": "Albania",
+    "page_frequency": 83,
+    "bucket": "high"
+  },
+  {
+    "claim": "Palo Alto, California is located only outside of San Francisco Bay Area.",
+    "label": 1,
+    "wiki_page": "Palo Alto",
+    "page_frequency": 330,
+    "bucket": "high"
+  },
+  {
+    "claim": "Youtube is not a website.",
+    "label": 1,
+    "wiki_page": "YouTube",
+    "page_frequency": 72,
+    "bucket": "high"
+  },
+  {
+    "claim": "Arizona is not a state.",
+    "label": 1,
+    "wiki_page": "Arizona",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Hindu Kush is entirely in Africa.",
+    "label": 1,
+    "wiki_page": "Afghanistan",
+    "page_frequency": 122,
+    "bucket": "high"
+  },
+  {
+    "claim": "Phoenix, Arizona is not in the southwestern United States.",
+    "label": 1,
+    "wiki_page": "Arizona",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Warcraft premiered globally on May 24th, 2016.",
+    "label": 0,
+    "wiki_page": "Warcraft (film)",
+    "page_frequency": 15,
+    "bucket": "high"
+  },
+  {
+    "claim": "Helmand Province is in the Middle East.",
+    "label": 1,
+    "wiki_page": "Afghanistan",
+    "page_frequency": 122,
+    "bucket": "high"
+  },
+  {
+    "claim": "Amyotrophic lateral sclerosis only starts around the age of 70",
+    "label": 1,
+    "wiki_page": "Amyotrophic lateral sclerosis",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "John DiMaggio refused to work on any shows from Cartoon Network.",
+    "label": 1,
+    "wiki_page": "Adventure Time",
+    "page_frequency": 40,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Hunger Games are not a film trilogy.",
+    "label": 1,
+    "wiki_page": "The Hunger Games (film)",
+    "page_frequency": 140,
+    "bucket": "high"
+  },
+  {
+    "claim": "Amyotrophic lateral sclerosis is a cure.",
+    "label": 1,
+    "wiki_page": "Amyotrophic lateral sclerosis",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "West Ham United F.C. is a club for football.",
+    "label": 0,
+    "wiki_page": "Premier League",
+    "page_frequency": 46,
+    "bucket": "high"
+  },
+  {
+    "claim": "Recovery is an Eminem song.",
+    "label": 1,
+    "wiki_page": "Recovery (Eminem album)",
+    "page_frequency": 13,
+    "bucket": "high"
+  },
+  {
+    "claim": "Zoe Saldana is a Leo.",
+    "label": 1,
+    "wiki_page": "Leo (astrology)",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "Syracuse, New York, claimed a population of 145,170 residents according to the 2010 United States Census.",
+    "label": 0,
+    "wiki_page": "Syracuse",
+    "page_frequency": 67,
+    "bucket": "high"
+  },
+  {
+    "claim": "Linkin Park has only released one album to date.",
+    "label": 1,
+    "wiki_page": "Linkin Park",
+    "page_frequency": 99,
+    "bucket": "high"
+  },
+  {
+    "claim": "Underdog stars an actor.",
+    "label": 0,
+    "wiki_page": "Jason Lee (actor)",
+    "page_frequency": 22,
+    "bucket": "high"
+  },
+  {
+    "claim": "The New York Knicks compete in the National Basketball Association (NBA).",
+    "label": 0,
+    "wiki_page": "New York Knicks",
+    "page_frequency": 14,
+    "bucket": "high"
+  },
+  {
+    "claim": "Joe Walsh was brought into the Rock and Roll Hall of Fame.",
+    "label": 0,
+    "wiki_page": "Joe Walsh",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Robinson Crusoe on Mars was produced by Paramount Pictures.",
+    "label": 0,
+    "wiki_page": "Paramount Pictures",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "Pen\u00e9lope Cruz has modeled for Ralph Lauren.",
+    "label": 0,
+    "wiki_page": "Pene\u0301lope Cruz",
+    "page_frequency": 16,
+    "bucket": "high"
+  },
+  {
+    "claim": "Sayyeshaa only works with American directors.",
+    "label": 1,
+    "wiki_page": "Ajay Devgn",
+    "page_frequency": 252,
+    "bucket": "high"
+  },
+  {
+    "claim": "Billie Joe Armstrong is a vocalist of the American rock band Green Day.",
+    "label": 0,
+    "wiki_page": "Green Day",
+    "page_frequency": 233,
+    "bucket": "high"
+  },
+  {
+    "claim": "Underdog was directed by an American film director.",
+    "label": 0,
+    "wiki_page": "Jason Lee (actor)",
+    "page_frequency": 22,
+    "bucket": "high"
+  },
+  {
+    "claim": "Juventus F.C. competes at Juventus Stadium in Lisbon, Portugal.",
+    "label": 1,
+    "wiki_page": "Juventus F.C.",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Roswell is an Azerbaijani TV series.",
+    "label": 1,
+    "wiki_page": "Roswell (TV series)",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Maze Runner is a film.",
+    "label": 0,
+    "wiki_page": "The Maze Runner (film)",
+    "page_frequency": 16,
+    "bucket": "high"
+  },
+  {
+    "claim": "Humphrey Bogart does acting.",
+    "label": 0,
+    "wiki_page": "Academy Award for Best Actor",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Juventus F.C. adopted its characteristic black-and-white-striped home uniform in 1903.",
+    "label": 0,
+    "wiki_page": "Juventus F.C.",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Palo Alto, California is 100 miles from the United States.",
+    "label": 1,
+    "wiki_page": "Palo Alto",
+    "page_frequency": 330,
+    "bucket": "high"
+  },
+  {
+    "claim": "Mogadishu is located in a country.",
+    "label": 0,
+    "wiki_page": "Capital city",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Palo Alto, California is a city.",
+    "label": 0,
+    "wiki_page": "Palo Alto",
+    "page_frequency": 330,
+    "bucket": "high"
+  },
+  {
+    "claim": "Neil Diamond was not born on January 24th, 1941.",
+    "label": 1,
+    "wiki_page": "Neil Diamond",
+    "page_frequency": 28,
+    "bucket": "high"
+  },
+  {
+    "claim": "Juventus F.C. competes in the Coliseum.",
+    "label": 1,
+    "wiki_page": "Juventus F.C.",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Juventus Stadium in Turin is the home stadium for Juventus F.C.",
+    "label": 0,
+    "wiki_page": "Juventus F.C.",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Andrew Kevin Walker is only a dancer.",
+    "label": 1,
+    "wiki_page": "Andrew Kevin Walker",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Australia (2008 film) production took place in a town and locality in the Whitsunday Region on the eastern coast of Queensland, Australia called Bowen.",
+    "label": 0,
+    "wiki_page": "Bowen",
+    "page_frequency": 15,
+    "bucket": "high"
+  },
+  {
+    "claim": "Floyd Mayweather Jr. is a professional boxer.",
+    "label": 0,
+    "wiki_page": "Floyd Mayweather Jr.",
+    "page_frequency": 126,
+    "bucket": "high"
+  },
+  {
+    "claim": "Riz Ahmed was an actor in a miniseries about crime.",
+    "label": 0,
+    "wiki_page": "The Night Of",
+    "page_frequency": 104,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Armenian Genocide occurred during the Second Constitutional Era.",
+    "label": 0,
+    "wiki_page": "World War I",
+    "page_frequency": 147,
+    "bucket": "high"
+  },
+  {
+    "claim": "Floyd Mayweather Jr. is a professional boxer.",
+    "label": 0,
+    "wiki_page": "Floyd Mayweather Jr.",
+    "page_frequency": 126,
+    "bucket": "high"
+  },
+  {
+    "claim": "Lithuanians are Mediterranean.",
+    "label": 1,
+    "wiki_page": "Lithuania",
+    "page_frequency": 44,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Greek language is spoken in Italy.",
+    "label": 0,
+    "wiki_page": "Greek language",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Oscar Isaac played a fictional character.",
+    "label": 0,
+    "wiki_page": "Oscar Isaac",
+    "page_frequency": 19,
+    "bucket": "high"
+  },
+  {
+    "claim": "Punch-Drunk Love was distributed exclusively by New Line Cinema.",
+    "label": 1,
+    "wiki_page": "Punch-Drunk Love",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Floyd Mayweather Jr. is incapable of boxing.",
+    "label": 1,
+    "wiki_page": "Floyd Mayweather Jr.",
+    "page_frequency": 126,
+    "bucket": "high"
+  },
+  {
+    "claim": "John Goodman is not an actor.",
+    "label": 1,
+    "wiki_page": "The Big Lebowski",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Syracuse, New York, had a population of 145,170 in 2010.",
+    "label": 0,
+    "wiki_page": "Syracuse",
+    "page_frequency": 67,
+    "bucket": "high"
+  },
+  {
+    "claim": "Samsung exited the construction and shipbuilding industries in the mid-1970s.",
+    "label": 1,
+    "wiki_page": "Samsung",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Watertown, Massachusetts is a city in Suffolk County.",
+    "label": 1,
+    "wiki_page": "Watertown",
+    "page_frequency": 34,
+    "bucket": "high"
+  },
+  {
+    "claim": "Japan is in East Asia.",
+    "label": 0,
+    "wiki_page": "Japan",
+    "page_frequency": 22,
+    "bucket": "high"
+  },
+  {
+    "claim": "Pen\u00e9lope Cruz did modeling for L'Or\u00e9al.",
+    "label": 0,
+    "wiki_page": "Pene\u0301lope Cruz",
+    "page_frequency": 16,
+    "bucket": "high"
+  },
+  {
+    "claim": "Simon Pegg is a person.",
+    "label": 0,
+    "wiki_page": "Simon Pegg",
+    "page_frequency": 20,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Bee Gees were producers of music.",
+    "label": 0,
+    "wiki_page": "Barry Gibb",
+    "page_frequency": 49,
+    "bucket": "high"
+  },
+  {
+    "claim": "NXT Tag Team Championship was created by World Wrestling Entertainment, Inc.",
+    "label": 0,
+    "wiki_page": "WWE",
+    "page_frequency": 86,
+    "bucket": "high"
+  },
+  {
+    "claim": "Babur was the last Mughal emperor.",
+    "label": 1,
+    "wiki_page": "Mughal Empire",
+    "page_frequency": 83,
+    "bucket": "high"
+  },
+  {
+    "claim": "Veep has won an award.",
+    "label": 0,
+    "wiki_page": "Veep",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Croatia is incapable of rendering services.",
+    "label": 1,
+    "wiki_page": "Croatia",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Jonah Hill is an actor.",
+    "label": 0,
+    "wiki_page": "Jonah Hill",
+    "page_frequency": 31,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Challenge XXX: Dirty 30 is not a season of a TV series.",
+    "label": 1,
+    "wiki_page": "MTV",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Kenneth Lonergan is the director of Pacific Rim.",
+    "label": 1,
+    "wiki_page": "Pacific Rim (film)",
+    "page_frequency": 65,
+    "bucket": "high"
+  },
+  {
+    "claim": "Simon Pegg is a producer and an actor.",
+    "label": 0,
+    "wiki_page": "Simon Pegg",
+    "page_frequency": 20,
+    "bucket": "high"
+  },
+  {
+    "claim": "Multiple shows on Cartoon Network employed John DiMaggio.",
+    "label": 0,
+    "wiki_page": "Adventure Time",
+    "page_frequency": 40,
+    "bucket": "high"
+  },
+  {
+    "claim": "Northwestern University is the only public university of the Big Ten Conference.",
+    "label": 1,
+    "wiki_page": "Northwestern University",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "House ended after its pilot.",
+    "label": 1,
+    "wiki_page": "House (TV series)",
+    "page_frequency": 21,
+    "bucket": "high"
+  },
+  {
+    "claim": "Victoria Palace Theatre is in a place named after Queen Victoria.",
+    "label": 0,
+    "wiki_page": "Victoria",
+    "page_frequency": 56,
+    "bucket": "high"
+  },
+  {
+    "claim": "Roberto Orci wrote Star Trek.",
+    "label": 0,
+    "wiki_page": "Star Trek (film)",
+    "page_frequency": 29,
+    "bucket": "high"
+  },
+  {
+    "claim": "John DiMaggio refused to work on any shows from Cartoon Network.",
+    "label": 1,
+    "wiki_page": "Adventure Time",
+    "page_frequency": 40,
+    "bucket": "high"
+  },
+  {
+    "claim": "Peking University is in Guam.",
+    "label": 1,
+    "wiki_page": "Guam",
+    "page_frequency": 72,
+    "bucket": "high"
+  },
+  {
+    "claim": "Veep is a show.",
+    "label": 0,
+    "wiki_page": "Veep",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Robert Singer (producer) worked on a tv show.",
+    "label": 0,
+    "wiki_page": "Supernatural (U.S. TV series)",
+    "page_frequency": 140,
+    "bucket": "high"
+  },
+  {
+    "claim": "A&E serves as the flagship property of America.",
+    "label": 1,
+    "wiki_page": "A&E (TV channel)",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "The world's second largest economy by GDP is China.",
+    "label": 0,
+    "wiki_page": "China",
+    "page_frequency": 19,
+    "bucket": "high"
+  },
+  {
+    "claim": "Croatia is incapable of rendering services.",
+    "label": 1,
+    "wiki_page": "Croatia",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Floyd Mayweather Jr. is incapable of boxing.",
+    "label": 1,
+    "wiki_page": "Floyd Mayweather Jr.",
+    "page_frequency": 126,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Nobel Prize in Chemistry was awarded to a person from everywhere except from Holland.",
+    "label": 1,
+    "wiki_page": "Netherlands",
+    "page_frequency": 147,
+    "bucket": "high"
+  },
+  {
+    "claim": "Cher was released by the record label Geffen Records.",
+    "label": 0,
+    "wiki_page": "Cher (1987 album)",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Kuching is a province of Taiwan.",
+    "label": 1,
+    "wiki_page": "Taiwan",
+    "page_frequency": 155,
+    "bucket": "high"
+  },
+  {
+    "claim": "Tenacious D is an American duo.",
+    "label": 0,
+    "wiki_page": "California",
+    "page_frequency": 122,
+    "bucket": "high"
+  },
+  {
+    "claim": "A monk completely avoids practicing a lifestyle characterized by abstinence from worldly pleasures.",
+    "label": 1,
+    "wiki_page": "Asceticism",
+    "page_frequency": 26,
+    "bucket": "high"
+  },
+  {
+    "claim": "Veep is not a television show.",
+    "label": 1,
+    "wiki_page": "Veep",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "House of Balloons is by a American singer.",
+    "label": 1,
+    "wiki_page": "The Weeknd",
+    "page_frequency": 194,
+    "bucket": "high"
+  },
+  {
+    "claim": "On June 1, 2007, Knocked Up was released.",
+    "label": 0,
+    "wiki_page": "Knocked Up",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Arizona is a part of France.",
+    "label": 1,
+    "wiki_page": "Arizona",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Harvard University is incapable of having a undergraduate college.",
+    "label": 1,
+    "wiki_page": "Harvard University",
+    "page_frequency": 13,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Ellen Show stars Ellen DeGeneres.",
+    "label": 0,
+    "wiki_page": "Ellen (TV series)",
+    "page_frequency": 17,
+    "bucket": "high"
+  },
+  {
+    "claim": "Danger UXB is on a commercial TV network in Europe.",
+    "label": 0,
+    "wiki_page": "ITV (TV network)",
+    "page_frequency": 20,
+    "bucket": "high"
+  },
+  {
+    "claim": "Guns N' Roses is an American hard rock band.",
+    "label": 0,
+    "wiki_page": "Guns N' Roses",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Punch-Drunk Love was distributed by Columbia Pictures in 2000.",
+    "label": 1,
+    "wiki_page": "Punch-Drunk Love",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "West Ham United F.C. is a club.",
+    "label": 0,
+    "wiki_page": "Premier League",
+    "page_frequency": 46,
+    "bucket": "high"
+  },
+  {
+    "claim": "Youtube was ranked by Alexa Internet.",
+    "label": 0,
+    "wiki_page": "YouTube",
+    "page_frequency": 72,
+    "bucket": "high"
+  },
+  {
+    "claim": "Guns N' Roses is a hard rock band.",
+    "label": 0,
+    "wiki_page": "Guns N' Roses",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Larry Wilmore is a Gemini.",
+    "label": 1,
+    "wiki_page": "Gemini (astrology)",
+    "page_frequency": 52,
+    "bucket": "high"
+  },
+  {
+    "claim": "Recovery is an Eminem song.",
+    "label": 1,
+    "wiki_page": "Recovery (Eminem album)",
+    "page_frequency": 13,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Bengal tiger is from a region.",
+    "label": 0,
+    "wiki_page": "Bangladesh",
+    "page_frequency": 172,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Maze Runner is a sports competition.",
+    "label": 1,
+    "wiki_page": "The Maze Runner (film)",
+    "page_frequency": 16,
+    "bucket": "high"
+  },
+  {
+    "claim": "Guillermo del Toro is an essayist.",
+    "label": 1,
+    "wiki_page": "Guillermo del Toro",
+    "page_frequency": 11,
+    "bucket": "high"
+  },
+  {
+    "claim": "Barbarella is a 1968 film.",
+    "label": 0,
+    "wiki_page": "Barbarella (film)",
+    "page_frequency": 11,
+    "bucket": "high"
+  },
+  {
+    "claim": "In 1992, Prague's historic center was added to UNESCO's list of World Heritage Sites.",
+    "label": 0,
+    "wiki_page": "Prague",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Prague's historic center is on UNIDO's list of World Heritage Sites.",
+    "label": 0,
+    "wiki_page": "Prague",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Finding Dory was directed by an American.",
+    "label": 0,
+    "wiki_page": "Finding Dory",
+    "page_frequency": 16,
+    "bucket": "high"
+  },
+  {
+    "claim": "Guns N' Roses is an American hard rock band.",
+    "label": 0,
+    "wiki_page": "Slash (musician)",
+    "page_frequency": 186,
+    "bucket": "high"
+  },
+  {
+    "claim": "Simon Pegg is only a banker.",
+    "label": 1,
+    "wiki_page": "Simon Pegg",
+    "page_frequency": 20,
+    "bucket": "high"
+  },
+  {
+    "claim": "Savages had no director.",
+    "label": 1,
+    "wiki_page": "Savages (2012 film)",
+    "page_frequency": 13,
+    "bucket": "high"
+  },
+  {
+    "claim": "Simon Pegg is only an actor.",
+    "label": 1,
+    "wiki_page": "Simon Pegg",
+    "page_frequency": 20,
+    "bucket": "high"
+  },
+  {
+    "claim": "Mel B had a career.",
+    "label": 0,
+    "wiki_page": "Mel B",
+    "page_frequency": 27,
+    "bucket": "high"
+  },
+  {
+    "claim": "Harvard University is barely residential.",
+    "label": 1,
+    "wiki_page": "Harvard University",
+    "page_frequency": 13,
+    "bucket": "high"
+  },
+  {
+    "claim": "Tottenham Hotspur F.C. is a basketball team.",
+    "label": 1,
+    "wiki_page": "FA Cup",
+    "page_frequency": 16,
+    "bucket": "high"
+  },
+  {
+    "claim": "Recovery is an Eminem song.",
+    "label": 1,
+    "wiki_page": "Recovery (Eminem album)",
+    "page_frequency": 13,
+    "bucket": "high"
+  },
+  {
+    "claim": "Watertown, Massachusetts is in the United Kingdom.",
+    "label": 1,
+    "wiki_page": "Watertown",
+    "page_frequency": 34,
+    "bucket": "high"
+  },
+  {
+    "claim": "Pearl Jam is a band.",
+    "label": 0,
+    "wiki_page": "Pearl Jam",
+    "page_frequency": 26,
+    "bucket": "high"
+  },
+  {
+    "claim": "Punch-Drunk Love was distributed by an American film studio.",
+    "label": 0,
+    "wiki_page": "Columbia Pictures",
+    "page_frequency": 11,
+    "bucket": "high"
+  },
+  {
+    "claim": "Japan is landlocked.",
+    "label": 1,
+    "wiki_page": "Japan",
+    "page_frequency": 22,
+    "bucket": "high"
+  },
+  {
+    "claim": "Meteora is the sophomore album of Linkin Park.",
+    "label": 0,
+    "wiki_page": "Linkin Park",
+    "page_frequency": 99,
+    "bucket": "high"
+  },
+  {
+    "claim": "Arizona is in the United States.",
+    "label": 0,
+    "wiki_page": "Arizona",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "The New York Knicks are in the Prince of Wales Conference of the National Hockey League.",
+    "label": 1,
+    "wiki_page": "New York Knicks",
+    "page_frequency": 14,
+    "bucket": "high"
+  },
+  {
+    "claim": "Baz Luhrmann's film Australia only stars an American actor, singer, and producer.",
+    "label": 1,
+    "wiki_page": "Hugh Jackman",
+    "page_frequency": 90,
+    "bucket": "high"
+  },
+  {
+    "claim": "Watertown, Massachusetts is a city in Suffolk County.",
+    "label": 1,
+    "wiki_page": "Watertown",
+    "page_frequency": 34,
+    "bucket": "high"
+  },
+  {
+    "claim": "Amyotrophic lateral sclerosis starts earlier in genetic cases.",
+    "label": 0,
+    "wiki_page": "Amyotrophic lateral sclerosis",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Jonah Hill is an actor.",
+    "label": 0,
+    "wiki_page": "Jonah Hill",
+    "page_frequency": 31,
+    "bucket": "high"
+  },
+  {
+    "claim": "Veeru Devgan is from Asia.",
+    "label": 0,
+    "wiki_page": "India",
+    "page_frequency": 81,
+    "bucket": "high"
+  },
+  {
+    "claim": "Roswell was by Jason Katims.",
+    "label": 0,
+    "wiki_page": "Roswell (TV series)",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Palo Alto, California is located in a county.",
+    "label": 0,
+    "wiki_page": "Palo Alto",
+    "page_frequency": 330,
+    "bucket": "high"
+  },
+  {
+    "claim": "Recovery is an Eminem album.",
+    "label": 0,
+    "wiki_page": "Recovery (Eminem album)",
+    "page_frequency": 13,
+    "bucket": "high"
+  },
+  {
+    "claim": "Pen\u00e9lope Cruz has modeled for Mango.",
+    "label": 0,
+    "wiki_page": "Pene\u0301lope Cruz",
+    "page_frequency": 16,
+    "bucket": "high"
+  },
+  {
+    "claim": "Recovery is an Eminem album.",
+    "label": 0,
+    "wiki_page": "Recovery (Eminem album)",
+    "page_frequency": 13,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Romani people originated in Eastern China.",
+    "label": 1,
+    "wiki_page": "Indian subcontinent",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Sam Claflin is not an actor.",
+    "label": 1,
+    "wiki_page": "Me Before You (film)",
+    "page_frequency": 72,
+    "bucket": "high"
+  },
+  {
+    "claim": "Arizona is not in the United States.",
+    "label": 1,
+    "wiki_page": "California",
+    "page_frequency": 122,
+    "bucket": "high"
+  },
+  {
+    "claim": "Jonah Hill was featured in 21 Jump Street.",
+    "label": 0,
+    "wiki_page": "Jonah Hill",
+    "page_frequency": 31,
+    "bucket": "high"
+  },
+  {
+    "claim": "Rachel Green appeared in every episode of Friends until the final episode in 2002.",
+    "label": 1,
+    "wiki_page": "Friends",
+    "page_frequency": 26,
+    "bucket": "high"
+  },
+  {
+    "claim": "Amyotrophic lateral sclerosis can be inherited.",
+    "label": 0,
+    "wiki_page": "Amyotrophic lateral sclerosis",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Gory Guerrero was a professional athlete.",
+    "label": 0,
+    "wiki_page": "Professional wrestling",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "Saxony is the tenth smallest German state.",
+    "label": 1,
+    "wiki_page": "Saxony",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Floyd Mayweather Jr. is incapable of boxing.",
+    "label": 1,
+    "wiki_page": "Floyd Mayweather Jr.",
+    "page_frequency": 126,
+    "bucket": "high"
+  },
+  {
+    "claim": "Knocked Up was released around the world.",
+    "label": 0,
+    "wiki_page": "Knocked Up",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Jonah Hill is an actor.",
+    "label": 0,
+    "wiki_page": "Jonah Hill",
+    "page_frequency": 31,
+    "bucket": "high"
+  },
+  {
+    "claim": "Youtube is unranked.",
+    "label": 1,
+    "wiki_page": "YouTube",
+    "page_frequency": 72,
+    "bucket": "high"
+  },
+  {
+    "claim": "Deepika Padukone has acted in comedies, dramas, and romances.",
+    "label": 0,
+    "wiki_page": "Love Aaj Kal",
+    "page_frequency": 40,
+    "bucket": "high"
+  },
+  {
+    "claim": "China is the world's second largest economy by nominal GDP.",
+    "label": 0,
+    "wiki_page": "China",
+    "page_frequency": 19,
+    "bucket": "high"
+  },
+  {
+    "claim": "Emma Watson is an actress.",
+    "label": 0,
+    "wiki_page": "Emma Watson",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "Veep is a show.",
+    "label": 0,
+    "wiki_page": "Veep",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Chris Bosh plays in a professional basketball league in America.",
+    "label": 0,
+    "wiki_page": "National Basketball Association",
+    "page_frequency": 30,
+    "bucket": "high"
+  },
+  {
+    "claim": "Temple Mount is related to an Abrahamic religion.",
+    "label": 0,
+    "wiki_page": "Islam",
+    "page_frequency": 185,
+    "bucket": "high"
+  },
+  {
+    "claim": "Barbarella is a 1998 film.",
+    "label": 1,
+    "wiki_page": "Barbarella (film)",
+    "page_frequency": 11,
+    "bucket": "high"
+  },
+  {
+    "claim": "Jamaica is the place where Island Records was founded.",
+    "label": 0,
+    "wiki_page": "Island Records",
+    "page_frequency": 26,
+    "bucket": "high"
+  },
+  {
+    "claim": "Billie Joe Armstrong is a vocalist of the American rock band Green Day.",
+    "label": 0,
+    "wiki_page": "Green Day",
+    "page_frequency": 233,
+    "bucket": "high"
+  },
+  {
+    "claim": "Poseidon had a budget of $160 million and did not make a profit.",
+    "label": 1,
+    "wiki_page": "Poseidon (film)",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Syracuse, New York, had a metropolitan population of 600,000 in 2010.",
+    "label": 1,
+    "wiki_page": "Syracuse",
+    "page_frequency": 67,
+    "bucket": "high"
+  },
+  {
+    "claim": "Recovery is an Eminem song.",
+    "label": 1,
+    "wiki_page": "Recovery (Eminem album)",
+    "page_frequency": 13,
+    "bucket": "high"
+  },
+  {
+    "claim": "Floyd Mayweather Jr. is incapable of being a professional boxer.",
+    "label": 1,
+    "wiki_page": "Floyd Mayweather Jr.",
+    "page_frequency": 126,
+    "bucket": "high"
+  },
+  {
+    "claim": "Samsung entered the shipbuilding industries in the mid-1970's.",
+    "label": 0,
+    "wiki_page": "Samsung",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Brat Pack is a nickname given to a group of five young actors.",
+    "label": 1,
+    "wiki_page": "Brat Pack (actors)",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Simon Pegg is an actor.",
+    "label": 0,
+    "wiki_page": "Simon Pegg",
+    "page_frequency": 20,
+    "bucket": "high"
+  },
+  {
+    "claim": "Aristotle spent almost 40 years at the Academy.",
+    "label": 1,
+    "wiki_page": "Aristotle",
+    "page_frequency": 17,
+    "bucket": "high"
+  },
+  {
+    "claim": "Northwestern University is a founding leader of the Big Ten Conference.",
+    "label": 0,
+    "wiki_page": "Northwestern University",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "John Goodman did not play Babe Ruth in The Babe.",
+    "label": 1,
+    "wiki_page": "John Goodman",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Laura Robson is an athlete.",
+    "label": 0,
+    "wiki_page": "Grand Slam (tennis)",
+    "page_frequency": 158,
+    "bucket": "high"
+  },
+  {
+    "claim": "Black Canary is a character in comic books published by an American entrepreneur.",
+    "label": 1,
+    "wiki_page": "DC Comics",
+    "page_frequency": 11,
+    "bucket": "high"
+  },
+  {
+    "claim": "Island Records was founded by Peter Jackson only.",
+    "label": 1,
+    "wiki_page": "Island Records",
+    "page_frequency": 26,
+    "bucket": "high"
+  },
+  {
+    "claim": "Sky UK serves London.",
+    "label": 0,
+    "wiki_page": "United Kingdom",
+    "page_frequency": 303,
+    "bucket": "high"
+  },
+  {
+    "claim": "One album by Eminem is Recovery.",
+    "label": 0,
+    "wiki_page": "Recovery (Eminem album)",
+    "page_frequency": 13,
+    "bucket": "high"
+  },
+  {
+    "claim": "Philomena is a TV show.",
+    "label": 1,
+    "wiki_page": "British Academy Film Awards",
+    "page_frequency": 13,
+    "bucket": "high"
+  },
+  {
+    "claim": "Neil Diamond is not a musician.",
+    "label": 1,
+    "wiki_page": "Neil Diamond",
+    "page_frequency": 28,
+    "bucket": "high"
+  },
+  {
+    "claim": "Palo Alto, California is located outside of the United States.",
+    "label": 1,
+    "wiki_page": "Palo Alto",
+    "page_frequency": 330,
+    "bucket": "high"
+  },
+  {
+    "claim": "Juventus F.C. has worn a black-and-white-striped home uniform since 1903.",
+    "label": 0,
+    "wiki_page": "Juventus F.C.",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Palo Alto, California is a city.",
+    "label": 0,
+    "wiki_page": "Palo Alto",
+    "page_frequency": 330,
+    "bucket": "high"
+  },
+  {
+    "claim": "Guns N' Roses is an American hard rock restaurant.",
+    "label": 1,
+    "wiki_page": "Guns N' Roses",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Watertown, Massachusetts is the county seat of Middlesex County.",
+    "label": 1,
+    "wiki_page": "Watertown",
+    "page_frequency": 34,
+    "bucket": "high"
+  },
+  {
+    "claim": "Guillermo del Toro works in the coal industry.",
+    "label": 1,
+    "wiki_page": "Guillermo del Toro",
+    "page_frequency": 11,
+    "bucket": "high"
+  },
+  {
+    "claim": "Cher was liberated by Geffen Records.",
+    "label": 1,
+    "wiki_page": "Cher (1987 album)",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Guns N' Roses is a hard rock band.",
+    "label": 0,
+    "wiki_page": "Guns N' Roses",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Queen (band) formed in London in 1970.",
+    "label": 0,
+    "wiki_page": "Queen (band)",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Rage Against the Machine is a band.",
+    "label": 0,
+    "wiki_page": "Rage Against the Machine",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Youtube is a hotel.",
+    "label": 1,
+    "wiki_page": "YouTube",
+    "page_frequency": 72,
+    "bucket": "high"
+  },
+  {
+    "claim": "Emma Watson was killed in 1990.",
+    "label": 1,
+    "wiki_page": "Emma Watson",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "Terry Crews played professional football.",
+    "label": 0,
+    "wiki_page": "National Football League",
+    "page_frequency": 18,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Maze Runner's budget was $34 million.",
+    "label": 0,
+    "wiki_page": "The Maze Runner (film)",
+    "page_frequency": 16,
+    "bucket": "high"
+  },
+  {
+    "claim": "Nicholas Brody is a character on Homeland.",
+    "label": 0,
+    "wiki_page": "Carrie Mathison",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Maze Runner had a budget of $34 million for cast and crew.",
+    "label": 0,
+    "wiki_page": "The Maze Runner (film)",
+    "page_frequency": 16,
+    "bucket": "high"
+  },
+  {
+    "claim": "Andrew Kevin Walker is only a dancer.",
+    "label": 1,
+    "wiki_page": "Andrew Kevin Walker",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Palo Alto, California is located in the southeast corner San Francisco Bay Area.",
+    "label": 1,
+    "wiki_page": "Palo Alto",
+    "page_frequency": 330,
+    "bucket": "high"
+  },
+  {
+    "claim": "Avenged Sevenfold is an album by a band from California.",
+    "label": 0,
+    "wiki_page": "Avenged Sevenfold",
+    "page_frequency": 67,
+    "bucket": "high"
+  },
+  {
+    "claim": "Linkin Park's second studio album, released in 2004, was Meteora.",
+    "label": 1,
+    "wiki_page": "Linkin Park",
+    "page_frequency": 99,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Maze Runner is a narrative in a visual medium.",
+    "label": 0,
+    "wiki_page": "The Maze Runner (film)",
+    "page_frequency": 16,
+    "bucket": "high"
+  },
+  {
+    "claim": "Arizona is a mass-marketed beverage.",
+    "label": 1,
+    "wiki_page": "Arizona",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Damon Albarn has released something.",
+    "label": 0,
+    "wiki_page": "Gorillaz",
+    "page_frequency": 134,
+    "bucket": "high"
+  },
+  {
+    "claim": "Deepika Padukone has only been in one Indian film.",
+    "label": 1,
+    "wiki_page": "Goliyon Ki Raasleela Ram-Leela",
+    "page_frequency": 32,
+    "bucket": "high"
+  },
+  {
+    "claim": "Youtube is a hotel.",
+    "label": 1,
+    "wiki_page": "YouTube",
+    "page_frequency": 72,
+    "bucket": "high"
+  },
+  {
+    "claim": "Australia (2008 film) production took place only in China.",
+    "label": 1,
+    "wiki_page": "Bowen",
+    "page_frequency": 15,
+    "bucket": "high"
+  },
+  {
+    "claim": "Simon Pegg is only an actor.",
+    "label": 1,
+    "wiki_page": "Simon Pegg",
+    "page_frequency": 20,
+    "bucket": "high"
+  },
+  {
+    "claim": "Pearl Jam is not a band.",
+    "label": 1,
+    "wiki_page": "Pearl Jam",
+    "page_frequency": 26,
+    "bucket": "high"
+  },
+  {
+    "claim": "Saxony is the sixth most populous Spanish state.",
+    "label": 1,
+    "wiki_page": "Saxony",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Foot Locker is a retailer from the United States.",
+    "label": 0,
+    "wiki_page": "United States",
+    "page_frequency": 280,
+    "bucket": "high"
+  },
+  {
+    "claim": "Doug Petrie appeared in a web-based film in 2008.",
+    "label": 0,
+    "wiki_page": "Joss Whedon",
+    "page_frequency": 17,
+    "bucket": "high"
+  },
+  {
+    "claim": "Harvard University is a residential school.",
+    "label": 0,
+    "wiki_page": "Harvard University",
+    "page_frequency": 13,
+    "bucket": "high"
+  },
+  {
+    "claim": "Palo Alto, California is 100 miles from the United States.",
+    "label": 1,
+    "wiki_page": "Mountain View",
+    "page_frequency": 330,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Nottingham Forest F.C. refuse to play soccer.",
+    "label": 1,
+    "wiki_page": "FA Cup",
+    "page_frequency": 16,
+    "bucket": "high"
+  },
+  {
+    "claim": "Andrew Kevin Walker is a cat.",
+    "label": 1,
+    "wiki_page": "Andrew Kevin Walker",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "The New York Knicks are in the Prince of Wales Conference of the National Hockey League.",
+    "label": 1,
+    "wiki_page": "New York Knicks",
+    "page_frequency": 14,
+    "bucket": "high"
+  },
+  {
+    "claim": "Finding Dory was directed by someone who is based at anywhere except Pixar.",
+    "label": 1,
+    "wiki_page": "Andrew Stanton",
+    "page_frequency": 84,
+    "bucket": "high"
+  },
+  {
+    "claim": "Temple Mount is related to an Abrahamic religion.",
+    "label": 0,
+    "wiki_page": "Christianity",
+    "page_frequency": 45,
+    "bucket": "high"
+  },
+  {
+    "claim": "Michigan is an Indian state.",
+    "label": 1,
+    "wiki_page": "U.S. state",
+    "page_frequency": 24,
+    "bucket": "high"
+  },
+  {
+    "claim": "Temple Mount is related to an Abrahamic religion.",
+    "label": 0,
+    "wiki_page": "Bible",
+    "page_frequency": 41,
+    "bucket": "high"
+  },
+  {
+    "claim": "Victoria Palace Theatre is in a place named after Queen Elizabeth.",
+    "label": 1,
+    "wiki_page": "Victoria",
+    "page_frequency": 56,
+    "bucket": "high"
+  },
+  {
+    "claim": "Around the age of 60, amyotrophic lateral sclerosis usually starts.",
+    "label": 0,
+    "wiki_page": "Amyotrophic lateral sclerosis",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Elizabeth I's mother was executed.",
+    "label": 0,
+    "wiki_page": "Elizabeth I of England",
+    "page_frequency": 77,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Cyclades are in the Dead Sea.",
+    "label": 1,
+    "wiki_page": "Aegean Sea",
+    "page_frequency": 31,
+    "bucket": "high"
+  },
+  {
+    "claim": "Jeb Bush is the younger brother of a salesman.",
+    "label": 1,
+    "wiki_page": "George W. Bush",
+    "page_frequency": 162,
+    "bucket": "high"
+  },
+  {
+    "claim": "In 1992, Prague's historic center was added to UNESCO's list of World Heritage Sites.",
+    "label": 0,
+    "wiki_page": "Prague",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Northwestern University is a founding member of the Big Ten Conference starting in 1893.",
+    "label": 1,
+    "wiki_page": "Northwestern University",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "Neil Diamond is an American singer.",
+    "label": 0,
+    "wiki_page": "Neil Diamond",
+    "page_frequency": 28,
+    "bucket": "high"
+  },
+  {
+    "claim": "San Francisco Bay Area contains zero cities.",
+    "label": 1,
+    "wiki_page": "San Francisco",
+    "page_frequency": 285,
+    "bucket": "high"
+  },
+  {
+    "claim": "Virginia transitioned from an agricultural to industrial economy during the Civil War.",
+    "label": 0,
+    "wiki_page": "Virginia",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "Leslie Kong founded Island Records.",
+    "label": 0,
+    "wiki_page": "Island Records",
+    "page_frequency": 26,
+    "bucket": "high"
+  },
+  {
+    "claim": "Pen\u00e9lope Cruz has modeled for Ralph Lauren.",
+    "label": 0,
+    "wiki_page": "Pene\u0301lope Cruz",
+    "page_frequency": 16,
+    "bucket": "high"
+  },
+  {
+    "claim": "The New York Knicks are in the Prince of Wales Conference of the National Hockey League.",
+    "label": 1,
+    "wiki_page": "New York Knicks",
+    "page_frequency": 14,
+    "bucket": "high"
+  },
+  {
+    "claim": "House is a dramatic work focused on medicine.",
+    "label": 0,
+    "wiki_page": "House (TV series)",
+    "page_frequency": 21,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Brat Pack is only a nickname given to a group of old actors who appeared together in films.",
+    "label": 1,
+    "wiki_page": "Brat Pack (actors)",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Island Records was founded by Chris Blackwell.",
+    "label": 0,
+    "wiki_page": "Island Records",
+    "page_frequency": 26,
+    "bucket": "high"
+  },
+  {
+    "claim": "Emma Watson was killed in 1990.",
+    "label": 1,
+    "wiki_page": "Emma Watson",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "Palo Alto, California is located in a county.",
+    "label": 0,
+    "wiki_page": "Palo Alto",
+    "page_frequency": 330,
+    "bucket": "high"
+  },
+  {
+    "claim": "Burbank, California is a location where secret and technologically advanced space ships were produced.",
+    "label": 1,
+    "wiki_page": "Burbank",
+    "page_frequency": 330,
+    "bucket": "high"
+  },
+  {
+    "claim": "Croatia is incapable of rendering services.",
+    "label": 1,
+    "wiki_page": "Croatia",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Juventus F.C. is the third oldest association football (soccer) club in Italy.",
+    "label": 1,
+    "wiki_page": "Juventus F.C.",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Younger is not a television series.",
+    "label": 1,
+    "wiki_page": "Molly Bernard",
+    "page_frequency": 26,
+    "bucket": "high"
+  },
+  {
+    "claim": "Miracle at St. Anna is set primarily in Europe.",
+    "label": 0,
+    "wiki_page": "Italy",
+    "page_frequency": 105,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Nottingham Forest F.C. refuse to play soccer.",
+    "label": 1,
+    "wiki_page": "FA Cup",
+    "page_frequency": 16,
+    "bucket": "high"
+  },
+  {
+    "claim": "Arizona is a part of France.",
+    "label": 1,
+    "wiki_page": "Arizona",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Jeb Bush's parent is Barbara Bush.",
+    "label": 0,
+    "wiki_page": "Jeb Bush",
+    "page_frequency": 24,
+    "bucket": "high"
+  },
+  {
+    "claim": "Pearl Jam plays music.",
+    "label": 0,
+    "wiki_page": "Pearl Jam",
+    "page_frequency": 26,
+    "bucket": "high"
+  },
+  {
+    "claim": "Watertown, Massachusetts is in Vermont.",
+    "label": 1,
+    "wiki_page": "Watertown",
+    "page_frequency": 34,
+    "bucket": "high"
+  },
+  {
+    "claim": "Youtube has been ranked by a company.",
+    "label": 0,
+    "wiki_page": "YouTube",
+    "page_frequency": 72,
+    "bucket": "high"
+  },
+  {
+    "claim": "Knocked Up is a horror film.",
+    "label": 1,
+    "wiki_page": "Knocked Up",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Edgar Wright is a Gemini.",
+    "label": 1,
+    "wiki_page": "Gemini (astrology)",
+    "page_frequency": 52,
+    "bucket": "high"
+  },
+  {
+    "claim": "Guillermo del Toro works in the film industry.",
+    "label": 0,
+    "wiki_page": "Guillermo del Toro",
+    "page_frequency": 11,
+    "bucket": "high"
+  },
+  {
+    "claim": "Veep is a show.",
+    "label": 0,
+    "wiki_page": "Veep",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Knocked Up was released around the world.",
+    "label": 0,
+    "wiki_page": "Knocked Up",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Amyotrophic lateral sclerosis is a cure.",
+    "label": 1,
+    "wiki_page": "Amyotrophic lateral sclerosis",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Croatia is incapable of rendering services.",
+    "label": 1,
+    "wiki_page": "Croatia",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Greek language has speakers in Cyprus.",
+    "label": 0,
+    "wiki_page": "Greek language",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Daenerys Targaryen is a character in a J.R.R. Tolkein series.",
+    "label": 1,
+    "wiki_page": "Khal Drogo",
+    "page_frequency": 41,
+    "bucket": "high"
+  },
+  {
+    "claim": "House is a dramatic work focused on medicine.",
+    "label": 0,
+    "wiki_page": "House (TV series)",
+    "page_frequency": 21,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Quran is Islamic.",
+    "label": 0,
+    "wiki_page": "Ramadan",
+    "page_frequency": 48,
+    "bucket": "high"
+  },
+  {
+    "claim": "Veep has won an award in Comedy.",
+    "label": 0,
+    "wiki_page": "Veep",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Bengal tiger is a member of the largest cat species.",
+    "label": 0,
+    "wiki_page": "Tiger",
+    "page_frequency": 30,
+    "bucket": "high"
+  },
+  {
+    "claim": "Recovery is Eminem's first album.",
+    "label": 1,
+    "wiki_page": "Recovery (Eminem album)",
+    "page_frequency": 13,
+    "bucket": "high"
+  },
+  {
+    "claim": "Emma Watson was born.",
+    "label": 0,
+    "wiki_page": "Emma Watson",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "Adidas is from Europe.",
+    "label": 0,
+    "wiki_page": "Germany",
+    "page_frequency": 11,
+    "bucket": "high"
+  },
+  {
+    "claim": "Paramore is Canadian.",
+    "label": 1,
+    "wiki_page": "Paramore (album)",
+    "page_frequency": 58,
+    "bucket": "high"
+  },
+  {
+    "claim": "Finding Dory was written by anyone except Andrew Stanton.",
+    "label": 1,
+    "wiki_page": "Finding Dory",
+    "page_frequency": 16,
+    "bucket": "high"
+  },
+  {
+    "claim": "Underdog stars an actor.",
+    "label": 0,
+    "wiki_page": "Peter Dinklage",
+    "page_frequency": 11,
+    "bucket": "high"
+  },
+  {
+    "claim": "Manchester United F.C. was the world's highest-earning tennis club for a season.",
+    "label": 1,
+    "wiki_page": "Manchester United F.C.",
+    "page_frequency": 59,
+    "bucket": "high"
+  },
+  {
+    "claim": "Veep has no multiple seasons.",
+    "label": 1,
+    "wiki_page": "Veep",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Aphrodite appears in Greek mythology.",
+    "label": 0,
+    "wiki_page": "Zeus",
+    "page_frequency": 87,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Greek language is spoken in the Mediterranean.",
+    "label": 0,
+    "wiki_page": "Greek language",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Palo Alto, California is 100 miles from the United States.",
+    "label": 1,
+    "wiki_page": "Palo Alto",
+    "page_frequency": 330,
+    "bucket": "high"
+  },
+  {
+    "claim": "Prince Charles and Lady Diana's wedding anniversary was a traditional wedding service.",
+    "label": 0,
+    "wiki_page": "Wedding of Charles",
+    "page_frequency": 130,
+    "bucket": "high"
+  },
+  {
+    "claim": "Alvin and the Chipmunks is a Canadian film.",
+    "label": 1,
+    "wiki_page": "20th Century Fox",
+    "page_frequency": 11,
+    "bucket": "high"
+  },
+  {
+    "claim": "Northwestern University is the only public university of the Big Ten Conference.",
+    "label": 1,
+    "wiki_page": "Northwestern University",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "Knocked Up only grossed $19 million worldwide.",
+    "label": 1,
+    "wiki_page": "Knocked Up",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Roberto Orci was uninvolved with the writing of Star Trek Into Darkness.",
+    "label": 1,
+    "wiki_page": "Star Trek (film)",
+    "page_frequency": 29,
+    "bucket": "high"
+  },
+  {
+    "claim": "Samwell Tarly appears in novels by George R. R. Martin.",
+    "label": 0,
+    "wiki_page": "A Game of Thrones",
+    "page_frequency": 195,
+    "bucket": "high"
+  },
+  {
+    "claim": "Linkin Park released Meteora.",
+    "label": 0,
+    "wiki_page": "Linkin Park",
+    "page_frequency": 99,
+    "bucket": "high"
+  },
+  {
+    "claim": "\"I Want You Back\" was released by Mel B.",
+    "label": 0,
+    "wiki_page": "Mel B",
+    "page_frequency": 27,
+    "bucket": "high"
+  },
+  {
+    "claim": "Warren Beatty was never involved in an epic drama film.",
+    "label": 1,
+    "wiki_page": "Reds (film)",
+    "page_frequency": 49,
+    "bucket": "high"
+  },
+  {
+    "claim": "Samsung was separated into four business groups in 1982.",
+    "label": 1,
+    "wiki_page": "Samsung",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Andrew Kevin Walker is from America.",
+    "label": 0,
+    "wiki_page": "Andrew Kevin Walker",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Manchester United's first name was the Newton Heath LYR Football Club.",
+    "label": 0,
+    "wiki_page": "Manchester United F.C.",
+    "page_frequency": 59,
+    "bucket": "high"
+  },
+  {
+    "claim": "Punch-Drunk Love was produced by two studios.",
+    "label": 0,
+    "wiki_page": "Punch-Drunk Love",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Island Records was founded in Jamaica.",
+    "label": 1,
+    "wiki_page": "Island Records",
+    "page_frequency": 26,
+    "bucket": "high"
+  },
+  {
+    "claim": "Rage Against the Machine is a band.",
+    "label": 0,
+    "wiki_page": "Rage Against the Machine",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Gettysburg Address was delivered by someone who was assassinated.",
+    "label": 0,
+    "wiki_page": "Abraham Lincoln",
+    "page_frequency": 396,
+    "bucket": "high"
+  },
+  {
+    "claim": "Guns N' Roses is an American hard rock restaurant.",
+    "label": 1,
+    "wiki_page": "Guns N' Roses",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Robert Singer (producer) worked on a tv show.",
+    "label": 0,
+    "wiki_page": "Supernatural (U.S. TV series)",
+    "page_frequency": 140,
+    "bucket": "high"
+  },
+  {
+    "claim": "Queen (band) is a British gospel group.",
+    "label": 1,
+    "wiki_page": "Queen (band)",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Emma Watson is a French-British actress, model, and activist.",
+    "label": 0,
+    "wiki_page": "Emma Watson",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "Watertown, Massachusetts is in Vermont.",
+    "label": 1,
+    "wiki_page": "Watertown",
+    "page_frequency": 34,
+    "bucket": "high"
+  },
+  {
+    "claim": "Veep has multiple seasons.",
+    "label": 0,
+    "wiki_page": "Veep",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Amyotrophic lateral sclerosis is a cure.",
+    "label": 1,
+    "wiki_page": "Amyotrophic lateral sclerosis",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Floyd Mayweather Jr. has made 30 career boxing knockouts.",
+    "label": 0,
+    "wiki_page": "Floyd Mayweather Jr.",
+    "page_frequency": 126,
+    "bucket": "high"
+  },
+  {
+    "claim": "Recovery is a solo album by Lil Wayne.",
+    "label": 1,
+    "wiki_page": "Recovery (Eminem album)",
+    "page_frequency": 13,
+    "bucket": "high"
+  },
+  {
+    "claim": "Amyotrophic lateral sclerosis is a cure.",
+    "label": 1,
+    "wiki_page": "Amyotrophic lateral sclerosis",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "On June 1, 2007, Knocked Up was released.",
+    "label": 0,
+    "wiki_page": "Knocked Up",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Liverpool is in the United States.",
+    "label": 1,
+    "wiki_page": "Premier League",
+    "page_frequency": 46,
+    "bucket": "high"
+  },
+  {
+    "claim": "Daenerys Targaryen is a character in a J.R.R. Tolkein series.",
+    "label": 1,
+    "wiki_page": "A Dance with Dragons",
+    "page_frequency": 36,
+    "bucket": "high"
+  },
+  {
+    "claim": "Floyd Mayweather Jr. has a record 26 world title wins without a loss.",
+    "label": 0,
+    "wiki_page": "Floyd Mayweather Jr.",
+    "page_frequency": 126,
+    "bucket": "high"
+  },
+  {
+    "claim": "Saxony is only in Spain.",
+    "label": 1,
+    "wiki_page": "Saxony",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Elizabeth I was the son of Anne Boleyn.",
+    "label": 1,
+    "wiki_page": "Elizabeth I of England",
+    "page_frequency": 77,
+    "bucket": "high"
+  },
+  {
+    "claim": "Guns N' Roses is a hard rock band.",
+    "label": 0,
+    "wiki_page": "Guns N' Roses",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Greek language is spoken only outside of Greece.",
+    "label": 1,
+    "wiki_page": "Greek language",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Arizona is not a state.",
+    "label": 1,
+    "wiki_page": "Arizona",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Pen\u00e9lope Cruz did modeling for L'Or\u00e9al.",
+    "label": 0,
+    "wiki_page": "Pene\u0301lope Cruz",
+    "page_frequency": 16,
+    "bucket": "high"
+  },
+  {
+    "claim": "Clueless (film) was followed by a spin-off television sitcom with the same name.",
+    "label": 0,
+    "wiki_page": "Clueless (film)",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Roswell is an American TV series.",
+    "label": 0,
+    "wiki_page": "Roswell (TV series)",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Computer chips became Virginia's most valuable export in 2002.",
+    "label": 0,
+    "wiki_page": "Virginia",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "Chile is in Asia.",
+    "label": 1,
+    "wiki_page": "Peru",
+    "page_frequency": 38,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Paper stars a horse.",
+    "label": 1,
+    "wiki_page": "Michael Keaton",
+    "page_frequency": 178,
+    "bucket": "high"
+  },
+  {
+    "claim": "Honeymoon is a collection of music.",
+    "label": 0,
+    "wiki_page": "Album",
+    "page_frequency": 24,
+    "bucket": "high"
+  },
+  {
+    "claim": "Elizabeth Olsen is a person.",
+    "label": 0,
+    "wiki_page": "Elizabeth Olsen",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "The world's largest economy by purchasing power parity is China.",
+    "label": 1,
+    "wiki_page": "China",
+    "page_frequency": 19,
+    "bucket": "high"
+  },
+  {
+    "claim": "Byron Howard co-directed at least one animated film.",
+    "label": 0,
+    "wiki_page": "Zootopia",
+    "page_frequency": 117,
+    "bucket": "high"
+  },
+  {
+    "claim": "Punch-Drunk Love's producers were Revolution Studios and New Line Cinema.",
+    "label": 0,
+    "wiki_page": "Punch-Drunk Love",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Andrew Kevin Walker is a writer.",
+    "label": 0,
+    "wiki_page": "Andrew Kevin Walker",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Linkin Park was on hiatus from 2000 to 2005.",
+    "label": 1,
+    "wiki_page": "Linkin Park",
+    "page_frequency": 99,
+    "bucket": "high"
+  },
+  {
+    "claim": "Nestor Carbonell played Mayor Anthony Garcia in The Dark Knight and The Dark Knight Rises during the 19th century.",
+    "label": 1,
+    "wiki_page": "The Dark Knight Rises",
+    "page_frequency": 50,
+    "bucket": "high"
+  },
+  {
+    "claim": "Caroline Kennedy is the author of Twilight.",
+    "label": 1,
+    "wiki_page": "Twilight (novel series)",
+    "page_frequency": 47,
+    "bucket": "high"
+  },
+  {
+    "claim": "Sky UK is a British telecommunications company.",
+    "label": 0,
+    "wiki_page": "United Kingdom",
+    "page_frequency": 303,
+    "bucket": "high"
+  },
+  {
+    "claim": "Linkin Park's second studio album, released in 2004, was Meteora.",
+    "label": 1,
+    "wiki_page": "Linkin Park",
+    "page_frequency": 99,
+    "bucket": "high"
+  },
+  {
+    "claim": "San Francisco Bay Area contains zero national parks.",
+    "label": 1,
+    "wiki_page": "San Francisco Bay Area",
+    "page_frequency": 15,
+    "bucket": "high"
+  },
+  {
+    "claim": "Guns N' Roses is an American hard rock band.",
+    "label": 0,
+    "wiki_page": "Guns N' Roses",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "The mother of Elizabeth I was executed.",
+    "label": 0,
+    "wiki_page": "Elizabeth I of England",
+    "page_frequency": 77,
+    "bucket": "high"
+  },
+  {
+    "claim": "Youtube is ranked as the fourth most popular site in the world.",
+    "label": 1,
+    "wiki_page": "YouTube",
+    "page_frequency": 72,
+    "bucket": "high"
+  },
+  {
+    "claim": "Japan is in North America.",
+    "label": 1,
+    "wiki_page": "Japan",
+    "page_frequency": 22,
+    "bucket": "high"
+  },
+  {
+    "claim": "Saxony is the tenth smallest German state.",
+    "label": 1,
+    "wiki_page": "Saxony",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Clueless (film) was followed by a spin-off television sitcom with the same name.",
+    "label": 0,
+    "wiki_page": "Clueless (film)",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Saxony is the tenth largest German cat.",
+    "label": 1,
+    "wiki_page": "Saxony",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Stripes had a person appear in it.",
+    "label": 0,
+    "wiki_page": "Harold Ramis",
+    "page_frequency": 51,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Maze Runner is a sports competition.",
+    "label": 1,
+    "wiki_page": "The Maze Runner (film)",
+    "page_frequency": 16,
+    "bucket": "high"
+  },
+  {
+    "claim": "Jeb Bush has yet to spend time in Houston.",
+    "label": 1,
+    "wiki_page": "Jeb Bush",
+    "page_frequency": 24,
+    "bucket": "high"
+  },
+  {
+    "claim": "Andrew Kevin Walker is a screenwriter.",
+    "label": 0,
+    "wiki_page": "Andrew Kevin Walker",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Maze Runner is a narrative in a visual medium.",
+    "label": 0,
+    "wiki_page": "The Maze Runner (film)",
+    "page_frequency": 16,
+    "bucket": "high"
+  },
+  {
+    "claim": "Croatia is incapable of rendering services.",
+    "label": 1,
+    "wiki_page": "Croatia",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "John Goodman is a person who acts.",
+    "label": 0,
+    "wiki_page": "John Goodman",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Good Wife airs on television.",
+    "label": 0,
+    "wiki_page": "CBS",
+    "page_frequency": 48,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Ellen Show was created by an Australian comedian.",
+    "label": 1,
+    "wiki_page": "Ellen DeGeneres",
+    "page_frequency": 219,
+    "bucket": "high"
+  },
+  {
+    "claim": "Robert Singer (producer) worked on a tv show.",
+    "label": 0,
+    "wiki_page": "Supernatural (U.S. TV series)",
+    "page_frequency": 140,
+    "bucket": "high"
+  },
+  {
+    "claim": "Warcraft premiered in America in June 2006.",
+    "label": 1,
+    "wiki_page": "Warcraft (film)",
+    "page_frequency": 15,
+    "bucket": "high"
+  },
+  {
+    "claim": "San Francisco Bay Area contains many national parks.",
+    "label": 0,
+    "wiki_page": "San Francisco Bay Area",
+    "page_frequency": 15,
+    "bucket": "high"
+  },
+  {
+    "claim": "Southpaw was written by a person.",
+    "label": 0,
+    "wiki_page": "Kurt Sutter",
+    "page_frequency": 61,
+    "bucket": "high"
+  },
+  {
+    "claim": "Island Records was founded in 1960.",
+    "label": 1,
+    "wiki_page": "Island Records",
+    "page_frequency": 26,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Republic of Macedonia is in Europe.",
+    "label": 0,
+    "wiki_page": "Serbia",
+    "page_frequency": 32,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Bee Gees wrote songs.",
+    "label": 0,
+    "wiki_page": "Bee Gees",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Lockheed's Skunk Works was located in Burbank, California.",
+    "label": 0,
+    "wiki_page": "Burbank",
+    "page_frequency": 330,
+    "bucket": "high"
+  },
+  {
+    "claim": "George Harrison is still married to his first wife.",
+    "label": 1,
+    "wiki_page": "George Harrison",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "House is on Fox.",
+    "label": 0,
+    "wiki_page": "House (TV series)",
+    "page_frequency": 21,
+    "bucket": "high"
+  },
+  {
+    "claim": "Emma Watson is an actress.",
+    "label": 0,
+    "wiki_page": "Emma Watson",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Endless River is an album by a band formed in Tokyo.",
+    "label": 1,
+    "wiki_page": "Pink Floyd",
+    "page_frequency": 154,
+    "bucket": "high"
+  },
+  {
+    "claim": "Byron Howard was nominated for a film award.",
+    "label": 0,
+    "wiki_page": "Golden Globe Award",
+    "page_frequency": 23,
+    "bucket": "high"
+  },
+  {
+    "claim": "Youtube has been ranked by a company.",
+    "label": 0,
+    "wiki_page": "YouTube",
+    "page_frequency": 72,
+    "bucket": "high"
+  },
+  {
+    "claim": "Guillermo del Toro works in the coal industry.",
+    "label": 1,
+    "wiki_page": "Guillermo del Toro",
+    "page_frequency": 11,
+    "bucket": "high"
+  },
+  {
+    "claim": "Jeb Bush's father is Barbara Bush.",
+    "label": 1,
+    "wiki_page": "Jeb Bush",
+    "page_frequency": 24,
+    "bucket": "high"
+  },
+  {
+    "claim": "John S. McCain Jr. went to school.",
+    "label": 0,
+    "wiki_page": "United States Naval Academy",
+    "page_frequency": 59,
+    "bucket": "high"
+  },
+  {
+    "claim": "Palo Alto, California is located in Canada.",
+    "label": 1,
+    "wiki_page": "Palo Alto",
+    "page_frequency": 330,
+    "bucket": "high"
+  },
+  {
+    "claim": "Knocked Up grossed $219 million worldwide.",
+    "label": 0,
+    "wiki_page": "Knocked Up",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Saxony is a horse.",
+    "label": 1,
+    "wiki_page": "Saxony",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Java is landlocked.",
+    "label": 1,
+    "wiki_page": "Island",
+    "page_frequency": 17,
+    "bucket": "high"
+  },
+  {
+    "claim": "Floyd Mayweather Jr. has made 30 career music albums.",
+    "label": 1,
+    "wiki_page": "Floyd Mayweather Jr.",
+    "page_frequency": 126,
+    "bucket": "high"
+  },
+  {
+    "claim": "The 2010 population of Syracuse, New York, was 145,170.",
+    "label": 0,
+    "wiki_page": "Syracuse",
+    "page_frequency": 67,
+    "bucket": "high"
+  },
+  {
+    "claim": "In the 1960's, Samsung entered the electronics industry.",
+    "label": 0,
+    "wiki_page": "Samsung",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Avenged Sevenfold is an album by a band from California.",
+    "label": 0,
+    "wiki_page": "Avenged Sevenfold",
+    "page_frequency": 67,
+    "bucket": "high"
+  },
+  {
+    "claim": "Prague's historic center was first included in the UNESCO list of World Heritage Sites in 1992.",
+    "label": 0,
+    "wiki_page": "Prague",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Road to El Dorado stars an actor.",
+    "label": 0,
+    "wiki_page": "Kenneth Branagh",
+    "page_frequency": 43,
+    "bucket": "high"
+  },
+  {
+    "claim": "Veep has no multiple seasons.",
+    "label": 1,
+    "wiki_page": "Veep",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Recovery is Eminem's first album.",
+    "label": 1,
+    "wiki_page": "Recovery (Eminem album)",
+    "page_frequency": 13,
+    "bucket": "high"
+  },
+  {
+    "claim": "Ronaldinho has played 97 football matches.",
+    "label": 0,
+    "wiki_page": "Brazil national football team",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Mohra got zero nominations from a magazine in 1995.",
+    "label": 1,
+    "wiki_page": "Filmfare",
+    "page_frequency": 38,
+    "bucket": "high"
+  },
+  {
+    "claim": "Arizona is not a state.",
+    "label": 1,
+    "wiki_page": "Arizona",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Marjorie Gross wrote for American sitcoms.",
+    "label": 0,
+    "wiki_page": "Seinfeld",
+    "page_frequency": 64,
+    "bucket": "high"
+  },
+  {
+    "claim": "Jonah Hill did not star in 21 Jump Street.",
+    "label": 1,
+    "wiki_page": "21 Jump Street (film)",
+    "page_frequency": 98,
+    "bucket": "high"
+  },
+  {
+    "claim": "Croatia has a government.",
+    "label": 0,
+    "wiki_page": "Croatia",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Maze Runner is a motion picture.",
+    "label": 0,
+    "wiki_page": "The Maze Runner (film)",
+    "page_frequency": 16,
+    "bucket": "high"
+  },
+  {
+    "claim": "Palo Alto, California is only a town.",
+    "label": 1,
+    "wiki_page": "Palo Alto",
+    "page_frequency": 330,
+    "bucket": "high"
+  },
+  {
+    "claim": "No Strings Attached was released in a country of the Northern Hemisphere.",
+    "label": 0,
+    "wiki_page": "United States",
+    "page_frequency": 280,
+    "bucket": "high"
+  },
+  {
+    "claim": "Arizona is not a part of the United States.",
+    "label": 1,
+    "wiki_page": "Arizona",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Arizona is a part of France.",
+    "label": 1,
+    "wiki_page": "Arizona",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Victoria Palace Theatre is in a place named after Queen Victoria.",
+    "label": 0,
+    "wiki_page": "Victoria",
+    "page_frequency": 56,
+    "bucket": "high"
+  },
+  {
+    "claim": "No Country for Old Men was selected.",
+    "label": 0,
+    "wiki_page": "No Country for Old Men (film)",
+    "page_frequency": 14,
+    "bucket": "high"
+  },
+  {
+    "claim": "Recovery is a song by Marshall Mathers III.",
+    "label": 0,
+    "wiki_page": "Eminem",
+    "page_frequency": 382,
+    "bucket": "high"
+  },
+  {
+    "claim": "Amyotrophic lateral sclerosis is a cure.",
+    "label": 1,
+    "wiki_page": "Amyotrophic lateral sclerosis",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Colosseum is in Europe.",
+    "label": 0,
+    "wiki_page": "Italy",
+    "page_frequency": 105,
+    "bucket": "high"
+  },
+  {
+    "claim": "Knocked Up was only released on May 1, 2007.",
+    "label": 1,
+    "wiki_page": "Knocked Up",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Arizona is a part of France.",
+    "label": 1,
+    "wiki_page": "Arizona",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Burbank, California is a location where secret and technologically advanced airplanes were produced during the cold war.",
+    "label": 0,
+    "wiki_page": "Cold War",
+    "page_frequency": 14,
+    "bucket": "high"
+  },
+  {
+    "claim": "Lee Daniels directed a film based on the novel \"Push.\"",
+    "label": 0,
+    "wiki_page": "Precious (film)",
+    "page_frequency": 38,
+    "bucket": "high"
+  },
+  {
+    "claim": "Harvard University is the first University in the U.S.",
+    "label": 0,
+    "wiki_page": "Harvard University",
+    "page_frequency": 13,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Good Wife airs on television.",
+    "label": 0,
+    "wiki_page": "CBS",
+    "page_frequency": 48,
+    "bucket": "high"
+  },
+  {
+    "claim": "No Country for Old Men is a cat-and-mouse drama.",
+    "label": 0,
+    "wiki_page": "No Country for Old Men (film)",
+    "page_frequency": 14,
+    "bucket": "high"
+  },
+  {
+    "claim": "Jonah Hill starred in a movie.",
+    "label": 0,
+    "wiki_page": "Jonah Hill",
+    "page_frequency": 31,
+    "bucket": "high"
+  },
+  {
+    "claim": "As of 2003, Saxony is the sixth most populous German state.",
+    "label": 0,
+    "wiki_page": "Saxony",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Floyd Mayweather Jr. is a professional boxer.",
+    "label": 0,
+    "wiki_page": "Floyd Mayweather Jr.",
+    "page_frequency": 126,
+    "bucket": "high"
+  },
+  {
+    "claim": "Veep has multiple seasons.",
+    "label": 0,
+    "wiki_page": "Veep",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "A&E is a channel from the United States.",
+    "label": 0,
+    "wiki_page": "A&E (TV channel)",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Guns N' Roses is an American hard rock band.",
+    "label": 0,
+    "wiki_page": "Guns N' Roses",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Amyotrophic lateral sclerosis is a cure.",
+    "label": 1,
+    "wiki_page": "Amyotrophic lateral sclerosis",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Neil Diamond is a musician.",
+    "label": 0,
+    "wiki_page": "Neil Diamond",
+    "page_frequency": 28,
+    "bucket": "high"
+  },
+  {
+    "claim": "Harvard University is a university.",
+    "label": 0,
+    "wiki_page": "Harvard University",
+    "page_frequency": 13,
+    "bucket": "high"
+  },
+  {
+    "claim": "Simi Valley, California, reported a median household income of $87,894 in the 2012 U.S. Census.",
+    "label": 0,
+    "wiki_page": "Simi Valley",
+    "page_frequency": 330,
+    "bucket": "high"
+  },
+  {
+    "claim": "Uganda is in space.",
+    "label": 1,
+    "wiki_page": "Kenya",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Maze Runner is a sports competition.",
+    "label": 1,
+    "wiki_page": "The Maze Runner (film)",
+    "page_frequency": 16,
+    "bucket": "high"
+  },
+  {
+    "claim": "Uganda is in space.",
+    "label": 1,
+    "wiki_page": "Tanzania",
+    "page_frequency": 229,
+    "bucket": "high"
+  },
+  {
+    "claim": "Aristotle tutored Alexander the Great starting in 2009.",
+    "label": 1,
+    "wiki_page": "Aristotle",
+    "page_frequency": 17,
+    "bucket": "high"
+  },
+  {
+    "claim": "Watertown, Massachusetts is a city.",
+    "label": 0,
+    "wiki_page": "Watertown",
+    "page_frequency": 34,
+    "bucket": "high"
+  },
+  {
+    "claim": "Watertown, Massachusetts is in France.",
+    "label": 1,
+    "wiki_page": "Watertown",
+    "page_frequency": 34,
+    "bucket": "high"
+  },
+  {
+    "claim": "Estonia is in Eastern Africa.",
+    "label": 1,
+    "wiki_page": "Russia",
+    "page_frequency": 83,
+    "bucket": "high"
+  },
+  {
+    "claim": "Tenacious D is made up of two Canadians.",
+    "label": 1,
+    "wiki_page": "Jack Black",
+    "page_frequency": 77,
+    "bucket": "high"
+  },
+  {
+    "claim": "Neil Diamond is not a songwriter.",
+    "label": 1,
+    "wiki_page": "Neil Diamond",
+    "page_frequency": 28,
+    "bucket": "high"
+  },
+  {
+    "claim": "Buffy the Vampire Slayer is created by Joss Whedon in 1990.",
+    "label": 1,
+    "wiki_page": "Joss Whedon",
+    "page_frequency": 17,
+    "bucket": "high"
+  },
+  {
+    "claim": "Linkin Park has only released one album to date.",
+    "label": 1,
+    "wiki_page": "Linkin Park",
+    "page_frequency": 99,
+    "bucket": "high"
+  },
+  {
+    "claim": "A relative of Elizabeth I was executed.",
+    "label": 0,
+    "wiki_page": "Elizabeth I of England",
+    "page_frequency": 77,
+    "bucket": "high"
+  },
+  {
+    "claim": "Elizabeth Olsen is a person.",
+    "label": 0,
+    "wiki_page": "Elizabeth Olsen",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Saxony is the tenth largest German cat.",
+    "label": 1,
+    "wiki_page": "Saxony",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "San Francisco Bay Area contains zero towns.",
+    "label": 1,
+    "wiki_page": "San Francisco Bay Area",
+    "page_frequency": 15,
+    "bucket": "high"
+  },
+  {
+    "claim": "Geffen Records released Cher.",
+    "label": 0,
+    "wiki_page": "Cher (1987 album)",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "The X-Files starred an actress.",
+    "label": 0,
+    "wiki_page": "Gillian Anderson",
+    "page_frequency": 98,
+    "bucket": "high"
+  },
+  {
+    "claim": "John DiMaggio refused to work on any shows from Cartoon Network.",
+    "label": 1,
+    "wiki_page": "Adventure Time",
+    "page_frequency": 40,
+    "bucket": "high"
+  },
+  {
+    "claim": "Arizona is a part of France.",
+    "label": 1,
+    "wiki_page": "Arizona",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Samsung entered the electronics industry in the late 20th century.",
+    "label": 0,
+    "wiki_page": "Samsung",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Knocked Up is a town.",
+    "label": 1,
+    "wiki_page": "Knocked Up",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "There are 26 world title wins and 0 loss record under Floyd Mayweather Jr.",
+    "label": 0,
+    "wiki_page": "Floyd Mayweather Jr.",
+    "page_frequency": 126,
+    "bucket": "high"
+  },
+  {
+    "claim": "Floyd Mayweather Jr. is a professional boxer.",
+    "label": 0,
+    "wiki_page": "Floyd Mayweather Jr.",
+    "page_frequency": 126,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Maze Runner is a narrative in a visual medium.",
+    "label": 0,
+    "wiki_page": "The Maze Runner (film)",
+    "page_frequency": 16,
+    "bucket": "high"
+  },
+  {
+    "claim": "Aristotle tutored Alexander the Great.",
+    "label": 0,
+    "wiki_page": "Aristotle",
+    "page_frequency": 17,
+    "bucket": "high"
+  },
+  {
+    "claim": "Rage Against the Machine is a game.",
+    "label": 1,
+    "wiki_page": "Rage Against the Machine",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Watertown, Massachusetts is a city in Suffolk County.",
+    "label": 1,
+    "wiki_page": "Watertown",
+    "page_frequency": 34,
+    "bucket": "high"
+  },
+  {
+    "claim": "Matteo Renzi was Prime Minister of a country.",
+    "label": 0,
+    "wiki_page": "Italian constitutional referendum",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "In the 1970's, Samsung entered the shipbuilding industries.",
+    "label": 1,
+    "wiki_page": "Samsung",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "A&E is a television channel on both cable and satellite.",
+    "label": 0,
+    "wiki_page": "A&E (TV channel)",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Knocked Up was released in 2007.",
+    "label": 0,
+    "wiki_page": "Knocked Up",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Tottenham Hotspur F.C. is a basketball team.",
+    "label": 1,
+    "wiki_page": "FA Cup",
+    "page_frequency": 16,
+    "bucket": "high"
+  },
+  {
+    "claim": "Aristotle never went to the Academy.",
+    "label": 1,
+    "wiki_page": "Aristotle",
+    "page_frequency": 17,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Maze Runner is a sports competition.",
+    "label": 1,
+    "wiki_page": "The Maze Runner (film)",
+    "page_frequency": 16,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Challenge XXX: Dirty 30 is a season of an Australian TV show.",
+    "label": 1,
+    "wiki_page": "MTV",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Arizona is not a part of the United States.",
+    "label": 1,
+    "wiki_page": "Arizona",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Bee Gees did not produce music.",
+    "label": 1,
+    "wiki_page": "Bee Gees",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Youtube has been ranked by a California-based mining company.",
+    "label": 0,
+    "wiki_page": "YouTube",
+    "page_frequency": 72,
+    "bucket": "high"
+  },
+  {
+    "claim": "In the 1970's, Samsung entered the construction industry.",
+    "label": 1,
+    "wiki_page": "Samsung",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Saxony is the tenth smallest German state.",
+    "label": 1,
+    "wiki_page": "Saxony",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Recovery is Eminem's first album.",
+    "label": 1,
+    "wiki_page": "Recovery (Eminem album)",
+    "page_frequency": 13,
+    "bucket": "high"
+  },
+  {
+    "claim": "Floyd Mayweather Jr. is incapable of boxing.",
+    "label": 1,
+    "wiki_page": "Floyd Mayweather Jr.",
+    "page_frequency": 126,
+    "bucket": "high"
+  },
+  {
+    "claim": "Emma Watson was killed in 1990.",
+    "label": 1,
+    "wiki_page": "Emma Watson",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "Arizona is a part of France.",
+    "label": 1,
+    "wiki_page": "Arizona",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Stripes had a person appear in it.",
+    "label": 0,
+    "wiki_page": "Harold Ramis",
+    "page_frequency": 51,
+    "bucket": "high"
+  },
+  {
+    "claim": "George Harrisongot married in 1966.",
+    "label": 0,
+    "wiki_page": "George Harrison",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "Recovery is Eminem's first album.",
+    "label": 1,
+    "wiki_page": "Recovery (Eminem album)",
+    "page_frequency": 13,
+    "bucket": "high"
+  },
+  {
+    "claim": "Guillermo del Toro died in 1964.",
+    "label": 1,
+    "wiki_page": "Guillermo del Toro",
+    "page_frequency": 11,
+    "bucket": "high"
+  },
+  {
+    "claim": "Pen\u00e9lope Cruz did modeling for L'Or\u00e9al.",
+    "label": 0,
+    "wiki_page": "Pene\u0301lope Cruz",
+    "page_frequency": 16,
+    "bucket": "high"
+  },
+  {
+    "claim": "Veep is a show.",
+    "label": 0,
+    "wiki_page": "Veep",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Jonah Hill made $16 million dollars in June of 2014.",
+    "label": 1,
+    "wiki_page": "Jonah Hill",
+    "page_frequency": 31,
+    "bucket": "high"
+  },
+  {
+    "claim": "Rage Against the Machine performed at live venues and festivals.",
+    "label": 0,
+    "wiki_page": "Rage Against the Machine",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Robert Singer (producer) worked on a tv show.",
+    "label": 0,
+    "wiki_page": "Supernatural (U.S. TV series)",
+    "page_frequency": 140,
+    "bucket": "high"
+  },
+  {
+    "claim": "Keith Stanfield is a Gemini.",
+    "label": 1,
+    "wiki_page": "Leo (astrology)",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "Amyotrophic lateral sclerosis is a cure.",
+    "label": 1,
+    "wiki_page": "Amyotrophic lateral sclerosis",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Baz Luhrmann's film Australia stars at least one person.",
+    "label": 0,
+    "wiki_page": "Hugh Jackman",
+    "page_frequency": 90,
+    "bucket": "high"
+  },
+  {
+    "claim": "Mud has a Canadian in its cast.",
+    "label": 1,
+    "wiki_page": "Reese Witherspoon",
+    "page_frequency": 123,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Road to El Dorado stars an actor.",
+    "label": 0,
+    "wiki_page": "Kevin Kline",
+    "page_frequency": 15,
+    "bucket": "high"
+  },
+  {
+    "claim": "Recovery is an album by Marshall Mathers III.",
+    "label": 0,
+    "wiki_page": "Eminem",
+    "page_frequency": 382,
+    "bucket": "high"
+  },
+  {
+    "claim": "Northwestern University is the only private university of the Big Ten Conference.",
+    "label": 0,
+    "wiki_page": "Northwestern University",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "Punch-Drunk Love had Columbia Pictures as its distributor.",
+    "label": 0,
+    "wiki_page": "Punch-Drunk Love",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "John Goodman did not star in The Flinstones.",
+    "label": 1,
+    "wiki_page": "John Goodman",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Brat Pack is a nickname given to a group of five young actors.",
+    "label": 1,
+    "wiki_page": "Brat Pack (actors)",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Benjamin Franklin was born in 1790.",
+    "label": 1,
+    "wiki_page": "Founding Fathers of the United States",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Barbarella is based on a comic by Gene Luen Yang.",
+    "label": 1,
+    "wiki_page": "Barbarella (film)",
+    "page_frequency": 11,
+    "bucket": "high"
+  },
+  {
+    "claim": "Pearl Jam is a song",
+    "label": 1,
+    "wiki_page": "Pearl Jam",
+    "page_frequency": 26,
+    "bucket": "high"
+  },
+  {
+    "claim": "Prague's historic center was first included in the UNESCO list of World Heritage Sites in 1992.",
+    "label": 0,
+    "wiki_page": "Prague",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "John Goodman is a person who acts.",
+    "label": 0,
+    "wiki_page": "John Goodman",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Linkin Park released Meteora.",
+    "label": 0,
+    "wiki_page": "Linkin Park",
+    "page_frequency": 99,
+    "bucket": "high"
+  },
+  {
+    "claim": "Manchester United's current name is the Newton Heath LYR Football Club.",
+    "label": 1,
+    "wiki_page": "Manchester United F.C.",
+    "page_frequency": 59,
+    "bucket": "high"
+  },
+  {
+    "claim": "Emma Watson is a French-British car.",
+    "label": 1,
+    "wiki_page": "Emma Watson",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "Rage Against the Machine is a band.",
+    "label": 0,
+    "wiki_page": "Rage Against the Machine",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Recovery is a Drake album.",
+    "label": 1,
+    "wiki_page": "Recovery (Eminem album)",
+    "page_frequency": 13,
+    "bucket": "high"
+  },
+  {
+    "claim": "Veep has no multiple seasons.",
+    "label": 1,
+    "wiki_page": "Veep",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "The undergraduate college of Harvard University became coeducational after its merger with Radcliffe College.",
+    "label": 0,
+    "wiki_page": "Harvard University",
+    "page_frequency": 13,
+    "bucket": "high"
+  },
+  {
+    "claim": "Phoenix, Arizona is in the southwestern United States.",
+    "label": 0,
+    "wiki_page": "Arizona",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Greek language is spoken only outside of Greece.",
+    "label": 1,
+    "wiki_page": "Greek language",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Temple Mount is related to an Abrahamic religion.",
+    "label": 0,
+    "wiki_page": "Islam",
+    "page_frequency": 185,
+    "bucket": "high"
+  },
+  {
+    "claim": "Oscar Isaac played a fictional character.",
+    "label": 0,
+    "wiki_page": "Oscar Isaac",
+    "page_frequency": 19,
+    "bucket": "high"
+  },
+  {
+    "claim": "Arizona is a part of France.",
+    "label": 1,
+    "wiki_page": "Arizona",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "A Milli is a song by someone born in 1978.",
+    "label": 1,
+    "wiki_page": "Lil Wayne",
+    "page_frequency": 151,
+    "bucket": "high"
+  },
+  {
+    "claim": "A near-Earth object is not a planet and it is in the universe.",
+    "label": 0,
+    "wiki_page": "Earth",
+    "page_frequency": 79,
+    "bucket": "high"
+  },
+  {
+    "claim": "Floyd Mayweather Jr. is a professional boxer.",
+    "label": 0,
+    "wiki_page": "Floyd Mayweather Jr.",
+    "page_frequency": 126,
+    "bucket": "high"
+  },
+  {
+    "claim": "Floyd Mayweather Jr. is a professional beat boxer.",
+    "label": 1,
+    "wiki_page": "Floyd Mayweather Jr.",
+    "page_frequency": 126,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Maze Runner is a sports competition.",
+    "label": 1,
+    "wiki_page": "The Maze Runner (film)",
+    "page_frequency": 16,
+    "bucket": "high"
+  },
+  {
+    "claim": "Temple Mount is related to an Abrahamic religion.",
+    "label": 0,
+    "wiki_page": "Islam",
+    "page_frequency": 185,
+    "bucket": "high"
+  },
+  {
+    "claim": "San Francisco Bay Area contains zero cities.",
+    "label": 1,
+    "wiki_page": "San Jose",
+    "page_frequency": 330,
+    "bucket": "high"
+  },
+  {
+    "claim": "Matteo Renzi has only served as the Prime Minister of Colombia.",
+    "label": 1,
+    "wiki_page": "Italian constitutional referendum",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "San Francisco Bay Area contains zero cities.",
+    "label": 1,
+    "wiki_page": "San Francisco",
+    "page_frequency": 285,
+    "bucket": "high"
+  },
+  {
+    "claim": "Amyotrophic lateral sclerosis usually starts around the age of 50.",
+    "label": 0,
+    "wiki_page": "Amyotrophic lateral sclerosis",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Guns N' Roses is a hard rock band.",
+    "label": 0,
+    "wiki_page": "Axl Rose",
+    "page_frequency": 29,
+    "bucket": "high"
+  },
+  {
+    "claim": "Poseidon lost $181,674,817.",
+    "label": 1,
+    "wiki_page": "Poseidon (film)",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Maze Runner had a budget in the millions.",
+    "label": 0,
+    "wiki_page": "The Maze Runner (film)",
+    "page_frequency": 16,
+    "bucket": "high"
+  },
+  {
+    "claim": "Finding Dory was directed by an American.",
+    "label": 0,
+    "wiki_page": "Andrew Stanton",
+    "page_frequency": 84,
+    "bucket": "high"
+  },
+  {
+    "claim": "SZA's music combines elements from different genres.",
+    "label": 0,
+    "wiki_page": "Bjo\u0308rk",
+    "page_frequency": 25,
+    "bucket": "high"
+  },
+  {
+    "claim": "Japan is in the Eastern Hemisphere.",
+    "label": 0,
+    "wiki_page": "Japan",
+    "page_frequency": 22,
+    "bucket": "high"
+  },
+  {
+    "claim": "Jonah Hill is an actor.",
+    "label": 0,
+    "wiki_page": "Jonah Hill",
+    "page_frequency": 31,
+    "bucket": "high"
+  },
+  {
+    "claim": "Amyotrophic lateral sclerosis is a disease.",
+    "label": 0,
+    "wiki_page": "Amyotrophic lateral sclerosis",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Samwell Tarly appears in novels by George R. R. Martin.",
+    "label": 0,
+    "wiki_page": "A Clash of Kings",
+    "page_frequency": 54,
+    "bucket": "high"
+  },
+  {
+    "claim": "Meteora is the sophomore album of Linkin Park.",
+    "label": 0,
+    "wiki_page": "Linkin Park",
+    "page_frequency": 99,
+    "bucket": "high"
+  },
+  {
+    "claim": "Watertown, Massachusetts is in Missouri.",
+    "label": 1,
+    "wiki_page": "Watertown",
+    "page_frequency": 34,
+    "bucket": "high"
+  },
+  {
+    "claim": "Saxony is the tenth largest German cat.",
+    "label": 1,
+    "wiki_page": "Saxony",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Punch-Drunk Love was distributed by an American television studio.",
+    "label": 1,
+    "wiki_page": "Punch-Drunk Love",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "John Goodman is a person who acts.",
+    "label": 0,
+    "wiki_page": "John Goodman",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Elizabeth Olsen died in 1989.",
+    "label": 1,
+    "wiki_page": "Elizabeth Olsen",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Watertown, Massachusetts is in France.",
+    "label": 1,
+    "wiki_page": "Watertown",
+    "page_frequency": 34,
+    "bucket": "high"
+  },
+  {
+    "claim": "Rage Against the Machine performed at live venues and festivals.",
+    "label": 0,
+    "wiki_page": "Rage Against the Machine",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Stripes had a person appear in it.",
+    "label": 0,
+    "wiki_page": "Harold Ramis",
+    "page_frequency": 51,
+    "bucket": "high"
+  },
+  {
+    "claim": "An American punk rock band made Kerplunk.",
+    "label": 0,
+    "wiki_page": "Green Day",
+    "page_frequency": 233,
+    "bucket": "high"
+  },
+  {
+    "claim": "Youtube is a hotel.",
+    "label": 1,
+    "wiki_page": "YouTube",
+    "page_frequency": 72,
+    "bucket": "high"
+  },
+  {
+    "claim": "A lifestyle characterized by abstinence from worldly pleasures is practiced by monks.",
+    "label": 0,
+    "wiki_page": "Asceticism",
+    "page_frequency": 26,
+    "bucket": "high"
+  },
+  {
+    "claim": "Croatia is incapable of rendering services.",
+    "label": 1,
+    "wiki_page": "Croatia",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "House ran for 9 seasons.",
+    "label": 1,
+    "wiki_page": "House (TV series)",
+    "page_frequency": 21,
+    "bucket": "high"
+  },
+  {
+    "claim": "Lee Daniels directed a film.",
+    "label": 0,
+    "wiki_page": "Precious (film)",
+    "page_frequency": 38,
+    "bucket": "high"
+  },
+  {
+    "claim": "Robert Singer (producer) wrote for a tv show.",
+    "label": 0,
+    "wiki_page": "Supernatural (U.S. TV series)",
+    "page_frequency": 140,
+    "bucket": "high"
+  },
+  {
+    "claim": "Knocked Up was released in 2007.",
+    "label": 0,
+    "wiki_page": "Knocked Up",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Maze Runner is an unadapted novel.",
+    "label": 1,
+    "wiki_page": "The Maze Runner (film)",
+    "page_frequency": 16,
+    "bucket": "high"
+  },
+  {
+    "claim": "Pen\u00e9lope Cruz did modeling for L'Or\u00e9al.",
+    "label": 0,
+    "wiki_page": "Pene\u0301lope Cruz",
+    "page_frequency": 16,
+    "bucket": "high"
+  },
+  {
+    "claim": "Mud was made before Matthew McConaughey was born.",
+    "label": 1,
+    "wiki_page": "Matthew McConaughey",
+    "page_frequency": 44,
+    "bucket": "high"
+  },
+  {
+    "claim": "Watertown, Massachusetts is the totality of Middlesex County.",
+    "label": 1,
+    "wiki_page": "Watertown",
+    "page_frequency": 34,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Brat Pack appeared in films in the 20th century.",
+    "label": 0,
+    "wiki_page": "Brat Pack (actors)",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Punch-Drunk Love's producers were Revolution Studios and New Line Cinema.",
+    "label": 0,
+    "wiki_page": "Punch-Drunk Love",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Billie Joe Armstrong is a vocalist of the American rock band Green Day.",
+    "label": 0,
+    "wiki_page": "Green Day",
+    "page_frequency": 233,
+    "bucket": "high"
+  },
+  {
+    "claim": "Two and a Half Men starred a person.",
+    "label": 0,
+    "wiki_page": "Charlie Sheen",
+    "page_frequency": 97,
+    "bucket": "high"
+  },
+  {
+    "claim": "Pen\u00e9lope Cruz has done modeling for Mango.",
+    "label": 0,
+    "wiki_page": "Pene\u0301lope Cruz",
+    "page_frequency": 16,
+    "bucket": "high"
+  },
+  {
+    "claim": "Recovery is a Drake album.",
+    "label": 1,
+    "wiki_page": "Recovery (Eminem album)",
+    "page_frequency": 13,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Maze Runner is a sports competition.",
+    "label": 1,
+    "wiki_page": "The Maze Runner (film)",
+    "page_frequency": 16,
+    "bucket": "high"
+  },
+  {
+    "claim": "Clueless (film) was followed by one young adult novel.",
+    "label": 1,
+    "wiki_page": "Clueless (film)",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Rihanna is on Recovery.",
+    "label": 0,
+    "wiki_page": "Recovery (Eminem album)",
+    "page_frequency": 13,
+    "bucket": "high"
+  },
+  {
+    "claim": "Palo Alto, California is located in a county.",
+    "label": 0,
+    "wiki_page": "Palo Alto",
+    "page_frequency": 330,
+    "bucket": "high"
+  },
+  {
+    "claim": "Cher was released by Geffen Records.",
+    "label": 0,
+    "wiki_page": "Cher (1987 album)",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Jonah Hill did not star in 21 Jump Street.",
+    "label": 1,
+    "wiki_page": "Jonah Hill",
+    "page_frequency": 31,
+    "bucket": "high"
+  },
+  {
+    "claim": "Peking University is in Guam.",
+    "label": 1,
+    "wiki_page": "Guam",
+    "page_frequency": 72,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Danish language is spoken in North America.",
+    "label": 0,
+    "wiki_page": "Canada",
+    "page_frequency": 193,
+    "bucket": "high"
+  },
+  {
+    "claim": "John Goodman played Babe Ruth in The Babe.",
+    "label": 0,
+    "wiki_page": "John Goodman",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Premier League Asia Trophy is a battle.",
+    "label": 1,
+    "wiki_page": "Premier League",
+    "page_frequency": 46,
+    "bucket": "high"
+  },
+  {
+    "claim": "Uganda is in space.",
+    "label": 1,
+    "wiki_page": "Nile",
+    "page_frequency": 88,
+    "bucket": "high"
+  },
+  {
+    "claim": "Sophia Bush played a minor role in The Narrows.",
+    "label": 1,
+    "wiki_page": "The Narrows (film)",
+    "page_frequency": 44,
+    "bucket": "high"
+  },
+  {
+    "claim": "Meteora is the sophomore album of Linkin Park.",
+    "label": 0,
+    "wiki_page": "Linkin Park",
+    "page_frequency": 99,
+    "bucket": "high"
+  },
+  {
+    "claim": "Temple Mount has nothing to do with an Abrahamic religion.",
+    "label": 1,
+    "wiki_page": "Islam",
+    "page_frequency": 185,
+    "bucket": "high"
+  },
+  {
+    "claim": "Guns N' Roses is an American hard rock restaurant.",
+    "label": 1,
+    "wiki_page": "Guns N' Roses",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "One of the most influential bands of its time is Pearl Jam.",
+    "label": 0,
+    "wiki_page": "Pearl Jam",
+    "page_frequency": 26,
+    "bucket": "high"
+  },
+  {
+    "claim": "Linkin Park released Meteora.",
+    "label": 0,
+    "wiki_page": "Linkin Park",
+    "page_frequency": 99,
+    "bucket": "high"
+  },
+  {
+    "claim": "One album by Eminem is Recovery.",
+    "label": 0,
+    "wiki_page": "Recovery (Eminem album)",
+    "page_frequency": 13,
+    "bucket": "high"
+  },
+  {
+    "claim": "Liverpool is in Europe.",
+    "label": 0,
+    "wiki_page": "United Kingdom",
+    "page_frequency": 303,
+    "bucket": "high"
+  },
+  {
+    "claim": "Floyd Mayweather Jr. is incapable of boxing.",
+    "label": 1,
+    "wiki_page": "Floyd Mayweather Jr.",
+    "page_frequency": 126,
+    "bucket": "high"
+  },
+  {
+    "claim": "Warren Beatty was the co-writer, producer, and director of an epic drama movie.",
+    "label": 0,
+    "wiki_page": "Reds (film)",
+    "page_frequency": 49,
+    "bucket": "high"
+  },
+  {
+    "claim": "Duff McKagan refused to ever be a musician.",
+    "label": 1,
+    "wiki_page": "Velvet Revolver",
+    "page_frequency": 23,
+    "bucket": "high"
+  },
+  {
+    "claim": "Tenacious D is an American duo.",
+    "label": 0,
+    "wiki_page": "Jack Black",
+    "page_frequency": 77,
+    "bucket": "high"
+  },
+  {
+    "claim": "Poseidon lost money at the worldwide box office.",
+    "label": 1,
+    "wiki_page": "Poseidon (film)",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Saxony is the tenth smallest German state.",
+    "label": 1,
+    "wiki_page": "Saxony",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Sean Penn is a film actor.",
+    "label": 0,
+    "wiki_page": "Mystic River (film)",
+    "page_frequency": 17,
+    "bucket": "high"
+  },
+  {
+    "claim": "Rage Against the Machine performed at live venues and festivals.",
+    "label": 0,
+    "wiki_page": "Rage Against the Machine",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Secret and technologically advanced airplanes were produced in Burbank, California.",
+    "label": 0,
+    "wiki_page": "Burbank",
+    "page_frequency": 330,
+    "bucket": "high"
+  },
+  {
+    "claim": "Justin Chatwin is an actor.",
+    "label": 0,
+    "wiki_page": "War of the Worlds (2005 film)",
+    "page_frequency": 73,
+    "bucket": "high"
+  },
+  {
+    "claim": "No Country for Old Men is critically acclaimed.",
+    "label": 0,
+    "wiki_page": "No Country for Old Men (film)",
+    "page_frequency": 14,
+    "bucket": "high"
+  },
+  {
+    "claim": "Samwell Tarly appears in novels.",
+    "label": 0,
+    "wiki_page": "A Game of Thrones",
+    "page_frequency": 195,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Maze Runner is a film.",
+    "label": 0,
+    "wiki_page": "The Maze Runner (film)",
+    "page_frequency": 16,
+    "bucket": "high"
+  },
+  {
+    "claim": "Knocked Up is a podcast.",
+    "label": 1,
+    "wiki_page": "Knocked Up",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Elizabeth Olsen was born.",
+    "label": 0,
+    "wiki_page": "Elizabeth Olsen",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Recovery is a Drake album.",
+    "label": 1,
+    "wiki_page": "Recovery (Eminem album)",
+    "page_frequency": 13,
+    "bucket": "high"
+  },
+  {
+    "claim": "Barbarella was directed by Roger Vadim.",
+    "label": 0,
+    "wiki_page": "Barbarella (film)",
+    "page_frequency": 11,
+    "bucket": "high"
+  },
+  {
+    "claim": "Arizona is not in the United States.",
+    "label": 1,
+    "wiki_page": "Arizona",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Hindu Kush is entirely in Africa.",
+    "label": 1,
+    "wiki_page": "Afghanistan",
+    "page_frequency": 122,
+    "bucket": "high"
+  },
+  {
+    "claim": "Japan is represented by several localized governments.",
+    "label": 1,
+    "wiki_page": "Sovereign state",
+    "page_frequency": 14,
+    "bucket": "high"
+  },
+  {
+    "claim": "Brie Larson worked with director Destin Daniel.",
+    "label": 0,
+    "wiki_page": "Short Term 12",
+    "page_frequency": 37,
+    "bucket": "high"
+  },
+  {
+    "claim": "Finding Dory was written by anyone but an American.",
+    "label": 1,
+    "wiki_page": "Andrew Stanton",
+    "page_frequency": 84,
+    "bucket": "high"
+  },
+  {
+    "claim": "Guns N' Roses formed in Los Angeles.",
+    "label": 0,
+    "wiki_page": "Guns N' Roses",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Marvel vs. Capcom: Infinite is a mobile game.",
+    "label": 1,
+    "wiki_page": "Xbox One",
+    "page_frequency": 175,
+    "bucket": "high"
+  },
+  {
+    "claim": "Savages was created in 1954.",
+    "label": 1,
+    "wiki_page": "Savages (2012 film)",
+    "page_frequency": 13,
+    "bucket": "high"
+  },
+  {
+    "claim": "Punch-Drunk Love was distributed by a film studio.",
+    "label": 0,
+    "wiki_page": "Columbia Pictures",
+    "page_frequency": 11,
+    "bucket": "high"
+  },
+  {
+    "claim": "Croatia is incapable of rendering services.",
+    "label": 1,
+    "wiki_page": "Croatia",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Temple Mount is related to an Abrahamic religion.",
+    "label": 0,
+    "wiki_page": "Islam",
+    "page_frequency": 185,
+    "bucket": "high"
+  },
+  {
+    "claim": "Mars is in the Andromeda galaxy.",
+    "label": 1,
+    "wiki_page": "Solar System",
+    "page_frequency": 58,
+    "bucket": "high"
+  },
+  {
+    "claim": "Barbarella was directed by Roger Vadim.",
+    "label": 0,
+    "wiki_page": "Barbarella (film)",
+    "page_frequency": 11,
+    "bucket": "high"
+  },
+  {
+    "claim": "Punch-Drunk Love was distributed by an American television studio.",
+    "label": 1,
+    "wiki_page": "Columbia Pictures",
+    "page_frequency": 11,
+    "bucket": "high"
+  },
+  {
+    "claim": "Youtube was ranked by Alexa Internet.",
+    "label": 0,
+    "wiki_page": "YouTube",
+    "page_frequency": 72,
+    "bucket": "high"
+  },
+  {
+    "claim": "Catherine Hardwicke has refused to ever direct films.",
+    "label": 1,
+    "wiki_page": "Twilight (2008 film)",
+    "page_frequency": 26,
+    "bucket": "high"
+  },
+  {
+    "claim": "Temple Mount has nothing to do with an Abrahamic religion.",
+    "label": 1,
+    "wiki_page": "Islam",
+    "page_frequency": 185,
+    "bucket": "high"
+  },
+  {
+    "claim": "Anne Rice lived in the US.",
+    "label": 0,
+    "wiki_page": "San Francisco",
+    "page_frequency": 285,
+    "bucket": "high"
+  },
+  {
+    "claim": "Mohra got nine nominations from a newspaper in 1995.",
+    "label": 0,
+    "wiki_page": "Filmfare",
+    "page_frequency": 38,
+    "bucket": "high"
+  },
+  {
+    "claim": "Arizona is in North America.",
+    "label": 0,
+    "wiki_page": "Arizona",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Barbarella is in the genre of science fiction.",
+    "label": 0,
+    "wiki_page": "Barbarella (film)",
+    "page_frequency": 11,
+    "bucket": "high"
+  },
+  {
+    "claim": "Saxony is the tenth largest Irish state.",
+    "label": 1,
+    "wiki_page": "Saxony",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Guns N' Roses is an American punk band.",
+    "label": 1,
+    "wiki_page": "Guns N' Roses",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Stripes featured an Italian in a role.",
+    "label": 1,
+    "wiki_page": "Harold Ramis",
+    "page_frequency": 51,
+    "bucket": "high"
+  },
+  {
+    "claim": "Japan is represented by two centralized governments.",
+    "label": 1,
+    "wiki_page": "Sovereign state",
+    "page_frequency": 14,
+    "bucket": "high"
+  },
+  {
+    "claim": "Jens Stoltenberg was the first Prime Minister of Norway from 2005 to 2013.",
+    "label": 1,
+    "wiki_page": "Norway",
+    "page_frequency": 67,
+    "bucket": "high"
+  },
+  {
+    "claim": "Elizabeth I's mother is still alive.",
+    "label": 1,
+    "wiki_page": "Elizabeth I of England",
+    "page_frequency": 77,
+    "bucket": "high"
+  },
+  {
+    "claim": "Jonah Hill starred in Sausage Party.",
+    "label": 0,
+    "wiki_page": "Jonah Hill",
+    "page_frequency": 31,
+    "bucket": "high"
+  },
+  {
+    "claim": "Pen\u00e9lope Cruz did modeling for L'Or\u00e9al.",
+    "label": 0,
+    "wiki_page": "Pene\u0301lope Cruz",
+    "page_frequency": 16,
+    "bucket": "high"
+  },
+  {
+    "claim": "Fargo (season 3) aired on a Chinese basic cable network.",
+    "label": 1,
+    "wiki_page": "FX (TV channel)",
+    "page_frequency": 25,
+    "bucket": "high"
+  },
+  {
+    "claim": "Jonah Hill did not star in 21 Jump Street.",
+    "label": 1,
+    "wiki_page": "Jonah Hill",
+    "page_frequency": 31,
+    "bucket": "high"
+  },
+  {
+    "claim": "The ROC controls more of China than the PRC.",
+    "label": 1,
+    "wiki_page": "China",
+    "page_frequency": 19,
+    "bucket": "high"
+  },
+  {
+    "claim": "Neil Diamond is not a songwriter.",
+    "label": 1,
+    "wiki_page": "Neil Diamond",
+    "page_frequency": 28,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Bengal tiger is from a region.",
+    "label": 0,
+    "wiki_page": "Bengal",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Saxony is in Ireland.",
+    "label": 1,
+    "wiki_page": "Saxony",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Arizona is not a part of the United States.",
+    "label": 1,
+    "wiki_page": "Arizona",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "House is a dramatic work focused on medicine.",
+    "label": 0,
+    "wiki_page": "House (TV series)",
+    "page_frequency": 21,
+    "bucket": "high"
+  },
+  {
+    "claim": "Emma Watson was born in 2001.",
+    "label": 1,
+    "wiki_page": "Emma Watson",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "Andrew Kevin Walker was nominated by the BAFTA for his screenwriting.",
+    "label": 0,
+    "wiki_page": "Andrew Kevin Walker",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Saxony is a German state.",
+    "label": 0,
+    "wiki_page": "Saxony",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Baz Luhrmann's film Australia stars an Australian actress and film producer.",
+    "label": 0,
+    "wiki_page": "Nicole Kidman",
+    "page_frequency": 261,
+    "bucket": "high"
+  },
+  {
+    "claim": "Island Records was co-founded by Chris Blackwell.",
+    "label": 0,
+    "wiki_page": "Island Records",
+    "page_frequency": 26,
+    "bucket": "high"
+  },
+  {
+    "claim": "Arizona is a part of France.",
+    "label": 1,
+    "wiki_page": "Arizona",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Linkin Park released Meteora.",
+    "label": 0,
+    "wiki_page": "Linkin Park",
+    "page_frequency": 99,
+    "bucket": "high"
+  },
+  {
+    "claim": "Robert Singer (producer) worked on a tv show.",
+    "label": 0,
+    "wiki_page": "Supernatural (U.S. TV series)",
+    "page_frequency": 140,
+    "bucket": "high"
+  },
+  {
+    "claim": "Neil Diamond is not a songwriter.",
+    "label": 1,
+    "wiki_page": "Song Sung Blue",
+    "page_frequency": 45,
+    "bucket": "high"
+  },
+  {
+    "claim": "House is a one-man show starring Hugh Laurie.",
+    "label": 1,
+    "wiki_page": "House (TV series)",
+    "page_frequency": 21,
+    "bucket": "high"
+  },
+  {
+    "claim": "Recovery is an Eminem album.",
+    "label": 0,
+    "wiki_page": "Recovery (Eminem album)",
+    "page_frequency": 13,
+    "bucket": "high"
+  },
+  {
+    "claim": "Recovery is an Eminem song.",
+    "label": 1,
+    "wiki_page": "Recovery (Eminem album)",
+    "page_frequency": 13,
+    "bucket": "high"
+  },
+  {
+    "claim": "Veep is a successful person.",
+    "label": 1,
+    "wiki_page": "Veep",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "Home for the Holidays stars an actress from the United States.",
+    "label": 0,
+    "wiki_page": "Holly Hunter",
+    "page_frequency": 72,
+    "bucket": "high"
+  },
+  {
+    "claim": "Two parties claim to be the official government of China.",
+    "label": 0,
+    "wiki_page": "China",
+    "page_frequency": 19,
+    "bucket": "high"
+  },
+  {
+    "claim": "Juventus F.C. adopted its characteristic black-and-white-striped home uniform in 1903.",
+    "label": 0,
+    "wiki_page": "Juventus F.C.",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Pearl Jam is not a band.",
+    "label": 1,
+    "wiki_page": "Pearl Jam",
+    "page_frequency": 26,
+    "bucket": "high"
+  },
+  {
+    "claim": "George Harrison has been single his whole life.",
+    "label": 1,
+    "wiki_page": "George Harrison",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "Jason Katims has made no contributions to Roswell.",
+    "label": 1,
+    "wiki_page": "Roswell (TV series)",
+    "page_frequency": 10,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Brat Pack is a type of name given to a group.",
+    "label": 0,
+    "wiki_page": "Brat Pack (actors)",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Monster is a work of music by an American rapper.",
+    "label": 0,
+    "wiki_page": "Eminem",
+    "page_frequency": 382,
+    "bucket": "high"
+  },
+  {
+    "claim": "Oscar Isaac played a fictional character.",
+    "label": 0,
+    "wiki_page": "Oscar Isaac",
+    "page_frequency": 19,
+    "bucket": "high"
+  },
+  {
+    "claim": "Howard was in Iron Man.",
+    "label": 0,
+    "wiki_page": "Iron Man (2008 film)",
+    "page_frequency": 100,
+    "bucket": "high"
+  },
+  {
+    "claim": "Simon Pegg is entirely Japanese.",
+    "label": 1,
+    "wiki_page": "Simon Pegg",
+    "page_frequency": 20,
+    "bucket": "high"
+  },
+  {
+    "claim": "Guillermo del Toro works in the coal industry.",
+    "label": 1,
+    "wiki_page": "Guillermo del Toro",
+    "page_frequency": 11,
+    "bucket": "high"
+  },
+  {
+    "claim": "Brown University's main campus is located in the city in Rhode Island with the highest population.",
+    "label": 0,
+    "wiki_page": "Providence",
+    "page_frequency": 37,
+    "bucket": "high"
+  },
+  {
+    "claim": "Andrew Kevin Walker is only a dancer.",
+    "label": 1,
+    "wiki_page": "Andrew Kevin Walker",
+    "page_frequency": 8,
+    "bucket": "high"
+  },
+  {
+    "claim": "Uganda is in space.",
+    "label": 1,
+    "wiki_page": "Nile",
+    "page_frequency": 88,
+    "bucket": "high"
+  },
+  {
+    "claim": "Canada is where EA Black Box was based.",
+    "label": 0,
+    "wiki_page": "British Columbia",
+    "page_frequency": 92,
+    "bucket": "high"
+  },
+  {
+    "claim": "Neil Diamond is a musician.",
+    "label": 0,
+    "wiki_page": "Neil Diamond",
+    "page_frequency": 28,
+    "bucket": "high"
+  },
+  {
+    "claim": "Watertown, Massachusetts is in Vermont.",
+    "label": 1,
+    "wiki_page": "Watertown",
+    "page_frequency": 34,
+    "bucket": "high"
+  },
+  {
+    "claim": "George Harrisongot married in 1966.",
+    "label": 0,
+    "wiki_page": "George Harrison",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "No Strings Attached was released in a country of the Northern Hemisphere.",
+    "label": 0,
+    "wiki_page": "United States",
+    "page_frequency": 280,
+    "bucket": "high"
+  },
+  {
+    "claim": "Eurotas (river) is in Europe.",
+    "label": 0,
+    "wiki_page": "Greece",
+    "page_frequency": 142,
+    "bucket": "high"
+  },
+  {
+    "claim": "In the 2012 U.S. Census, Simi Valley, California, reported a median household income of $87,894.",
+    "label": 0,
+    "wiki_page": "Simi Valley",
+    "page_frequency": 330,
+    "bucket": "high"
+  },
+  {
+    "claim": "Pearl Jam is considered to be one of the most influential bands of its time.",
+    "label": 0,
+    "wiki_page": "Pearl Jam",
+    "page_frequency": 26,
+    "bucket": "high"
+  },
+  {
+    "claim": "Arizona is in three regions of the United States.",
+    "label": 0,
+    "wiki_page": "Arizona",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Daenerys Targaryen is a character in a J.R.R. Tolkein series.",
+    "label": 1,
+    "wiki_page": "A Game of Thrones",
+    "page_frequency": 195,
+    "bucket": "high"
+  },
+  {
+    "claim": "George Harrison is still married to his first wife.",
+    "label": 1,
+    "wiki_page": "George Harrison",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "House ended after its pilot.",
+    "label": 1,
+    "wiki_page": "House (TV series)",
+    "page_frequency": 21,
+    "bucket": "high"
+  },
+  {
+    "claim": "Black Canary is a character in works published by an American comic book publisher.",
+    "label": 0,
+    "wiki_page": "DC Comics",
+    "page_frequency": 11,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Endless River is an album by a band formed in England.",
+    "label": 0,
+    "wiki_page": "Pink Floyd",
+    "page_frequency": 154,
+    "bucket": "high"
+  },
+  {
+    "claim": "A song on Virgin Records was released by Mel B.",
+    "label": 0,
+    "wiki_page": "Mel B",
+    "page_frequency": 27,
+    "bucket": "high"
+  },
+  {
+    "claim": "Home for the Holidays stars no children of Charlie Chaplin.",
+    "label": 1,
+    "wiki_page": "Geraldine Chaplin",
+    "page_frequency": 203,
+    "bucket": "high"
+  },
+  {
+    "claim": "Pearl Jam did not sold many songs in the early 1990s.",
+    "label": 1,
+    "wiki_page": "Pearl Jam",
+    "page_frequency": 26,
+    "bucket": "high"
+  },
+  {
+    "claim": "Jeb Bush's father is Barbara Bush.",
+    "label": 1,
+    "wiki_page": "Barbara Bush",
+    "page_frequency": 53,
+    "bucket": "high"
+  },
+  {
+    "claim": "An American punk rock band made Kerplunk.",
+    "label": 0,
+    "wiki_page": "Green Day",
+    "page_frequency": 233,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Republic of Macedonia is far from Europe.",
+    "label": 1,
+    "wiki_page": "Albania",
+    "page_frequency": 83,
+    "bucket": "high"
+  },
+  {
+    "claim": "Rage Against the Machine performed at live venues and festivals.",
+    "label": 0,
+    "wiki_page": "Rage Against the Machine",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Prague's historic center was first included in the UNESCO list of World Heritage Sites in 1992.",
+    "label": 0,
+    "wiki_page": "Prague",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Oscar Isaac was featured in Star Wars: The Force Awakens.",
+    "label": 0,
+    "wiki_page": "Oscar Isaac",
+    "page_frequency": 19,
+    "bucket": "high"
+  },
+  {
+    "claim": "The Republic of Macedonia is in Europe.",
+    "label": 0,
+    "wiki_page": "Bulgaria",
+    "page_frequency": 36,
+    "bucket": "high"
+  },
+  {
+    "claim": "There are many airports contained in the San Francisco Bay Area.",
+    "label": 0,
+    "wiki_page": "San Francisco Bay Area",
+    "page_frequency": 15,
+    "bucket": "high"
+  },
+  {
+    "claim": "Brian De Palma is a Westerner.",
+    "label": 0,
+    "wiki_page": "United States",
+    "page_frequency": 280,
+    "bucket": "high"
+  },
+  {
+    "claim": "Arizona is not in the United States.",
+    "label": 1,
+    "wiki_page": "Arizona",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Omar Epps is involved in House.",
+    "label": 0,
+    "wiki_page": "House (TV series)",
+    "page_frequency": 21,
+    "bucket": "high"
+  },
+  {
+    "claim": "Arizona is not a state.",
+    "label": 1,
+    "wiki_page": "Arizona",
+    "page_frequency": 9,
+    "bucket": "high"
+  },
+  {
+    "claim": "Emma Watson is an actress.",
+    "label": 0,
+    "wiki_page": "Emma Watson",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "Edgar Wright is a Gemini.",
+    "label": 1,
+    "wiki_page": "Gemini (astrology)",
+    "page_frequency": 52,
+    "bucket": "high"
+  },
+  {
+    "claim": "Aleister Crowley died on October 12, 1874.",
+    "label": 1,
+    "wiki_page": "World War I",
+    "page_frequency": 147,
+    "bucket": "high"
+  },
+  {
+    "claim": "Nicholas Brody is a character on Homeland.",
+    "label": 0,
+    "wiki_page": "Carrie Mathison",
+    "page_frequency": 12,
+    "bucket": "high"
+  },
+  {
+    "claim": "Always stars an actor from Jaws.",
+    "label": 0,
+    "wiki_page": "Richard Dreyfuss",
+    "page_frequency": 52,
+    "bucket": "high"
+  }
+]

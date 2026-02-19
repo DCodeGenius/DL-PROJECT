@@ -8,9 +8,9 @@ venv/
 env/
 ENV/
 
-# Model outputs
-results/
-checkpoints/
+# Model outputs (heavy files only)
+results/final_model/
+results/checkpoint-*/
 *.pt
 *.pth
 *.bin
@@ -19,7 +19,6 @@ checkpoints/
 # Data
 data/
 *.csv
-*.json
 *.parquet
 
 # Logs
